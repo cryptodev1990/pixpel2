@@ -1,0 +1,46 @@
+@import "../../scss/variebles";
+@import "../../components/Menu/Menu.scss";
+@import "../../components/Header/Header.scss";
+@import "../../components/Banner/Banner.scss";
+.text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-gray;
+
+}
+.home {
+  padding-bottom: 300px;
+}
+.title {
+
+}
+.section {
+  &__row {
+    display: flex;
+    column-gap: 125px;
+  }
+  &__title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 85px;
+  }
+  &__card-title {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 36px;
+  }
+  &__card-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+  }
+  &--offset-bottom {
+    margin-bottom: 130px;
+  }
+}

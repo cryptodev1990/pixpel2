@@ -1,0 +1,29 @@
+.stacking {
+  &__title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  &__table .table__tr {
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr 1fr;
+  }
+  &__table .table__tr:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &__status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  &__status-btns &__status-btn:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__status-btn {
+    padding: 15px 32px;
+    background: #37404C;
+    border-radius: 5px;
+  }
+  &__status-btn--active {
+    background: #0095C8;
+  }
+}

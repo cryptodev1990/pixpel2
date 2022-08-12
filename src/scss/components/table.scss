@@ -1,0 +1,92 @@
+.table {
+    &__tr {
+        display: grid;
+        grid-template-columns: 576px 506px 440px 1fr;
+        align-items: center;
+    }
+    &__th {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #717A8B;
+    }
+    &__tr:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    &__td {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+    }
+    &__td--chart {
+        position: relative;
+    }
+    &__td:last-child,
+    &__th:last-child {
+        text-align: right;
+        justify-content: right;
+    }
+    &__icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+    }
+    &__full-name {
+        margin-left: 5px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #717A8B;
+    }
+    // &__btn--stake {
+    //   background: #2EBD85;
+    //   border-radius: 5px;
+    //   padding: 5px 25px;
+    //   color: #FFFFFF;
+    //   font-weight: 500;
+    //   font-size: 20px;
+    //   line-height: 30px;
+    //   margin-left: auto;
+    // }
+    &__btn--stake {
+        background: #2EBD85;
+        border-radius: 5px;
+        padding: 25px 25px;
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        margin-left: auto;
+    }
+    &__btn--mystery {
+        background: #0095C8;
+        border-radius: 5px;
+        padding: 25px 25px;
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        margin-left: auto;
+    }
+    &__btn--price {
+        background: #F6465D;
+        border-radius: 5px;
+        padding: 25px 25px;
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        margin-left: auto;
+    }
+    &__duration {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 5px 25px;
+        background: #717A8B;
+        border-radius: 5px;
+    }
+}

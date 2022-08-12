@@ -1,0 +1,81 @@
+.collection {
+  &__title {
+    margin-bottom: 25px;
+    font-weight: 600;
+    line-height: 60px;
+    font-size: 40px;
+  }
+
+  &__panel {
+    height: 300px;
+    background: #29313C;
+    border-radius: 10px;
+    padding: 3em;
+  }
+
+  p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #717A8B;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  &__btn {
+    padding: 20px 50px;
+    gap: 10px;
+    background: #0095C8;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 800;
+  }
+
+  &__banner {
+    height: 540px;
+    background: #29313C;
+    border-radius: 10px;
+    padding: 3em;
+    margin-bottom: 1em;
+  }
+
+  &__banner_img {
+    height: 400px;
+    background: #37404C;
+    border-radius: 10px;
+
+  }
+
+  &__banner_btn {
+    margin-left: auto;
+  }
+
+  &__input {
+    padding-left: 0.5em;
+    height: 60px;
+    background: #29313C;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+
+  &__area {
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    height: 300px;
+    background: #29313C;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+
+  &__select {
+    height: 77px;
+    background: #29313C;
+    border-radius: 10px;
+  }
+}

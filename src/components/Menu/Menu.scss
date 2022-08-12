@@ -1,0 +1,14 @@
+@import "../../scss/variebles";
+
+.menu {
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+  &__item {
+    @include text-medium();
+  }
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}

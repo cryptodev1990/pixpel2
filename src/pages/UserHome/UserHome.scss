@@ -1,0 +1,211 @@
+.user-home {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -30px;
+    right: -100px;
+    background: url('../../../public/assets/images/UserHome/bg.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 1422px 1087px;
+    pointer-events: none;
+    width: 100%;
+    height: 1087px;
+  }
+
+  &__top {
+    margin-bottom: 70px;
+
+  }
+
+  &__top-title {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 90px;
+    margin-bottom: 20px;
+  }
+
+  &__top-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 683px;
+    color: #717A8B;
+    margin-bottom: 60px;
+
+  }
+
+  &__top-btn {
+  }
+
+  &__card {
+
+  }
+
+  &__card-image {
+    max-width: 151px;
+    margin-bottom: 26px;
+  }
+
+  &__card-name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #717A8B;
+  }
+
+  &__card-title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 10px;
+
+  }
+
+  &__card-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #717A8B;
+  }
+
+  &__row {
+    gap: 48px;
+  }
+
+  &__nfts {
+  }
+
+  &__nfts-top {
+  }
+
+  &__nfts-title {
+  }
+
+  &__nft {
+    position: relative;
+    max-width: 293px;
+  }
+
+  &__nft-btn {
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: #37404C;
+  }
+
+  &__nft-picture {
+    margin-bottom: 5px;
+  }
+
+  &__nft-list &__nft-item:first-child > div {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #717A8B;
+  }
+
+  &__nft-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nft-name {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    color: #FFFFFF;
+  }
+
+  &__nft-value {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    color: #0095C8;
+  }
+
+  &__token-card {
+    background: #29313C;
+    border-radius: 10px;
+    padding: 30px 20px 40px 20px;
+  }
+
+  &__token-card-picture {
+    position: relative;
+  }
+
+  &__token-card-picture {
+    margin-bottom: 30px;
+  }
+
+  &__token-card-picture &__token-card-btn:first-child {
+    left: 0;
+  }
+
+  &__token-card-picture &__token-card-btn:nth-child(2) {
+    right: 0;
+  }
+
+  &__token-card-btn {
+    padding: 10px 20px;
+    background: #0095C8;
+    border-radius: 5px;
+    max-height: 44px;
+    position: absolute;
+    font-weight: 500;
+    font-size: 16px;
+    top: 0;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+
+  &__token-card-list &__token-card-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__token-card-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: #37404C;
+    border-radius: 10px;
+  }
+
+  &__section--offset {
+    margin-bottom: 150px;
+  }
+
+
+
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &__btn {
+    padding: 25px 103px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1F2630;
+
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 75px;
+    color: #FFFFFF;
+  }
+
+}

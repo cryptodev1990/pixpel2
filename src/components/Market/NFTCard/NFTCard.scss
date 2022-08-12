@@ -1,0 +1,64 @@
+.card {
+  width: 224px;
+  background: #29313C;
+  border-radius: 5px;
+  padding: 20px;
+
+  &__top {
+    margin-bottom: 5px;
+  }
+
+  &__top, &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0095C8;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #717A8B;
+    background: #37404C;
+    border-radius: 5px;
+  }
+
+  &__btn--info {
+    padding: 3px 10px;
+  }
+
+  &__btn--cart {
+    width: 35px;
+    height: 35px;
+    padding: 8px;
+    border-radius: 2px;
+  }
+
+  &__btn--info svg {
+    margin-right: 5px;
+  }
+
+  &__main {
+
+  }
+
+  &__value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__footer {
+    margin-top: 5px;
+  }
+}

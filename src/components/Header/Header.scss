@@ -1,0 +1,164 @@
+@import "../../scss/variebles";
+.header {
+  padding: 20px 0;
+  color: $color-bg;
+  z-index: 10;
+  background-color: #29313C;
+  &__logo {
+    width: 170px;
+    height: 44px;
+    margin-right: 27px;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__group {
+    margin-left: auto;
+  }
+  &__user-tools {
+    display: flex;
+    align-items: center;
+  }
+  &__user-tools &__link:not(:last-child) {
+    margin-right: 22px;
+  }
+
+  &__btn-user {
+    padding: 10px 46px;
+    background: #37404C;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0095C8;
+    margin-left: 443px;
+
+  }
+}
+.modal {
+  &__box  {
+    position: relative;
+
+  }
+  &__img {
+    border-radius: 12px;
+
+  }
+  &__row {
+    display: flex;
+    gap: 40px;
+  }
+  &__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+    color: #FFFFFF;
+    transform: translate(-50%, -50%);
+  }
+  &__close {
+    width: 50px;
+    border-radius: 10px;
+    height: 50px;
+    display: block;
+    background: #48515F;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+  &__btn-forgot {
+    background: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    display: block;
+    color: #0095C8;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+  &__label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 8px;
+  }
+  &__input {
+    width: 100%;
+    background: #29313C;
+    border-radius: 5px;
+    padding: 15px 30px;
+    &::placeholder {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #717A8B;
+    }
+  }
+  &__form-group  &__field:not(:last-child){
+    margin-bottom: 28px;
+  }
+  &__form-group &__checkbox:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__form-group {
+    margin-bottom: 25px;
+  }
+  &__field--offset {
+    margin-bottom: 25px;
+  }
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #717A8B;
+  }
+  &__checkbox-input {
+    margin-right: 15px;
+  }
+  &__btn {
+    width: 100%;
+    padding: 15px 0;
+    display: block;
+    text-align: center;
+    background: #0095C8;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  &__close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+  &__close--static {
+    position: static;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #717A8B;
+    margin-bottom: 30px;
+  }
+
+}
+.modal-login {
+
+}
+.modal-verify {
+  &__title {
+    margin-bottom: 10px;
+  }
+}

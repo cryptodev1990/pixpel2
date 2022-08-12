@@ -1,0 +1,19 @@
+.market {
+  &__title {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+  }
+  &__row {
+    gap: 15px;
+  }
+  &__inner {
+    position: relative;
+  }
+  &__cart {
+    position: absolute;
+    height: 100%;
+    top: 0;
+  }
+}

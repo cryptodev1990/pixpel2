@@ -1,0 +1,49 @@
+.card-modal {
+	height: 100%;
+
+	>div {
+		height: 100%;
+	}
+
+	table {
+		th {
+			font-size: 0.8em;
+			font-weight: 400;
+			color: #717A8B;
+			text-align: left;
+		}
+
+		th,
+		td {
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			text-align: center;
+		}
+	}
+
+	img {
+		height: 100%;
+		padding-bottom: 1em;
+		border-radius: 10px;
+	}
+
+	.btn-buy {
+		background: #2EBD85;
+		height: 40px;
+	}
+
+	.btn {
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+.panel {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 30px;
+	background-color: #37404C;
+	border-radius: 5px;
+}

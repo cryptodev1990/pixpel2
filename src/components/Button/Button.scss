@@ -1,0 +1,27 @@
+@import "../../scss/variebles";
+
+.btn {
+  border: none;
+  border-radius: 5px;
+
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  color: $color-text;
+  background-color: transparent;
+  @include text-regular();
+
+  &--brand {
+    background-color: $color-blue;
+  }
+
+  &--secondary {
+    background-color: #37404C;
+  }
+
+  &--active {
+    background: #0095C8;
+  }
+}
