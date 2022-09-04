@@ -1,6 +1,6 @@
 import AddressManagement from "./AddressManagement/AddressManagement";
 import Exchange from "./Exchange/Exchange";
-import HelpCenter from "./GameMarket/GameMarket";
+import HelpCenter from "./HelpCenter/HelpCenter";
 import Home from "./Home/Home";
 import Inventory from "./Inventory/Inventory";
 import NFTMarket from "./NFTMarket/NFTMarket";
@@ -33,5 +33,5 @@ export {
     GameMarket,
     Collection,
     CreateNFT,
-    Developer
+    Developer,
 }
