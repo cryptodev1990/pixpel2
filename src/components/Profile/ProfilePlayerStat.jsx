@@ -18,7 +18,7 @@ const ProfilePlayerStat = () => {
   return (
     <div>
       <div className="mt-12 font-semibold text-2xl">Balance Details</div>
-      <div className="flex gap-4 mt-6 mb-3">
+      <div className="flex gap-4 mt-6 mb-3 w-2/3">
         {tokenList.map((menu, idx) => {
           return (
             <TokenButton
@@ -31,7 +31,7 @@ const ProfilePlayerStat = () => {
           );
         })}
       </div>
-      <div className="bg-app-black flex h-52 w-full rounded-lg justify-between px-6 items-center">
+      <div className="bg-app-black flex xl:flex-row flex-col h-auto w-full rounded-lg justify-between py-6 gap-6 px-6">
         <EstimateBalance id={selectedIndex} />
         <ProfileCircle />
       </div>

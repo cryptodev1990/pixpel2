@@ -9,7 +9,7 @@ const ProfileAvatar = () => {
         <div>
           <img
             src={Avatar}
-            className="flex h-28 w-28 rounded-full"
+            className="flex xl:h-28 md:h-24 sm:h-16 xs:h-12 rounded-full"
             alt="avatar"
           ></img>
         </div>
