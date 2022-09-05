@@ -1,9 +1,11 @@
 import React from "react";
 import EditButton from "../../Button/EditButton";
+import ConfirmationModal from "../Modal/ConfirmationModal";
 
 const Preferences = () => {
+  const [showModal, setShowModal] = React.useState(false);
   return (
-    <div>
+    <>
       <div className="mt-20 mb-8 font-semibold text-3xl">Preferences</div>
       <div className="flex flex-col border-y-2 border-app-black py-3">
         <div className="flex flex-row justify-between items-center border-b-2 border-app-black">
@@ -24,8 +26,13 @@ const Preferences = () => {
             </div>
           </div>
           <div className="py-12 text-base"></div>
-          <div className="py-10">
-            <EditButton title="Manage" />
+          <div
+            className="mx-2 flex rounded-md items-center bg-app-black h-10 w-auto px-6 justify-center hover:cursor-pointer"
+            onClick={() => {
+              setShowModal(true);
+            }}
+          >
+            <button>Edit</button>
           </div>
         </div>
         <div className="flex flex-row justify-between items-center">
@@ -81,7 +88,8 @@ const Preferences = () => {
           </div>
         </div>
       </div>
-    </div>
+      {<ConfirmationModal showModal={showModal} setShowModal={setShowModal} />}
+    </>
   );
 };
 
