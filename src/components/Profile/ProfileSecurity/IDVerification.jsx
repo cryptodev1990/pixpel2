@@ -3,7 +3,7 @@ import EnableButton from "../../Button/EnableButton";
 
 const IDVerification = () => {
   return (
-    <div className="flex gap-6 flex-col bg-app-black rounded-lg w-full lg:w-1/3 px-6 py-8">
+    <div className="flex gap-6 flex-col bg-app-black rounded-lg px-6 py-8">
       <div className="flex gap-6 items-center">
         <div className="bg-app-green w-3 h-3 rounded-full"></div>
         <div className="text-xl">ID Verification</div>

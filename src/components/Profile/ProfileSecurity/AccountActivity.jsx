@@ -3,7 +3,7 @@ import EnableButton from "../../Button/EnableButton";
 
 const AccountActivity = () => {
   return (
-    <div className="flex flex-col bg-app-black rounded-lg w-full lg:w-1/3 px-6 py-8 gap-6">
+    <div className="flex flex-col bg-app-black rounded-lg px-6 py-8 gap-6">
       <div className="flex items-center gap-6">
         <div className="rounded-full w-3 h-3 bg-app-green"></div>
         <div className="text-xl">Devices and activities</div>
