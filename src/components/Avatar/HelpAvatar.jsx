@@ -1,13 +1,14 @@
 import React from "react";
 import Avartar from "../../asssets/images/market/nft-1.jpg";
 
-const HelpAvatar = () => {
+const HelpAvatar = (props) => {
   return (
-    <div className="w-80 h-80 bg-app-black rounded-md items-center justify-center">
-      <div className="w-20 h-20 rounded bg-app-black-button" />
-      <img src={Avartar} alt="avatar">
-      </img>
+    <div className="bg-app-black  flex flex-col w-full px-5 pt-5 pb-10 items-center rounded-lg gap-3">
+    <div className="bg-app-black-button w-full rounded-md">
+      <img src={Avartar} alt="Avatar" className="flex w-full" />
     </div>
+    <div className="text-lg">{props.title}</div>
+  </div>
   );
 };
 

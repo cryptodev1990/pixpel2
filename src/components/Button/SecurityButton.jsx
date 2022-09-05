@@ -1,9 +1,5 @@
 import React from "react";
-const SecurityButton = ({ title, allSelected}) => {
-  const [selected, setSelected] = React.useState(false);
-  const handleClick = () => {
-    setSelected(!selected);
-  };
+const SecurityButton = ({title, idx, handleClick, selected}) => {
   const className = "rounded-full w-3 h-3";
   return (
     <div
@@ -11,7 +7,7 @@ const SecurityButton = ({ title, allSelected}) => {
       onClick={handleClick}
     >
       <div
-        className={className + (allSelected || selected ? " bg-app-green" : " bg-app-red")}
+        className={className + (selected ? " bg-app-green" : " bg-app-red")}
       ></div>
       {title}
     </div>

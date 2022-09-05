@@ -1,5 +1,5 @@
 import React from "react";
-import EnableButton from "../../Button/EnableButton";
+import HelpCenterButton from "../../Button/HelpCenterButton";
 import ModalHalfButton from "../../Button/ModalHalfButton";
 import NFTAvatar from "../../Avatar/NFTAvatar";
 import "./modal.css";
@@ -27,8 +27,8 @@ const NicknameModal = (props) => {
                 />
                 <div className="mb-3 text-lg">Select avatar</div>
                 <div className="flex gap-4 mb-4">
-                  <EnableButton title="Default" />
-                  <EnableButton title="NFT" />
+                  <HelpCenterButton title="Default" />
+                  <HelpCenterButton title="NFT" />
                 </div>
                 <div className="grid grid-cols-4 overflow-auto h-80 gap-2 grid-scroll">
                   <NFTAvatar />
