@@ -1,5 +1,5 @@
 import React from "react";
-import SecurityButton from "../../Button/SecurityButton";
+import ModalPurchaseButton from "../../Button/ModalPurchaseButton";
 import ModalHalfButton from "../../Button/ModalHalfButton";
 import ModalSelectHalfButton from "../../Button/ModalSelectHalfButton";
 import { useEffect } from "react";
@@ -22,15 +22,26 @@ const ConfirmationModal = (props) => {
     setSellSelected(!sellSelected);
   };
   const [selected, setSelected] = React.useState(false);
+  const setAll = (flag) => {
+    setBuySelected(flag);
+    setSellSelected(flag);
+    setPurchaseSelected(flag);
+    setMarketSelected(flag);
+  };
   const handleClick = () => {
-    setSelected(!selected);
+    if (purchaseSelected && buySelected && sellSelected && marketSelected) {
+      setSelected(false);
+      setAll(false);
+    } else {
+      setSelected(true);
+      setAll(true);
+    }
   };
   useEffect(() => {
-    setBuySelected(selected);
-    setSellSelected(selected);
-    setPurchaseSelected(selected);
-    setMarketSelected(selected);
-  }, [selected]);
+    setSelected(
+      purchaseSelected && buySelected && sellSelected && marketSelected
+    );
+  }, [purchaseSelected, buySelected, sellSelected, marketSelected]);
   const pictureClassName = "rounded-full h-3 w-3";
   const className =
     "mb-5 flex items-center justify-center w-full h-14 gap-3 rounded-md hover:bg-app-blue cursor-pointer";
@@ -71,25 +82,25 @@ const ConfirmationModal = (props) => {
                 <div className="flex gap-4 mb-4">
                   <ModalSelectHalfButton
                     title="Purchase NFT"
-                    onClick={handlepurchaseClick}
+                    handleClick={handlepurchaseClick}
                     selected={purchaseSelected}
                   />
                   <ModalSelectHalfButton
                     title="Market order"
-                    onClick={handlemarketClick}
+                    handleClick={handlemarketClick}
                     selected={marketSelected}
                   />
                 </div>
                 <div className="flex gap-4 mb-10">
-                  <SecurityButton
+                  <ModalPurchaseButton
                     title="Buy"
                     selected={buySelected}
-                    onClick={handlebuyClick}
+                    handleClick={handlebuyClick}
                   />
-                  <SecurityButton
+                  <ModalPurchaseButton
                     title="Sell"
                     selected={sellSelected}
-                    onClick={handlesellClick}
+                    handleClick={handlesellClick}
                   />
                 </div>
                 <div className="flex mt-4 mb-10 gap-4 w-full">

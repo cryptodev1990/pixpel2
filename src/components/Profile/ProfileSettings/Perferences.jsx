@@ -1,9 +1,50 @@
 import React from "react";
-import EditButton from "../../Button/EditButton";
+import { useEffect } from "react";
+import NotificationButton from "../../Button/NotificationButton";
 import ConfirmationModal from "../Modal/ConfirmationModal";
 
 const Preferences = () => {
   const [showModal, setShowModal] = React.useState(false);
+  const [activities, setActivities] = React.useState(false);
+  const handleactivites = () => {
+    setActivities(!activities);
+  }
+  const [pixpel, setPixpel] = React.useState(false);
+  const handlepixpel = () => {
+    setPixpel(!pixpel);
+  }
+  const [messages, setMessages] = React.useState(false);
+  const handlemessage = () => {
+    setMessages(!messages);
+  }
+  const [marketing, setMarketing] = React.useState(false);
+  const handlemarketing = () => {
+    setMarketing(!marketing);
+  }
+  const [selected, setSelected] = React.useState(false);
+  const setAll = (flag) => {
+    setActivities(flag);
+    setPixpel(flag);
+    setMessages(flag);
+    setMarketing(flag);
+  }
+
+  const handleClick = () => {
+    if (activities && pixpel && messages && marketing) {
+      setSelected(false);
+      setAll(false);
+    } else {
+      setSelected(true);
+      setAll(true);
+    }
+  }
+
+  useEffect(() => {
+    setSelected(
+      activities && pixpel && messages && marketing
+    );
+  }, [activities, pixpel, messages, marketing]);
+
   return (
     <>
       <div className="mt-20 mb-8 font-semibold text-3xl">Preferences</div>
@@ -36,55 +77,20 @@ const Preferences = () => {
           </div>
         </div>
         <div className="flex flex-row justify-between items-center">
-          <div className="flex flex-row">
+          <div className="flex">
             <div className="bg-app-black-light h-6 w-6 mt-6 rounded-md"></div>
             <div className="flex flex-col pt-6 mx-4">
               <div className="text-base">Notifications</div>
-              <div className="flex flex-row my-4">
-                <EditButton
-                  title={
-                    <div className="flex flex-row items-center">
-                      <div className="rounded-full bg-app-green w-2 h-2 mx-2"></div>
-                      <div>Pixpel News</div>
-                    </div>
-                  }
-                />
-                <EditButton
-                  title={
-                    <div className="flex flex-row items-center">
-                      <div className="rounded-full bg-app-red w-2 h-2 mx-2"></div>
-                      <div>Activites</div>
-                    </div>
-                  }
-                />
-                <EditButton
-                  title={
-                    <div className="flex flex-row items-center">
-                      <div className="rounded-full bg-app-red w-2 h-2 mx-2"></div>
-                      <div>System Messages</div>
-                    </div>
-                  }
-                />
-                <EditButton
-                  title={
-                    <div className="flex flex-row items-center">
-                      <div className="rounded-full bg-app-green w-2 h-2 mx-2"></div>
-                      <div>Marketing & Email</div>
-                    </div>
-                  }
-                />
+              <div className="flex my-4 gap-3">
+                <NotificationButton title="PixPel News" handleClick={handlepixpel} selected={pixpel}/>
+                <NotificationButton title="Activities" handleClick={handleactivites} selected={activities}/>
+                <NotificationButton title="System Messages" handleClick={handlemessage} selected={messages}/>
+                <NotificationButton title="Marketing & Email" handleClick={handlemarketing} selected={marketing}/>
               </div>
             </div>
           </div>
           <div className="pt-12">
-            <EditButton
-              title={
-                <div className="flex flex-row items-center">
-                  <div className="rounded-full bg-app-red w-2 h-2 mx-2"></div>
-                  <div>Select All</div>
-                </div>
-              }
-            />
+            <NotificationButton title="Select All" handleClick={handleClick} selected={selected}/>
           </div>
         </div>
       </div>
