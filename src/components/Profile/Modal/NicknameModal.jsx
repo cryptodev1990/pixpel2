@@ -1,47 +1,60 @@
 import React from "react";
 import EnableButton from "../../Button/EnableButton";
+import ModalHalfButton from "../../Button/ModalHalfButton";
 import NFTAvatar from "../../Avatar/NFTAvatar";
-import ProfileButton from "../../Button/ProfileButton";
 
 const NicknameModal = (props) => {
   return (
     <>
       {props.showModal ? (
-        <div className="bg-app-black-modal px-10 py-10 flex flex-col">
-          <div className="mb-8 text-lg">Set a customized nickname</div>
-          <div className="text-sm">Nickname</div>
-          <input
-            className="w-full h-6 px-2 items-center bg-app-black text-gray-500"
-            placeholder="Avatar9281746199"
-          />
-          <div className="mt-4 mb-2">Select avatar</div>
-          <div className="flex gap-3">
-            <ProfileButton title="Default" />
-            <ProfileButton title="NFT" />
+        <>
+          <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div
+              className="fixed inset-0 w-full h-full bg-black opacity-40"
+              onClick={() => props.setShowModal(false)}
+            ></div>
+            <div className="flex items-center px-4 py-6 min-h-screen">
+              <div
+                className="relative flex flex-col w-full max-w-lg p-4 mx-auto 
+															bg-app-black rounded-xl shadow-lg px-12 py-12 text-lg"
+              >
+                <div className="text-lg mb-6">Set a customized nickname</div>
+                <div className="text-sm mb-2">Nickname</div>
+                <input
+                  className="w-full h-12 px-6 items-center bg-app-black-button rounded-md text-gray-500 mb-6"
+                  placeholder="Avatar9281746199"
+                />
+                <div className="mb-3">Select avatar</div>
+                <div className="flex gap-4 mb-4">
+                  <EnableButton title="Default" />
+                  <EnableButton title="NFT" />
+                </div>
+                <div className="grid grid-cols-4 gap-2">
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                  <NFTAvatar />
+                </div>
+                <div className="flex mt-4 mb-10 gap-4 w-full">
+                  <ModalHalfButton title="Cancel" />
+                  <ModalHalfButton title="Apply" />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-4 gap-5">
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-            <NFTAvatar />
-          </div>
-          <div className="flex mt-12 mb-10">
-            <EnableButton title="Cancel" />
-            <EnableButton title="Apply" />
-          </div>
-        </div>
+        </>
       ) : null}
     </>
   );
