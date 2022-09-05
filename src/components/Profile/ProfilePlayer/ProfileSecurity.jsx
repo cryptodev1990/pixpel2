@@ -8,7 +8,9 @@ const ProfileSecurity = () => {
       <div className="text-3xl">Security</div>
       <div className="xl:flex-row flex flex-col gap-6 items-baseline mt-6">
         {securityList.map((menu, idx) => {
-          return <SecurityButton key={idx} title={menu.title} />;
+          return (
+            <SecurityButton key={idx} title={menu.title} />
+          );
         })}
       </div>
     </div>
