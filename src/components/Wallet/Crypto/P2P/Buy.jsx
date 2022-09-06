@@ -1,12 +1,13 @@
 import React from "react";
 import BuyButton from "../../../Button/BuyButton";
 import { buyList } from "../dataList";
+import Setting from "./Setting";
 
 const Sell = () => {
   return (
     <div>
-    <div className="flex mt-8 w-full">
-      <table className="table-auto w-full">
+      <Setting />
+      <table className="table-auto w-full mt-10">
         <thead>
           <tr>
             <td className="text-gray-400 w-1/6">User</td>
@@ -37,9 +38,7 @@ const Sell = () => {
                   </div>
                 </td>
                 <td>
-                  <div className="w-1/2">
-                    {menu.Terms}
-                  </div>
+                  <div className="w-1/2">{menu.Terms}</div>
                 </td>
                 <td>
                   <BuyButton title={menu.Action} />
@@ -50,8 +49,7 @@ const Sell = () => {
         </tbody>
       </table>
     </div>
-  </div>
-  )
-}
+  );
+};
 
 export default Sell;
