@@ -4,7 +4,6 @@ import { modeList } from "./Crypto/dataList";
 import { buysell } from "./Crypto/dataList";
 import Sell from "./Crypto/P2P/Sell";
 import Buy from "./Crypto/P2P/Buy";
-import Setting from "./Crypto/P2P/Setting";
 
 const BuyCrypto = () => {
   const [modeSelected, setModeSelected] = React.useState(0);

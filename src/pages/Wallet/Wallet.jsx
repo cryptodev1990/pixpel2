@@ -2,7 +2,7 @@ import React from "react";
 import { Header } from "../../components";
 import ProfileButton from "../../components/Button/ProfileButton";
 import { menuList } from "./dataList";
-import Overview from "../../components/Wallet/Overview";
+// import Overview from "../../components/Wallet/Overview";
 import BuyCrypto from "../../components/Wallet/BuyCrypto";
 
 const Wallet = () => {
