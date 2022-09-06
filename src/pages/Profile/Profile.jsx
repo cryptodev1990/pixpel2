@@ -34,7 +34,7 @@ const Profile = () => {
     <>
       <Header />
       <div className="flex xl:flex-row flex-col px-14 w-full min-h-screen gap-8 pb-80">
-        <div className="flex flex-col xl:w-1/5 w-full bg-app-black rounded-xl h-80 px-4 py-4 gap-2 xl:text-base">
+        <div className="flex flex-col xl:w-1/5 w-full bg-app-black rounded-xl h-max px-4 py-8 gap-2 xl:text-base">
           {menuList.map((menu, idx) => {
             return (
               <ProfileButton
