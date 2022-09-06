@@ -3,6 +3,7 @@ import { Header } from "../../components";
 import ProfileButton from "../../components/Button/ProfileButton";
 import { menuList } from "./dataList";
 import Overview from "../../components/Wallet/Overview";
+import BuyCrypto from "../../components/Wallet/BuyCrypto";
 
 const Wallet = () => {
   const [menuButtonIndex, setMenuButtonIndex] = React.useState(0);
@@ -27,7 +28,8 @@ const Wallet = () => {
           })}
         </div>
 				<div className="flex flex-col xl:w-4/5 x-full">
-					<Overview />
+					{/* <Overview /> */}
+					<BuyCrypto />
 				</div>
       </div>
     </>

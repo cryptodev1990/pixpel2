@@ -36,6 +36,13 @@ module.exports = {
           }
         }
       },
+      textColor: {
+        app: {
+          blue: {
+            DEFAULT: '#0095C8',
+          }
+        }
+      }
     },
   },
   plugins: [],
