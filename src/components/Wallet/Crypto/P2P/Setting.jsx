@@ -8,7 +8,7 @@ const Setting = () => {
         <div>Amount</div>
         <div className="rounded flex items-center px-3 bg-app-black-button py-3">
           <div className="text-gray-400 mr-2 text-sm">Enter Amount</div>
-          <div className=" border-r px-3 border-gray-400 mr-2">UAH</div>
+          <div className=" border-r-2 px-3 border-gray-500 mr-2">UAH</div>
           <div className="text-app-blue">Search</div>
         </div>
       </div>

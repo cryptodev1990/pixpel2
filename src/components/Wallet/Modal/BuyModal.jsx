@@ -1,50 +1,9 @@
 import React from "react";
-import ModalPurchaseButton from "../../Button/ModalPurchaseButton";
-import ModalHalfButton from "../../Button/ModalHalfButton";
-import ModalSelectHalfButton from "../../Button/ModalSelectHalfButton";
-import { useEffect } from "react";
+import PIXP from "../../../asssets/images/UserHome/bnb.png";
+import BTC from "../../../asssets/images/UserHome/btc.png";
+import HelpCenterButton from "../../Button/HelpCenterButton";
 
-const ConfirmationModal = (props) => {
-  const [purchaseSelected, setPurchaseSelected] = React.useState(false);
-  const handlepurchaseClick = () => {
-    setPurchaseSelected(!purchaseSelected);
-  };
-  const [marketSelected, setMarketSelected] = React.useState(false);
-  const handlemarketClick = () => {
-    setMarketSelected(!marketSelected);
-  };
-  const [buySelected, setBuySelected] = React.useState(false);
-  const handlebuyClick = () => {
-    setBuySelected(!buySelected);
-  };
-  const [sellSelected, setSellSelected] = React.useState(false);
-  const handlesellClick = () => {
-    setSellSelected(!sellSelected);
-  };
-  const [selected, setSelected] = React.useState(false);
-  const setAll = (flag) => {
-    setBuySelected(flag);
-    setSellSelected(flag);
-    setPurchaseSelected(flag);
-    setMarketSelected(flag);
-  };
-  const handleClick = () => {
-    if (purchaseSelected && buySelected && sellSelected && marketSelected) {
-      setSelected(false);
-      setAll(false);
-    } else {
-      setSelected(true);
-      setAll(true);
-    }
-  };
-  useEffect(() => {
-    setSelected(
-      purchaseSelected && buySelected && sellSelected && marketSelected
-    );
-  }, [purchaseSelected, buySelected, sellSelected, marketSelected]);
-  const pictureClassName = "rounded-full h-3 w-3";
-  const className =
-    "mb-5 flex items-center justify-center w-full h-14 gap-3 rounded-md hover:bg-app-blue cursor-pointer";
+const BuyModal = (props) => {
   return (
     <>
       {props.showModal ? (
@@ -55,59 +14,30 @@ const ConfirmationModal = (props) => {
               onClick={() => props.setShowModal(false)}
             ></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
-              <div
-                className="relative flex flex-col w-full max-w-lg p-4 mx-auto 
-                            bg-app-black rounded-xl shadow-lg px-12 py-12 text-lg"
-              >
-                <div className="text-xl mb-3">Order confirmation reminders</div>
-                <div className="mb-8 text-sm text-gray-400">
-                  When the dunction enable you must reooNFT every time order is
-                  suring
+              <div className="relative flex flex-col w-full max-w-lg p-4 mx-auto bg-app-black rounded-xl shadow-lg px-6 py-6 text-lg">
+                <div>Pay:</div>
+                <div className="flex bg-app-black-button rounded-md px-3 items-center w-full justify-between py-3 mt-2 mb-6">
+                  <div className="flex items-center">
+                    <img src={PIXP} alt="PIXP" className="w-5 h-5" />
+                    <div className="border-r-2 px-3 border-gray-500 mr-2">PIPX</div>
+                    <div className="text-gray-400">1000 000.0000</div>
+                  </div>
+                  <div className="text-app-blue text-lg">MAX</div>
                 </div>
-                <div
-                  className={
-                    className +
-                    (selected ? " bg-app-blue" : " bg-app-black-button")
-                  }
-                  onClick={handleClick}
-                >
-                  <div
-                    className={
-                      pictureClassName +
-                      (selected ? " bg-app-green" : " bg-app-red")
-                    }
-                  ></div>
-                  <div className="text-base">Select All</div>
+                <div>Receive:</div>
+                <div className="flex bg-app-black-button rounded-md px-3 items-center w-full py-3 mt-2">
+                  <div className="flex items-center">
+                    <img src={BTC} alt="PIXP" className="w-5 h-5" />
+                    <div className="border-r-2 px-3 border-gray-500 mr-2">BTC</div>
+                    <div>84.2252900000</div>
+                  </div>
                 </div>
-                <div className="flex gap-4 mb-4">
-                  <ModalSelectHalfButton
-                    title="Purchase NFT"
-                    handleClick={handlepurchaseClick}
-                    selected={purchaseSelected}
-                  />
-                  <ModalSelectHalfButton
-                    title="Market order"
-                    handleClick={handlemarketClick}
-                    selected={marketSelected}
-                  />
-                </div>
-                <div className="flex gap-4 mb-10">
-                  <ModalPurchaseButton
-                    title="Buy"
-                    selected={buySelected}
-                    handleClick={handlebuyClick}
-                  />
-                  <ModalPurchaseButton
-                    title="Sell"
-                    selected={sellSelected}
-                    handleClick={handlesellClick}
-                  />
-                </div>
-                <div className="flex mt-4 mb-10 gap-4 w-full">
-                  <ModalHalfButton title="Cancel" />
-                  <ModalHalfButton title="Apply" />
+                <div className="grid grid-cols-2 gap-4 my-8">
+                  <HelpCenterButton title="Cancel" />
+                  <HelpCenterButton title="Buy BTC" />
                 </div>
               </div>
+              
             </div>
           </div>
         </>
@@ -116,4 +46,4 @@ const ConfirmationModal = (props) => {
   );
 };
 
-export default ConfirmationModal;
+export default BuyModal;

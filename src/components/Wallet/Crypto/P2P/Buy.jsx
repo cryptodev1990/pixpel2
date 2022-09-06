@@ -3,7 +3,7 @@ import BuyButton from "../../../Button/BuyButton";
 import { buyList } from "../dataList";
 import Setting from "./Setting";
 
-const Sell = () => {
+const Buy = () => {
   return (
     <div>
       <Setting />
@@ -52,4 +52,4 @@ const Sell = () => {
   );
 };
 
-export default Sell;
+export default Buy;
