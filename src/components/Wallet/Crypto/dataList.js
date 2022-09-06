@@ -27,7 +27,7 @@ export const buysell = [
 export const buyList = [
   {
     id:1,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -38,7 +38,7 @@ export const buyList = [
   },
   {
     id:2,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -49,7 +49,7 @@ export const buyList = [
   },
   {
     id:3,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -60,7 +60,7 @@ export const buyList = [
   },
   {
     id:4,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -71,7 +71,7 @@ export const buyList = [
   },
   {
     id:5,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -82,7 +82,7 @@ export const buyList = [
   },
   {
     id:6,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -96,7 +96,7 @@ export const buyList = [
 export const sellList = [
   {
     id:1,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -107,7 +107,7 @@ export const sellList = [
   },
   {
     id:2,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -118,7 +118,7 @@ export const sellList = [
   },
   {
     id:3,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -129,7 +129,7 @@ export const sellList = [
   },
   {
     id:4,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -140,7 +140,7 @@ export const sellList = [
   },
   {
     id:5,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",
@@ -151,7 +151,7 @@ export const sellList = [
   },
   {
     id:6,
-    user: "Cerstkon",
+    User: "Cerstkon",
     Price: "30,000 MXN",
     Limit: {
       Available: "2 BTC",

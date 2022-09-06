@@ -10,19 +10,21 @@ import { menuList } from "./datalist";
 
 const Profile = () => {
   const [profileButtonIndex, setProfileButtonIndex] = useState(0);
-  const [showingComponent, setShowingComponent] = useState(<ProfilePlayerStat/>);
-  let temp; 
+  const [showingComponent, setShowingComponent] = useState(
+    <ProfilePlayerStat />
+  );
+  let temp;
   const handleClick = (idx) => () => {
     setProfileButtonIndex(idx);
-    switch(idx) {
+    switch (idx) {
       case 0:
-       temp = <ProfilePlayerStat />
-       break;
+        temp = <ProfilePlayerStat />;
+        break;
       case 1:
-        temp = <ProfileSettings />
+        temp = <ProfileSettings />;
         break;
       case 3:
-        temp = <ProfileSecurity />
+        temp = <ProfileSecurity />;
         break;
       default:
         break;

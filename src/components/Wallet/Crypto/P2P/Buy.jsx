@@ -1,6 +1,6 @@
 import React from "react";
-import CancelButton from "../../../Button/CancelButton";
-import { sellList } from "../dataList";
+import BuyButton from "../../../Button/BuyButton";
+import { buyList } from "../dataList";
 
 const Sell = () => {
   return (
@@ -17,7 +17,7 @@ const Sell = () => {
           </tr>
         </thead>
         <tbody className="px-4">
-          {sellList.map((menu, idx) => {
+          {buyList.map((menu, idx) => {
             return (
               <tr key={idx} className="border-b-2 border-app-black">
                 <td className="py-3">
@@ -42,7 +42,7 @@ const Sell = () => {
                   </div>
                 </td>
                 <td>
-                  <CancelButton title={menu.Action}></CancelButton>
+                  <BuyButton title={menu.Action} />
                 </td>
               </tr>
             );
