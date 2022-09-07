@@ -2,6 +2,7 @@ import React from "react";
 import BuyButton from "../../../Button/BuyButton";
 import { buyList } from "../dataList";
 import Setting from "./Setting";
+import Dropdown from "../../../DropDown/Dropdown";
 
 const Buy = () => {
   return (
@@ -48,6 +49,7 @@ const Buy = () => {
           })}
         </tbody>
       </table>
+      <Dropdown />
     </div>
   );
 };

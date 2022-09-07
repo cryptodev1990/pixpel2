@@ -18,7 +18,7 @@ const Setting = () => {
           <img src={BNB} className="h-5 w-5 mr-2" alt="BNB" />
           <div className="mr-3">BNB</div>
           <svg
-            class="h-4 w-4 text-gray-700"
+            className="h-4 w-4 text-gray-700"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
