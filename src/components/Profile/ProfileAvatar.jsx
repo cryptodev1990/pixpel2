@@ -4,11 +4,11 @@ import ExitButton from "../Button/ExitButton";
 
 const ProfileAvatar = () => {
   return (
-    <div className="flex bg-app-black rounded-lg h-40 w-full px-10 items-center justify-between">
+    <div className="flex bg-app-black rounded-lg h-auto w-full xl:px-10 px-4 items-center justify-between py-6">
       <div className="flex gap-4 items-center">
         <img
           src={Avatar}
-          className="flex xl:h-28 md:h-24 sm:h-16 xs:h-12 rounded-full"
+          className="flex xl:h-24 h-16 rounded-full"
           alt="avatar"
         />
         <div className="flex flex-col">

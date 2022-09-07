@@ -35,8 +35,8 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <div className="flex xl:flex-row flex-col px-14 w-full min-h-screen gap-8 pb-80">
-        <div className="flex flex-col xl:w-1/5 w-full bg-app-black rounded-xl h-max px-4 py-8 gap-2 xl:text-base">
+      <div className="flex md:flex-row flex-col xl:px-14 md:px-6 w-full min-h-screen gap-8 pb-80">
+        <div className="flex flex-col md:w-1/5 w-full bg-app-black rounded-xl h-max px-4 py-8 gap-2 xl:text-base">
           {menuList.map((menu, idx) => {
             return (
               <ProfileButton
@@ -49,7 +49,7 @@ const Profile = () => {
             );
           })}
         </div>
-        <div className="flex flex-col xl:w-4/5 x-full">
+        <div className="flex flex-col md:w-4/5 x-full">
           <ProfileAvatar />
           {showingComponent}
         </div>
