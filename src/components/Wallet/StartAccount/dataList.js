@@ -105,3 +105,164 @@ export const tableList = [
     PIXP: "3 000",
   },
 ]
+
+export const tablefiatList = [
+  {
+    id: 1,
+    Coin: "EURO",
+    Total: "50 000",
+    Available: "212 000",
+    Orders: "34 000",
+    PIXP: "3 000",
+  },
+  {
+    id: 2,
+    Coin: "USD",
+    Total: "50 000",
+    Available: "212 000",
+    Orders: "34 000",
+    PIXP: "3 000",
+  },
+  {
+    id: 3,
+    Coin: "USC",
+    Total: "90 000",
+    Available: "212 000",
+    Orders: "34 000",
+    PIXP: "3 000",
+  },
+  {
+    id: 4,
+    Coin: "FOUND",
+    Total: "50 000",
+    Available: "210 000",
+    Orders: "34 000",
+    PIXP: "3 000",
+  },
+  {
+    id: 5,
+    Coin: "FRAN",
+    Total: "60 000",
+    Available: "212 000",
+    Orders: "34 000",
+    PIXP: "3 000",
+  },
+  {
+    id: 6,
+    Coin: "DINAR",
+    Total: "30 000",
+    Available: "212 000",
+    Orders: "34 000",
+    PIXP: "3 000",
+  },
+  {
+    id: 7,
+    Coin: "RMB",
+    Total: "40 000",
+    Available: "212 000",
+    Orders: "34 000",
+    PIXP: "3 000",
+  },
+]
+
+export const stakingList = [
+  {
+    id: 1,
+    Game: "Crypto Bots",
+    Coin: "PIXP",
+    Rewards: "300 PIXP",
+    StakedAmount: "3 000 PIXP",
+    StartDate: "13-03-2022",
+    ESTAPY: "10%",
+    LockedDays: "120 days",
+    InvestDate: "3%"
+  },
+  {
+    id: 2,
+    Game: "Crypto Bots",
+    Coin: "PIXP",
+    Rewards: "300 PIXP",
+    StakedAmount: "3 000 PIXP",
+    StartDate: "13-03-2022",
+    ESTAPY: "10%",
+    LockedDays: "120 days",
+    InvestDate: "3%"
+  },
+  {
+    id: 3,
+    Game: "Crypto Bots",
+    Coin: "PIXP",
+    Rewards: "300 PIXP",
+    StakedAmount: "3 000 PIXP",
+    StartDate: "13-03-2022",
+    ESTAPY: "10%",
+    LockedDays: "120 days",
+    InvestDate: "3%"
+  },
+  {
+    id: 4,
+    Game: "Crypto Bots",
+    Coin: "PIXP",
+    Rewards: "300 PIXP",
+    StakedAmount: "3 000 PIXP",
+    StartDate: "13-03-2022",
+    ESTAPY: "10%",
+    LockedDays: "120 days",
+    InvestDate: "3%"
+  },
+  {
+    id: 5,
+    Game: "Crypto Bots",
+    Coin: "PIXP",
+    Rewards: "300 PIXP",
+    StakedAmount: "3 000 PIXP",
+    StartDate: "13-03-2022",
+    ESTAPY: "10%",
+    LockedDays: "120 days",
+    InvestDate: "3%"
+  },
+  {
+    id: 6,
+    Game: "Crypto Bots",
+    Coin: "PIXP",
+    Rewards: "300 PIXP",
+    StakedAmount: "3 000 PIXP",
+    StartDate: "13-03-2022",
+    ESTAPY: "10%",
+    LockedDays: "120 days",
+    InvestDate: "3%"
+  },
+  {
+    id: 7,
+    Game: "Crypto Bots",
+    Coin: "PIXP",
+    Rewards: "300 PIXP",
+    StakedAmount: "3 000 PIXP",
+    StartDate: "13-03-2022",
+    ESTAPY: "10%",
+    LockedDays: "120 days",
+    InvestDate: "3%"
+  },
+  {
+    id: 8,
+    Game: "Crypto Bots",
+    Coin: "PIXP",
+    Rewards: "300 PIXP",
+    StakedAmount: "3 000 PIXP",
+    StartDate: "13-03-2022",
+    ESTAPY: "10%",
+    LockedDays: "120 days",
+    InvestDate: "3%"
+  },
+  {
+    id: 9,
+    Game: "Crypto Bots",
+    Coin: "PIXP",
+    Rewards: "300 PIXP",
+    StakedAmount: "3 000 PIXP",
+    StartDate: "13-03-2022",
+    ESTAPY: "10%",
+    LockedDays: "120 days",
+    InvestDate: "3%"
+  },
+]

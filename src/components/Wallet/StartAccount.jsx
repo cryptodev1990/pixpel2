@@ -35,7 +35,7 @@ const StartAccount = () => {
               return <TokenButton key={idx} title={menu.title} />;
             })}
       </div>
-      <CoinTable />
+      <CoinTable idx={selectedIndex} />
     </div>
   );
 };
