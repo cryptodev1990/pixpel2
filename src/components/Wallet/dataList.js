@@ -271,22 +271,22 @@ export const transactionButtonList = [
   {
     id: 1,
     title: "CRYPTO",
+    Initial: "Deposit",
   },
   {
     id: 2,
     title: "FIAT",
+    Initial: "Past 30 days",
   },
   {
     id: 3,
     title: "TRANSFER",
+    Initial: "All",
   },
   {
     id: 4,
     title: "DISTRIBUTION",
-  },
-  {
-    id: 5,
-    title: "BNB CONVERT",
+    Initial: "All"
   },
 ]
 
