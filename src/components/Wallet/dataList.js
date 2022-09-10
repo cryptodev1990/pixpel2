@@ -266,3 +266,119 @@ export const stakingList = [
     InvestDate: "3%"
   },
 ]
+
+export const transactionButtonList = [
+  {
+    id: 1,
+    title: "CRYPTO",
+  },
+  {
+    id: 2,
+    title: "FIAT",
+  },
+  {
+    id: 3,
+    title: "TRANSFER",
+  },
+  {
+    id: 4,
+    title: "DISTRIBUTION",
+  },
+  {
+    id: 5,
+    title: "BNB CONVERT",
+  },
+]
+
+export const transactionList = [
+  {
+    id: 1,
+    time: "14:11:58",
+    type: "Deposit",
+    wallet: "212 000",
+    asset: "All",
+    amount: "3 000",
+    TxID: "2kk23981as0",
+    status: "Completed"
+  },
+  {
+    id: 2,
+    time: "14:11:58",
+    type: "Deposit",
+    wallet: "212 000",
+    asset: "All",
+    amount: "3 000",
+    TxID: "2kk23981as0",
+    status: "Completed"
+  },
+  {
+    id: 3,
+    time: "14:11:58",
+    type: "Deposit",
+    wallet: "212 000",
+    asset: "All",
+    amount: "3 000",
+    TxID: "2kk23981as0",
+    status: "Completed"
+  },
+  {
+    id: 4,
+    time: "14:11:58",
+    type: "Deposit",
+    wallet: "212 000",
+    asset: "All",
+    amount: "3 000",
+    TxID: "2kk23981as0",
+    status: "Completed"
+  },
+  {
+    id: 5,
+    time: "14:11:58",
+    type: "Deposit",
+    wallet: "212 000",
+    asset: "All",
+    amount: "3 000",
+    TxID: "2kk23981as0",
+    status: "Completed"
+  },
+  {
+    id: 6,
+    time: "14:11:58",
+    type: "Deposit",
+    wallet: "212 000",
+    asset: "All",
+    amount: "3 000",
+    TxID: "2kk23981as0",
+    status: "Completed"
+  },
+  {
+    id: 7,
+    time: "14:11:58",
+    type: "Deposit",
+    wallet: "212 000",
+    asset: "All",
+    amount: "3 000",
+    TxID: "2kk23981as0",
+    status: "Completed"
+  },
+  {
+    id: 8,
+    time: "14:11:58",
+    type: "Deposit",
+    wallet: "212 000",
+    asset: "All",
+    amount: "3 000",
+    TxID: "2kk23981as0",
+    status: "Completed"
+  },
+  {
+    id: 9,
+    time: "14:11:58",
+    type: "Deposit",
+    wallet: "212 000",
+    asset: "All",
+    amount: "3 000",
+    TxID: "2kk23981as0",
+    status: "Completed"
+  },
+]

@@ -1,7 +1,7 @@
 import React from "react";
 import StartAccountOverview from "./StartAccount/StartAccountOverview";
 import TokenButton from "../Button/TokenButton";
-import { tokenList, tokencoinList, fiatList } from "./StartAccount/dataList";
+import { tokenList, tokencoinList, fiatList } from "./dataList";
 import CoinTable from "./StartAccount/CoinTable";
 
 const StartAccount = () => {

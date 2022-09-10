@@ -1,6 +1,6 @@
 import React from "react";
 import TokenButton from "../../Button/TokenButton";
-import { stakingList } from "../StartAccount/dataList";
+import { stakingList } from "../dataList";
 import UnlockButton from "./UnlockButton";
 
 const LockedUnlocked = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { tableList, tablefiatList } from "./dataList";
+import { tableList, tablefiatList } from "../dataList";
 import SwapButton from "./SwapButton";
 import TradeButton from "./TradeButton";
 import BuyButton from "./BuyButton";
