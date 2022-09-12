@@ -1,3 +1,5 @@
+import Game1 from "../../asssets/images/market/nft1.jpg";
+import Game2 from "../../asssets/images/market/ply.png";
 export const tokenList = [
   {
     id: 1,
@@ -597,5 +599,53 @@ export const transactionList = [
     amount: "3 000",
     TxID: "2kk23981as0",
     status: "Completed"
+  },
+]
+
+export const NFTList = [
+  {
+    id: 1,
+    gaem: {Game1},
+    quantity: 30,
+    valuet: "300.000 PIXP",
+    startDate: "01/02/2023",
+    earning: "50.000 PIXP",
+    expenses: "25.000 PIXP"
+  },
+  {
+    id: 2,
+    gaem: {Game1},
+    quantity: 30,
+    valuet: "300.000 PIXP",
+    startDate: "01/02/2023",
+    earning: "50.000 PIXP",
+    expenses: "25.000 PIXP"
+  },
+  {
+    id: 3,
+    gaem: {Game2},
+    quantity: 30,
+    valuet: "300.000 PIXP",
+    startDate: "01/02/2023",
+    earning: "50.000 PIXP",
+    expenses: "25.000 PIXP"
+  },
+  {
+    id: 4,
+    gaem: {Game2},
+    quantity: 30,
+    valuet: "300.000 PIXP",
+    startDate: "01/02/2023",
+    earning: "50.000 PIXP",
+    expenses: "25.000 PIXP"
+  },
+  {
+    id: 5,
+    gaem: {Game1},
+    quantity: 30,
+    valuet: "300.000 PIXP",
+    startDate: "01/02/2023",
+    earning: "50.000 PIXP",
+    expenses: "25.000 PIXP"
   },
 ]

@@ -1,6 +1,6 @@
 import React from "react";
 import { paymentBankList } from "../dataList";
-import TradeButton from "./TradeButton";
+import TradeButton from "../StartAccount/TradeButton";
 
 const BankTable = () => {
   return (
@@ -17,7 +17,7 @@ const BankTable = () => {
         {paymentBankList.map((menu, idx) => {
           return (
             <tr key={idx} className="border-b-2 border-app-black">
-              <td>{menu.name}</td>
+              <td className="px-3 py-4">{menu.name}</td>
               <td>{menu.bankAccount}</td>
               <td>{menu.bankName}</td>
               <td>

@@ -1,5 +1,9 @@
 import cartReducer from './cartReducer';
-import { combineReducers } from "redux";
+import withdrawReducer from './withdrawReducer';
+import { combineReducers} from "redux";
 
-export default combineReducers({ cart: cartReducer });
+export default combineReducers({ 
+    cart: cartReducer,
+    withdraw: withdrawReducer 
+});
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { paymentCardList } from "../dataList";
-import TradeButton from "./TradeButton";
+import TradeButton from "../StartAccount/TradeButton";
 
 const CardTable = () => {
   return (
@@ -16,7 +16,7 @@ const CardTable = () => {
         {paymentCardList.map((menu, idx) => {
           return (
             <tr key={idx} className="border-b-2 border-app-black">
-              <td>{menu.type}</td>
+              <td className="px-2 py-4 w-1/2">{menu.type}</td>
               <td>{menu.Number}</td>
               <td>
                 <TradeButton title="Remove" />

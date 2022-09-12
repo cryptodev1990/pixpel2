@@ -3,17 +3,44 @@ import { Header } from "../../components";
 import ProfileButton from "../../components/Button/ProfileButton";
 import { menuList } from "./dataList";
 import Overview from "../../components/Wallet/Overview";
-import BuyCrypto from "../../components/Wallet/BuyCrypto";
 import StartAccount from "../../components/Wallet/StartAccount";
 import StakingAccount from "../../components/Wallet/StakingAccount";
 import TransactionHistory from "../../components/Wallet/TransactionHistory";
 import TradeAccount from "../../components/Wallet/TradeAccount";
 import GameAccount from "../../components/Wallet/GameAccount";
+import PaymentMethod from "../../components/Wallet/PaymentMethod";
+import NFTAccount from "../../components/Wallet/NFTAccount";
 
 const Wallet = () => {
+  const [tempComponent, setTempComponent] = React.useState(<Overview/>);
   const [menuButtonIndex, setMenuButtonIndex] = React.useState(0);
   const handleClick = (idx) => () => {
     setMenuButtonIndex(idx);
+    switch(idx) {
+      case 0:
+        setTempComponent(<Overview />);
+        break;
+      case 1:
+        setTempComponent(<PaymentMethod />);
+        break;
+      case 2:
+        setTempComponent(<StartAccount />);
+        break;
+      case 3:
+        setTempComponent(<GameAccount />);
+        break;
+      case 4:
+        setTempComponent(<TradeAccount />);
+        break;
+      case 5:
+        setTempComponent(<NFTAccount />);
+        break;
+      case 6:
+        setTempComponent(<StakingAccount />);
+        break;
+      default:
+        break;
+    }
   };
   return (
     <>
@@ -33,16 +60,12 @@ const Wallet = () => {
           })}
         </div>
         <div className="flex flex-col xl:w-4/5 x-full">
-          {/* <StartAccount /> */}
-          {/* <Overview /> */}
-          {/* <BuyCrypto /> */}
-          {/* <StakingAccount /> */}
-          {/* <TransactionHistory /> */}
-          {/* <TradeAccount /> */}
-          <GameAccount />
+          {tempComponent}
         </div>
       </div>
     </>
   );
 };
+
+
 export default Wallet;

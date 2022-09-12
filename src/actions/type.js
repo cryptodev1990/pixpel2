@@ -1,3 +1,6 @@
 export const ADD_CART = "ADD_CART";
 export const REMOVE_CART = "REMOVE_CART";
 export const FETCH_CARDS = "FETCH_CARDS";
+
+export const WITHDRAW_SHOW_MODAL = "WITHDRAW_SHOW_MODAL";
+export const WITHDRAW_CLOSE_MODAL = "WITHDRAW_CLOSE_MODAL"
