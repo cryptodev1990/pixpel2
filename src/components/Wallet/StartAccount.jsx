@@ -12,7 +12,7 @@ const StartAccount = () => {
 
   return (
     <div className="flex flex-col">
-      <StartAccountOverview />
+      <StartAccountOverview selected={selectedIndex} />
       <div className="flex gap-4 mt-6 mb-3">
         {tokenList.map((menu, idx) => {
           return (
