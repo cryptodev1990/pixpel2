@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const SwapMasterLimit = () => {
-    return(
-        <>Hi</>
-    );
-}
+  return <>Hi</>;
+};
 
 export default SwapMasterLimit;

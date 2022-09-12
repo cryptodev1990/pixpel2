@@ -3,25 +3,22 @@ import { useSelector, useDispatch } from "react-redux";
 import { withdrawCloseModal } from "../../actions/withdraw";
 
 export default function WithdrawalModal() {
-  
-  const selector =  useSelector(state => state.withdraw);
+  const selector = useSelector((state) => state.withdraw);
   const dispatch = useDispatch();
-  
-	return (
-		<>
-			{ selector ? (
-				<>
-					<div className="fixed inset-0 z-10 overflow-y-auto">
-						<div
-							className="fixed inset-0 w-full h-full bg-black opacity-40"
-							onClick={() => dispatch(withdrawCloseModal())}
-						></div>
-						<div className="flex items-center min-h-screen px-4 py-8">
-							<div className="relative flex flex-col px-10 py-10 mx-auto text-lg shadow-lg bg-app-black rounded-xl">
+
+  return (
+    <>
+      {selector ? (
+        <>
+          <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div
+              className="fixed inset-0 w-full h-full bg-black opacity-40"
+              onClick={() => dispatch(withdrawCloseModal())}
+            ></div>
+            <div className="flex items-center min-h-screen px-4 py-8">
+              <div className="relative flex flex-col px-10 py-10 mx-auto text-lg shadow-lg bg-app-black rounded-xl">
                 <div className="flex justify-start mb-5">
-                  <div className="text-2xl font-medium">
-                    Withdraw
-                  </div>
+                  <div className="text-2xl font-medium">Withdraw</div>
                 </div>
                 <div className="flex flex-col px-8 py-5 mb-5 rounded-md bg-app-black-light">
                   <div className="flex flex-row justify-start">
@@ -70,15 +67,13 @@ export default function WithdrawalModal() {
                   </div>
                 </div>
                 <div className="flex items-center justify-center h-16 rounded-md cursor-pointer h-18 bg-app-blue hover:bg-app-blue">
-                  <div className="text-lg">
-                    confirm
-                  </div>
+                  <div className="text-lg">confirm</div>
                 </div>
-							</div>
-						</div>
-					</div>
-				</>
-			  ) : null}
-		</>
-	);
+              </div>
+            </div>
+          </div>
+        </>
+      ) : null}
+    </>
+  );
 }
