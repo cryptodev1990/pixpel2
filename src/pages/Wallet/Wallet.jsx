@@ -17,6 +17,9 @@ const Wallet = () => {
   const handleClick = (idx) => () => {
     setMenuButtonIndex(idx);
     switch(idx) {
+      case -1:
+        setTempComponent(<TransactionHistory />);
+        break;
       case 0:
         setTempComponent(<Overview />);
         break;
