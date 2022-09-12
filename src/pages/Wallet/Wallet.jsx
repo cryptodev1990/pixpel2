@@ -7,6 +7,8 @@ import BuyCrypto from "../../components/Wallet/BuyCrypto";
 import StartAccount from "../../components/Wallet/StartAccount";
 import StakingAccount from "../../components/Wallet/StakingAccount";
 import TransactionHistory from "../../components/Wallet/TransactionHistory";
+import TradeAccount from "../../components/Wallet/TradeAccount";
+import GameAccount from "../../components/Wallet/GameAccount";
 
 const Wallet = () => {
   const [menuButtonIndex, setMenuButtonIndex] = React.useState(0);
@@ -35,7 +37,9 @@ const Wallet = () => {
           {/* <Overview /> */}
           {/* <BuyCrypto /> */}
           {/* <StakingAccount /> */}
-          <TransactionHistory />
+          {/* <TransactionHistory /> */}
+          {/* <TradeAccount /> */}
+          <GameAccount />
         </div>
       </div>
     </>

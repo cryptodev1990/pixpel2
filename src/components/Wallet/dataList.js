@@ -369,6 +369,144 @@ export const dropdownList = [
   },
 ]
 
+export const paymentBankList = [
+  {
+    id: 1,
+    name: "Juan Vivas",
+    bankAccount: "xxxxxxxxxxxxx",
+    bankName: "HSBC"
+  },
+  {
+    id: 2,
+    name: "Juan Vivas",
+    bankAccount: "xxxxxxxxxxxxx",
+    bankName: "HSBC"
+  },
+  {
+    id: 3,
+    name: "Juan Vivas",
+    bankAccount: "xxxxxxxxxxxxx",
+    bankName: "HSBC"
+  },
+  {
+    id: 4,
+    name: "Juan Vivas",
+    bankAccount: "xxxxxxxxxxxxx",
+    bankName: "HSBC"
+  },
+  {
+    id: 5,
+    name: "Juan Vivas",
+    bankAccount: "xxxxxxxxxxxxx",
+    bankName: "HSBC"
+  },
+  {
+    id: 6,
+    name: "Juan Vivas",
+    bankAccount: "xxxxxxxxxxxxx",
+    bankName: "HSBC"
+  },
+]
+
+export const paymentCardList = [
+  {
+    id: 1,
+    type: "VISA",
+    Number: "4442xxxx9375"
+  },
+  {
+    id: 2,
+    type: "VISA",
+    Number: "4442xxxx9375"
+  },
+  {
+    id: 3,
+    type: "VISA",
+    Number: "4442xxxx9375"
+  },
+  {
+    id: 4,
+    type: "VISA",
+    Number: "4442xxxx9375"
+  },
+  {
+    id: 5,
+    type: "VISA",
+    Number: "4442xxxx9375"
+  },
+  {
+    id: 6,
+    type: "VISA",
+    Number: "4442xxxx9375"
+  },
+]
+
+export const gamingList = [
+  {
+    id: 1,
+    coin: "CPAN",
+    game: "Crypto Bots",
+    reward: "100 000",
+    deposit: "50 000",
+    available: "150 000",
+    daw: "3 000"
+  },
+  {
+    id: 2,
+    coin: "CPAN",
+    game: "Crypto Bots",
+    reward: "100 000",
+    deposit: "50 000",
+    available: "150 000",
+    daw: "3 000"
+  },
+  {
+    id: 3,
+    coin: "CPAN",
+    game: "Crypto Bots",
+    reward: "100 000",
+    deposit: "50 000",
+    available: "150 000",
+    daw: "3 000"
+  },
+  {
+    id: 4,
+    coin: "CPAN",
+    game: "Crypto Bots",
+    reward: "100 000",
+    deposit: "50 000",
+    available: "150 000",
+    daw: "3 000"
+  },
+  {
+    id: 5,
+    coin: "CPAN",
+    game: "Crypto Bots",
+    reward: "100 000",
+    deposit: "50 000",
+    available: "150 000",
+    daw: "3 000"
+  },
+  {
+    id: 6,
+    coin: "CPAN",
+    game: "Crypto Bots",
+    reward: "100 000",
+    deposit: "50 000",
+    available: "150 000",
+    daw: "3 000"
+  },
+  {
+    id: 7,
+    coin: "CPAN",
+    game: "Crypto Bots",
+    reward: "100 000",
+    deposit: "50 000",
+    available: "150 000",
+    daw: "3 000"
+  },
+]
+
 export const transactionList = [
   {
     id: 1,

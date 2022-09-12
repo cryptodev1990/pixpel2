@@ -42,9 +42,9 @@ const CoinTable = (props) => {
               </td>
               <td>
                 <div className="flex gap-4">
-                  <SwapButton />
-                  <TradeButton />
-                  <BuyButton />
+                  <SwapButton title="Swap" />
+                  <TradeButton title="Trade" />
+                  <BuyButton title="Buy" />
                 </div>
               </td>
             </tr>
