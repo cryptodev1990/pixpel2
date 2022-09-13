@@ -15,7 +15,7 @@ const StartAccountOverview = ({ selected }) => {
     <div className="flex justify-between w-full h-max pt-4 pb-10 px-10 bg-app-black rounded-lg">
       <div className="flex flex-col w-full">
         <div className="flex md:flex-row flex-col gap-3 justify-between mb-8 md:items-end">
-          <div className="text-xl font-bold">START ACCOUNT</div>
+          <div className="text-3xl">START ACCOUNT</div>
           <TransactionHistoryButton />
         </div>
         <div className="flex xl:flex-row flex-col xl:items-end pr-16 gap-10">

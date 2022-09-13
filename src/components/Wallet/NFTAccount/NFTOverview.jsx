@@ -4,7 +4,7 @@ const NFTOverview = () => {
   return (
     <div className="flex justify-between w-full h-max py-8 px-5 bg-app-black rounded-lg items-baseline">
       <div className="flex flex-col">
-        <div className="text-2xl mb-3">NFT Account</div>
+        <div className="text-3xl mb-3">NFT Account</div>
         <div className="flex gap-10">
           <div className="flex flex-col">
             <div className="text-sm text-gray-400 mb-2">Value Purchase</div>
