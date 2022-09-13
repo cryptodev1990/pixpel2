@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ModalPurchaseButton from "../../Button/ModalPurchaseButton";
 import ModalHalfButton from "../../Button/ModalHalfButton";
 import ModalSelectHalfButton from "../../Button/ModalSelectHalfButton";
-import { useEffect } from "react";
 
 const ConfirmationModal = (props) => {
   const [purchaseSelected, setPurchaseSelected] = useState(false);
   const handlepurchaseClick = () => {
     setPurchaseSelected(!purchaseSelected);
   };
+
+  const handleModalClick = () => {
+    props.setShowModal(false);
+  };
+  
   const [marketSelected, setMarketSelected] = useState(false);
   const handlemarketClick = () => {
     setMarketSelected(!marketSelected);
@@ -104,8 +108,14 @@ const ConfirmationModal = (props) => {
                   />
                 </div>
                 <div className="flex mt-4 mb-10 gap-4 w-full">
-                  <ModalHalfButton title="Cancel" />
-                  <ModalHalfButton title="Apply" />
+                  <ModalHalfButton
+                    title="Cancel"
+                    handleClick={handleModalClick}
+                  />
+                  <ModalHalfButton
+                    title="Apply"
+                    handleClick={handleModalClick}
+                  />
                 </div>
               </div>
             </div>

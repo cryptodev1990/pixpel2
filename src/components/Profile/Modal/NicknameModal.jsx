@@ -5,6 +5,9 @@ import NFTAvatar from "../../Avatar/NFTAvatar";
 import "./modal.css";
 
 const NicknameModal = (props) => {
+  const handleClick = () => {
+    props.setShowModal(false);
+  };
   return (
     <>
       {props.showModal ? (
@@ -53,8 +56,8 @@ const NicknameModal = (props) => {
                   <NFTAvatar />
                 </div>
                 <div className="flex mt-4 mb-10 gap-4 w-full">
-                  <ModalHalfButton title="Cancel" />
-                  <ModalHalfButton title="Apply" />
+                  <ModalHalfButton title="Cancel" handleClick={handleClick} />
+                  <ModalHalfButton title="Apply" handleClick={handleClick} />
                 </div>
               </div>
             </div>

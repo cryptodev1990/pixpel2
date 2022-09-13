@@ -8,26 +8,26 @@ const Preferences = () => {
   const [activities, setActivities] = useState(false);
   const handleactivites = () => {
     setActivities(!activities);
-  }
+  };
   const [pixpel, setPixpel] = useState(false);
   const handlepixpel = () => {
     setPixpel(!pixpel);
-  }
+  };
   const [messages, setMessages] = useState(false);
   const handlemessage = () => {
     setMessages(!messages);
-  }
+  };
   const [marketing, setMarketing] = useState(false);
   const handlemarketing = () => {
     setMarketing(!marketing);
-  }
+  };
   const [selected, setSelected] = useState(false);
   const setAll = (flag) => {
     setActivities(flag);
     setPixpel(flag);
     setMessages(flag);
     setMarketing(flag);
-  }
+  };
 
   const handleClick = () => {
     if (activities && pixpel && messages && marketing) {
@@ -37,12 +37,10 @@ const Preferences = () => {
       setSelected(true);
       setAll(true);
     }
-  }
+  };
 
   useEffect(() => {
-    setSelected(
-      activities && pixpel && messages && marketing
-    );
+    setSelected(activities && pixpel && messages && marketing);
   }, [activities, pixpel, messages, marketing]);
 
   return (
@@ -82,15 +80,35 @@ const Preferences = () => {
             <div className="flex flex-col pt-6 mx-4">
               <div className="text-base">Notifications</div>
               <div className="flex my-4 gap-3">
-                <NotificationButton title="PixPel News" handleClick={handlepixpel} selected={pixpel}/>
-                <NotificationButton title="Activities" handleClick={handleactivites} selected={activities}/>
-                <NotificationButton title="System Messages" handleClick={handlemessage} selected={messages}/>
-                <NotificationButton title="Marketing & Email" handleClick={handlemarketing} selected={marketing}/>
+                <NotificationButton
+                  title="PixPel News"
+                  handleClick={handlepixpel}
+                  selected={pixpel}
+                />
+                <NotificationButton
+                  title="Activities"
+                  handleClick={handleactivites}
+                  selected={activities}
+                />
+                <NotificationButton
+                  title="System Messages"
+                  handleClick={handlemessage}
+                  selected={messages}
+                />
+                <NotificationButton
+                  title="Marketing & Email"
+                  handleClick={handlemarketing}
+                  selected={marketing}
+                />
               </div>
             </div>
           </div>
           <div className="pt-12">
-            <NotificationButton title="Select All" handleClick={handleClick} selected={selected}/>
+            <NotificationButton
+              title="Select All"
+              handleClick={handleClick}
+              selected={selected}
+            />
           </div>
         </div>
       </div>
