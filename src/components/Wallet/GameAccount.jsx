@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import GamingAccountOverview from "./GamingAccount/GamingAccountOverview";
 import TokenButton from "../Button/TokenButton";
 import GamingTable from "./GamingAccount/GamingTable";
 
 const GameAccount = () => {
-  const [selected, setSelected] = React.useState(0);
+  const [selected, setSelected] = useState(0);
 
   const handleClick = (idx) => () => {
     setSelected(idx);

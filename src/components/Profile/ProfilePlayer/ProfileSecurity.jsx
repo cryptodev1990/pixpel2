@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { securityList } from "../../../pages/Profile/datalist";
 import SecurityButton from "../../Button/SecurityButton";
 
 const ProfileSecurity = () => {
-  const [selected, setSelected] = React.useState(0);
+  const [selected, setSelected] = useState(0);
 
   const handleClick = (idx) => () => {
     setSelected(idx);

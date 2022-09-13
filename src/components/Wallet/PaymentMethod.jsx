@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BankTable from "./Payment/BankTable";
 import CardTable from "./Payment/CardTable";
 import FiatBanks from "./Payment/FiatBanks";
@@ -6,10 +6,10 @@ import FiatCards from "./Payment/FiatCards";
 import TokenButton from "../Button/TokenButton";
 
 const PaymentMethod = () => {
-  const [selected, setSelected] = React.useState(0);
-  const [tempOverview, setTempOverview] = React.useState(<FiatBanks />);
-  const [tempTable, setTempTable] = React.useState(<BankTable />);
-  const [word, setWord] = React.useState("Bank Transfer");
+  const [selected, setSelected] = useState(0);
+  const [tempOverview, setTempOverview] = useState(<FiatBanks />);
+  const [tempTable, setTempTable] = useState(<BankTable />);
+  const [word, setWord] = useState("Bank Transfer");
   const handleClick = (idx) => () => {
     setSelected(idx);
     if (idx === 0) {

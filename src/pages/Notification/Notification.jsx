@@ -1,6 +1,6 @@
 import "./Notification.scss"
 import { Header } from "../../components";
-import React from "react";
+import React, { useState } from "react";
 import ProfileButton from "../../components/Button/ProfileButton";
 
 
@@ -33,8 +33,8 @@ let temp = [];
 
 const Notification = () => {
 
-	const [componentArray, setComponentArray] = React.useState([]);
-	const [profileButtonIndex, setProfileButtonIndex] = React.useState(0);
+	const [componentArray, setComponentArray] = useState([]);
+	const [profileButtonIndex, setProfileButtonIndex] = useState(0);
 
 	const handleClick = (idx) => () => {
 		setProfileButtonIndex(idx);

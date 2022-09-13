@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import TokenButton from "../Button/TokenButton";
 import { transactionButtonList, dropdownList } from "./dataList";
 import Dropdown from "./Transaction/Dropdown";
 import TransactionTable from "./Transaction/TransactionTable";
 
 const TransactionHistory = () => {
-  const [buttonSelected, setButtonSelected] = React.useState(0);
+  const [buttonSelected, setButtonSelected] = useState(0);
   const handleClick = (idx) => () => {
     setButtonSelected(idx);
   };

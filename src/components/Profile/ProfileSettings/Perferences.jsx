@@ -1,27 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import NotificationButton from "../../Button/NotificationButton";
 import ConfirmationModal from "../Modal/ConfirmationModal";
 
 const Preferences = () => {
-  const [showModal, setShowModal] = React.useState(false);
-  const [activities, setActivities] = React.useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [activities, setActivities] = useState(false);
   const handleactivites = () => {
     setActivities(!activities);
   }
-  const [pixpel, setPixpel] = React.useState(false);
+  const [pixpel, setPixpel] = useState(false);
   const handlepixpel = () => {
     setPixpel(!pixpel);
   }
-  const [messages, setMessages] = React.useState(false);
+  const [messages, setMessages] = useState(false);
   const handlemessage = () => {
     setMessages(!messages);
   }
-  const [marketing, setMarketing] = React.useState(false);
+  const [marketing, setMarketing] = useState(false);
   const handlemarketing = () => {
     setMarketing(!marketing);
   }
-  const [selected, setSelected] = React.useState(false);
+  const [selected, setSelected] = useState(false);
   const setAll = (flag) => {
     setActivities(flag);
     setPixpel(flag);

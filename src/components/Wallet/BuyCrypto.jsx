@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TokenButton from "../Button/TokenButton";
 import { modeList } from "./Crypto/dataList";
 import { buysell } from "./Crypto/dataList";
@@ -6,9 +6,9 @@ import Sell from "./Crypto/P2P/Sell";
 import Buy from "./Crypto/P2P/Buy";
 
 const BuyCrypto = () => {
-  const [modeSelected, setModeSelected] = React.useState(0);
-  const [buysellSelected, setBuysellSelected] = React.useState(1);
-  const [buyCryptoComponent, setBuyCryptoComponent] = React.useState(<Sell />);
+  const [modeSelected, setModeSelected] = useState(0);
+  const [buysellSelected, setBuysellSelected] = useState(1);
+  const [buyCryptoComponent, setBuyCryptoComponent] = useState(<Sell />);
   let temp;
   const buysellclassName = "flex gap-3";
   const handleModeClick = (idx) => () => {

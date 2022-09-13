@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { tokenList } from "../../pages/Profile/datalist";
 import TokenButton from "../../components/Button/TokenButton";
 import EstimateBalance from "./TokenState/EstimateBalance";
@@ -9,7 +9,7 @@ import ProfileOpenOrders from "./ProfilePlayer/ProfileOpenOrders";
 import ProfileSecurity from "./ProfilePlayer/ProfileSecurity";
 
 const ProfilePlayerStat = () => {
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleClick = (idx) => () => {
     setSelectedIndex(idx);

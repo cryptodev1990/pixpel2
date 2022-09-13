@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Menu} from "../index";
 import Modal from "react-modal";
 
@@ -71,10 +71,10 @@ const Header = (props) => {
             borderRadius: '10px'
         },
     };
-    const [modalIsOpen, setIsOpen] = React.useState(false);
-    const [modalIsOpenLogin, setIsOpenLogin] = React.useState(false);
-    const [modalIsOpenRegister, setIsOpenRegister] = React.useState(false);
-    const [modalIsOpenVerify, setIsOpenVerify] = React.useState(false);
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [modalIsOpenLogin, setIsOpenLogin] = useState(false);
+    const [modalIsOpenRegister, setIsOpenRegister] = useState(false);
+    const [modalIsOpenVerify, setIsOpenVerify] = useState(false);
     Modal.defaultStyles.overlay.backgroundColor = 'rgba(0, 0, 0, 0.5)';
 
     function openModal() {

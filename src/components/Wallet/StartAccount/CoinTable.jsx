@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { tableList, tablefiatList } from "../dataList";
 import SwapButton from "./SwapButton";
 import TradeButton from "./TradeButton";
 import BuyButton from "./BuyButton";
 
 const CoinTable = (props) => {
-  const [tempTable, setTempTable] = React.useState(tableList);
+  const [tempTable, setTempTable] = useState(tableList);
   React.useEffect(() => {
     props.idx === 0 ? setTempTable(tablefiatList) : setTempTable(tableList);
   }, [props.idx]);

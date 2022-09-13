@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import EditButton from "../../Button/EditButton";
 import NicknameModal from "../Modal/NicknameModal";
 
 const MyProfile = () => {
-  const [showModal, setShowModal] = React.useState(false);
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       <div className="mt-20 mb-8 font-semibold text-3xl">My Profile</div>

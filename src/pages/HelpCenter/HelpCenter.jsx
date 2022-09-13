@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "../../components";
 import HelpCenterButton from "../../components/Button/HelpCenterButton";
 import MailImage from "../../asssets/images/Mail.svg";
@@ -6,7 +6,7 @@ import HelpAvatar from "../../components/Avatar/HelpAvatar";
 import Mail from "../../components/Message/Mail";
 
 const HelpCenter = () => {
-  const [showMessageBox, setShowMessageBox] = React.useState(false);
+  const [showMessageBox, setShowMessageBox] = useState(false);
   return (
     <>
       <Header />

@@ -1,27 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import ModalPurchaseButton from "../../Button/ModalPurchaseButton";
 import ModalHalfButton from "../../Button/ModalHalfButton";
 import ModalSelectHalfButton from "../../Button/ModalSelectHalfButton";
 import { useEffect } from "react";
 
 const ConfirmationModal = (props) => {
-  const [purchaseSelected, setPurchaseSelected] = React.useState(false);
+  const [purchaseSelected, setPurchaseSelected] = useState(false);
   const handlepurchaseClick = () => {
     setPurchaseSelected(!purchaseSelected);
   };
-  const [marketSelected, setMarketSelected] = React.useState(false);
+  const [marketSelected, setMarketSelected] = useState(false);
   const handlemarketClick = () => {
     setMarketSelected(!marketSelected);
   };
-  const [buySelected, setBuySelected] = React.useState(false);
+  const [buySelected, setBuySelected] = useState(false);
   const handlebuyClick = () => {
     setBuySelected(!buySelected);
   };
-  const [sellSelected, setSellSelected] = React.useState(false);
+  const [sellSelected, setSellSelected] = useState(false);
   const handlesellClick = () => {
     setSellSelected(!sellSelected);
   };
-  const [selected, setSelected] = React.useState(false);
+  const [selected, setSelected] = useState(false);
   const setAll = (flag) => {
     setBuySelected(flag);
     setSellSelected(flag);

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import StartAccountOverview from "./StartAccount/StartAccountOverview";
 import TokenButton from "../Button/TokenButton";
 import { tokenList, tokencoinList, fiatList } from "./dataList";
 import CoinTable from "./StartAccount/CoinTable";
 
 const StartAccount = () => {
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(1);
   const handleClick = (idx) => () => {
     setSelectedIndex(idx);
   };

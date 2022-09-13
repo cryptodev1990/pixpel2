@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import TokenButton from "../../Button/TokenButton";
 import { stakingList } from "../dataList";
 import UnlockButton from "./UnlockButton";
 
 const LockedUnlocked = () => {
-  const [selected, setSelected] = React.useState(0);
+  const [selected, setSelected] = useState(0);
 
   const handleClick = (idx) => () => {
     setSelected(idx);
