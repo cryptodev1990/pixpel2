@@ -605,7 +605,7 @@ export const transactionList = [
 export const NFTList = [
   {
     id: 1,
-    gaem: {Game1},
+    gaem: { Game1 },
     quantity: 30,
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
@@ -614,7 +614,7 @@ export const NFTList = [
   },
   {
     id: 2,
-    gaem: {Game1},
+    gaem: { Game1 },
     quantity: 30,
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
@@ -623,7 +623,7 @@ export const NFTList = [
   },
   {
     id: 3,
-    gaem: {Game2},
+    gaem: { Game2 },
     quantity: 30,
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
@@ -632,7 +632,7 @@ export const NFTList = [
   },
   {
     id: 4,
-    gaem: {Game2},
+    gaem: { Game2 },
     quantity: 30,
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
@@ -641,11 +641,66 @@ export const NFTList = [
   },
   {
     id: 5,
-    gaem: {Game1},
+    gaem: { Game1 },
     quantity: 30,
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
     earning: "50.000 PIXP",
     expenses: "25.000 PIXP"
   },
+]
+
+export const accountList = [
+  {
+    id: 1,
+    title: "From:",
+    content: [
+      {
+        id: 1,
+        title: "GAME ACCOUNT",
+      },
+      {
+        id: 2,
+        title: "START ACCOUNT",
+      },
+      {
+        id: 3,
+        title: "TRADE ACCOUNT",
+      },
+      {
+        id: 4,
+        title: "NFT ACCOUNT",
+      },
+      {
+        id: 5,
+        title: "STAKING ACCOUNT",
+      },
+    ]
+  },
+  {
+    id: 2,
+    title: "To:",
+    content: [
+      {
+        id: 1,
+        title: "GAME ACCOUNT",
+      },
+      {
+        id: 2,
+        title: "START ACCOUNT",
+      },
+      {
+        id: 3,
+        title: "TRADE ACCOUNT",
+      },
+      {
+        id: 4,
+        title: "NFT ACCOUNT",
+      },
+      {
+        id: 5,
+        title: "STAKING ACCOUNT",
+      },
+    ]
+  }
 ]

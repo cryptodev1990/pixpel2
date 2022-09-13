@@ -18,7 +18,7 @@ const DropDown = (props) => {
   return (
     <div
       className={
-        " bg-app-black" + (showDropDown ? " rounded-t-md" : " rounded-md")
+        " bg-app-black-button" + (showDropDown ? " rounded-t-md" : " rounded-md")
       }
       onClick={handleDropDown}
     >
