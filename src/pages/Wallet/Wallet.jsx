@@ -5,21 +5,18 @@ import { menuList } from "./dataList";
 import Overview from "../../components/Wallet/Overview";
 import StartAccount from "../../components/Wallet/StartAccount";
 import StakingAccount from "../../components/Wallet/StakingAccount";
-import TransactionHistory from "../../components/Wallet/TransactionHistory";
 import TradeAccount from "../../components/Wallet/TradeAccount";
 import GameAccount from "../../components/Wallet/GameAccount";
 import PaymentMethod from "../../components/Wallet/PaymentMethod";
 import NFTAccount from "../../components/Wallet/NFTAccount";
 
 const Wallet = () => {
-  const [tempComponent, setTempComponent] = React.useState(<Overview/>);
+  const [tempComponent, setTempComponent] = React.useState(<Overview />);
   const [menuButtonIndex, setMenuButtonIndex] = React.useState(0);
+
   const handleClick = (idx) => () => {
     setMenuButtonIndex(idx);
-    switch(idx) {
-      case -1:
-        setTempComponent(<TransactionHistory />);
-        break;
+    switch (idx) {
       case 0:
         setTempComponent(<Overview />);
         break;
@@ -62,13 +59,10 @@ const Wallet = () => {
             );
           })}
         </div>
-        <div className="flex flex-col xl:w-4/5 x-full">
-          {tempComponent}
-        </div>
+        <div className="flex flex-col xl:w-4/5 x-full">{tempComponent}</div>
       </div>
     </>
   );
 };
-
 
 export default Wallet;
