@@ -17,7 +17,7 @@ export default function MarketModal(props) {
                     Security Verification
                   </div>
                 </div>
-                <div className="flex flex-col gap-1 py-5 rounded-md px-7 bg-app-black-light mb-7">
+                <div className="flex flex-col gap-1 py-5 rounded-md px-7 bg-app-black-button mb-7">
                   <div className="flex flex-row justify-between">
                     <div className="flex w-1/6">
                       <div className="text-base font-medium text-slate-400">
@@ -70,9 +70,9 @@ export default function MarketModal(props) {
                     Phone Number Verification Code
                   </div>
                 </div>
-                <div className="flex flex-row items-center justify-between h-16 py-5 mb-1 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-row items-center justify-between h-16 py-5 mb-1 rounded-md px-7 bg-app-black-button">
                   <div className="flex flex-row w-">
-                    <input className="w-72 bg-app-black-light" />
+                    <input className="w-72 bg-app-black-button" />
                   </div>
                   <div className="text-base text-slate-400">
                     Verification code sent
@@ -88,9 +88,9 @@ export default function MarketModal(props) {
                     Email Verification Code
                   </div>
                 </div>
-                <div className="flex flex-row items-center justify-between h-16 py-5 mb-1 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-row items-center justify-between h-16 py-5 mb-1 rounded-md px-7 bg-app-black-button">
                   <div className="flex flex-row w-">
-                    <input className="w-72 bg-app-black-light" />
+                    <input className="w-72 bg-app-black-button" />
                   </div>
                   <div className="text-base text-slate-400">
                     Verification code sent

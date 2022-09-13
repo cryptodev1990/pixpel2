@@ -34,17 +34,17 @@ export default function LiquidityModal(props) {
                   </div>
                   <div className="text-5xl font-medium">BNB/PIXP</div>
                 </div>
-                <div className="flex flex-row justify-between py-5 mb-2 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-row justify-between py-5 mb-2 rounded-md px-7 bg-app-black-button">
                   <div className="text-base font-normal">BNB Deposited</div>
                   <div className="text-base font-medium text-blue-700">
                     0.103576
                   </div>
                 </div>
-                <div className="flex flex-row justify-between py-5 mb-2 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-row justify-between py-5 mb-2 rounded-md px-7 bg-app-black-button">
                   <div className="text-base font-normal">PIXP Deposited</div>
                   <div className="text-base font-medium text-blue-700">20</div>
                 </div>
-                <div className="flex flex-col py-5 mb-2 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-col py-5 mb-2 rounded-md px-7 bg-app-black-button">
                   <div className="flex flex-row justify-between mb-3">
                     <div className="text-base font-normal">Rotes</div>
                     <div className="text-base font-medium text-blue-700">
@@ -57,7 +57,7 @@ export default function LiquidityModal(props) {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-row justify-between py-5 mb-5 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-row justify-between py-5 mb-5 rounded-md px-7 bg-app-black-button">
                   <div className="text-base font-normal">Share of Pool</div>
                   <div className="text-base font-medium text-blue-700">
                     100%

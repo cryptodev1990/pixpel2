@@ -20,7 +20,7 @@ export default function WithdrawalModal() {
                 <div className="flex justify-start mb-5">
                   <div className="text-2xl font-medium">Withdraw</div>
                 </div>
-                <div className="flex flex-col px-8 py-5 mb-5 rounded-md bg-app-black-light">
+                <div className="flex flex-col px-8 py-5 mb-5 rounded-md bg-app-black-button">
                   <div className="flex flex-row justify-start">
                     <div className="text-base font-medium w-36 text-slate-400">
                       Amount

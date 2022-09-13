@@ -1,4 +1,5 @@
 import React from "react";
+import TransactionHistoryButton from "../../Button/TransactionHistoryButton";
 
 const StakingAccountOverview = () => {
   return (
@@ -11,9 +12,7 @@ const StakingAccountOverview = () => {
           <div className="text-gray-400 text-sm">= 3,832,194,124.10 TUSD</div>
         </div>
       </div>
-      <div className="flex bg-app-black-button rounded-md px-3 h-max py-3 hover:bg-app-blue cursor-pointer active:bg-purple-800">
-        TRANSACTION HISTORY
-      </div>
+      <TransactionHistoryButton />
     </div>
   );
 };

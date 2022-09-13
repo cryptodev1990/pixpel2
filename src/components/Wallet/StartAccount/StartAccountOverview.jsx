@@ -1,11 +1,11 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Clock from "../../../asssets/images/clock.svg";
+import TransactionHistoryButton from "../../Button/TransactionHistoryButton";
 
 const StartAccountOverview = ({ selected }) => {
   const className =
     "flex gap-3 items-center pl-5 pr-12 bg-app-black-button h-max rounded-md py-3 w-max";
-  const [tempBalance, setTempBalance] = React.useState("");
+  const [tempBalance, setTempBalance] = useState("");
   useEffect(() => {
     selected === 0
       ? setTempBalance("Fiat Balance")
@@ -16,9 +16,7 @@ const StartAccountOverview = ({ selected }) => {
       <div className="flex flex-col w-full">
         <div className="flex md:flex-row flex-col gap-3 justify-between mb-8 md:items-end">
           <div className="text-xl font-bold">START ACCOUNT</div>
-          <div className="flex bg-app-black-button rounded-md px-5 h-max py-3 hover:bg-app-blue cursor-pointer">
-            TRANSACTION HISTORY
-          </div>
+          <TransactionHistoryButton />
         </div>
         <div className="flex xl:flex-row flex-col xl:items-end pr-16 gap-10">
           <div className="flex w-5/6 justify-between">

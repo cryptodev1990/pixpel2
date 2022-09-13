@@ -6,7 +6,7 @@ const Button = ({ onClick, title, selected }) => {
   return (
     <div
       className={
-        className + (selected ? " bg-app-blue" : " bg-app-black-light")
+        className + (selected ? " bg-app-blue" : " bg-app-black-button")
       }
       onClick={onClick}
     >

@@ -26,10 +26,10 @@ const LimitCard = () => {
             <div className="text-xs">0 USDT</div>
           </div>
         </div>
-        <div className="flex flex-row justify-between h-16 px-8 py-3 mt-3 rounded-lg bg-app-black-light">
+        <div className="flex flex-row justify-between h-16 px-8 py-3 mt-3 rounded-lg bg-app-black-button">
           <div className="flex flex-row items-center justify-between w-3/4">
             <input
-              className="w-full bg-app-black-light placeholder:text-gray-400"
+              className="w-full bg-app-black-button placeholder:text-gray-400"
               placeholder="Please enter 20-25000000"
             />
             <div className="text-base text-gray-700 w-text-base">Max</div>
@@ -58,9 +58,9 @@ const LimitCard = () => {
             <div className="w-1/3">Expires in</div>
           </div>
           <div className="flex flex-row justify-start gap-2 mt-3">
-            <div className="flex flex-row justify-between w-2/3 px-8 py-5 rounded-lg bg-app-black-light">
+            <div className="flex flex-row justify-between w-2/3 px-8 py-5 rounded-lg bg-app-black-button">
               <div className="w-3/4">
-                <input className="w-full bg-app-black-light" />
+                <input className="w-full bg-app-black-button" />
               </div>
               <div className="flex flex-row gap-1">
                 <div className="flex text-base">USDT</div>
@@ -79,7 +79,7 @@ const LimitCard = () => {
                 </svg>
               </div>
             </div>
-            <div className="flex flex-row items-center justify-between w-1/3 px-5 py-5 rounded-lg bg-app-black-light">
+            <div className="flex flex-row items-center justify-between w-1/3 px-5 py-5 rounded-lg bg-app-black-button">
               <div className="text-base">1day</div>
               <div className="flex flex-row gap-1 items center">
                 <div className="flex text-base">USDT</div>
@@ -101,7 +101,7 @@ const LimitCard = () => {
           </div>
         </div>
         <div className="flex justify-center w-full -mt-6">
-          <div className="flex items-center justify-center rounded-full full bg-app-black-light">
+          <div className="flex items-center justify-center rounded-full full bg-app-black-button">
             <svg
               className="w-12 h-12 text-white-800"
               width="24"
@@ -125,10 +125,10 @@ const LimitCard = () => {
         <div className="flex flex-row justify-between">
           <div className="text-lg font-semibold ">To</div>
         </div>
-        <div className="flex flex-row justify-between h-16 px-8 py-3 mt-3 rounded-lg bg-app-black-light">
+        <div className="flex flex-row justify-between h-16 px-8 py-3 mt-3 rounded-lg bg-app-black-button">
           <div className="flex flex-row items-center justify-between w-3/4">
             <input
-              className="w-full bg-app-black-light placeholder:text-gray-400"
+              className="w-full bg-app-black-button placeholder:text-gray-400"
               placeholder="Please enter 0.0004-50"
             />
           </div>

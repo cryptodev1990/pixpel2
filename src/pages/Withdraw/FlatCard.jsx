@@ -8,7 +8,7 @@ const FlatCard = () => {
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Crypto</div>
         </div>
-        <div className="flex flex-row justify-between h-16 px-5 py-5 mb-8 rounded-md bg-app-black-light">
+        <div className="flex flex-row justify-between h-16 px-5 py-5 mb-8 rounded-md bg-app-black-button">
           <div className="flex flex-row gap-2">
             <img src={BNB} alt={""} />
             <div className="text-base font-medium">PIXP</div>
@@ -32,25 +32,25 @@ const FlatCard = () => {
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Method</div>
         </div>
-        <div className="flex h-16 px-5 py-5 mb-8 rounded-md bg-app-black-light">
+        <div className="flex h-16 px-5 py-5 mb-8 rounded-md bg-app-black-button">
           <input
-            className="w-full bg-app-black-light placeholder:text-slate-700"
+            className="w-full bg-app-black-button placeholder:text-slate-700"
             placeholder="Bank Transfer"
           />
         </div>
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Method</div>
         </div>
-        <div className="flex h-16 px-5 py-5 mb-8 rounded-md bg-app-black-light">
+        <div className="flex h-16 px-5 py-5 mb-8 rounded-md bg-app-black-button">
           <input
-            className="w-full bg-app-black-light placeholder:text-slate-700"
+            className="w-full bg-app-black-button placeholder:text-slate-700"
             placeholder="HSBC Hong Kong"
           />
         </div>
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Withdraw Amount</div>
         </div>
-        <div className="flex flex-row justify-between h-16 px-5 py-5 mb-1 rounded-md bg-app-black-light">
+        <div className="flex flex-row justify-between h-16 px-5 py-5 mb-1 rounded-md bg-app-black-button">
           <div className="flex flex-row w-full">
             <div className="flex flex-row gap-1">
               <img src={BNB} alt={""} />
@@ -87,7 +87,7 @@ const FlatCard = () => {
             </div>
             <div className="flex gap-2">
               <input
-                className="w-72 bg-app-black-light placeholder:text-slate-700"
+                className="w-72 bg-app-black-button placeholder:text-slate-700"
                 placeholder="1,000,000,000"
               />
               <div className="text-base font-medium text-blue-900">MAX</div>

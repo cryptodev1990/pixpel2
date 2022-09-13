@@ -19,7 +19,7 @@ const DropDownButton = (props) => {
     <>
       <div
         className={
-          " bg-app-black-light" +
+          " bg-app-black-button" +
           (showDropDown ? " rounded-t-md" : " rounded-md")
         }
         onClick={handleDropDown}
@@ -51,7 +51,7 @@ const DropDownButton = (props) => {
                 className="fixed inset-0 w-full h-full"
                 onClick={handleDropDown}
               ></div>
-              <div className="flex flex-col bg-app-black-light rounded-b-md">
+              <div className="flex flex-col bg-app-black-button rounded-b-md">
                 {props.contentList.map((content, idx) => {
                   return (
                     <div

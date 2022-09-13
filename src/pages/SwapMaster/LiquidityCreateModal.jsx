@@ -21,7 +21,7 @@ export default function LiquidityCreateModal(props) {
                     LP tokens in your wallet
                   </div>
                 </div>
-                <div className="flex flex-row justify-between py-5 mb-5 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-row justify-between py-5 mb-5 rounded-md px-7 bg-app-black-button">
                   <div className="flex flex-row items-center gap-1">
                     <img className="h-2/3" src={BNB} alt={""} />
                     <div className="text-base font-normal">BNB/PIXP</div>
@@ -32,19 +32,19 @@ export default function LiquidityCreateModal(props) {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-row justify-between py-5 mb-2 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-row justify-between py-5 mb-2 rounded-md px-7 bg-app-black-button">
                   <div className="text-base font-normal">Share of Pool</div>
                   <div className="text-base font-medium text-blue-700">
                     100.000000%
                   </div>
                 </div>
-                <div className="flex flex-row justify-between py-5 mb-2 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-row justify-between py-5 mb-2 rounded-md px-7 bg-app-black-button">
                   <div className="text-base font-normal">Pooled BNB</div>
                   <div className="text-base font-medium text-blue-700">
                     0.001248
                   </div>
                 </div>
-                <div className="flex flex-row justify-between py-5 mb-5 rounded-md px-7 bg-app-black-light">
+                <div className="flex flex-row justify-between py-5 mb-5 rounded-md px-7 bg-app-black-button">
                   <div className="text-base font-normal">Pooled PIXP</div>
                   <div className="text-base font-medium text-blue-700">
                     15.7531

@@ -19,7 +19,7 @@ const LiquidityCard = () => {
             Add liquidity to recieve LP token
           </div>
         </div>
-        <div className="flex flex-col px-16 py-8 mt-6 mb-8 rounded-xl bg-app-black-light">
+        <div className="flex flex-col px-16 py-8 mt-6 mb-8 rounded-xl bg-app-black-button">
           <div className="flex justify-center mb-4">
             <div className="text-base font-semibold">
               You are the first liquidity provider.
@@ -37,7 +37,7 @@ const LiquidityCard = () => {
           </div>
         </div>
         <ExchangeCardForLiquidity />
-        <div className="flex flex-col py-8 mt-6 mb-8 rounded-xl bg-app-black-light">
+        <div className="flex flex-col py-8 mt-6 mb-8 rounded-xl bg-app-black-button">
           <div className="flex justify-center pb-5 mb-4 border-b-2 border-app-black">
             <div className="text-base font-medium">
               Initial prices and pool share

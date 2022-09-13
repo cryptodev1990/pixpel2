@@ -15,7 +15,7 @@ const ExchangeCard = () => {
           <div className="w-12 h-full text-lg font-semibold">From</div>
           <div className="h-full text-lg">Balance: {balance.avaBalance}</div>
         </div>
-        <div className="flex flex-row items-center h-16 px-5 py-5 mb-5 rounded-md bg-app-black-light ">
+        <div className="flex flex-row items-center h-16 px-5 py-5 mb-5 rounded-md bg-app-black-button ">
           <div className="flex flex-row gap-2">
             <div className="flex w-6 h-full">
               <img src={Avax} alt={""} />
@@ -54,13 +54,13 @@ const ExchangeCard = () => {
             </svg>
           </div>
           <div className="flex flex-row justify-between gap-7">
-            <input className="w-72 bg-app-black-light" />
+            <input className="w-72 bg-app-black-button" />
             <div className="text-base text-blue-700">Max</div>
           </div>
         </div>
         <div className="flex justify-center w-full">
           <div
-            className="flex items-center justify-center rounded-full full bg-app-black-light"
+            className="flex items-center justify-center rounded-full full bg-app-black-button"
             style={{ marginBottom: "10px", width: "53px", height: "53px" }}
           >
             <svg
@@ -87,7 +87,7 @@ const ExchangeCard = () => {
           <div className="w-12 h-full text-lg font-semibold">To</div>
           <div className="h-full text-lg">Balance: {balance.pixpBalance}</div>
         </div>
-        <div className="flex flex-row items-center h-16 px-5 py-5 mb-5 rounded-md bg-app-black-light ">
+        <div className="flex flex-row items-center h-16 px-5 py-5 mb-5 rounded-md bg-app-black-button ">
           <div className="flex flex-row gap-2">
             <div className="flex w-6 h-full">
               <img src={PIXP} alt={""} />
@@ -126,7 +126,7 @@ const ExchangeCard = () => {
             </svg>
           </div>
           <div className="flex flex-row justify-stratch gap-7">
-            <input className="w-80 bg-app-black-light" />
+            <input className="w-80 bg-app-black-button" />
           </div>
         </div>
       </div>

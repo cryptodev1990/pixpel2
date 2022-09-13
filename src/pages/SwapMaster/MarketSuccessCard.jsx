@@ -59,7 +59,7 @@ const MarketSuccessCard = () => {
           <div className="text-sm font-normal">1 BTC = 41201.8 USDT</div>
         </div>
         <div className="flex flex-row justify-between w-full">
-          <div className="flex items-center justify-center h-16 px-20 py-5 rounded-lg bg-app-black-light hover:bg-app-blue">
+          <div className="flex items-center justify-center h-16 px-20 py-5 rounded-lg bg-app-black-button hover:bg-app-blue">
             <div className="text-lg font-medium">Back</div>
           </div>
           <div className="flex items-center justify-center h-16 px-12 py-5 bg-blue-500 rounded-lg hover:bg-app-blue">

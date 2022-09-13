@@ -11,7 +11,7 @@ const ExchangeCardForLiquidity = () => {
   return (
     <>
       <div className="flex flex-col w-full">
-        <div className="flex flex-row items-center h-16 px-5 py-5 mb-1 rounded-md bg-app-black-light ">
+        <div className="flex flex-row items-center h-16 px-5 py-5 mb-1 rounded-md bg-app-black-button ">
           <div className="flex flex-row gap-2">
             <div className="flex w-6 h-full">
               <img src={PIXP} alt={""} />
@@ -50,7 +50,7 @@ const ExchangeCardForLiquidity = () => {
             </svg>
           </div>
           <div className="flex flex-row justify-stratch gap-7">
-            <input className="w-80 bg-app-black-light" />
+            <input className="w-80 bg-app-black-button" />
           </div>
         </div>
         <div className="flex flex-row justify-end mb-3 h-7">
@@ -60,7 +60,7 @@ const ExchangeCardForLiquidity = () => {
         </div>
         <div className="flex justify-center w-full mb-5">
           <div
-            className="flex items-center justify-center rounded-full full bg-app-black-light"
+            className="flex items-center justify-center rounded-full full bg-app-black-button"
             style={{ marginBottom: "10px", width: "53px", height: "53px" }}
           >
             <svg
@@ -84,7 +84,7 @@ const ExchangeCardForLiquidity = () => {
             </svg>
           </div>
         </div>
-        <div className="flex flex-row items-center h-16 px-5 py-5 mb-1 rounded-md bg-app-black-light ">
+        <div className="flex flex-row items-center h-16 px-5 py-5 mb-1 rounded-md bg-app-black-button ">
           <div className="flex flex-row gap-2">
             <div className="flex w-6 h-full">
               <img src={XRP} alt={""} />
@@ -123,7 +123,7 @@ const ExchangeCardForLiquidity = () => {
             </svg>
           </div>
           <div className="flex flex-row justify-between gap-7">
-            <input className="w-72 bg-app-black-light" />
+            <input className="w-72 bg-app-black-button" />
             <div className="text-base text-blue-700">Max</div>
           </div>
         </div>
