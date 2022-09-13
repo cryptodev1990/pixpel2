@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Header } from "../../components";
 import ProfileButton from "../../components/Button/ProfileButton";
 import { menuList } from "./dataList";
@@ -9,13 +9,19 @@ import TradeAccount from "../../components/Wallet/TradeAccount";
 import GameAccount from "../../components/Wallet/GameAccount";
 import PaymentMethod from "../../components/Wallet/PaymentMethod";
 import NFTAccount from "../../components/Wallet/NFTAccount";
+import TransactionHistory from "../../components/Wallet/TransactionHistory";
+import { useAppContext } from "../../contexts/AppContext";
 
 const Wallet = () => {
-  const [tempComponent, setTempComponent] = React.useState(<Overview />);
-  const [menuButtonIndex, setMenuButtonIndex] = React.useState(0);
+  const [tempComponent, setTempComponent] = useState(<Overview />);
+  const context = useAppContext();
 
-  const handleClick = (idx) => () => {
-    setMenuButtonIndex(idx);
+  useEffect(() => {
+    setTempComponent(<TransactionHistory />);
+  }, [context.selectedIndex === -1]);
+
+  const handleClick =  (idx) => async () => {
+    await context.setSelectedIndex(idx);
     switch (idx) {
       case 0:
         setTempComponent(<Overview />);
@@ -53,7 +59,7 @@ const Wallet = () => {
                 key={idx}
                 title={menu.title}
                 idx={idx}
-                selected={menuButtonIndex === idx}
+                selected={context.selectedIndex === idx}
                 handleClick={handleClick(idx)}
               />
             );

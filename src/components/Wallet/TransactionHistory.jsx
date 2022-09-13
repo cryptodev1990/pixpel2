@@ -28,7 +28,7 @@ const TransactionHistory = () => {
       <div className="flex gap-5">
         {dropdownList.map((menu, idx) => {
           return (
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2" key={idx}>
               <div className="text-gray-400 text-sm">{menu.title}</div>
               <Dropdown
                 key={idx}
@@ -40,7 +40,10 @@ const TransactionHistory = () => {
         })}
         <div className="flex flex-col gap-2">
           <div className="text-gray-400 text-sm">TxID</div>
-          <input className="py-3 pl-4 pr-12 text-gray-400 bg-app-black rounded-lg" placeholder="Enter TxID"></input>
+          <input
+            className="py-3 pl-4 pr-12 text-gray-400 bg-app-black rounded-lg"
+            placeholder="Enter TxID"
+          ></input>
         </div>
       </div>
       <TransactionTable />

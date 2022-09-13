@@ -7,14 +7,17 @@ import './index.css';
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import Reducers from './reducers';
+import AppContextProvider from './contexts/AppContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={createStore(Reducers)}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <AppContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </AppContextProvider>
     </Provider>
   </React.StrictMode>
 );
