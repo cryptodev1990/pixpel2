@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Dropdown from "../Transaction/Dropdown";
-import { accountList } from "../dataList";
+import { accountList, coinList } from "../dataList";
 
 const TransferModal = (props) => {
   const [reverse, setReverse] = useState(false);
@@ -39,11 +39,11 @@ const TransferModal = (props) => {
                     />
                   </div>
                   <div
-                    className="flex h-10 w-10 rounded-full bg-app-black-button items-center justify-center mt-5 cursor-pointer active:bg-gray-500"
+                    className="flex h-10 w-10 rounded-full bg-app-black-button items-center justify-center mt-5 cursor-pointer active:bg-gray-500 flex-none"
                     onClick={handleChange}
                   >
                     <svg
-                      class="h-8 w-8 text-white"
+                      className="h-8 w-8 text-white"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -67,11 +67,25 @@ const TransferModal = (props) => {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <Dropdown initialContent="COIN"></Dropdown>
-                  <div className="bg-app-black-button flex justify-between items-center py-3 px-4 w-1/2 rounded-md">
+                  <div className="w-1/2">
+                    <Dropdown
+                      initialContent="COIN"
+                      contentList={coinList}
+                    ></Dropdown>
+                  </div>
+                  <div className="bg-app-black-button flex justify-between items-center py-2 px-4 w-1/2 rounded-md">
                     <div className="text-gray-400">AMOUNT</div>
                     <div className="text-blue-500">MAX</div>
                   </div>
+                </div>
+                <div className="text-gray-400 flex justify-end my-2 text-sm">
+                  Available Amount: 50 000.000
+                </div>
+                <div
+                  className="flex justify-center items-center w-full rounded my-3 bg-app-blue py-3 cursor-pointer"
+                  onClick={() => props.setShowModal(false)}
+                >
+                  CONFIRM
                 </div>
               </div>
             </div>

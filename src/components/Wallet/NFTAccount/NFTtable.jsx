@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { tableList, tablefiatList } from "../dataList";
+import React, { useState } from "react";
 import SwapButton from "./SwapButton";
 import TradeButton from "./TradeButton";
 import BuyButton from "./BuyButton";
 
-const CoinTable = (props) => {
-  const [tempTable, setTempTable] = useState(tableList);
-  useEffect(() => {
-    props.idx === 0 ? setTempTable(tablefiatList) : setTempTable(tableList);
-  }, [props.idx]);
+const CoinTable = ({table}) => {
   return (
     <table className="table-fixed w-full mt-10">
       <thead>
         <tr>
-          <td className="text-gray-400">Coin</td>
-          <td className="text-gray-400">Total</td>
-          <td className="text-gray-400">Available</td>
-          <td className="text-gray-400">In Orders</td>
-          <td className="text-gray-400">PIXP Value</td>
+          <td className="text-gray-400">NFT</td>
+          <td className="text-gray-400">Purchase value</td>
+          <td className="text-gray-400">Purchase date</td>
+          <td className="text-gray-400">Sold date</td>
+          <td className="text-gray-400">Earning</td>
+          <td className="text-gray-400">Expenses</td>
           <td className="text-gray-400">Action</td>
         </tr>
       </thead>
       <tbody className="px-4">
-        {tempTable.map((menu, idx) => {
+        {table.map((menu, idx) => {
           return (
             <tr key={idx} className="border-b-2 border-app-black">
               <td className="py-3">
