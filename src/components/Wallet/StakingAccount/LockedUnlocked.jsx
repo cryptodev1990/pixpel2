@@ -27,29 +27,36 @@ const LockedUnlocked = () => {
         <thead>
           <tr>
             <td className="text-gray-400">Game</td>
-            <td className="text-gray-400 w-1/12">Coin</td>
+            <td className="text-gray-400">Coin</td>
             <td className="text-gray-400">Rewards</td>
             <td className="text-gray-400">Staked Amount</td>
             <td className="text-gray-400">Start Date</td>
-            <td className="text-gray-400 w-1/12">EST.APY</td>
+            <td className="text-gray-400">EST.APY</td>
             <td className="text-gray-400">Locked Days</td>
             <td className="text-gray-400">Invest Date</td>
-            <td></td>
+            <td className="w-1/12"></td>
           </tr>
         </thead>
         <tbody className="px-4">
           {stakingList.map((menu, idx) => {
             return (
-              <tr key={idx} className="border-b-2 border-app-black">
-                <td className="py-3">{menu.Game}</td>
-                <td className="py-3">{menu.Coin}</td>
-                <td className="py-3">{menu.Rewards}</td>
-                <td className="py-3">{menu.StakedAmount}</td>
-                <td className="flex flex-col py-2 gap-2">{menu.StartDate}</td>
-                <td className="py-3">{menu.ESTAPY}</td>
-                <td className="py-3">{menu.LockedDays}</td>
-                <td className="py-3">{menu.InvestDate}</td>
-                <td className="py-3">
+              <tr
+                key={idx}
+                className={
+                  idx !== stakingList.length - 1
+                    ? "border-b-2 border-app-black"
+                    : ""
+                }
+              >
+                <td className="py-5">{menu.Game}</td>
+                <td>{menu.Coin}</td>
+                <td>{menu.Rewards}</td>
+                <td>{menu.StakedAmount}</td>
+                <td>{menu.StartDate}</td>
+                <td>{menu.ESTAPY}</td>
+                <td>{menu.LockedDays}</td>
+                <td>{menu.InvestDate}</td>
+                <td>
                   <UnlockButton />
                 </td>
               </tr>

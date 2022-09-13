@@ -18,7 +18,7 @@ const ProfilePlayerStat = () => {
   return (
     <div>
       <div className="mt-12 font-semibold text-2xl">Balance Details</div>
-      <div className="flex gap-4 mt-6 mb-3 w-2/3">
+      <div className="flex flex-col md:flex-row gap-4 mt-6 my-5">
         {tokenList.map((menu, idx) => {
           return (
             <TokenButton

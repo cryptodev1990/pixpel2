@@ -6,7 +6,7 @@ import TradeButton from "../StartAccount/TradeButton";
 
 const GamingTable = () => {
   return (
-    <table className="table-fixed w-full mt-10">
+    <table className="table-auto w-full mt-10">
       <thead>
         <tr>
           <td className="text-gray-400">Coin</td>
@@ -34,16 +34,23 @@ const GamingTable = () => {
               <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
             </svg>
           </td>
-          <td className="text-gray-400 w-1/4">Action</td>
+          <td className="text-gray-400 w-1/6">Action</td>
         </tr>
       </thead>
       <tbody className="px-4">
         {gamingList.map((menu, idx) => {
           return (
-            <tr key={idx} className="border-b-2 border-app-black">
-              <td className="py-3">{menu.coin}</td>
-              <td className="py-3">{menu.game}</td>
-              <td className="flex flex-col py-2 gap-2">{menu.reward}</td>
+            <tr
+              key={idx}
+              className={
+                idx !== gamingList.length - 1
+                  ? "border-b-2 border-app-black"
+                  : ""
+              }
+            >
+              <td className="py-5">{menu.coin}</td>
+              <td >{menu.game}</td>
+              <td>{menu.reward}</td>
               <td>{menu.deposit}</td>
               <td>{menu.available}</td>
               <td>{menu.daw}</td>

@@ -10,36 +10,33 @@ const CoinTable = (props) => {
     props.idx === 0 ? setTempTable(tablefiatList) : setTempTable(tableList);
   }, [props.idx]);
   return (
-    <table className="table-fixed w-full mt-10">
+    <table className="table-auto w-full mt-10">
       <thead>
         <tr>
-          <td className="text-gray-400">Coin</td>
-          <td className="text-gray-400">Total</td>
+          <td className="text-gray-400 w-1/6">Coin</td>
+          <td className="text-gray-400 w-1/6">Total</td>
           <td className="text-gray-400">Available</td>
           <td className="text-gray-400">In Orders</td>
           <td className="text-gray-400">PIXP Value</td>
-          <td className="text-gray-400">Action</td>
+          <td className="text-gray-400 w-1/6">Action</td>
         </tr>
       </thead>
       <tbody className="px-4">
         {tempTable.map((menu, idx) => {
           return (
-            <tr key={idx} className="border-b-2 border-app-black">
-              <td className="py-3">
-                <div>{menu.Coin}</div>
-              </td>
-              <td className="py-3">
-                <div>{menu.Total}</div>
-              </td>
-              <td className="flex flex-col py-2 gap-2">
-                <div>{menu.Available}</div>
-              </td>
-              <td>
-                <div>{menu.Orders}</div>
-              </td>
-              <td>
-                <div>{menu.PIXP}</div>
-              </td>
+            <tr
+              key={idx}
+              className={
+                idx !== tempTable.length - 1
+                  ? "border-b-2 border-app-black"
+                  : ""
+              }
+            >
+              <td className="py-5">{menu.Coin}</td>
+              <td >{menu.Total}</td>
+              <td >{menu.Available}</td>
+              <td>{menu.Orders}</td>
+              <td>{menu.PIXP}</td>
               <td>
                 <div className="flex gap-4">
                   <SwapButton title="Swap" />

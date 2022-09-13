@@ -4,20 +4,27 @@ import TradeButton from "../StartAccount/TradeButton";
 
 const BankTable = () => {
   return (
-    <table className="table-fixed w-full mt-10">
+    <table className="table-auto w-full mt-10">
       <thead>
         <tr>
           <td className="text-gray-400">Name</td>
           <td className="text-gray-400">Bank Account</td>
           <td className="text-gray-400">Bank Name</td>
-          <td className="text-gray-400">Action</td>
+          <td className="text-gray-400 w-1/12">Action</td>
         </tr>
       </thead>
       <tbody className="px-4">
         {paymentBankList.map((menu, idx) => {
           return (
-            <tr key={idx} className="border-b-2 border-app-black">
-              <td className="px-3 py-4">{menu.name}</td>
+            <tr
+              key={idx}
+              className={
+                idx !== paymentBankList.length - 1
+                  ? "border-b-2 border-app-black"
+                  : ""
+              }
+            >
+              <td className="py-5">{menu.name}</td>
               <td>{menu.bankAccount}</td>
               <td>{menu.bankName}</td>
               <td>

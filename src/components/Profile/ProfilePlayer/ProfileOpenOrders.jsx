@@ -7,20 +7,27 @@ const ProfileOpenOrders = () => {
     <div>
       <div className="mt-10 font-semibold text-xl">Open Orders</div>
       <div className="flex mt-6 w-full">
-        <table className="table-fixed w-full">
+        <table className="table-auto w-full">
           <thead>
             <tr>
               <td className="text-gray-400">Pair Date</td>
               <td className="text-gray-400">Type Conditions</td>
               <td className="text-gray-400">Price</td>
               <td className="text-gray-400">Total Filled</td>
-              <td className="text-gray-400">Action</td>
+              <td className="text-gray-400 w-1/12">Action</td>
             </tr>
           </thead>
           <tbody className="px-4">
             {tableList.map((menu, idx) => {
               return (
-                <tr key={idx} className="border-b-2 border-app-black">
+                <tr
+                  key={idx}
+                  className={
+                    idx !== tableList.length - 1
+                      ? "border-b-2 border-app-black"
+                      : ""
+                  }
+                >
                   <td className="py-3">
                     <div>{menu.title.Pair}</div>
                     <div className="text-gray-400 text-xs">
