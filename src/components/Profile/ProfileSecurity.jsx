@@ -7,7 +7,7 @@ const ProfileSecurity = () => {
   return (
     <div>
       <div className="mt-20 mb-8 font-semibold text-3xl">Security</div>
-      <div className="grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-1 gap-4 h-80 w-full">
+      <div className="grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-1 gap-4 w-full">
         <TwoMethodSecurity />
         <IDVerification />
         <AccountActivity />

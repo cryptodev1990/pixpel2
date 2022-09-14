@@ -46,7 +46,7 @@ const ConfirmationModal = (props) => {
       purchaseSelected && buySelected && sellSelected && marketSelected
     );
   }, [purchaseSelected, buySelected, sellSelected, marketSelected]);
-  const pictureClassName = "rounded-full h-3 w-3";
+  const pictureClassName = "rounded-full h-3 w-3 flex-none";
   const className =
     "mb-5 flex items-center justify-center w-full h-14 gap-3 rounded-md hover:bg-app-blue cursor-pointer";
   return (
@@ -83,7 +83,7 @@ const ConfirmationModal = (props) => {
                   ></div>
                   <div className="text-base">Select All</div>
                 </div>
-                <div className="flex gap-4 mb-4">
+                <div className="flex gap-4 mb-4 flex-col xs:flex-row">
                   <ModalSelectHalfButton
                     title="Purchase NFT"
                     handleClick={handlepurchaseClick}
@@ -95,7 +95,7 @@ const ConfirmationModal = (props) => {
                     selected={marketSelected}
                   />
                 </div>
-                <div className="flex gap-4 mb-10">
+                <div className="flex gap-4 mb-10 flex-col xs:flex-row">
                   <ModalPurchaseButton
                     title="Buy"
                     selected={buySelected}
@@ -107,7 +107,7 @@ const ConfirmationModal = (props) => {
                     handleClick={handlesellClick}
                   />
                 </div>
-                <div className="flex mt-4 mb-10 gap-4 w-full">
+                <div className="flex mt-4 mb-10 gap-4">
                   <ModalHalfButton
                     title="Cancel"
                     handleClick={handleModalClick}

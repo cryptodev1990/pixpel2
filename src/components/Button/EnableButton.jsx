@@ -1,10 +1,8 @@
 import React from "react";
 const EnableButton = (props) => {
   return (
-    <div className="bg-app-blue text-white rounded-md w-auto h-10 py-2 hover: cursor-pointer">
-      <div className="gap-2 px-6 justify-center items-center">
-        <button>{props.title}</button>
-      </div>
+    <div className="flex bg-app-blue px-6 justify-center items-center rounded-md py-2 cursor-pointer">
+        {props.title}
     </div>
   )
 }

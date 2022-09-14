@@ -8,12 +8,12 @@ const AccountActivity = () => {
 
   return (
     <>
-      <div className="flex flex-col bg-app-black rounded-lg px-6 py-8 gap-6">
+      <div className="flex flex-col bg-app-black rounded-lg px-6 py-8 gap-6 overflow-x-auto">
         <div className="flex items-center gap-6">
           <div className="rounded-full w-3 h-3 bg-app-green"></div>
           <div className="text-xl">Devices and activities</div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <div className="flex gap-6 items-baseline">
             <div className="bg-app-green w-3 h-3 rounded-full"></div>
             <div className="flex flex-col">
@@ -22,7 +22,7 @@ const AccountActivity = () => {
             </div>
           </div>
           <div
-            className="bg-app-blue rounded-md px-4 py-2 cursor-pointer"
+            className="bg-app-blue rounded-md px-4 py-2 cursor-pointer flex justify-center items-center"
             onClick={() => {
               setShowDeviceModal(true);
             }}
@@ -33,7 +33,7 @@ const AccountActivity = () => {
         <div className="flex justify-between my-8">
           <div className="text-lg">Account activity</div>
           <div
-            className="bg-app-blue rounded-md px-4 py-2 cursor-pointer"
+            className="bg-app-blue rounded-md px-4 py-2 cursor-pointer flex justify-center items-center"
             onClick={() => {
               setShowActivityModal(true);
             }}

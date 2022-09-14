@@ -12,12 +12,12 @@ const DeviceModal = (props) => {
               className="fixed inset-0 w-full h-full bg-black opacity-40"
               onClick={() => props.setShowModal(false)}
             ></div>
-            <div className="flex items-center px-4 py-6 min-h-screen">
+            <div className="flex items-center xs:px-4 py-6 px-0 min-h-screen">
               <div
                 className="relative flex flex-col w-full max-w-2xl p-4 mx-auto 
-															bg-app-black rounded-xl shadow-lg px-12 py-12 text-lg"
+															bg-app-black rounded-xl shadow-lg xs:px-12 xs:py-12 px-0 py-0 text-lg"
               >
-                <div className="h-auto w-full py-6 px-8 bg-app-black flex flex-col rounded-lg">
+                <div className="h-auto w-full xs:py-6 xs:px-8 px-2 py-2 bg-app-black flex flex-col rounded-lg">
                   <div className="text-white" style={{ fontSize: "28px" }}>
                     Devices
                   </div>
