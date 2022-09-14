@@ -7,28 +7,28 @@ const EachNFT = ({ content }) => {
     setClicked(!clicked);
   };
   return (
-    <div className="flex flex-col rounded-lg">
+    <div className="flex flex-col">
       <div
         className={
           clicked
-            ? "flex bg-app-black-button rounded-t-md w-full px-7 py-6 items-center cursor-pointer"
-            : "flex bg-app-black-button rounded-md w-full px-7 py-6 items-center cursor-pointer"
+            ? "flex bg-app-black-button rounded-t-md w-full py-6 items-center cursor-pointer"
+            : "flex bg-app-black-button rounded-md w-full py-6 items-center cursor-pointer"
         }
         onClick={handleClick}
       >
-        <div className="w-1/12">
+        <div className="w-1/12 px-6">
           <img
             className="w-10 h-10 rounded"
             src={content.game}
             alt="Game"
           ></img>
         </div>
-        <div className="flex justify-center w-1/6">{content.quantity}</div>
-        <div className="flex justify-center w-1/4">{content.valuet}</div>
-        <div className="flex justify-center w-1/6">{content.startDate}</div>
-        <div className="flex justify-center w-1/6">{content.earning}</div>
-        <div className="flex justify-center w-1/12">{content.expenses}</div>
-        <div className="flex justify-end w-1/12">
+        <div className="flex justify-center px-6 w-1/6">{content.quantity}</div>
+        <div className="flex justify-center px-6 w-1/6">{content.valuet}</div>
+        <div className="flex justify-center px-6 w-1/6">{content.startDate}</div>
+        <div className="flex justify-center px-6 w-1/6">{content.earning}</div>
+        <div className="flex justify-center px-6 w-1/6">{content.expenses}</div>
+        <div className="flex justify-end px-6  w-1/12">
           <div className="flex rounded-md h-10 w-10 bg-app-black-select items-center justify-center">
             {clicked ? (
               <svg
@@ -62,7 +62,7 @@ const EachNFT = ({ content }) => {
           </div>
         </div>
       </div>
-      <div className={clicked ? "px-5 bg-app-black rounded-b-md" : "hidden"}>
+      <div className={clicked ? "px-5 bg-app-black rounded-b-lg" : "hidden"}>
         <NFTtable table={content.gameNFTList} />
       </div>
     </div>

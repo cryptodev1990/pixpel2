@@ -4,13 +4,14 @@ import TradeButton from "../StartAccount/TradeButton";
 
 const BankTable = () => {
   return (
-    <table className="table-auto w-full mt-10">
+    <div className="overflow-x-auto relative mt-10 w-full">
+    <table className="table-auto text-left">
       <thead>
         <tr>
-          <td className="text-gray-400">Name</td>
-          <td className="text-gray-400">Bank Account</td>
-          <td className="text-gray-400">Bank Name</td>
-          <td className="text-gray-400 w-1/12">Action</td>
+          <td className="text-gray-400 px-6">Name</td>
+          <td className="text-gray-400 px-6">Bank Account</td>
+          <td className="text-gray-400 px-6">Bank Name</td>
+          <td className="text-gray-400 w-1/12 px-6">Action</td>
         </tr>
       </thead>
       <tbody className="px-4">
@@ -24,10 +25,10 @@ const BankTable = () => {
                   : ""
               }
             >
-              <td className="py-5">{menu.name}</td>
-              <td>{menu.bankAccount}</td>
-              <td>{menu.bankName}</td>
-              <td>
+              <td className="py-5 px-6">{menu.name}</td>
+              <td className="px-6">{menu.bankAccount}</td>
+              <td className="px-6">{menu.bankName}</td>
+              <td className="px-6">
                 <TradeButton title="Remove" />
               </td>
             </tr>
@@ -35,6 +36,7 @@ const BankTable = () => {
         })}
       </tbody>
     </table>
+    </div>
   );
 };
 

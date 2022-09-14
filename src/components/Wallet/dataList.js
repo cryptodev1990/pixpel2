@@ -606,7 +606,7 @@ export const NFTList = [
   {
     id: 1,
     game: Game1,
-    quantity: 30,
+    quantity: "30",
     valuet: "300.000 PIXP",
     startDate: "01/02/2023",
     earning: "50.000 PIXP",
@@ -648,7 +648,7 @@ export const NFTList = [
         earning: "170 PIXP",
         expenses: "50 PIXP",
       },
-    ]
+    ],
   },
   {
     id: 2,
