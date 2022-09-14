@@ -1,73 +1,68 @@
-import React, { useState } from "react";
-import MarketCard from "./MarketCard";
-import LiquidityCard from "./LiquidityCard";
-import GraphCard from "./GraphCard";
-import LimitCard from "./LimitCard";
-import Button from "./Button";
-import { useSearchParams } from "react-router-dom";
+import React, { useState } from 'react';
+import Market from './Market';
+import LiquidityCard from './LiquidityCard';
+import Limit from './Limit';
+import Button from '../../components/Button/Button';
 
 const buttonList = [
   {
     id: 1,
     title: "Market",
+    buttonStyle: "w-33 h-14"
   },
   {
     id: 2,
     title: "Limit",
+    buttonStyle: "w-26 h-14"
   },
   {
     id: 3,
     title: "Liquidity",
+    buttonStyle: "w-36 h-14"
   },
-];
+]
 
 function SwapMaster() {
-  const [search, setSearch] = useSearchParams();
 
-  const [swapState, setSwapState] = useState(
-    search.get("x") === null ? "Market" : search.get("x")
-  );
+  const [selectedButtonId, setSelectedButtonId] = useState(1);
+  const [temp, setTemp] = useState(<Market/>)
 
-  const [selected, setSelected] = useState(search.get("y") === null ? 1 : 3);
-
-  const handleClick = (button) => {
-    setSwapState(button.title);
-    setSelected(button.id);
-  };
+  const handleClick = (buttonId) => {
+    setSelectedButtonId(buttonId);
+    switch(buttonId) {
+      case 1:
+        setTemp(<Market/>);
+        break;
+      case 2:
+        setTemp(<Limit/>);
+        break;
+      case 3:
+        setTemp(<LiquidityCard/>);
+        break;
+      default:
+    }
+  }
+  
   return (
     <>
-      <div
-        className="flex flex-col py-12 justify"
-        style={{ fontFamily: "Poppins" }}
-      >
-        <div className="mb-5 w-66 h-15" style={{ fontSize: "40px" }}>
+      <div className="flex flex-col py-12 justify" style={{fontFamily:"Poppins"}}>
+        <div className="mb-5 w-66 h-15" style={{fontSize:"40px"}}>
           Swap Master
         </div>
-        <div className="flex flex-row justify-between gap-5 mb-12">
-          {buttonList.map((button, idx) => {
-            return (
-              <Button
-                key={idx}
-                title={button.title}
-                selected={selected === button.id}
-                onClick={() => {
-                  handleClick(button);
-                }}
-              />
-            );
-          })}
+        <div className="flex flex-row justify-between gap-5 mb-12 text-lg font-semibold g-5">
+          {
+						buttonList.map( (button, idx) => {
+              return(
+                <Button key={idx} title={button.title}  onClick={() => {handleClick(button.id)}} 
+                        buttonStyle={button.buttonStyle} selected={selectedButtonId === button.id}/>
+              )
+            })
+					}
         </div>
-        {swapState === "Market" ? <MarketCard /> : null}
-        {swapState === "Liquidity" ? <LiquidityCard /> : null}
-        {swapState === "Limit" ? (
-          <div className="flex flex-col gap-8 2xl:flex-row">
-            <GraphCard />
-            <LimitCard />
-          </div>
-        ) : null}
+        {temp}
       </div>
     </>
-  );
+  )
 }
 
 export default SwapMaster;
