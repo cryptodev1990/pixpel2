@@ -8,7 +8,7 @@ const CardTable = () => {
       <thead>
         <tr>
           <td className="text-gray-400">Type</td>
-          <td className="text-gray-400">Number</td>
+          <td className="text-gray-400 w-1/2">Number</td>
           <td className="text-gray-400 w-1/12">Action</td>
         </tr>
       </thead>

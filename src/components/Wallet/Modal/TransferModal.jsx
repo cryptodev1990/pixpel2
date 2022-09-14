@@ -22,24 +22,31 @@ const TransferModal = (props) => {
                 <div className="flex justify-center text-xl">
                   internal Transferson PIXPEL
                 </div>
+                <div className="flex my-2">
+                  <div className="text-gray-400 text-sm w-5/12">
+                    {accountList[0].title}
+                  </div>
+                  <div className="w-28"></div>
+                  <div className="text-gray-400 text-sm">
+                    {accountList[1].title}
+                  </div>
+                </div>
+
                 <div
                   className={
                     reverse
-                      ? "flex flex-row-reverse gap-8 items-center justify-center mb-4"
-                      : "flex gap-8 items-center justify-center mb-4"
+                      ? "flex flex-row-reverse gap-7 items-center justify-center mb-4"
+                      : "flex gap-7 items-center justify-center mb-4"
                   }
                 >
                   <div className="flex flex-col gap-1 w-full">
-                    <div className="text-gray-400 text-sm">
-                      {accountList[0].title}
-                    </div>
                     <Dropdown
                       initialContent={accountList[0].content[0].title}
                       contentList={accountList[0].content}
                     />
                   </div>
                   <div
-                    className="flex h-10 w-10 rounded-full bg-app-black-button items-center justify-center mt-5 cursor-pointer active:bg-gray-500 flex-none"
+                    className="flex h-10 w-10 rounded-full bg-app-black-button items-center justify-center cursor-pointer active:bg-gray-500 flex-none"
                     onClick={handleChange}
                   >
                     <svg
@@ -57,9 +64,6 @@ const TransferModal = (props) => {
                     </svg>
                   </div>
                   <div className="flex flex-col gap-1 w-full">
-                    <div className="text-gray-400 text-sm">
-                      {accountList[1].title}
-                    </div>
                     <Dropdown
                       initialContent={accountList[1].content[1].title}
                       contentList={accountList[1].content}

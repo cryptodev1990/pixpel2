@@ -4,6 +4,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '560px',
+        '2xs': '375px'
+      },
       backgroundColor: {
         app: {
           black: {
@@ -42,6 +46,25 @@ module.exports = {
             DEFAULT: '#0095C8',
           }
         }
+      },
+      width: {
+        '47': '189px',
+        '58': '230px',
+        '66': '264px',
+        '81': '323px',
+        '93': '372px',
+        '125': '500px',
+        '227': '1307px'
+      },
+      height: {
+        '14': '56px',
+        '15': '60px',
+        '88': '350px',
+        '90': '360px'
+      },
+      padding: {
+        '50px': '50px',
+        '60px': '60px',
       }
     },
   },

@@ -905,3 +905,26 @@ export const coinList = [
     title: "USDT"
   }
 ]
+
+export const currencyList = [
+  {
+    id: 1,
+    title: "USD American Dollar"
+  },
+  {
+    id: 2,
+    title: "CAD Canadian Dollar"
+  },
+  {
+    id: 3,
+    title: "FF France Frang"
+  },
+  {
+    id: 4,
+    title: "CHF Swiss Frang"
+  },
+  {
+    id: 5,
+    title: "Pound British Money"
+  },
+]
