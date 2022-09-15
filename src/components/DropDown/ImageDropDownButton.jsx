@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const ImageDropDownButton = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -20,7 +20,7 @@ const ImageDropDownButton = (props) => {
   return (
     <div
       className={
-        props.backgroundColor + (showDropDown ? " rounded-md" : " rounded-t-md")
+        props.backgroundColor + (showDropDown ? " rounded-t-md" : " rounded-md")
       }
       onClick={handleDropDown}
     >
