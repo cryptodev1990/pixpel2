@@ -5,9 +5,11 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        'md': '1000px',
         'xs': '560px',
         '1xs': '480px',
-        '2xs': '375px'
+        '2xs': '375px',
+        'preferencemd': '820px',
       },
       backgroundColor: {
         app: {

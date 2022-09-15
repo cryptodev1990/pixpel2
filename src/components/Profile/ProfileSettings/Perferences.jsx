@@ -47,8 +47,8 @@ const Preferences = () => {
     <>
       <div className="mt-20 mb-8 font-semibold text-3xl">Preferences</div>
       <div className="flex flex-col border-y-2 border-app-black py-3">
-        <div className="flex flex-row justify-between items-center border-b-2 border-app-black overflow-x-auto">
-          <div className="flex flex-row">
+        <div className="flex sm:flex-row flex-col justify-between sm:items-center border-b-2 border-app-black overflow-x-auto">
+          <div className="flex">
             <div className="bg-app-black-light h-6 w-6 mt-6 rounded-md flex-none"></div>
             <div className="flex flex-col pt-6 mx-4">
               <div className="text-xl">Order Confirmation Reminders</div>
@@ -58,15 +58,14 @@ const Preferences = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-baseline px-6">
-            <div className="rouned-full w-2.5 h-2.5 bg-app-green rounded-full"></div>
-            <div className="w-2/3 mx-3">
+          <div className="flex items-baseline px-8">
+            <div className="rouned-full w-2.5 h-2.5 bg-app-green rounded-full flex-none"></div>
+            <div className="sm:w-2/3 w-full mx-3">
               Stop-Limit Order, Auto Borrow/Replay for Margin
             </div>
           </div>
-          <div className="py-12 text-base"></div>
           <div
-            className="mx-2 flex rounded-md items-center bg-app-black h-10 w-auto px-6 justify-center hover:cursor-pointer"
+            className="my-4 flex rounded-md items-center bg-app-black h-10 sm:w-auto px-6 justify-center cursor-pointer w-32 mx-8 sm:mx-2"
             onClick={() => {
               setShowModal(true);
             }}
@@ -79,8 +78,8 @@ const Preferences = () => {
             <div className="bg-app-black-light h-6 w-6 rounded-md flex-none"></div>
             <div className="text-xl">Notifications</div>
           </div>
-          <div className="flex justify-between md:flex-row flex-col gap-7 md:px-0 px-4">
-            <div className="flex flex-col md:flex-row gap-3">
+          <div className="flex justify-between preferencemd:flex-row flex-col gap-7 px-10">
+            <div className="flex flex-col sm:flex-row gap-3">
               <NotificationButton
                 title="PixPel News"
                 handleClick={handlepixpel}

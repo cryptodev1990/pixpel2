@@ -10,24 +10,26 @@ const AccountActivity = () => {
     <>
       <div className="flex flex-col bg-app-black rounded-lg px-6 py-8 gap-6 overflow-x-auto">
         <div className="flex items-center gap-6">
-          <div className="rounded-full w-3 h-3 bg-app-green"></div>
+          <div className="rounded-full w-3 h-3 bg-app-green flex-none"></div>
           <div className="text-xl">Devices and activities</div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-baseline flex-col 2xs:flex-row">
           <div className="flex gap-6 items-baseline">
-            <div className="bg-app-green w-3 h-3 rounded-full"></div>
+            <div className="bg-app-green w-3 h-3 rounded-full flex-none"></div>
             <div className="flex flex-col">
               <div className="text-xl">Safe devices</div>
               <div className="text-gray-500 text-sm">Verified: 03-07-2022</div>
             </div>
           </div>
-          <div
-            className="bg-app-blue rounded-md px-4 py-2 cursor-pointer flex justify-center items-center"
-            onClick={() => {
-              setShowDeviceModal(true);
-            }}
-          >
-            Manage
+          <div className="ml-8 my-2">
+            <div
+              className="bg-app-blue rounded-md px-4 py-2 cursor-pointer flex justify-center items-baseline"
+              onClick={() => {
+                setShowDeviceModal(true);
+              }}
+            >
+              Manage
+            </div>
           </div>
         </div>
         <div className="flex justify-between my-8">

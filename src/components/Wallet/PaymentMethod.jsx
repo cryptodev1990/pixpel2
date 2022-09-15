@@ -41,10 +41,10 @@ const PaymentMethod = () => {
             handleClick={handleClick(1)}
           />
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-baseline">
           <div className="text-2xl">{word}</div>
           <div
-            className="bg-app-green px-4 py-3 rounded-md hover:cursor-pointer"
+            className="bg-app-green px-4 py-3 rounded-md hover:cursor-pointer mx-8"
             onClick={() => {
               setShowModal(true);
             }}

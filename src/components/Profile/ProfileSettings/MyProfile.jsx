@@ -8,8 +8,8 @@ const MyProfile = () => {
     <>
       <div className="mt-20 mb-8 font-semibold text-3xl">My Profile</div>
       <div className="flex flex-col border-y-2 border-app-black gap-3 py-3">
-        <div className="flex flex-row justify-between items-center border-b-2 border-app-black overflow-x-auto">
-          <div className="flex flex-row pr-6">
+        <div className="flex sm:flex-row flex-col justify-between sm:items-center border-b-2 border-app-black overflow-x-auto">
+          <div className="flex pr-6">
             <div className="bg-app-black-light items-baseline h-6 w-6 rounded-md flex-none"></div>
             <div className="flex flex-col mx-4">
               <div className="text-base">Nickname</div>
@@ -18,14 +18,14 @@ const MyProfile = () => {
               </div>
             </div>
           </div>
-          <div className="py-12 text-base px-6">Alberto1738</div>
+          <div className="sm:py-12 my-3 text-base px-10">Alberto1738</div>
           <div
-            className="mx-2 flex rounded-md items-center bg-app-black py-2 w-auto px-6 justify-center hover:cursor-pointer"
+            className="flex rounded-md bg-app-black py-2 px-6 justify-center cursor-pointer mb-5 mx-10 w-32 sm:mx-2 sm:w-auto"
             onClick={() => {
               setShowModal(true);
             }}
           >
-            <button>Edit</button>
+            Edit
           </div>
         </div>
         <div className="flex flex-row justify-between items-center">
