@@ -15,7 +15,7 @@ const AddBankModal = (props) => {
               onClick={() => props.setShowModal(false)}
             ></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
-              <div className="relative flex flex-col w-full max-w-lg p-4 mx-auto bg-app-black rounded-xl shadow-lg px-6 py-8 text-lg">
+              <div className="relative flex flex-col w-full max-w-lg p-4 mx-auto bg-app-black rounded-xl shadow-lg xs:px-6 px-2 py-8 text-lg">
                 <div className="flex justify-center text-xl my-3">
                   SELECT BANK
                 </div>

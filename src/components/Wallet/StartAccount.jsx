@@ -52,7 +52,7 @@ const StartAccount = () => {
     <>
       <div className="flex flex-col">
         <StartAccountOverview selected={selectedType} />
-        <div className="flex gap-4 mt-6 mb-3">
+        <div className="flex gap-4 mt-6">
           {tokenList.map((menu, idx) => {
             return (
               <TokenButton
@@ -65,7 +65,7 @@ const StartAccount = () => {
             );
           })}
         </div>
-        <div className="flex gap-4 mt-6 mb-5">
+        <div className="flex gap-4 mt-6 mb-5 xs:flex-row flex-col">
           {selectedType === 0
             ? fiatList.map((menu, idx) => {
                 return (

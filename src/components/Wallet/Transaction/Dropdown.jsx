@@ -23,7 +23,7 @@ const Dropdown = (props) => {
       }
       onClick={handleDropDown}
     >
-      <div className="flex flex-row justify-between px-4 py-3 rounded-md gap-20">
+      <div className="flex justify-between px-4 py-3 rounded-md">
         <div className="flex">
           <div className="text-base font-medium">{selectedContent}</div>
         </div>

@@ -32,7 +32,7 @@ const GameAccount = () => {
     <>
       <div>
         <GamingAccountOverview />
-        <div className="flex mt-4 mb-8 gap-4">
+        <div className="flex mt-4 mb-8 gap-4 flex-col 2xs:flex-row">
           <TokenButton
             title="DEPOSIT"
             selected={selected === 0}

@@ -12,7 +12,7 @@ const TransactionHistory = () => {
   return (
     <div className="flex flex-col">
       <div className="text-3xl mb-6 font-semibold">Transaction History</div>
-      <div className="flex gap-5 mb-10">
+      <div className="flex gap-5 mb-10 flex-col sm:flex-row">
         {transactionButtonList.map((menu, idx) => {
           return (
             <TokenButton
@@ -25,7 +25,7 @@ const TransactionHistory = () => {
           );
         })}
       </div>
-      <div className="flex gap-5">
+      <div className="flex gap-5 flex-col sm:flex-row">
         {dropdownList.map((menu, idx) => {
           return (
             <div className="flex flex-col gap-2" key={idx}>

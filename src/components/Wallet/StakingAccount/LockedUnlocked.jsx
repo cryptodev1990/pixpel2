@@ -23,47 +23,49 @@ const LockedUnlocked = () => {
           handleClick={handleClick(1)}
         />
       </div>
-      <table className="table-auto w-full mt-10">
-        <thead>
-          <tr>
-            <td className="text-gray-400">Game</td>
-            <td className="text-gray-400">Coin</td>
-            <td className="text-gray-400">Rewards</td>
-            <td className="text-gray-400">Staked Amount</td>
-            <td className="text-gray-400">Start Date</td>
-            <td className="text-gray-400">EST.APY</td>
-            <td className="text-gray-400">Locked Days</td>
-            <td className="text-gray-400">Invest Date</td>
-            <td className="w-1/12"></td>
-          </tr>
-        </thead>
-        <tbody className="px-4">
-          {stakingList.map((menu, idx) => {
-            return (
-              <tr
-                key={idx}
-                className={
-                  idx !== stakingList.length - 1
-                    ? "border-b-2 border-app-black"
-                    : ""
-                }
-              >
-                <td className="py-5">{menu.Game}</td>
-                <td>{menu.Coin}</td>
-                <td>{menu.Rewards}</td>
-                <td>{menu.StakedAmount}</td>
-                <td>{menu.StartDate}</td>
-                <td>{menu.ESTAPY}</td>
-                <td>{menu.LockedDays}</td>
-                <td>{menu.InvestDate}</td>
-                <td>
-                  <UnlockButton />
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div className="overflow-x-auto relative mt-10 x-full">
+        <table className="table-auto">
+          <thead>
+            <tr>
+              <td className="text-gray-400 px-6">Game</td>
+              <td className="text-gray-400 px-6">Coin</td>
+              <td className="text-gray-400 px-6">Rewards</td>
+              <td className="text-gray-400 px-6">Staked Amount</td>
+              <td className="text-gray-400 px-6">Start Date</td>
+              <td className="text-gray-400 px-6">EST.APY</td>
+              <td className="text-gray-400 px-6">Locked Days</td>
+              <td className="text-gray-400 px-6">Invest Date</td>
+              <td className="w-1/12"></td>
+            </tr>
+          </thead>
+          <tbody className="px-4">
+            {stakingList.map((menu, idx) => {
+              return (
+                <tr
+                  key={idx}
+                  className={
+                    idx !== stakingList.length - 1
+                      ? "border-b-2 border-app-black"
+                      : ""
+                  }
+                >
+                  <td className="py-5 px-6">{menu.Game}</td>
+                  <td className="px-6">{menu.Coin}</td>
+                  <td className="px-6">{menu.Rewards}</td>
+                  <td className="px-6">{menu.StakedAmount}</td>
+                  <td className="px-6">{menu.StartDate}</td>
+                  <td className="px-6">{menu.ESTAPY}</td>
+                  <td className="px-6">{menu.LockedDays}</td>
+                  <td className="px-6">{menu.InvestDate}</td>
+                  <td className="px-6">
+                    <UnlockButton />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

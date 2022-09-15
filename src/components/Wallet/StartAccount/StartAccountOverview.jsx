@@ -12,14 +12,14 @@ const StartAccountOverview = ({ selected }) => {
       : setTempBalance("Token balance");
   }, [selected]);
   return (
-    <div className="flex justify-between w-full h-max pt-4 pb-10 px-10 bg-app-black rounded-lg">
+    <div className="flex justify-between w-full h-max pt-4 pb-10 md:px-10 px-2 bg-app-black rounded-lg">
       <div className="flex flex-col w-full">
         <div className="flex md:flex-row flex-col gap-3 justify-between mb-8 md:items-end">
           <div className="text-3xl">START ACCOUNT</div>
           <TransactionHistoryButton />
         </div>
-        <div className="flex xl:flex-row flex-col xl:items-end pr-16 gap-10">
-          <div className="flex w-5/6 justify-between">
+        <div className="flex xl:flex-row flex-col xl:items-end md:pr-16 gap-10">
+          <div className="flex md:w-5/6 justify-between flex-col md:flex-row gap-3">
             <div className="flex flex-col">
               <div className="text-sm text-gray-400 mb-2">
                 Estimated balance

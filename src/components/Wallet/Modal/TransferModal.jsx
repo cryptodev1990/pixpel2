@@ -18,7 +18,7 @@ const TransferModal = (props) => {
               onClick={() => props.setShowModal(false)}
             ></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
-              <div className="relative flex flex-col w-full max-w-3xl p-4 mx-auto bg-app-black rounded-xl shadow-lg px-6 py-6 text-lg">
+              <div className="relative flex flex-col w-full max-w-3xl p-4 mx-auto bg-app-black rounded-xl shadow-lg xs:px-6 px-2 py-6 text-lg">
                 <div className="flex justify-center text-2xl my-10">
                   internal Transferson PIXPEL
                 </div>
@@ -35,8 +35,8 @@ const TransferModal = (props) => {
                 <div
                   className={
                     reverse
-                      ? "flex flex-row-reverse gap-7 items-center justify-center mb-4"
-                      : "flex gap-7 items-center justify-center mb-4"
+                      ? "flex xs:flex-row-reverse flex-col-reverse xs:gap-7 gap-3 items-center justify-center mb-4"
+                      : "flex xs:flex-row flex-col xs:gap-7 gap-3 items-center justify-center mb-4"
                   }
                 >
                   <div className="flex flex-col gap-1 w-full">
@@ -70,14 +70,14 @@ const TransferModal = (props) => {
                     />
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <div className="w-1/2">
+                <div className="flex gap-3 flex-col xs:flex-row">
+                  <div className="xs:w-1/2">
                     <Dropdown
                       initialContent="COIN"
                       contentList={coinList}
                     ></Dropdown>
                   </div>
-                  <div className="bg-app-black-button flex justify-between items-center py-2 px-4 w-1/2 rounded-md">
+                  <div className="bg-app-black-button flex justify-between items-center xs:w-1/2 py-2 px-4 rounded-md">
                     <div className="text-gray-400">AMOUNT</div>
                     <div className="text-blue-500">MAX</div>
                   </div>

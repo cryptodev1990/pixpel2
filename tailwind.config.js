@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       screens: {
         'xs': '560px',
+        '1xs': '480px',
         '2xs': '375px'
       },
       backgroundColor: {
@@ -78,7 +79,7 @@ module.exports = {
       padding: {
         '50px': '50px',
         '60px': '60px',
-      }
+      },
     },
   },
   plugins: [],
