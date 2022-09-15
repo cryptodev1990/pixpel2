@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ImageDropDownButton from "../../components/DropDown/ImageDropDownButton";
 import DropdownButton from "../../components/DropDown/DropDownButton";
 
@@ -41,25 +41,29 @@ const fromTokenList = [
 const toTokenList = [
   {
     id:1,
-    title:"USDT",
+    title:"BTC",
     url:"../../assets/images/UserHome/bnb.png",
   },
   {
     id:2,
-    title:"USDT",
+    title:"BTC",
     url:"../../assets/images/UserHome/bnb.png",
   },
   {
     id:3,
-    title:"USDT",
+    title:"BTC",
     url:"../../assets/images/UserHome/bnb.png",
   },
 ]
 
 const LimitCard = () => {
+  const [convert, setConvert] = useState(false);
+  const handleConvert = () => {
+    setConvert(!convert);
+  };
 	return(
     <>
-      <div className="flex flex-col px-4 py-4 2xs:py-8 2xs:px-8 sm:py-14 sm:px-14 bg-app-black rounded-xl">
+      <div className="flex flex-col sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] bg-app-black rounded-xl">
         <div className="flex flex-col justify-between 2xs:flex-row">
           <div className="text-lg font-semibold ">From</div>
           <div className="flex flex-row items-center text-gray-600">
@@ -78,7 +82,10 @@ const LimitCard = () => {
             <div className="text-base text-gray-500 w-text-base">Max</div>
           </div>
           <div className="flex-none">
-            <ImageDropDownButton initialContent={fromTokenList[0]} contentList={fromTokenList} backgroundColor={" bg-app-black-button"}/>
+            <ImageDropDownButton 
+              initialContent={convert ? toTokenList[0] : fromTokenList[0]}
+              contentList={convert ? toTokenList : fromTokenList} 
+              backgroundColor={" bg-app-black-button"}/>
           </div>       
         </div>
         <div className="flex flex-col pb-10 border-b-2 border-app-block">
@@ -106,7 +113,8 @@ const LimitCard = () => {
           </div>
         </div>
         <div className="flex justify-center w-full -mt-6">
-          <div className="flex items-center justify-center rounded-full full bg-app-black-button">
+          <div className="flex items-center justify-center rounded-full cursor-pointer full bg-app-black-button"
+               onClick={handleConvert}>
 							<svg className="w-12 h-12 text-white-800"  width="24" height="24" viewBox="0 0 24 24" 
                    strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  
                 <path stroke="none" d="M0 0h24v24H0z"/>  
@@ -126,7 +134,10 @@ const LimitCard = () => {
             <input className="w-full bg-app-black-button xs:placeholder:text-base placeholder:text-xs placeholder:text-gray-400" placeholder='Please enter 0.0004-50'/>
           </div>
           <div className="flex-none">
-            <ImageDropDownButton initialContent={toTokenList[0]} contentList={toTokenList} backgroundColor={" bg-app-black-button"}/>
+            <ImageDropDownButton 
+              initialContent={convert ? fromTokenList[0] : toTokenList[0]}
+              contentList={convert ? fromTokenList : toTokenList} 
+              backgroundColor={" bg-app-black-button"}/>
           </div>
         </div>
         <div className="flex flex-row justify-between mt-5 text-xs 1xs:text-base">

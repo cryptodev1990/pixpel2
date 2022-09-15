@@ -49,7 +49,7 @@ const LiquidityCard = () => {
   }
   return(
     <>
-      <div className="flex flex-col px-6 py-6 md:py-12 md:px-12 bg-app-black rounded-xl 2xs:px-8 2xs:py-8">
+      <div className="flex flex-col bg-app-black rounded-xl sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px]">
         <div className="flex justify-center">
           <div className="text-xl font-semibold">
             Add liquidity

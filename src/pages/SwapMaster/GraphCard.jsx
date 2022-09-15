@@ -4,7 +4,7 @@ import Graph from '../../asssets/images/UserHome/graph.PNG';
 const GraphCard = () => {
 	return(
     <>
-      <div className="flex flex-col px-2 py-5 text-lg 2xs:py-12 2xs:px-12 bg-app-black rounded-xl">
+      <div className="flex flex-col text-lg bg-app-black rounded-xl sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] ">
         <div className="flex items-center justify-center rounded-md cursor-pointer w-36 bg-app-black-button hover:bg-app-blue h-14">
           <div>
             BTC/USDT

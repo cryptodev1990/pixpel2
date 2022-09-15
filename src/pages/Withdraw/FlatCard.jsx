@@ -67,7 +67,7 @@ const FlatCard = () => {
   } 
   return (
     <>
-      <div className="flex flex-col w-full px-12 py-12 bg-app-black rounded-xl sm:w-155">
+      <div className="flex flex-col w-full sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] bg-app-black rounded-xl sm:w-155">
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Fiat Coin</div>
         </div>

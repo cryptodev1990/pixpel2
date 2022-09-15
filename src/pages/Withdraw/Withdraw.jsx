@@ -27,7 +27,7 @@ const Withdraw = () => {
   return (
     <>
       <div
-        className="flex flex-col py-12 justify"
+        className="flex flex-col px-5 py-12 justify md:px-0"
         style={{ fontFamily: "Poppins" }}
       >
         <div className="flex mb-5">

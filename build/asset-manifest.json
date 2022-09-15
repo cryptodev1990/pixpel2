@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f7e0c12.css",
-    "main.js": "/static/js/main.e86f50db.js",
+    "main.css": "/static/css/main.51090fb9.css",
+    "main.js": "/static/js/main.eb01ef54.js",
     "static/media/nft-1.jpg": "/static/media/nft-1.448acf01f5f1549f6820.jpg",
     "static/media/bg.png": "/static/media/bg.04cc000024fb6ded8056.png",
     "static/media/graph.PNG": "/static/media/graph.932742628ff41f85fc2c.PNG",
@@ -12,11 +12,11 @@
     "index.html": "/index.html",
     "static/media/Mail.svg": "/static/media/Mail.94645815086e5146117ad6d3118b171a.svg",
     "static/media/clock.svg": "/static/media/clock.55739bce2d10d5437c4d472afb0da13f.svg",
-    "main.5f7e0c12.css.map": "/static/css/main.5f7e0c12.css.map",
-    "main.e86f50db.js.map": "/static/js/main.e86f50db.js.map"
+    "main.51090fb9.css.map": "/static/css/main.51090fb9.css.map",
+    "main.eb01ef54.js.map": "/static/js/main.eb01ef54.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f7e0c12.css",
-    "static/js/main.e86f50db.js"
+    "static/css/main.51090fb9.css",
+    "static/js/main.eb01ef54.js"
   ]
 }

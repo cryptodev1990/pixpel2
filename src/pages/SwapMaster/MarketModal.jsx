@@ -18,7 +18,7 @@ export default function MarketModal(props) {
 							onClick={() => props.setShowModal(false)}
 						></div>
 						<div className="flex items-center min-h-screen px-4 py-8">
-							<div className="relative flex flex-col w-full px-10 py-10 mx-auto text-lg bg-app-black rounded-xl xs:w-auto">
+							<div className="relative flex flex-col w-full sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] mx-auto text-lg bg-app-black rounded-xl xs:w-auto">
                 <div className="flex mb-5">
                   <div className="text-xl font-medium 2xs:text-2xl">
                     Security Verification

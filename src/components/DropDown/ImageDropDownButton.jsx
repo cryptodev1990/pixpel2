@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ImageDropDownButton = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [selectedContent, setSelectedContent] = useState(props.initialContent);
+
+  useEffect(() => {
+    setSelectedContent(props.initialContent);
+  },[props.initialContent])
+
 
   const handleDropDown = () => {
     if (showDropDown) {
@@ -19,18 +24,16 @@ const ImageDropDownButton = (props) => {
   return (
     <div
       className={
-        showDropDown
-          ? " bg-app-black-button rounded-t-md cursor-pointer"
-          : " bg-app-black-button rounded-md cursor-pointer"
+        props.backgroundColor + (showDropDown ? " rounded-t-md" : " rounded-md") + " items-center"
       }
       onClick={handleDropDown}
     >
-      <div className="flex flex-row items-center justify-between px-5 py-2 rounded-md gap-3">
-        <div className="flex gap-2 items-center">
-          <img src={selectedContent.url} alt="" className="rounded-full h-7" />
+      <div className="flex flex-row items-center justify-between h-16 px-5 py-3 rounded-md gap-3">
+        <div className="flex flex-row gap-1 h-3/5 items-center">
+          <img src={selectedContent.url} alt="" className="w-7 h-7 rounded-full" />
           <div className="text-base font-medium">{selectedContent.title}</div>
         </div>
-        <div className="flex">
+        <div className="flex items-center">
           <svg
             className="w-5 h-5 text-gray-700"
             fill="none"
@@ -53,7 +56,9 @@ const ImageDropDownButton = (props) => {
               className="fixed inset-0 w-full h-full"
               onClick={handleDropDown}
             ></div>
-            <div className="bg-app-black-button flex flex-col rounded-b-md">
+            <div
+              className={props.backgroundColor + " flex flex-col rounded-b-md"}
+            >
               {props.contentList.map((content, idx) => {
                 return (
                   <div

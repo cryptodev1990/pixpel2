@@ -47,7 +47,7 @@ const CryptoCard = () => {
 
   return (
     <>
-      <div className="flex flex-col w-full px-12 py-12 bg-app-black rounded-xl sm:w-155">
+      <div className="flex flex-col w-full bg-app-black rounded-xl sm:w-155 sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px]">
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Crypto</div>
         </div>
@@ -95,9 +95,9 @@ const CryptoCard = () => {
           </div>
           <div className="text-xs font-medium 2xs:text-lg">500 PIXP</div>
         </div>
-        <div className="flex flex-row justify-between mb-1">
-          <div className="text-lg font-medium">500 PIXP</div>
-          <div className="text-lg font-semibold 1xs:text-2xl 2xs:text-xl">27 854 853.958 PIXP</div>
+        <div className="flex flex-row items-center justify-between mb-1">
+          <div className="text-sm font-medium 2xs:text-lg">500 PIXP</div>
+          <div className="text-sm font-semibold 1xs:text-2xl 2xs:text-xl">27 854 853.958 PIXP</div>
         </div>
         <div className="flex flex-row justify-end mb-5">
           <div className="text-sm font-normal text-gray-500">

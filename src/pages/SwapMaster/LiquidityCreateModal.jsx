@@ -12,8 +12,8 @@ export default function LiquidityCreateModal(props) {
 							onClick={() => props.setShowCreateModal(false)}
 						></div>
 						<div className="flex items-center min-h-screen px-4 py-8">
-							<div className="relative flex flex-col px-6 py-6 mx-auto text-lg shadow-lg bg-app-black rounded-xl w-158 xs:px-12 xs:py-12 2xs:px-8 2xs:py-8 sm:py-16 sm:px-16">
-                <div className="flex mb-7">
+							<div className="relative flex flex-col mx-auto text-lg shadow-lg bg-app-black rounded-xl w-158 sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px]">
+                <div className="flex justify-center mb-2 2xs:mb-7 2xs:justify-start">
                   <div className="text-lg font-medium 2xs:text-2xl">
                     LP tokens in your wallet
                   </div>

@@ -48,7 +48,7 @@ const MarketCard = () => {
     setConvert(!convert);
   };
   return (
-    <div className="flex flex-col 2xs:px-[50px] 2xs:py-[50px] rounded-md w-155 bg-app-black mb-3 px-3 py-3">
+    <div className="flex flex-col mb-3 rounded-md w-155 bg-app-black sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] ">
       <div className="flex flex-col justify-between text-lg 1xs:flex-row">
         <div className="font-semibold">From</div>
         <div className="font-normal text-gray-400">

@@ -18,7 +18,7 @@ export default function LiquidityModal(props) {
 							onClick={() => props.setShowModal(false)}
 						></div>
 						<div className="flex items-center min-h-screen px-4 py-8">
-							<div className="relative flex flex-col px-6 py-6 mx-auto text-lg shadow-lg sm:py-16 sm:px-16 w-158 bg-app-black rounded-xl xs:px-12 xs:py-12 2xs:px-8 2xs:py-8">
+							<div className="relative flex flex-col mx-auto text-lg shadow-lg w-158 bg-app-black rounded-xl sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px]">
                 <div className="flex mb-5">
                   <div className="text-xl font-medium 2xs:text-2xl">
                     You are creating a pool

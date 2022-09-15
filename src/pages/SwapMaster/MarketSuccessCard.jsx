@@ -6,7 +6,7 @@ const MarketSuccessCard = () => {
   const dispatch = useDispatch();
 	return(
     <>
-      <div className="flex flex-col items-center w-full px-5 py-5 2xs:py-12 2xs:px-12 bg-app-black rounded-xl xs:w-auto">
+      <div className="flex flex-col items-center w-full sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] bg-app-black rounded-xl xs:w-auto">
         <div className='flex mb-4 border-2 border-dashed rounded-full border-emerald-500' 
              style={{width:"130px", height:"130px", paddingTop:"13px",paddingRight:"14px",paddingBottom:"14px",paddingLeft:"14px"}}>
           <div className='flex px-2 py-3 rounded-full bg-emerald-500' style={{width:"100px", height:"100px"}}>
