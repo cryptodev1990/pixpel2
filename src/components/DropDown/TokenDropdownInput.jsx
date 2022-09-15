@@ -20,7 +20,7 @@ const TokenDropdownInput = (props) => {
     setShowDropDown(false);
   }
   return(
-    <div className="flex flex-row items-center w-full h-16 rounded-md bg-app-black-button">
+    <div className="flex flex-row items-center w-full h-16 rounded-md bg-app-black-button cursor-pointer">
       <div className="flex-none">
         <div className={ (showDropDown ? "rounded-t-md" : "rounded-md")  + " bg-app-black-button"} onClick={handleDropDown}>
           <div className="flex flex-row h-16 px-5 py-5">

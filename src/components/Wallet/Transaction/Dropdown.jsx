@@ -18,7 +18,7 @@ const Dropdown = (props) => {
   return (
     <div
       className={
-        " bg-app-black-button" +
+        " bg-app-black-button cursor-pointer" +
         (showDropDown ? " rounded-t-md" : " rounded-md")
       }
       onClick={handleDropDown}

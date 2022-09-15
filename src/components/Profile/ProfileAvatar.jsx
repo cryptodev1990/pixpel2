@@ -12,10 +12,10 @@ const ProfileAvatar = () => {
           alt="avatar"
         />
         <div className="flex flex-col">
-          <div className="font-medium md:text-xl text-lg">
+          <div className="font-medium md:text-2xl text-xl">
             Juan Vivas
           </div>
-          <div className="font-normal md:text-base sm:text-base text-sm text-gray-400">
+          <div className="font-normal md:text-lg sm:text-base text-sm text-gray-400">
             Last log-in 2022-04-18 14:12
           </div>
         </div>

@@ -18,7 +18,8 @@ import {
   GameMarket,
   Collection,
   CreateNFT,
-  Developer
+  Developer,
+  BuyCrypto
 } from "./pages/index"
 
 function About() {
@@ -75,6 +76,7 @@ function App() {
         <Route path="/create-nft" element={<CreateNFT />} />
         <Route path="/developer" element={<Developer />} />
         <Route path="*" element={<Test />} />
+        <Route path="/buycrypto" element={<BuyCrypto />} />
       </Routes>
     </div>
   );

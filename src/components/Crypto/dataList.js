@@ -1,26 +1,53 @@
-export const modeList = [
+import BNB from "../../asssets/images/UserHome/bnb.png";
+import BTC from "../../asssets/images/UserHome/btc.png";
+import USDC from "../../asssets/images/UserHome/usdc.png";
+import ETH from "../../asssets/images/UserHome/eth.png";
+import XRP from "../../asssets/images/UserHome/xrp.png";
+
+export const PaymentList = [
   {
     id: 1,
-    title: "P2P"
+    title: "MonoBank",
   },
   {
     id: 2,
-    title: "Instant Crypto"
+    title: "SwissBank",
   },
   {
-    id: 1,
-    title: "Deposit Fiat"
+    id: 3,
+    title: "SwissBank",
+  },
+  {
+    id: 4,
+    title: "SwissBank",
   },
 ]
 
-export const buysell = [
+export const FiatList = [
   {
     id: 1,
-    title: "BUY"
+    url: BNB,
+    title: "BNB",
   },
   {
     id: 2,
-    title: "SELL"
+    url: BTC,
+    title: "BTC",
+  },
+  {
+    id: 3,
+    url: ETH,
+    title: "ETH",
+  },
+  {
+    id: 4,
+    url: USDC,
+    title: "USDC",
+  },
+  {
+    id: 5,
+    url: XRP,
+    title: "XRP",
   },
 ]
 

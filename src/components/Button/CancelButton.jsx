@@ -1,8 +1,8 @@
 import React from "react";
 const CancelButton = (props) => {
   return (
-    <div className="bg-app-red text-white rounded-md hover: cursor-pointer w-32">
-      <div className="flex items-center gap-2 h-10 px-4 justify-center">
+    <div className="bg-app-red rounded-md cursor-pointer active:bg-violet-700">
+      <div className="flex items-center h-max w-max py-3 px-4 justify-center">
         {props.title}
       </div>
     </div>

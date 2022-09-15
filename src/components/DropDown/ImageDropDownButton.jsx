@@ -4,7 +4,6 @@ const ImageDropDownButton = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [selectedContent, setSelectedContent] = useState(props.initialContent);
 
-
   const handleDropDown = () => {
     if (showDropDown) {
       setShowDropDown(false);
@@ -20,13 +19,15 @@ const ImageDropDownButton = (props) => {
   return (
     <div
       className={
-        props.backgroundColor + (showDropDown ? " rounded-t-md" : " rounded-md")
+        showDropDown
+          ? " bg-app-black-button rounded-t-md cursor-pointer"
+          : " bg-app-black-button rounded-md cursor-pointer"
       }
       onClick={handleDropDown}
     >
-      <div className="flex flex-row items-center justify-between px-5 py-3 rounded-md h-14">
-        <div className="flex flex-row gap-1 h-2/3">
-          <img src={selectedContent.url} alt="" />
+      <div className="flex flex-row items-center justify-between px-5 py-2 rounded-md gap-3">
+        <div className="flex gap-2 items-center">
+          <img src={selectedContent.url} alt="" className="rounded-full h-7" />
           <div className="text-base font-medium">{selectedContent.title}</div>
         </div>
         <div className="flex">
@@ -52,9 +53,7 @@ const ImageDropDownButton = (props) => {
               className="fixed inset-0 w-full h-full"
               onClick={handleDropDown}
             ></div>
-            <div
-              className={props.backgroundColor + " flex flex-col rounded-b-md"}
-            >
+            <div className="bg-app-black-button flex flex-col rounded-b-md">
               {props.contentList.map((content, idx) => {
                 return (
                   <div

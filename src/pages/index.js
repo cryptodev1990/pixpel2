@@ -15,6 +15,7 @@ import GameMarket from "./GameMarket/GameMarket";
 import Collection from "./Collection/Collection";
 import CreateNFT from "./CreateNFT/CreateNFT";
 import Developer from "./Developer/Developer";
+import BuyCrypto from "./BuyCrypto/BuyCrypto";
 
 export {
     AddressManagement,
@@ -34,4 +35,5 @@ export {
     Collection,
     CreateNFT,
     Developer,
+    BuyCrypto
 }
