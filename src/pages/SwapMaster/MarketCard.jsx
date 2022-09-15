@@ -52,7 +52,7 @@ const MarketCard = () => {
       <div className="flex flex-row justify-between text-lg">
         <div className="font-semibold">From</div>
         <div className="font-normal text-gray-400">
-          { convert ? "Balance: 229.9022" : "Balance: 233,319,129.9022" }
+          {convert ? "Balance: 229.9022" : "Balance: 233,319,129.9022"}
         </div>
       </div>
       <TokenDropdownInput
@@ -89,8 +89,8 @@ const MarketCard = () => {
       <div className="flex flex-row justify-between text-lg">
         <div className="font-semibold">To</div>
         <div className="font-normal text-gray-400">
-					{convert ? "Balance: 233,319,129.9022" : "Balance: 229.9022" }
-				</div>
+          {convert ? "Balance: 233,319,129.9022" : "Balance: 229.9022"}
+        </div>
       </div>
       <TokenDropdownInput
         initialContent={convert ? fromTokenList[0] : toTokenList[0]}
@@ -124,8 +124,8 @@ const MarketCard = () => {
       >
         <div className="text-lg">confirm</div>
       </div>
-			
-			<MarketModal showModal={showModal} setShowModal={setShowModal}/>
+
+      <MarketModal showModal={showModal} setShowModal={setShowModal} />
     </div>
   );
 };

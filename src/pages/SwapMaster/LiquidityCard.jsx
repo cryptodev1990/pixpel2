@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import TokenDropdownInput from "../../components/DropDown/TokenDropdownInput";
-import LiquidityModal from './LiquidityModal';
+import LiquidityModal from "./LiquidityModal";
 
 const fromTokenList = [
   {
@@ -46,14 +46,12 @@ const LiquidityCard = () => {
   const [showModal, setShowModal] = useState(false);
   const handleModal = () => {
     setShowModal(true);
-  }
-  return(
+  };
+  return (
     <>
       <div className="flex flex-col px-12 py-12 bg-app-black rounded-xl">
         <div className="flex justify-center">
-          <div className="text-xl font-semibold">
-            Add liquidity
-          </div>
+          <div className="text-xl font-semibold">Add liquidity</div>
         </div>
         <div className="flex justify-center mt-2">
           <div className="text-sm font-medium text-slate-500">
@@ -147,20 +145,19 @@ const LiquidityCard = () => {
                 <div>193.095</div>
               </div>
               <div>PIXP per BNB</div>
-            </div>    
+            </div>
           </div>
         </div>
-        <div className="flex items-center justify-center h-16 rounded-md cursor-pointer h-18 bg-app-blue hover:bg-app-blue"
-            onClick={handleModal}>
-          <div className="text-lg">
-            confirm
-          </div>
+        <div
+          className="flex items-center justify-center h-16 rounded-md cursor-pointer h-18 bg-app-blue hover:bg-app-blue"
+          onClick={handleModal}
+        >
+          <div className="text-lg">confirm</div>
         </div>
       </div>
-      <LiquidityModal showModal={showModal} setShowModal={setShowModal}/>
+      <LiquidityModal showModal={showModal} setShowModal={setShowModal} />
     </>
-    
-  )
+  );
 };
 
 export default LiquidityCard;

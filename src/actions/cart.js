@@ -1,4 +1,4 @@
-import { ADD_CART, REMOVE_CART, FETCH_CARDS } from "./type";
+import { ADD_CART, REMOVE_CART } from "./type";
 
 export const addCart = info => {
   return {

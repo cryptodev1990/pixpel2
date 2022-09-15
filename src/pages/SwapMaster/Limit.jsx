@@ -10,8 +10,7 @@ const Limit = () => {
         <LimitCard />
       </div>
     </>
-  )
-}
-  
+  );
+};
+
 export default Limit;
-  

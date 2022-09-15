@@ -315,7 +315,7 @@ export const dropdownList = [
   {
     id: 2,
     title: "Time",
-    header: "Past 30 days",
+    header: "Past 30days",
     content: [
       {
         id: 1,

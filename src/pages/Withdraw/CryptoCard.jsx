@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import BNB from "../../asssets/images/UserHome/bnb.png";
 import DropDownButton from "./DropDownButton";
-import WithdrawalModal  from "./WithdrawalModal";
+import WithdrawalModal from "./WithdrawalModal";
 import ImageDropDownButton from "../../components/DropDown/ImageDropDownButton";
 import TokenDropdownInput from "../../components/DropDown/TokenDropdownInput";
 
@@ -43,8 +42,7 @@ const networkList = [
 ];
 
 const CryptoCard = () => {
-
-  const[showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <>
@@ -53,8 +51,12 @@ const CryptoCard = () => {
           <div className="text-lg font-medium">Crypto</div>
         </div>
         <div className="w-full mb-8">
-         <ImageDropDownButton initialContent={tokenList[0]} contentList={tokenList} backgroundColor={" bg-app-black-button"}/>
-        </div>  
+          <ImageDropDownButton
+            initialContent={tokenList[0]}
+            contentList={tokenList}
+            backgroundColor={" bg-app-black-button"}
+          />
+        </div>
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Wallet Address</div>
         </div>
@@ -75,7 +77,10 @@ const CryptoCard = () => {
           <div className="text-lg font-medium">Withdraw Amount</div>
         </div>
         <div className="flex flex-row mb-1 ">
-          <TokenDropdownInput initialContent={tokenList[0]} contentList={tokenList}/>
+          <TokenDropdownInput
+            initialContent={tokenList[0]}
+            contentList={tokenList}
+          />
         </div>
         <div className="flex justify-end mb-8">
           <div className="text-sm text-slate-500">
@@ -112,7 +117,7 @@ const CryptoCard = () => {
           <div className="text-lg">Withdraw</div>
         </div>
       </div>
-      <WithdrawalModal showModal={showModal} setShowModal={setShowModal}/>
+      <WithdrawalModal showModal={showModal} setShowModal={setShowModal} />
     </>
   );
 };

@@ -8,7 +8,7 @@ export const withdrawShowModal = () => {
 };
 
 export const withdrawCloseModal = () => {
-    return {
-      type: WITHDRAW_CLOSE_MODAL,
-    };
+  return {
+    type: WITHDRAW_CLOSE_MODAL,
   };
+};

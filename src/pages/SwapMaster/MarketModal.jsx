@@ -1,24 +1,24 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { marketSuccessHandle } from '../../actions/market';
+import { marketSuccessHandle } from "../../actions/market";
 
 export default function MarketModal(props) {
   const dispatch = useDispatch();
   const handleClick = () => {
     props.setShowModal(false);
     dispatch(marketSuccessHandle());
-  }
-	return (
-		<>
-			{props.showModal ? (
-				<>
-					<div className="fixed inset-0 z-10 overflow-y-auto">
-						<div
-							className="fixed inset-0 w-full h-full bg-black opacity-40"
-							onClick={() => props.setShowModal(false)}
-						></div>
-						<div className="flex items-center min-h-screen px-4 py-8">
-							<div className="relative flex flex-col px-10 py-10 mx-auto text-lg shadow-lg w- bg-app-black rounded-xl">
+  };
+  return (
+    <>
+      {props.showModal ? (
+        <>
+          <div className="fixed inset-0 z-10 overflow-y-auto">
+            <div
+              className="fixed inset-0 w-full h-full bg-black opacity-40"
+              onClick={() => props.setShowModal(false)}
+            ></div>
+            <div className="flex items-center min-h-screen px-4 py-8">
+              <div className="relative flex flex-col px-10 py-10 mx-auto text-lg shadow-lg w- bg-app-black rounded-xl">
                 <div className="flex mb-5">
                   <div className="text-2xl font-medium">
                     Security Verification
@@ -56,9 +56,7 @@ export default function MarketModal(props) {
                       </div>
                     </div>
                     <div className="flex w-3/4">
-                      <div className="text-base font-medium">
-                      Tron (TRC20)
-                      </div>
+                      <div className="text-base font-medium">Tron (TRC20)</div>
                     </div>
                   </div>
                   <div className="flex flex-row justify-between">
@@ -79,12 +77,12 @@ export default function MarketModal(props) {
                     Phone Number Verification Code
                   </div>
                 </div>
-                <div className='flex flex-row items-center justify-between h-16 py-5 mb-1 rounded-md px-7 bg-app-black-button'>
+                <div className="flex flex-row items-center justify-between h-16 py-5 mb-1 rounded-md px-7 bg-app-black-button">
                   <div className="flex flex-row w-">
-                    <input className="w-72 bg-app-black-button"/>
+                    <input className="w-72 bg-app-black-button" />
                   </div>
                   <div className="text-base text-slate-400">
-                      Verification code sent
+                    Verification code sent
                   </div>
                 </div>
                 <div className="flex mb-7">
@@ -97,12 +95,12 @@ export default function MarketModal(props) {
                     Email Verification Code
                   </div>
                 </div>
-                <div className='flex flex-row items-center justify-between h-16 py-5 mb-1 rounded-md px-7 bg-app-black-button'>
+                <div className="flex flex-row items-center justify-between h-16 py-5 mb-1 rounded-md px-7 bg-app-black-button">
                   <div className="flex flex-row w-">
-                    <input className="w-72 bg-app-black-button"/>
+                    <input className="w-72 bg-app-black-button" />
                   </div>
                   <div className="text-base text-slate-400">
-                      Verification code sent
+                    Verification code sent
                   </div>
                 </div>
                 <div className="flex mb-7">
@@ -115,17 +113,17 @@ export default function MarketModal(props) {
                     Security verification unavailable
                   </div>
                 </div>
-                <div className="flex items-center justify-center h-16 rounded-md cursor-pointer bg-app-blue hover:bg-app-blue"
-                     onClick={handleClick}>
-		  	        	<div className="text-lg font-medium">
-		  	        		confirm
-		  	        	</div>
-		  	        </div>	
-							</div>
-						</div>
-					</div>
-				</>
-			) : null}
-		</>
-	);
+                <div
+                  className="flex items-center justify-center h-16 rounded-md cursor-pointer bg-app-blue hover:bg-app-blue"
+                  onClick={handleClick}
+                >
+                  <div className="text-lg font-medium">confirm</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : null}
+    </>
+  );
 }

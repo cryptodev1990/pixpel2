@@ -25,19 +25,22 @@ const TransactionHistory = () => {
           );
         })}
       </div>
-      <div className="flex gap-5 flex-col sm:flex-row">
-        {dropdownList.map((menu, idx) => {
-          return (
-            <div className="flex flex-col gap-2" key={idx}>
-              <div className="text-gray-400 text-sm">{menu.title}</div>
-              <Dropdown
-                key={idx}
-                initialContent={menu.header}
-                contentList={menu.content}
-              />
-            </div>
-          );
-        })}
+      <div className="flex gap-5 flex-col xl:flex-row">
+        <div className="grid md:grid-cols-4 grid-cols-1 gap-3 xl:w-3/4 w-full">
+          {dropdownList.map((menu, idx) => {
+            return (
+              <div className="flex flex-col gap-2" key={idx}>
+                <div className="text-gray-400 text-sm">{menu.title}</div>
+                <Dropdown
+                  key={idx}
+                  initialContent={menu.header}
+                  contentList={menu.content}
+                />
+              </div>
+            );
+          })}
+        </div>
+
         <div className="flex flex-col gap-2">
           <div className="text-gray-400 text-sm">TxID</div>
           <input
