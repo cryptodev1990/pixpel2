@@ -22,6 +22,8 @@ import {
   BuyCrypto
 } from "./pages/index"
 
+import { Header } from "./components";
+
 function About() {
   return (
     <>
@@ -57,6 +59,7 @@ function Test() {
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nft-market" element={<NFTMarket />} />

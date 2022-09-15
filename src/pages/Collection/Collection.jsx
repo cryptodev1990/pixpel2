@@ -1,7 +1,6 @@
 import React from "react";
 import Select from 'react-select';
 import "./Collection.scss";
-import { Header } from "../../components";
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -34,7 +33,6 @@ const customStyles = {
 const Collection = () => {
   return (
     <div className="collection">
-      <Header></Header>
       <div className="container">
         <h2 className="collection__title">
           Create a Collection

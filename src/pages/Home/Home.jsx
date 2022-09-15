@@ -2,13 +2,11 @@ import React from "react";
 import "./Home.scss";
 import Banner from "../../components/Banner/Banner";
 import Button from "../../components/Button/Button";
-import Header from "../../components/Header/Header";
 
 const Home = () => {
   return (
     <>
       <div className="home">
-        <Header />
         <div className="container-fluid">
           <Banner
             bannerBg={"assets/images/home/header__top.jpg"}

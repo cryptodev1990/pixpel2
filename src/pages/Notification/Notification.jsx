@@ -1,4 +1,3 @@
-import { Header } from "../../components";
 import React, { useState } from "react";
 import ButtonWithSymbol from "../../components/Button/ButtonWithSymbol";
 import Row from "./Row";
@@ -40,7 +39,6 @@ const Notification = () => {
 
   return (
     <>
-      <Header></Header>
       <div
         className="flex flex-col w-full gap-8 px-5 text-white 2xs:px-10 md:justify-center md:flex-row"
         style={{ fontFamily: "Poppins" }}

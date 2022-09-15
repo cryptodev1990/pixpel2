@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import "./UserHome.scss";
-import { Header, Button, MarketChart } from "../../components";
+import { Button, MarketChart } from "../../components";
 const UserHome = () => {
   const sizeChart = {
     maxHeight: 51,
@@ -10,7 +10,6 @@ const UserHome = () => {
   return (
     <>
       <div className="user-home user-home--bg">
-        <Header styles={{ marginBottom: "200px" }}></Header>
         <div className="container">
           <div className="user-home__top">
             <h1 className="title user-home__top-title">

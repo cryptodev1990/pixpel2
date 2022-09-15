@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { Menu } from "../index";
 import Modal from "react-modal";
+import { useNavigate } from "react-router-dom";
 
 let typeModal = "register",
   typeUser = "account";
+
 const Header = (props) => {
+  const navigate = useNavigate();
   let styles = {
     marginBottom: "60px",
   };
@@ -124,34 +127,49 @@ const Header = (props) => {
           <nav className="menu">
             <ul className="menu__list">
               <li className="menu__item">
-                <a href="/nft-market" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/nft-market")}
+                >
                   Market
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/stacking" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/stacking")}
+                >
                   Staking
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/trade" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/exchange")}
+                >
                   Trade
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/swap-master" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/swap-master")}
+                >
                   Buy crypto
-                </a>
+                </div>
               </li>
             </ul>
           </nav>
-          <a href="#" className="header__btn-user" rel="noreferrer">
+          <div href="#" className="header__btn-user">
             Player
-          </a>
+          </div>
           <div className="header__group">
             <div className="header__user-tools">
-                {/* market */}
-              <a href="/nft-market" className="header__link" rel="noreferrer">
+              {/* market */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/nft-market")}
+              >
                 <svg
                   width="24"
                   height="24"
@@ -181,9 +199,12 @@ const Header = (props) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-                {/* notification */}
-              <a href="/notification" className="header__link" rel="noreferrer">
+              </div>
+              {/* notification */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/notification")}
+              >
                 <svg
                   width="22"
                   height="24"
@@ -206,9 +227,12 @@ const Header = (props) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-                {/* inventory */}
-              <a href="/inventory" className="header__link" rel="noreferrer">
+              </div>
+              {/* inventory */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/inventory")}
+              >
                 <svg
                   width="27"
                   height="21"
@@ -265,9 +289,12 @@ const Header = (props) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-                {/* wallet */}
-              <a href="/wallet" className="header__link" rel="noreferrer">
+              </div>
+              {/* wallet */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/wallet")}
+              >
                 <svg
                   width="28"
                   height="25"
@@ -288,9 +315,12 @@ const Header = (props) => {
                     strokeWidth="0.3"
                   />
                 </svg>
-              </a>
-                {/* profile */}
-              <a href="/profile" className="header__link" rel="noreferrer">
+              </div>
+              {/* profile */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/profile")}
+              >
                 <svg
                   width="30"
                   height="30"
@@ -320,7 +350,7 @@ const Header = (props) => {
                     strokeWidth="2"
                   />
                 </svg>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -339,24 +369,36 @@ const Header = (props) => {
           <nav className="menu">
             <ul className="menu__list">
               <li className="menu__item">
-                <a href="/buy-crypto" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/buy-crypto")}
+                >
                   Games
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/nft-market" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/nft-market")}
+                >
                   NFT
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/trade" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/exchange")}
+                >
                   Token
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/stacking" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/stacking")}
+                >
                   Staking
-                </a>
+                </div>
               </li>
             </ul>
           </nav>

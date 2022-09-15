@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Filter, GameCard, Cart } from "../../components";
+import { Filter, GameCard, Cart } from "../../components";
 import "../../components/Cart/Cart.scss";
 import "./GameMarket.scss";
 const isOpen = false;
@@ -7,7 +7,6 @@ const GameMarket = () => {
   return (
     <>
       <div className="game-market">
-        <Header></Header>
         <div className="container">
           <h1 className="title game-market__title">Game Market Place</h1>
           <div className="game-market__inner">

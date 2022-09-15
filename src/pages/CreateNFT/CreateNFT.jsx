@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Header, AddModal, SkillModal } from "../../components";
+import { AddModal, SkillModal } from "../../components";
 import Select from 'react-select';
 import './CreateNFT.scss';
 
@@ -38,7 +38,6 @@ const CreateNFT = () => {
   const [skillModalShow, setSkillModalShow] = useState(false);
   return (
     <>
-      <Header></Header>
       <div className="container">
         <h2>Create a New NFT</h2>
 

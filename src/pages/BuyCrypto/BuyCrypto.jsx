@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Buy from "../../components/Crypto/P2P/Buy";
 import Setting from "../../components/Crypto/P2P/Setting";
-import { Header } from "../../components";
 import TokenButton from "../../components/Button/TokenButton";
 import Sell from "../../components/Crypto/P2P/Sell";
 import { coinList } from "../../components/Crypto/dataList";
@@ -25,7 +24,6 @@ const BuyCrypto = () => {
   };
   return (
     <>
-      <Header />
       <div className="flex">
         <div className="w-1/6"></div>
         <div className="flex flex-col w-2/3 gap-12">

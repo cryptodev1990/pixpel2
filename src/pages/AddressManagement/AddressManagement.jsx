@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./AddressManagement.scss";
 import Modal from "./Modal.jsx";
-import { Header } from "../../components";
 import ImageDropDownButton from "../../components/DropDown/ImageDropDownButton";
 
 const tokenList = [
@@ -107,7 +106,6 @@ const AddressManagement = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <Header></Header>
       <div
         className="grid grid-cols-1 gap-10 my-10 justify-items-center"
         style={{ fontFamily: "Poppins" }}
