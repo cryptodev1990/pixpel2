@@ -150,7 +150,8 @@ const Header = (props) => {
           </a>
           <div className="header__group">
             <div className="header__user-tools">
-              <a href="#" className="header__link" rel="noreferrer">
+                {/* market */}
+              <a href="/nft-market" className="header__link" rel="noreferrer">
                 <svg
                   width="24"
                   height="24"
@@ -181,7 +182,8 @@ const Header = (props) => {
                   />
                 </svg>
               </a>
-              <a href="#" className="header__link" rel="noreferrer">
+                {/* notification */}
+              <a href="/notification" className="header__link" rel="noreferrer">
                 <svg
                   width="22"
                   height="24"
@@ -205,7 +207,8 @@ const Header = (props) => {
                   />
                 </svg>
               </a>
-              <a href="#" className="header__link" rel="noreferrer">
+                {/* inventory */}
+              <a href="/inventory" className="header__link" rel="noreferrer">
                 <svg
                   width="27"
                   height="21"
@@ -263,7 +266,8 @@ const Header = (props) => {
                   />
                 </svg>
               </a>
-              <a href="#" className="header__link" rel="noreferrer">
+                {/* wallet */}
+              <a href="/wallet" className="header__link" rel="noreferrer">
                 <svg
                   width="28"
                   height="25"
@@ -285,7 +289,8 @@ const Header = (props) => {
                   />
                 </svg>
               </a>
-              <a href="#" className="header__link" rel="noreferrer">
+                {/* profile */}
+              <a href="/profile" className="header__link" rel="noreferrer">
                 <svg
                   width="30"
                   height="30"

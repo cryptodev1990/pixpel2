@@ -4,6 +4,37 @@ import USDC from "../../asssets/images/UserHome/usdc.png";
 import ETH from "../../asssets/images/UserHome/eth.png";
 import XRP from "../../asssets/images/UserHome/xrp.png";
 
+export const coinList = [
+  {
+    id: 1,
+    title: "BTC",
+  },
+  {
+    id: 2,
+    title: "USDT",
+  },
+  {
+    id: 3,
+    title: "CCD",
+  },
+  {
+    id: 4,
+    title: "BUSD",
+  },
+  {
+    id: 5,
+    title: "ETH",
+  },
+  {
+    id: 6,
+    title: "BNB",
+  },
+  {
+    id: 7,
+    title: "SLP",
+  },
+]
+
 export const PaymentList = [
   {
     id: 1,

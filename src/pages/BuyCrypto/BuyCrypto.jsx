@@ -4,6 +4,8 @@ import Setting from "../../components/Crypto/P2P/Setting";
 import { Header } from "../../components";
 import TokenButton from "../../components/Button/TokenButton";
 import Sell from "../../components/Crypto/P2P/Sell";
+import { coinList } from "../../components/Crypto/dataList";
+import CoinType from "../../components/Crypto/P2P/CoinType";
 
 const BuyCrypto = () => {
   const [selectedBuySell, setSelectedBuySell] = useState(0);
@@ -26,7 +28,12 @@ const BuyCrypto = () => {
       <Header />
       <div className="flex">
         <div className="w-1/6"></div>
-        <div className="flex flex-col w-2/3">
+        <div className="flex flex-col w-2/3 gap-12">
+          <div className="flex justify-center gap-6">
+            {coinList.map((coin, idx) => {
+              return <CoinType key={idx} title={coin.title} />;
+            })}
+          </div>
           <div className="flex justify-end">
             <div className="flex w-5/6 justify-between">
               <Setting />
