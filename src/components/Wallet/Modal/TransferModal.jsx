@@ -19,7 +19,7 @@ const TransferModal = (props) => {
             ></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
               <div className="relative flex flex-col w-full max-w-3xl p-4 mx-auto bg-app-black rounded-xl shadow-lg px-6 py-6 text-lg">
-                <div className="flex justify-center text-xl">
+                <div className="flex justify-center text-2xl my-10">
                   internal Transferson PIXPEL
                 </div>
                 <div className="flex my-2">

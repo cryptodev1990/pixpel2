@@ -27,7 +27,10 @@ const StartAccount = () => {
     }
   };
   const handleTokenCoinClick = (idx) => async () => {
-    switch(idx) {
+    switch (idx) {
+      case 0:
+        context.setSelectedIndex(1);
+        break;
       case 1:
         navigate("/withdraw");
         break;
@@ -40,7 +43,7 @@ const StartAccount = () => {
       default:
         break;
     }
-  }
+  };
   const handleClick = (idx) => () => {
     setSelectedType(idx);
   };
@@ -74,13 +77,24 @@ const StartAccount = () => {
                 );
               })
             : tokencoinList.map((menu, idx) => {
-                return <TokenButton key={idx} title={menu.title} handleClick={handleTokenCoinClick(idx)} />;
+                return (
+                  <TokenButton
+                    key={idx}
+                    title={menu.title}
+                    handleClick={handleTokenCoinClick(idx)}
+                  />
+                );
               })}
         </div>
         <CoinTable idx={selectedType} />
       </div>
       {<WithdrawModal showModal={showModal} setShowModal={setShowModal} />}
-      {<TransferModal showModal={showTransferModal} setShowModal={setShowTransferModal}/>}
+      {
+        <TransferModal
+          showModal={showTransferModal}
+          setShowModal={setShowTransferModal}
+        />
+      }
     </>
   );
 };

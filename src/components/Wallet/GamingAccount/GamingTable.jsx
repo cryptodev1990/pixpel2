@@ -4,12 +4,26 @@ import SwapButton from "../StartAccount/SwapButton";
 import BuyButton from "../StartAccount/BuyButton";
 import TradeButton from "../StartAccount/TradeButton";
 import WithdrawModal from "../Modal/WithdrawModal";
+import TransferModal from "../Modal/TransferModal";
+import { useAppContext } from "../../../contexts/AppContext";
 
 const GamingTable = () => {
-  const [showModal, setShowModal] = useState(false);
-  const handleClick = () => {
-    setShowModal(true);
+  const [showWithdrawModal, setShowWithdrawModal] = useState(false);
+  const [showTransferModal, setShowTransferModal] = useState(false);
+  const context = useAppContext();
+
+  const handleDepositClick = () => {
+    context.setSelectedIndex(1);
   };
+
+  const handleTransferClick = () => {
+    setShowTransferModal(true);
+  };
+
+  const handleWithdrawClick = () => {
+    setShowWithdrawModal(true);
+  };
+
   return (
     <div>
       <div className="overflow-x-auto relative w-full mt-10">
@@ -63,9 +77,18 @@ const GamingTable = () => {
                   <td className="px-6">{menu.daw}</td>
                   <td className="px-6">
                     <div className="flex gap-4">
-                      <BuyButton title="Deposit" />
-                      <TradeButton title="Withdraw" handleModal={handleClick} />
-                      <SwapButton title="Transfer" />
+                      <BuyButton
+                        title="Deposit"
+                        handleClick={handleDepositClick}
+                      />
+                      <TradeButton
+                        title="Withdraw"
+                        handleClick={handleWithdrawClick}
+                      />
+                      <SwapButton
+                        title="Transfer"
+                        handleClick={handleTransferClick}
+                      />
                     </div>
                   </td>
                 </tr>
@@ -74,7 +97,18 @@ const GamingTable = () => {
           </tbody>
         </table>
       </div>
-      {<WithdrawModal showModal={showModal} setShowModal={setShowModal} />}
+      {
+        <WithdrawModal
+          showModal={showWithdrawModal}
+          setShowModal={setShowWithdrawModal}
+        />
+      }
+      {
+        <TransferModal
+          showModal={showTransferModal}
+          setShowModal={setShowTransferModal}
+        />
+      }
     </div>
   );
 };
