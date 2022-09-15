@@ -2,13 +2,23 @@ import React, { useState, useEffect } from "react";
 import { tableList, tablefiatList } from "../dataList";
 import SwapButton from "./SwapButton";
 import TradeButton from "./TradeButton";
+import { useNavigate } from "react-router-dom";
 import BuyButton from "./BuyButton";
 
 const CoinTable = (props) => {
+  const navigate = useNavigate();
   const [tempTable, setTempTable] = useState(tableList);
   useEffect(() => {
     props.idx === 0 ? setTempTable(tablefiatList) : setTempTable(tableList);
   }, [props.idx]);
+
+  const handleSwapClick = () => () => {
+    navigate("/swap-master");
+  }
+
+  const handleTradeClick = () => () => {
+    navigate("/exchange");
+  }
   return (
     <div className="overflow-x-auto relative mt-10 w-full">
       <table className="table-auto">
@@ -40,8 +50,8 @@ const CoinTable = (props) => {
                 <td className="px-6">{menu.PIXP}</td>
                 <td className="px-6">
                   <div className="flex gap-4">
-                    <SwapButton title="Swap" />
-                    <TradeButton title="Trade" />
+                    <SwapButton title="Swap" handleClick={handleSwapClick}/>
+                    <TradeButton title="Trade" handleClick={handleTradeClick}/>
                     <BuyButton title="Buy" />
                   </div>
                 </td>

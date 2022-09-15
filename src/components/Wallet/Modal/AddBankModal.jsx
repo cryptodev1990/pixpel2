@@ -1,7 +1,7 @@
 import React from "react";
 import BankButton from "../../Button/BankButton";
 
-const TransferModal = (props) => {
+const AddBankModal = (props) => {
   const handleClick = () => {
     props.setShowModal(false);
   };
@@ -37,4 +37,4 @@ const TransferModal = (props) => {
   );
 };
 
-export default TransferModal;
+export default AddBankModal;

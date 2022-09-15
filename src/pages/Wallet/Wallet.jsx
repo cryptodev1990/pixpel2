@@ -17,14 +17,10 @@ const Wallet = () => {
   const context = useAppContext();
 
   useEffect(() => {
-    if(context.selectedIndex === -1) {
-      setTempComponent(<TransactionHistory />);
-    }
-  }, [context.selectedIndex]);
-
-  const handleClick =  (idx) => async () => {
-    await context.setSelectedIndex(idx);
-    switch (idx) {
+    switch (context.selectedIndex) {
+      case -1:
+        setTempComponent(<TransactionHistory />);
+        break;
       case 0:
         setTempComponent(<Overview />);
         break;
@@ -49,6 +45,10 @@ const Wallet = () => {
       default:
         break;
     }
+  }, [context.selectedIndex]);
+
+  const handleClick = (idx) => async () => {
+    await context.setSelectedIndex(idx);
   };
   return (
     <>

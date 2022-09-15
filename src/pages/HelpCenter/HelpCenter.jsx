@@ -10,10 +10,10 @@ const HelpCenter = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col xl:px-32 lg:px-28 md:px-20 sm:px-12 xs:px-4 pt-8">
+      <div className="flex flex-col xl:px-32 lg:px-28 md:px-20 sm:px-12 px-4 py-8">
         <div className="flex justify-between mb-10 xl:flex-row gap-6 flex-col">
           <div className="text-3xl">Help Center</div>
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-4 sm:items-center flex-col">
             <div className="text-sm">Security Service:</div>
             <input
               className="bg-app-black-button h-10 px-4 items-center rounded"
@@ -21,15 +21,15 @@ const HelpCenter = () => {
             ></input>
           </div>
         </div>
-        <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 lg:flex-row gap-4">
-          <HelpAvatar title="Reset Password"/>
-          <HelpAvatar title="Change Phone"/>
-          <HelpAvatar title="Change Email"/>
-          <HelpAvatar title="Reset authenticator"/>
-          <HelpAvatar title="Crypto deposit issues"/>
+        <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:flex-row gap-4">
+          <HelpAvatar title="Reset Password" />
+          <HelpAvatar title="Change Phone" />
+          <HelpAvatar title="Change Email" />
+          <HelpAvatar title="Reset authenticator" />
+          <HelpAvatar title="Crypto deposit issues" />
         </div>
         <div className="my-10 text-3xl">FAQ</div>
-        <div className="grid lg:grid-cols-4 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <HelpCenterButton title="NEWBIE" />
           <HelpCenterButton title="TUTORIAL" />
           <HelpCenterButton title="SECURITY" />
@@ -39,10 +39,18 @@ const HelpCenter = () => {
           <HelpCenterButton title="API" />
           <HelpCenterButton title="NFT" />
         </div>
-        <Mail visibility={showMessageBox}/>
-        <div className="fixed 2xl:bottom-24 bottom-12 right-32 flex justify-end">
-          <div className={"flex h-20 w-20 rounded-br-xl rounded-bl-xl bg-app-black justify-center items-center hover:bg-app-blue cursor-pointer" + (showMessageBox ? "" : " rounded-tr-xl rounded-tl-xl")} onClick={() => setShowMessageBox(!showMessageBox)}>
-            <img src={MailImage} alt="avatar"></img>
+        <div className="flex flex-col my-5">
+          <Mail visibility={showMessageBox} />
+          <div className="2xl:bottom-24 bottom-12 right-32 flex justify-end">
+            <div
+              className={
+                "flex h-20 w-20 rounded-br-xl rounded-bl-xl bg-app-black justify-center items-center hover:bg-app-blue cursor-pointer" +
+                (showMessageBox ? "" : " rounded-tr-xl rounded-tl-xl")
+              }
+              onClick={() => setShowMessageBox(!showMessageBox)}
+            >
+              <img src={MailImage} alt="avatar"></img>
+            </div>
           </div>
         </div>
       </div>

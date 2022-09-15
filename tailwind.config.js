@@ -47,6 +47,9 @@ module.exports = {
           }
         }
       },
+      bottom: {
+        '34': "136px",
+      },
       width: {
         '13': '53px',
         '21': '85px',

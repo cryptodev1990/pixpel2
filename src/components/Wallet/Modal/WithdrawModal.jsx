@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Dropdown from "../Transaction/Dropdown";
 import { currencyList } from "../dataList";
-import ModalHalfTokenButton from "../../Button/TokenButton";
+import ModalHalfTokenButton from "../../Button/ModalHalfTokenButton";
 
 const WithdrawModal = (props) => {
   const [selected, setSelected] = useState(0);
@@ -18,12 +18,15 @@ const WithdrawModal = (props) => {
               onClick={() => props.setShowModal(false)}
             ></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
-              <div className="relative flex flex-col w-full max-w-lg p-4 mx-auto bg-app-black rounded-xl shadow-lg px-6 py-8 text-lg">
-                <div className="flex justify-between items-center my-5">
-                  <div className="flex text-xl my-3">WITHDRAW FIAT</div>
-                  <div className="flex w-10 h-10 rounded-md justify-center items-center">
+              <div className="relative flex flex-col w-full max-w-xl p-4 mx-auto bg-app-black rounded-xl shadow-lg px-6 py-6 text-lg">
+                <div className="flex justify-between items-center my-3">
+                  <div className="flex text-2xl my-3">WITHDRAW FIAT</div>
+                  <div
+                    className="flex w-10 h-10 bg-app-black-select rounded-md justify-center items-center cursor-pointer"
+                    onClick={() => props.setShowModal(false)}
+                  >
                     <svg
-                      className="h-4 w-4 text-gray-500"
+                      className="h-6 w-6 text-gray-400"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -37,32 +40,39 @@ const WithdrawModal = (props) => {
                     </svg>
                   </div>
                 </div>
-                <div className="text-sm my-2">Select currency</div>
+                <div className="text-base my-2">Select currency</div>
                 <div className="w-full mb-5">
                   <Dropdown
-                    initialContent={currencyList[0]}
+                    initialContent={currencyList[0].title}
                     contentList={currencyList}
                   />
                 </div>
-                <div className="mb-2">Withdrawal method</div>
-                <div className="flex justify-center">
-                  <ModalHalfTokenButton
-                    selected={selected === 0}
-                    handleClick={handleClick(0)}
-                    title="USD American Dollar"
-                  />
-                  <div className="flex flex-col gap-2">
+                <div className="mb-2 text-base">Withdrawal method</div>
+                <div className="flex gap-3">
+                  <div className="w-1/2">
+                    <ModalHalfTokenButton
+                      selected={selected === 0}
+                      handleClick={handleClick(0)}
+                      title="USD American Dollar"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2 w-1/2">
                     <ModalHalfTokenButton
                       selected={selected === 1}
                       handleClick={handleClick(1)}
                       title="Bank Card"
                     />
-                    <div className="text-gray-400 text-sm">
+                    <div className="flex text-gray-400 text-sm justify-center">
                       2% Fee Transaction
                     </div>
                   </div>
                 </div>
-                
+                <div
+                  className="flex w-full justify-center items-center bg-app-blue cursor-pointer py-3 rounded-md my-6"
+                  onClick={() => props.setShowModal(false)}
+                >
+                  CONTINUE
+                </div>
               </div>
             </div>
           </div>

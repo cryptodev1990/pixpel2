@@ -1,71 +1,66 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import BNB from "../../asssets/images/UserHome/bnb.png";
-import { useNavigate } from "react-router-dom";
-import { withdrawShowModal } from "../../actions/withdraw";
 import DropDownButton from "./DropDownButton";
+import WithdrawalModal  from "./WithdrawalModal";
+import ImageDropDownButton from "../../components/DropDown/ImageDropDownButton";
+import TokenDropdownInput from "../../components/DropDown/TokenDropdownInput";
+
+const tokenList = [
+  {
+    id: 1,
+    title: "AVA",
+    url: "../../assets/images/UserHome/avax.png",
+  },
+  {
+    id: 2,
+    title: "AVA",
+    url: "../../assets/images/UserHome/avax.png",
+  },
+  {
+    id: 3,
+    title: "AVA",
+    url: "../../assets/images/UserHome/avax.png",
+  },
+];
 
 const networkList = [
   {
     id: 1,
-    title: "111111111111",
+    title: "BSC/BNB SMART CHAIN (EBS 20)",
   },
   {
     id: 2,
-    title: "222222222222",
+    title: "BSC/BNB SMART CHAIN (EBS 20)",
   },
   {
     id: 3,
-    title: "33333333333",
+    title: "BSC/BNB SMART CHAIN (EBS 20)",
   },
   {
     id: 4,
-    title: "44444444444",
+    title: "BSC/BNB SMART CHAIN (EBS 20)",
   },
 ];
 
 const CryptoCard = () => {
-  const dispatch = useDispatch();
 
-  let navigate = useNavigate();
-  const handleClickWithdraw = () => {
-    dispatch(withdrawShowModal());
-    navigate("/swap-master?x=Liquidity&y=3", { replace: true });
-  };
+  const[showModal, setShowModal] = useState(false);
 
   return (
     <>
-      <div className="flex flex-col px-12 py-12 bg-app-black rounded-xl">
+      <div className="flex flex-col px-12 py-12 bg-app-black rounded-xl w-155">
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Crypto</div>
         </div>
-        <div className="flex flex-row justify-between h-16 px-5 py-5 mb-8 rounded-md bg-app-black-button">
-          <div className="flex flex-row gap-2">
-            <img src={BNB} alt={""} />
-            <div className="text-base font-medium">PIXP</div>
-          </div>
-          <div className="flex">
-            <svg
-              className="w-5 h-5 text-gray-700"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </div>
-        </div>
+        <div className="w-full mb-8">
+         <ImageDropDownButton initialContent={tokenList[0]} contentList={tokenList} backgroundColor={" bg-app-black-button"}/>
+        </div>  
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Wallet Address</div>
         </div>
         <div className="flex h-16 px-5 py-5 mb-8 rounded-md bg-app-black-button">
           <input
-            className="w-full bg-app-black-button placeholder:text-slate-700"
+            className="w-full bg-app-black-button placeholder:text-slate-500"
             placeholder="Enter Address Here"
           />
         </div>
@@ -79,49 +74,8 @@ const CryptoCard = () => {
         <div className="flex justify-start mt-8 mb-1">
           <div className="text-lg font-medium">Withdraw Amount</div>
         </div>
-        <div className="flex flex-row justify-between h-16 px-5 py-5 mb-1 rounded-md bg-app-black-button">
-          <div className="flex flex-row w-full">
-            <div className="flex flex-row gap-1">
-              <img src={BNB} alt={""} />
-              <div className="text-base font-medium ">PIXP</div>
-              <svg
-                className="w-5 h-5 text-gray-700"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
-            <div className="flex items-center">
-              <svg
-                className="w-12 h-12 text-gray-700"
-                width="10"
-                height="10"
-                viewBox="0 0 24 24"
-                strokeWidth="2"
-                stroke="currentColor"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" />
-                <line x1="12" y1="5" x2="12" y2="19" />
-              </svg>
-            </div>
-            <div className="flex gap-2">
-              <input
-                className="w-72 bg-app-black-button placeholder:text-slate-700"
-                placeholder="1,000,000,000"
-              />
-              <div className="text-base font-medium text-blue-900">MAX</div>
-            </div>
-          </div>
+        <div className="flex flex-row mb-1 ">
+          <TokenDropdownInput initialContent={tokenList[0]} contentList={tokenList}/>
         </div>
         <div className="flex justify-end mb-8">
           <div className="text-sm text-slate-500">
@@ -153,11 +107,12 @@ const CryptoCard = () => {
         </div>
         <div
           className="flex items-center justify-center h-16 rounded-md cursor-pointer bg-app-blue hover:bg-app-blue"
-          onClick={handleClickWithdraw}
+          onClick={() => setShowModal(true)}
         >
           <div className="text-lg">Withdraw</div>
         </div>
       </div>
+      <WithdrawalModal showModal={showModal} setShowModal={setShowModal}/>
     </>
   );
 };

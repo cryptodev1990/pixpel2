@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const DropDown = (props) => {
+const Dropdown = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [selectedContent, setSelectedContent] = useState(props.initialContent);
   const handleDropDown = () => {
@@ -18,7 +18,8 @@ const DropDown = (props) => {
   return (
     <div
       className={
-        " bg-app-black-button" + (showDropDown ? " rounded-t-md" : " rounded-md")
+        " bg-app-black-button" +
+        (showDropDown ? " rounded-t-md" : " rounded-md")
       }
       onClick={handleDropDown}
     >
@@ -71,4 +72,4 @@ const DropDown = (props) => {
   );
 };
 
-export default DropDown;
+export default Dropdown;

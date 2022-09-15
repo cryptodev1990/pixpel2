@@ -9,7 +9,7 @@ const AppContextProvider = ({ children }) => {
     <AppContext.Provider 
       value={{ 
         selectedIndex,
-        setSelectedIndex
+        setSelectedIndex,
       }}
     >
       {children}
