@@ -5,12 +5,13 @@ import GraphCard from "./GraphCard";
 const Limit = () => {
   return (
     <>
-      <div className="flex flex-col gap-8 2xl:flex-row">
+      <div className="flex flex-col w-full gap-8 2xl:flex-row md:w-auto">
         <GraphCard />
         <LimitCard />
       </div>
     </>
-  );
-};
-
+  )
+}
+  
 export default Limit;
+  

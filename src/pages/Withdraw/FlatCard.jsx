@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import ImageDropDownButton from "../../components/DropDown/ImageDropDownButton";
-import DropDownButton from "../../components/DropDown/DropDownButton";
+import DropDownButton from "./DropDownButton";
 import WithdrawalModal from "./WithdrawalModal";
 
 const tokenList = [
@@ -59,23 +59,20 @@ const HSBCList = [
   },
 ];
 
+
 const FlatCard = () => {
-  const [showModal, setShowModal] = useState(false);
+  const [ showModal, setShowModal] = useState(false);
   const handleClick = () => {
     setShowModal(true);
-  };
+  } 
   return (
     <>
-      <div className="flex flex-col px-12 py-12 bg-app-black rounded-xl w-155">
+      <div className="flex flex-col w-full px-12 py-12 bg-app-black rounded-xl sm:w-155">
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Fiat Coin</div>
         </div>
         <div className="mb-8">
-          <ImageDropDownButton
-            initialContent={tokenList[0]}
-            contentList={tokenList}
-            backgroundColor={" bg-app-black-button"}
-          />
+          <ImageDropDownButton initialContent={tokenList[0]} contentList={tokenList} backgroundColor={" bg-app-black-button"}/>
         </div>
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Method</div>
@@ -99,11 +96,7 @@ const FlatCard = () => {
           <div className="text-lg font-medium">Withdraw Amount</div>
         </div>
         <div className="mb-1">
-          <ImageDropDownButton
-            initialContent={tokenList[0]}
-            contentList={tokenList}
-            backgroundColor={" bg-app-black-button"}
-          />
+          <ImageDropDownButton initialContent={tokenList[0]} contentList={tokenList} backgroundColor={" bg-app-black-button"}/>
         </div>
         <div className="flex justify-end mb-8">
           <div className="text-sm text-slate-500">
@@ -112,33 +105,31 @@ const FlatCard = () => {
         </div>
         <div className="flex flex-row justify-between mb-2">
           <div className="flex flex-row items-center gap-4">
-            <div className="text-lg font-medium">Commission</div>
+            <div className="text-xs font-medium 2xs:text-lg">Commission</div>
           </div>
-          <div className="text-lg font-medium">5%</div>
+          <div className="text-sm font-medium 2xs:text-lg">5%</div>
         </div>
-        <div className="flex flex-row justify-between mb-5">
-          <div className="flex flex-row items-center gap-4">
-            <div className="text-lg font-medium">You recieve</div>
+        <div className="flex flex-row items-center justify-between mb-5">
+          <div className="flex flex-row gap-4">
+            <div className="text-xs font-medium 2xs:text-lg">You recieve</div>
           </div>
-          <div className="text-lg font-medium">950.000 USD</div>
+          <div className="flex text-sm font-medium 2xs:text-lg">950.000 USD</div>
         </div>
         <div className="flex flex-row justify-start gap-2 mb-12">
           <input
             type="checkbox"
-            className="appearance-none checked:bg-blue-500"
+            className="flex-none appearance-none checked:bg-blue-500"
           />
           <div className="text-base font-normal text-gray-400">
             I have read and I accept terms.
           </div>
         </div>
-        <div
-          className="flex items-center justify-center h-16 rounded-md cursor-pointer bg-app-blue hover:bg-app-blue"
-          onClick={handleClick}
-        >
+        <div className="flex items-center justify-center h-16 rounded-md cursor-pointer bg-app-blue hover:bg-app-blue"
+             onClick={handleClick}>
           <div className="text-lg">Withdraw</div>
         </div>
       </div>
-      <WithdrawalModal showModal={showModal} setShowModal={setShowModal} />
+      <WithdrawalModal showModal={showModal} setShowModal={setShowModal}/>
     </>
   );
 };
