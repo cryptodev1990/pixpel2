@@ -529,13 +529,14 @@ const Header = (props) => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
+        ariaHideApp={false}
         style={customStyles}
         contentLabel="Example Modal"
       >
         <div className="modal">
           <button
             onClick={closeModal}
-            className="modal__close modal__close--static"
+            className="modal__close modal__close--static flex justify-center items-center"
           >
             <svg
               width="14"
@@ -597,13 +598,14 @@ const Header = (props) => {
       <Modal
         isOpen={modalIsOpenLogin}
         onRequestClose={closeModalLogin}
+        ariaHideApp={false}
         style={customStylesLogin}
         contentLabel="Example Modal"
       >
         <div className="modal modal-login">
           <button
             onClick={closeModalLogin}
-            className="modal__close modal-login__close"
+            className="modal__close modal-login__close flex items-center justify-center"
           >
             <svg
               width="14"
@@ -661,13 +663,14 @@ const Header = (props) => {
       <Modal
         isOpen={modalIsOpenRegister}
         onRequestClose={closeModalRegister}
+        ariaHideApp={false}
         style={customStylesRegister}
         contentLabel="Example Modal"
       >
         <div className="modal modal-register">
           <button
             onClick={closeModalRegister}
-            className="modal__close modal-login__close"
+            className="modal__close modal-login__close flex items-center justify-center"
           >
             <svg
               width="14"
@@ -730,13 +733,14 @@ const Header = (props) => {
       <Modal
         isOpen={modalIsOpenVerify}
         onRequestClose={closeModalVerify}
+        ariaHideApp={false}
         style={customStylesVerify}
         contentLabel="Example Modal"
       >
         <div className="modal modal-verify">
           <button
             onClick={closeModalVerify}
-            className="modal__close modal-login__close"
+            className="modal__close modal-login__close flex items-center justify-center"
           >
             <svg
               width="14"
