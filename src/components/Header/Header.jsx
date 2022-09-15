@@ -87,7 +87,7 @@ const Header = (props) => {
     return (
       <div className="container-fluid">
         <div className="header__inner">
-          <div className="header__logo">
+          <div className="header__logo cursor-pointer" onClick={() => navigate('/')}>
             <img src="assets/images/logo.svg" className="logo" alt="" />
           </div>
           <Menu />
@@ -120,9 +120,9 @@ const Header = (props) => {
       <div className="container-fluid">
         <div className="header__inner">
           <div className="header__logo">
-            <a href="/">
+            <div className="cursor-pointer" onClick={() => navigate("/")}>
               <img src="assets/images/logo.svg" className="logo" alt="" />
-            </a>
+            </div>
           </div>
           <nav className="menu">
             <ul className="menu__list">
@@ -160,9 +160,8 @@ const Header = (props) => {
               </li>
             </ul>
           </nav>
-          <div href="#" className="header__btn-user">
-            Player
-          </div>
+          {/* player */}
+          <div className="header__btn-user cursor-pointer">Player</div>
           <div className="header__group">
             <div className="header__user-tools">
               {/* market */}
@@ -362,9 +361,9 @@ const Header = (props) => {
       <div className="container-fluid">
         <div className="header__inner">
           <div className="header__logo">
-            <a href="/">
+            <div className="cursor-pointer" onClick={() => navigate("/")}>
               <img src="assets/images/logo.svg" className="logo" alt="" />
-            </a>
+            </div>
           </div>
           <nav className="menu">
             <ul className="menu__list">
@@ -402,12 +401,14 @@ const Header = (props) => {
               </li>
             </ul>
           </nav>
-          <a href="#" className="header__btn-user" rel="noreferrer">
+          {/* developer */}
+          <div className="header__btn- cursor-pointeruser">
             Developer
-          </a>
+          </div>
           <div className="header__group">
             <div className="header__user-tools">
-              <a href="#" className="header__link" rel="noreferrer">
+              {/* notification */}
+              <div className="header__link cursor-pointer">
                 <svg
                   width="22"
                   height="24"
@@ -430,8 +431,9 @@ const Header = (props) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-              <a href="#" className="header__link" rel="noreferrer">
+              </div>
+              {/* wallet */}
+              <div className="header__link cursor-pointer">
                 <svg
                   width="28"
                   height="25"
@@ -452,8 +454,9 @@ const Header = (props) => {
                     strokeWidth="0.3"
                   />
                 </svg>
-              </a>
-              <a href="#" className="header__link" rel="noreferrer">
+              </div>
+              {/* profile */}
+              <div className="header__link cursor-pointer">
                 <svg
                   width="30"
                   height="30"
@@ -483,7 +486,7 @@ const Header = (props) => {
                     strokeWidth="2"
                   />
                 </svg>
-              </a>
+              </div>
             </div>
           </div>
         </div>

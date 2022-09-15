@@ -182,15 +182,14 @@ const Exchange = () => {
                     <div className="exchange__box orderform__box">
                       <div className="orderform__header">
                         <div className="orderform__header-col">
-                          <a
-                            href=""
+                          <div
                             className="orderform__header-link orderform__header-link--active"
                           >
                             Limit
-                          </a>
-                          <a href="" className="orderform__header-link">
+                          </div>
+                          <div className="orderform__header-link">
                             Market
-                          </a>
+                          </div>
                           <Select
                             className="orderform__header-link"
                             options={options}
@@ -198,14 +197,14 @@ const Exchange = () => {
                           />
                         </div>
                         <div className="orderform__header-col">
-                          <a href="" className="orderform__header-link">
+                          <div className="orderform__header-link">
                             Transfer
-                          </a>
-                          <a href="" className="orderform__header-link">
+                          </div>
+                          <div className="orderform__header-link">
                             Borrow
-                          </a>
-                          <a
-                            href=""
+                          </div>
+                          <div
+                           
                             className="orderform__header-link orderform__header-link--row"
                           >
                             Buy with{" "}
@@ -222,10 +221,10 @@ const Exchange = () => {
                               <path
                                 d="M1 1L5.5 5.5L1 10"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                             </svg>
-                          </a>
+                          </div>
                         </div>
                       </div>
                       <div className="orderform__main">
@@ -278,7 +277,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 12.0976 0.625394)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="3"
+                                strokeWidth="3"
                               />
                               <rect
                                 y="1.4076"
@@ -287,7 +286,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 112.914 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -296,7 +295,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 208.84 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -305,7 +304,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 304.766 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -314,7 +313,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 400.348 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                             </svg>
                           </div>
@@ -381,7 +380,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 12.0976 0.625394)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="3"
+                                strokeWidth="3"
                               />
                               <rect
                                 y="1.4076"
@@ -390,7 +389,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 112.914 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -399,7 +398,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 208.84 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -408,7 +407,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 304.766 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -417,7 +416,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 400.348 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                             </svg>
                           </div>
@@ -442,15 +441,15 @@ const Exchange = () => {
                     <div className="exchange__box orderform__box">
                       <div className="orderform__header">
                         <div className="orderform__header-col">
-                          <a
-                            href=""
+                          <div
+                           
                             className="orderform__header-link orderform__header-link--active"
                           >
                             Limit
-                          </a>
-                          <a href="" className="orderform__header-link">
+                          </div>
+                          <div className="orderform__header-link">
                             Market
-                          </a>
+                          </div>
                           <Select
                             className="orderform__header-link"
                             options={options}
@@ -458,14 +457,14 @@ const Exchange = () => {
                           />
                         </div>
                         <div className="orderform__header-col">
-                          <a href="" className="orderform__header-link">
+                          <div className="orderform__header-link">
                             Transfer
-                          </a>
-                          <a href="" className="orderform__header-link">
+                          </div>
+                          <div className="orderform__header-link">
                             Borrow
-                          </a>
-                          <a
-                            href=""
+                          </div>
+                          <div
+                           
                             className="orderform__header-link orderform__header-link--row"
                           >
                             Buy with{" "}
@@ -482,10 +481,10 @@ const Exchange = () => {
                               <path
                                 d="M1 1L5.5 5.5L1 10"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                             </svg>
-                          </a>
+                          </div>
                         </div>
                       </div>
                       <div className="orderform__main">
@@ -538,7 +537,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 12.0976 0.625394)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="3"
+                                strokeWidth="3"
                               />
                               <rect
                                 y="1.4076"
@@ -547,7 +546,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 112.914 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -556,7 +555,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 208.84 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -565,7 +564,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 304.766 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -574,7 +573,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 400.348 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                             </svg>
                           </div>
@@ -641,7 +640,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 12.0976 0.625394)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="3"
+                                strokeWidth="3"
                               />
                               <rect
                                 y="1.4076"
@@ -650,7 +649,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 112.914 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -659,7 +658,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 208.84 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -668,7 +667,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 304.766 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                               <rect
                                 y="1.4076"
@@ -677,7 +676,7 @@ const Exchange = () => {
                                 transform="matrix(0.710396 0.703802 -0.710396 0.703802 400.348 5.36664)"
                                 fill="#29313C"
                                 stroke="#717A8B"
-                                stroke-width="2"
+                                strokeWidth="2"
                               />
                             </svg>
                           </div>

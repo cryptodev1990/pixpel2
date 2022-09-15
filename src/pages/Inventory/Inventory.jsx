@@ -1,5 +1,4 @@
 import React from "react";
-import { Chart as ChartJS } from "chart.js/auto";
 import { Pie, Bar } from "react-chartjs-2";
 import "./Inventory.scss";
 
@@ -56,7 +55,7 @@ const Inventory = () => {
 
   function card() {
     return Array.from({ length: 100 }, (_, i) => (
-      <div className="inventory-card">
+      <div className="inventory-card" key={i}>
         <div className="inventory-card__img">
           <img
             src="assets/images/market/ply.png"
@@ -108,9 +107,9 @@ const Inventory = () => {
                         <path
                           d="M1 1L5.5 5.5M10 10L5.5 5.5M5.5 5.5L1 10L10 1"
                           stroke="#717A8B"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
                       </svg>
                       HIDE THIS WINDOW

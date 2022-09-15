@@ -38,9 +38,9 @@ const Cart = (props) => {
                     <path
                       d="M1 1L6.5 6.5M12 12L6.5 6.5M6.5 6.5L1 12L12 1"
                       stroke="#717A8B"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </div>
