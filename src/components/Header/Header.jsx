@@ -646,7 +646,10 @@ const Header = (props) => {
                 />
               </div>
             </div>
-            <button className="btn modal__btn">Login</button>
+            <a href={`/${typeUser}`} className="btn modal__btn">
+            Login
+            </a>
+            {/* <button className="btn modal__btn">Login</button> */}
             <button
               className="modal__btn-forgot"
               onClick={() => {
@@ -776,7 +779,6 @@ const Header = (props) => {
                 />
               </div>
             </div>
-
             <a href={`/${typeUser}`} className="btn modal__btn">
               Create account
             </a>

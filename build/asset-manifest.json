@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.51090fb9.css",
-    "main.js": "/static/js/main.8e502b3f.js",
+    "main.css": "/static/css/main.c2f8e950.css",
+    "main.js": "/static/js/main.51e0c7ee.js",
+    "static/media/main__bg.jpg": "/static/media/main__bg.3d2ca3cd9c52e772dead.jpg",
     "static/media/nft-1.jpg": "/static/media/nft-1.448acf01f5f1549f6820.jpg",
     "static/media/bg.png": "/static/media/bg.04cc000024fb6ded8056.png",
     "static/media/graph.PNG": "/static/media/graph.932742628ff41f85fc2c.PNG",
     "static/media/nft1.jpg": "/static/media/nft1.b88af0c8385046e7cc7a.jpg",
     "static/media/1.JPG": "/static/media/1.5e8707b30c3aeaf5c3a9.JPG",
     "static/media/ply.png": "/static/media/ply.d40e34013ebbd1f78d54.png",
+    "static/media/discord.svg": "/static/media/discord.b6ae84ab29efe3fd2244057b4fd72ca6.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.847327c2f1b7367728822e793f4327b4.svg",
+    "static/media/twitter.svg": "/static/media/twitter.bc96cba77404c4c18cc4d149db390933.svg",
+    "static/media/telegram.svg": "/static/media/telegram.940a1996891d3a45f63b5d1a2b154f67.svg",
+    "static/media/wallet.svg": "/static/media/wallet.3eef85e602bd88e42a8fabe7457615f1.svg",
+    "static/media/facebook.svg": "/static/media/facebook.31ec2e96a750e3bdb5766fbe6822860e.svg",
     "static/media/spin.svg": "/static/media/spin.f4400bdc38060c9f67f8580f8147fb33.svg",
     "index.html": "/index.html",
     "static/media/Mail.svg": "/static/media/Mail.94645815086e5146117ad6d3118b171a.svg",
     "static/media/clock.svg": "/static/media/clock.55739bce2d10d5437c4d472afb0da13f.svg",
-    "main.51090fb9.css.map": "/static/css/main.51090fb9.css.map",
-    "main.8e502b3f.js.map": "/static/js/main.8e502b3f.js.map"
+    "main.c2f8e950.css.map": "/static/css/main.c2f8e950.css.map",
+    "main.51e0c7ee.js.map": "/static/js/main.51e0c7ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.51090fb9.css",
-    "static/js/main.8e502b3f.js"
+    "static/css/main.c2f8e950.css",
+    "static/js/main.51e0c7ee.js"
   ]
 }
