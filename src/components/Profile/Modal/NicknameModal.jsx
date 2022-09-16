@@ -4,18 +4,18 @@ import ModalHalfButton from "../../Button/ModalHalfButton";
 import NFTAvatar from "../../Avatar/NFTAvatar";
 import "./modal.css";
 
-const NicknameModal = (props) => {
+const NicknameModal = ({ showModal, setShowModal }) => {
   const handleClick = () => {
-    props.setShowModal(false);
+    setShowModal(false);
   };
   return (
     <>
-      {props.showModal ? (
+      {showModal ? (
         <>
           <div className="fixed inset-0 z-10 overflow-x-auto">
             <div
               className="fixed inset-0 w-full h-full bg-black opacity-40"
-              onClick={() => props.setShowModal(false)}
+              onClick={() => setShowModal(false)}
             ></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
               <div

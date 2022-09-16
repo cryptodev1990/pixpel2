@@ -18,6 +18,7 @@ import MintFinish from "./MintFinish/MintFinish";
 import BuyCrypto from "./BuyCrypto/BuyCrypto";
 import Developer from "./Developer/Developer";
 import MyCollection from "./MyCollection/MyCollection";
+import MysteryBox from "./MysteryBox/MysteryBox";
 
 export {
     AddressManagement,
@@ -39,5 +40,6 @@ export {
     MintFinish,
     BuyCrypto,
     Developer,
-    MyCollection
+    MyCollection,
+    MysteryBox
 }

@@ -19,6 +19,7 @@ import {
   Collection,
   CreateNFT,
   MyCollection,
+  MysteryBox,
   MintFinish,
   Developer,
   BuyCrypto
@@ -81,8 +82,9 @@ function App() {
         <Route path="/mycollection" element={<MyCollection />} />
         <Route path="/create-nft" element={<CreateNFT />} />
         <Route path="/developer" element={<Developer />} />
-        <Route path="*" element={<Test />} />
+        <Route path="/mysterybox" element={<MysteryBox />} />
         <Route path="/buycrypto" element={<BuyCrypto />} />
+        <Route path="*" element={<Test />} />
       </Routes>
       <Footer />
     </div>

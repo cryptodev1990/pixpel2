@@ -791,7 +791,8 @@ const Header = (props) => {
           ? window.location.pathname === "/mycollection" ||
             window.location.pathname === "/developer" ||
             window.location.pathname === "/create-nft" ||
-            window.location.pathname === "/collection"
+            window.location.pathname === "/collection" ||
+            window.location.pathname === "/mysterybox"
             ? devHeader()
             : userHeader()
           : mainHeader()}

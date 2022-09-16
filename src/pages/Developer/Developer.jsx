@@ -14,7 +14,7 @@ const Developer = () => {
         navigate("/create-nft");
         break;
       case 2:
-        navigate('/');
+        navigate('/mysterybox');
         break;
       case 3:
         navigate('/');
