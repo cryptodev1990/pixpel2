@@ -52,7 +52,7 @@ const CreateNFT = () => {
               <span className="mb-3 text-xl">Name:</span>
               <input
                 type="text"
-                className="collection__input"
+                className="collection__input py-3"
                 placeholder="Writer your name..."
               />
             </div>
@@ -74,7 +74,7 @@ const CreateNFT = () => {
             <span className="mb-2">Collection:</span>
             <input
               type="text"
-              className="collection__input"
+              className="collection__input py-3"
               placeholder="The Warrior"
             />
           </div>
@@ -82,7 +82,7 @@ const CreateNFT = () => {
             <span className="mb-2">Sub-Collection:</span>
             <input
               type="text"
-              className="collection__input"
+              className="collection__input py-3"
               placeholder="https://pixpel.com/collection/"
             />
           </div>

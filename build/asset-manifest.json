@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.77e76acc.css",
-    "main.js": "/static/js/main.dc6547bd.js",
+    "main.css": "/static/css/main.65b017cb.css",
+    "main.js": "/static/js/main.2edb6b50.js",
     "static/media/main__bg.jpg": "/static/media/main__bg.3d2ca3cd9c52e772dead.jpg",
     "static/media/nft-1.jpg": "/static/media/nft-1.448acf01f5f1549f6820.jpg",
+    "static/media/inventory.png": "/static/media/inventory.9d4e6b51f283dac9ef62.png",
     "static/media/bg.png": "/static/media/bg.04cc000024fb6ded8056.png",
     "static/media/graph.PNG": "/static/media/graph.932742628ff41f85fc2c.PNG",
     "static/media/nft1.jpg": "/static/media/nft1.b88af0c8385046e7cc7a.jpg",
@@ -16,14 +17,16 @@
     "static/media/wallet.svg": "/static/media/wallet.3eef85e602bd88e42a8fabe7457615f1.svg",
     "static/media/facebook.svg": "/static/media/facebook.31ec2e96a750e3bdb5766fbe6822860e.svg",
     "static/media/spin.svg": "/static/media/spin.f4400bdc38060c9f67f8580f8147fb33.svg",
+    "static/media/exclaimnation.svg": "/static/media/exclaimnation.47913efdcf2112a2670699a7c2ed78b5.svg",
     "index.html": "/index.html",
+    "static/media/Union.svg": "/static/media/Union.7dc3bc08a0909616cef8d2ab97b7fe1a.svg",
     "static/media/Mail.svg": "/static/media/Mail.94645815086e5146117ad6d3118b171a.svg",
     "static/media/clock.svg": "/static/media/clock.55739bce2d10d5437c4d472afb0da13f.svg",
-    "main.77e76acc.css.map": "/static/css/main.77e76acc.css.map",
-    "main.dc6547bd.js.map": "/static/js/main.dc6547bd.js.map"
+    "main.65b017cb.css.map": "/static/css/main.65b017cb.css.map",
+    "main.2edb6b50.js.map": "/static/js/main.2edb6b50.js.map"
   },
   "entrypoints": [
-    "static/css/main.77e76acc.css",
-    "static/js/main.dc6547bd.js"
+    "static/css/main.65b017cb.css",
+    "static/js/main.2edb6b50.js"
   ]
 }
