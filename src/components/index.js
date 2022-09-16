@@ -12,4 +12,5 @@ import TradeViewChart from "./TradeChart/TradeView"
 import CardModal from "./CardModal/CardModal";
 import AddModal from "./AddModal/AddModal";
 import SkillModal from "./SkillModal/SkillModal";
-export {Header, Banner, Button, Menu, Filter, NFTCard, GameCard, MarketChart, TradeViewChart, Cart, CardModal, AddModal, SkillModal }
+import Footer from "./Footer/Footer";
+export {Header, Footer, Banner, Button, Menu, Filter, NFTCard, GameCard, MarketChart, TradeViewChart, Cart, CardModal, AddModal, SkillModal }

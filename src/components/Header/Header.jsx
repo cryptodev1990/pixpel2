@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Menu } from "../index";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
 
@@ -87,10 +86,12 @@ const Header = (props) => {
     return (
       <div className="container-fluid">
         <div className="header__inner">
-          <div className="header__logo cursor-pointer" onClick={() => navigate('/')}>
+          <div
+            className="header__logo cursor-pointer"
+            onClick={() => navigate("/")}
+          >
             <img src="assets/images/logo.svg" className="logo" alt="" />
           </div>
-          <Menu />
           <div className="header__group">
             <button
               className="btn"
@@ -402,9 +403,7 @@ const Header = (props) => {
             </ul>
           </nav>
           {/* developer */}
-          <div className="header__btn- cursor-pointeruser">
-            Developer
-          </div>
+          <div className="header__btn-user cursor-pointer">Developer</div>
           <div className="header__group">
             <div className="header__user-tools">
               {/* notification */}
@@ -576,7 +575,7 @@ const Header = (props) => {
             <div
               className="modal__box"
               onClick={() => {
-                typeUser = "devops";
+                typeUser = "developer";
                 if (typeModal === "register") {
                   openModalRegister();
                 } else {
@@ -786,10 +785,13 @@ const Header = (props) => {
       </Modal>
 
       <header className="header" style={styles}>
-        {window.location.pathname === "/account"
-          ? userHeader()
-          : window.location.pathname === "/devops"
-          ? devHeader()
+        {window.location.pathname !== "/"
+          ? window.location.pathname === "/mycollection" ||
+            window.location.pathname === "/developer" ||
+            window.location.pathname === "/create-nft" ||
+            window.location.pathname === "/collection"
+            ? devHeader()
+            : userHeader()
           : mainHeader()}
       </header>
     </>
