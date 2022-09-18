@@ -28,14 +28,14 @@ const ImageDropDownButton = (props) => {
       }
       onClick={handleDropDown}
     >
-      <div className="flex flex-row items-center justify-between h-16 px-5 py-3 rounded-md gap-3">
-        <div className="flex flex-row gap-1 h-3/5 items-center">
+      <div className="flex items-center justify-between px-8 py-5 rounded-md">
+        <div className="flex gap-2 h-3/5 items-center">
           <img src={selectedContent.url} alt="" className="w-7 h-7 rounded-full" />
           <div className="text-base font-medium">{selectedContent.title}</div>
         </div>
         <div className="flex items-center">
           <svg
-            className="w-5 h-5 text-gray-700"
+            className="w-7 h-7 text-gray-700"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -63,12 +63,12 @@ const ImageDropDownButton = (props) => {
                 return (
                   <div
                     key={idx}
-                    className="relative flex flex-row items-center justify-start gap-1 px-5 py-3"
+                    className="relative flex flex-row items-center justify-start gap-1 px-8 py-5"
                     onClick={() => {
                       selectHandleClick(content);
                     }}
                   >
-                    <img className="h-6" src={content.url} alt="" />
+                    <img className="h-7" src={content.url} alt="" />
                     <div className="text-base font-medium">{content.title}</div>
                   </div>
                 );

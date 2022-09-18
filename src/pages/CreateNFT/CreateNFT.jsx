@@ -1,210 +1,105 @@
-import React, { useState } from "react";
-import { AddModal, SkillModal } from "../../components";
-import Select from "react-select";
-import "./CreateNFT.scss";
-
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
-const customStyles = {
-  option: (provided, state) => ({
-    ...provided,
-    color: state.isSelected ? "#fff" : "#fff",
-    background: "#29313C",
-    paddingTop: 18,
-    paddingBottom: 18,
-    paddingLeft: 25,
-    paddingRight: 25,
-  }),
-  control: () => ({
-    background: "#29313C",
-    borderRadius: "5px",
-    paddingTop: 18,
-    paddingBottom: 18,
-    display: "flex",
-  }),
-  indicatorSeparator: () => ({}),
-};
+import React from "react";
+import NFT from "../../asssets/images/market/nft-1.jpg";
+import {
+  collectionList,
+  subCollectionList,
+  statsList,
+  ChainList,
+} from "./dataList";
+import DropDownButton from "../../components/DropDown/DropDownButton";
+import PlusButton from "../../components/Button/PlusButton";
+import SelectSomething from "../../components/Button/SelectSomething";
 
 const CreateNFT = () => {
-  const [addModalShow, setAddModalShow] = useState(false);
-  const [skillModalShow, setSkillModalShow] = useState(false);
   return (
-    <>
-      <div className="px-32 py-8">
-        <div className="text-gray-400 text-base mb-6">
-          My Collections / The Warrior / Create a New NFT
+    <div className="flex flex-col px-28 pb-40">
+      <div className="text-3xl gap-12 mb-8">Create a New NFT</div>
+      <div className="flex gap-16 mb-3">
+        <img src={NFT} alt="NFT" className="rounded-md w-7/12 h-137"></img>
+        <div className="flex flex-col w-5/12">
+          <div className="mb-2 text-xl">Name:</div>
+          <input
+            className="px-10 py-5 bg-app-black rounded-lg mb-20"
+            placeholder="Write your name..."
+          />
+          <div className="mb-2 text-xl">Description:</div>
+          <textarea
+            className="bg-app-black rounded-xl px-10 py-10 h-86"
+            placeholder="write your description..."
+          />
         </div>
-        <div className="text-4xl font-semibold mb-10">Create a New NFT</div>
-
-        <div className="flex gap-10 mb-3">
-          <div className="col-7 ">
-            <img
-              src="assets/images/market/nft-1.jpg"
-              alt=""
-              className="nft-picture"
-            />
-          </div>
-          <div className="col-5">
-            <div className="flex column mb-16">
-              <span className="mb-3 text-xl">Name:</span>
-              <input
-                type="text"
-                className="collection__input py-3"
-                placeholder="Writer your name..."
-              />
-            </div>
-            <div className="flex column mb-1">
-              <span className="mb-3 text-xl">Description:</span>
-              <textarea
-                rows="10"
-                className="collection__area"
-                placeholder="Writer your description..."
-              ></textarea>
-            </div>
-          </div>
-        </div>
-        <div className="text-gray-400 mb-12">
-          IMAGE, VIDEO, OR 3D MODEL. FILE SUPPORTED: JPG, PNG, GIF, SVG
-        </div>
-        <div className="flex gap-4 mt-2">
-          <div className="flex column col-6">
-            <span className="mb-2">Collection:</span>
-            <input
-              type="text"
-              className="collection__input py-3"
-              placeholder="The Warrior"
-            />
-          </div>
-          <div className="flex column col-6">
-            <span className="mb-2">Sub-Collection:</span>
-            <input
-              type="text"
-              className="collection__input py-3"
-              placeholder="https://pixpel.com/collection/"
-            />
-          </div>
-        </div>
-        <div className="flex mt-24 mb-10">
-          <div className="text-4xl font-semibold">Properties</div>
-          <button
-            className="nft-new-btn py-5 px-10"
-            onClick={() => {
-              setAddModalShow(true);
-            }}
-          >
-            New +
-          </button>
-        </div>
-        <div className="flex flex-col gap-6">
-          <div className="flex gap-4 mt-2">
-            <div className="col-6">
-              <div className="row">
-                <div className="col-10">
-                  <Select options={options} styles={customStyles} />
-                </div>
-                <div className="col-2">
-                  <button
-                    className="btn-add"
-                    onClick={() => {
-                      setSkillModalShow(true);
-                    }}
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="row">
-                <div className="col-10">
-                  <Select options={options} styles={customStyles} />
-                </div>
-                <div className="col-2">
-                  <button
-                    className="btn-add"
-                    onClick={() => {
-                      setSkillModalShow(true);
-                    }}
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-4 mt-2">
-            <div className="col-6">
-              <div className="row">
-                <div className="col-10">
-                  <Select options={options} styles={customStyles} />
-                </div>
-                <div className="col-2">
-                  <button
-                    className="btn-add"
-                    onClick={() => {
-                      setSkillModalShow(true);
-                    }}
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col-6">
-              <div className="row">
-                <div className="col-10">
-                  <Select options={options} styles={customStyles} />
-                </div>
-                <div className="col-2">
-                  <button
-                    className="btn-add"
-                    onClick={() => {
-                      setSkillModalShow(true);
-                    }}
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex gap-4 mt-12 mb-12">
-          <div className="flex column col-6">
-            <span className="mb-2">Supply:</span>
-            <input
-              type="text"
-              className="bg-app-black rounded py-6 px-4"
-              placeholder="The Warrior"
-            />
-          </div>
-          <div className="flex column col-6">
-            <span className="mb-2">Blockchain:</span>
-            <Select options={options} styles={customStyles} />
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <button className="collection__btn mt-2 mb-1 w-max px-20 py-8 text-xl font-medium">
-            CREATE NFT
-          </button>
-        </div>
-        <AddModal
-          show={addModalShow}
-          handleClose={() => {
-            setAddModalShow(false);
-          }}
-        />
-        <SkillModal
-          show={skillModalShow}
-          handleClose={() => {
-            setSkillModalShow(false);
-          }}
-        />
       </div>
-    </>
+      <div className="text-gray-500 text-lg mb-12">
+        IMAGE, VIDEO OR 3D MODEL. FILE SUPPORTED: JPG, PNG, GIF, SVG
+      </div>
+      <div className="flex justify-between gap-8 mb-28">
+        <div className="w-1/2">
+          <div className="text-lg mb-2">Collection:</div>
+          <DropDownButton
+            initialContent={collectionList[0].title}
+            contentList={collectionList}
+          />
+        </div>
+        <div className="w-1/2">
+          <div className="text-lg mb-2">Sub-Collection:</div>
+          <DropDownButton
+            initialContent={subCollectionList[0].title}
+            contentList={subCollectionList}
+          />
+        </div>
+      </div>
+      <div className="flex justify-between items-center mb-5">
+        <div className="text-4xl font-bold">Properties</div>
+        <div className="bg-app-blue px-16 py-6 cursor-pointer rounded-xl text-xl">
+          New +
+        </div>
+      </div>
+      <div className="flex justify-between gap-10 w-full mb-5">
+        <div className="flex gap-5 w-1/2">
+          <div className="w-full rounded-xl py-3 bg-app-black">
+            <DropDownButton
+              initialContent={statsList[0].title}
+              contentList={statsList}
+              fontSize="text-2xl"
+            />
+          </div>
+          <PlusButton />
+        </div>
+        <div className="flex gap-5 w-1/2">
+          <SelectSomething title="Skills" />
+          <PlusButton />
+        </div>
+      </div>
+      <div className="flex justify-between gap-10 w-full mb-7">
+        <div className="flex gap-5 w-1/2">
+          <SelectSomething title="Level" />
+          <PlusButton />
+        </div>
+        <div className="flex gap-5 w-1/2">
+          <SelectSomething title="Properties" />
+          <PlusButton />
+        </div>
+      </div>
+      <div className="flex justify-between gap-10 w-full mb-20">
+        <div className="flex flex-col gap-3 w-1/2">
+          <div>Supply:</div>
+          <input
+            className="py-5 px-10 rounded-xl bg-app-black text-lg"
+            placeholder="The Warrior"
+          />
+        </div>
+        <div className="flex flex-col gap-3 w-1/2">
+          <div>Blockchain:</div>
+          <DropDownButton
+            initialContent={ChainList[0].title}
+            contentList={ChainList}
+          />
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <div className="bg-app-blue py-8 px-12 rounded-xl cursor-pointer text-lg">CREATE NEW NFT</div>
+      </div>
+    </div>
   );
 };
 

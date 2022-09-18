@@ -24,6 +24,7 @@ const Setting = () => {
         <ImageDropDownButton
           initialContent={FiatList[0]}
           contentList={FiatList}
+          backgroundColor="bg-app-black-button"
         />
       </div>
       <div className="flex flex-col gap-2">
