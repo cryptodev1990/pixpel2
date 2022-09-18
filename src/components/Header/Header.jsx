@@ -371,7 +371,7 @@ const Header = (props) => {
               <li className="menu__item">
                 <div
                   className="menu__link cursor-pointer"
-                  onClick={() => navigate("/buy-crypto")}
+                  onClick={() => navigate("/developer")}
                 >
                   Games
                 </div>
@@ -379,7 +379,7 @@ const Header = (props) => {
               <li className="menu__item">
                 <div
                   className="menu__link cursor-pointer"
-                  onClick={() => navigate("/nft-market")}
+                  onClick={() => navigate("/mycollection")}
                 >
                   NFT
                 </div>
@@ -387,7 +387,7 @@ const Header = (props) => {
               <li className="menu__item">
                 <div
                   className="menu__link cursor-pointer"
-                  onClick={() => navigate("/exchange")}
+                  onClick={() => navigate("/tokenroom")}
                 >
                   Token
                 </div>
@@ -395,7 +395,7 @@ const Header = (props) => {
               <li className="menu__item">
                 <div
                   className="menu__link cursor-pointer"
-                  onClick={() => navigate("/stacking")}
+                  onClick={() => navigate("/stakingportfolio")}
                 >
                   Staking
                 </div>
@@ -432,7 +432,7 @@ const Header = (props) => {
                 </svg>
               </div>
               {/* wallet */}
-              <div className="header__link cursor-pointer">
+              <div className="header__link cursor-pointer" onClick={() => navigate('/developerwallet')}>
                 <svg
                   width="28"
                   height="25"
@@ -792,7 +792,10 @@ const Header = (props) => {
             window.location.pathname === "/developer" ||
             window.location.pathname === "/create-nft" ||
             window.location.pathname === "/collection" ||
-            window.location.pathname === "/mysterybox"
+            window.location.pathname === "/mysterybox" ||
+            window.location.pathname === "/stakingportfolio" ||
+            window.location.pathname === "/developerwallet" ||
+            window.location.pathname === "/tokenroom"
             ? devHeader()
             : userHeader()
           : mainHeader()}
