@@ -14,11 +14,11 @@ const AddPropertiesModal = ({ showModal, setShowModal }) => {
           <div className="fixed inset-0 z-10 overflow-x-auto">
             <div className="fixed inset-0 w-full h-full bg-black opacity-40"></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
-              <div className="relative flex flex-col w-full max-w-2xl mx-auto bg-app-black rounded-xl shadow-lg md:px-12 py-12 text-lg">
+              <div className="relative flex flex-col w-full max-w-2xl mx-auto bg-app-black-modal rounded-xl shadow-lg md:px-12 py-12 text-lg">
                 <div className="flex items-center justify-center mb-6 text-2xl">
                   YOU CREATED THE WARRIOR
                 </div>
-                <div className="bg-app-black-button rounded-lg h-80 mb-12" />
+                <div className="bg-app-black rounded-lg h-80 mb-12" />
                 <div className="flex justify-center items-center">
                   <div
                     className="px-16 py-4 cursor-pointer w-max bg-app-blue rounded-md"

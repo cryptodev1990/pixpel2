@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 
-const DropDownButton = (props) => {
+const DropDownButton = ({
+  initialContent,
+  contentList,
+  fontSize,
+}) => {
   const [showDropDown, setShowDropDown] = useState(false);
-  const [selectedContent, setSelectedContent] = useState(props.initialContent);
-  const [fontSize, setFontSize] = useState("text-lg");
+  const [selectedContent, setSelectedContent] = useState(initialContent);
+  const [font, setFont] = useState("");
 
   useEffect(() => {
-    setFontSize(props.fontSize);
-  },[props.fontSize]);
+    setFont(fontSize);
+  },[fontSize]);
+
   const handleDropDown = () => {
     if (showDropDown) {
       setShowDropDown(false);
@@ -20,19 +25,22 @@ const DropDownButton = (props) => {
     setSelectedContent(contentTitle);
     setShowDropDown(false);
   };
-  
 
   return (
     <>
       <div
         className={
-          " bg-app-black cursor-pointer" +
+          "cursor-pointer bg-app-black" +
           (showDropDown ? " rounded-t-xl" : " rounded-xl")
         }
         onClick={handleDropDown}
       >
-        <div className={"flex px-8 rounded-xl gap-3 items-center justify-between py-5"}>
-          <div className={fontSize + " font-medium"}>{selectedContent}</div>
+        <div
+          className={
+            "flex px-8 rounded-xl gap-3 items-center justify-between py-5"
+          }
+        >
+          <div className={font + " font-medium"}>{selectedContent}</div>
           <div className="flex">
             <svg
               className="w-7 h-7 text-gray-700"
@@ -57,7 +65,7 @@ const DropDownButton = (props) => {
                 onClick={handleDropDown}
               ></div>
               <div className="flex flex-col bg-app-black rounded-b-xl">
-                {props.contentList.map((content, idx) => {
+                {contentList.map((content, idx) => {
                   return (
                     <div
                       key={idx}

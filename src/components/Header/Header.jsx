@@ -795,7 +795,7 @@ const Header = (props) => {
             window.location.pathname === "/mysterybox" ||
             window.location.pathname === "/stakingportfolio" ||
             window.location.pathname === "/developerwallet" ||
-            window.location.pathname === "/mintfinish" ||
+            window.location.pathname === "/finishmint" ||
             window.location.pathname === "/tokenroom"
             ? devHeader()
             : userHeader()

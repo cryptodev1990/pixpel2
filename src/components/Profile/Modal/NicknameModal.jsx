@@ -19,12 +19,12 @@ const NicknameModal = ({ showModal, setShowModal }) => {
             <div className="flex items-center px-4 py-6 min-h-screen">
               <div
                 className="relative flex flex-col w-full max-w-lg p-4 mx-auto 
-															bg-app-black rounded-xl shadow-lg md:px-12 py-12 text-lg"
+															bg-app-black-modal rounded-xl shadow-lg md:px-12 py-12 text-lg"
               >
                 <div className="text-xl mb-6">Set a customized nickname</div>
                 <div className="mb-2">Nickname</div>
                 <input
-                  className="w-full py-2 px-6 items-center bg-app-black-button rounded-md text-gray-500 mb-6"
+                  className="w-full py-2 px-6 items-center bg-app-black rounded-md text-gray-500 mb-6"
                   placeholder="Avatar9281746199"
                 />
                 <div className="mb-3 text-lg">Select avatar</div>

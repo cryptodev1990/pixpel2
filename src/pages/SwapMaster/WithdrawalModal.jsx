@@ -16,11 +16,11 @@ export default function WithdrawalModal() {
               onClick={() => dispatch(withdrawCloseModal())}
             ></div>
             <div className="flex items-center min-h-screen px-4 py-8">
-              <div className="relative flex flex-col px-10 py-10 mx-auto text-lg shadow-lg bg-app-black rounded-xl">
+              <div className="relative flex flex-col px-10 py-10 mx-auto text-lg shadow-lg bg-app-black-modal rounded-xl">
                 <div className="flex justify-start mb-5">
                   <div className="text-2xl font-medium">Withdraw</div>
                 </div>
-                <div className="flex flex-col px-8 py-5 mb-5 rounded-md bg-app-black-button">
+                <div className="flex flex-col px-8 py-5 mb-5 rounded-md bg-app-black">
                   <div className="flex flex-row justify-start">
                     <div className="text-base font-medium w-36 text-slate-400">
                       Amount

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-const TokenDropdownInput = (props) => {
+const TokenDropdownInput = ({initialContent, contentList, Max }) => {
   const [showDropDown, setShowDropDown] = useState(false);
-  const [selectedContent, setSelectedContent] = useState(props.initialContent);
+  const [selectedContent, setSelectedContent] = useState(initialContent);
 
   useEffect(() => {
-    setSelectedContent(props.initialContent);
-  }, [props.initialContent]);
+    setSelectedContent(initialContent);
+  }, [initialContent]);
 
   const handleDropDown = () => {
     if (showDropDown) {
@@ -20,12 +20,12 @@ const TokenDropdownInput = (props) => {
     setShowDropDown(false);
   };
   return (
-    <div className="flex flex-row items-center w-full h-16 rounded-md bg-app-black-button cursor-pointer">
+    <div className="flex flex-row items-center w-full h-16 rounded-md bg-app-black cursor-pointer">
       <div className="flex-none">
         <div
           className={
             (showDropDown ? "rounded-t-md" : "rounded-md") +
-            " bg-app-black-button"
+            " bg-app-black"
           }
           onClick={handleDropDown}
         >
@@ -59,13 +59,13 @@ const TokenDropdownInput = (props) => {
                   className="fixed inset-0 w-full h-full"
                   onClick={handleDropDown}
                 ></div>
-                <div className="flex flex-col w-64 rounded-b-md bg-app-black-button">
-                  {props.contentList.map((content, idx) => {
+                <div className="flex flex-col w-64 rounded-b-md bg-app-black">
+                  {contentList.map((content, idx) => {
                     return (
                       <div
                         key={idx}
                         className={
-                          (idx === props.contentList.length - 1
+                          (idx === contentList.length - 1
                             ? " "
                             : " border-b-2 border-gray-500 ") +
                           " relative flex flex-row items-center justify-start gap-5 px-5 py-3"
@@ -104,9 +104,9 @@ const TokenDropdownInput = (props) => {
         </svg>
       </div>
       <div className="flex-auto">
-        <input className="w-full bg-app-black-button" />
+        <input className="w-full bg-app-black" />
       </div>
-      {props.Max ? <div className="flex mx-5 text-blue-500">Max</div> : null}
+      {Max ? <div className="flex mx-5 text-blue-500">Max</div> : null}
     </div>
   );
 };

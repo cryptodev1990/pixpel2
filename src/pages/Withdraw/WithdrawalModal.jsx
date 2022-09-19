@@ -13,13 +13,13 @@ export default function WithdrawalModal(props) {
 							onClick={() => props.setShowModal(false)}
 						></div>
 						<div className="flex items-center min-h-screen px-4 py-8">
-							<div className="relative flex flex-col w-full px-4 py-4 mx-auto text-lg shadow-lg 2xs:py-10 2xs:px-10 bg-app-black rounded-xl sm:w-auto">
+							<div className="relative flex flex-col w-full px-4 py-4 mx-auto text-lg shadow-lg 2xs:py-10 2xs:px-10 bg-app-black-modal rounded-xl sm:w-auto">
                 <div className="flex justify-start mb-5">
                   <div className="text-2xl font-medium">
                     Withdraw
                   </div>
                 </div>
-                <div className="flex flex-col px-4 py-3 mb-5 text-xs rounded-md 2xs:py-5 2xs:px-8 2xs:text-base bg-app-black-button">
+                <div className="flex flex-col px-4 py-3 mb-5 text-xs rounded-md 2xs:py-5 2xs:px-8 2xs:text-base bg-app-black">
                   <div className="flex flex-row justify-between">
                     <div className="flex-none w-16 font-medium 2xs:w-20 text-slate-400">
                       Amount

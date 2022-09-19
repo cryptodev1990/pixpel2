@@ -14,7 +14,7 @@ const ActivityModal = (props) => {
             <div className="flex items-center px-4 py-6 min-h-screen">
               <div
                 className="relative flex flex-col w-full max-w-2xl p-4 mx-auto 
-															bg-app-black rounded-xl shadow-lg xs:px-12 xs:py-12 px-0 py-0 text-lg"
+															bg-app-black-modal rounded-xl shadow-lg xs:px-12 xs:py-12 px-0 py-0 text-lg"
               >
                 <div className="h-auto w-full py-6 px-8 bg-app-black flex flex-col rounded-lg">
                   <div className=" text-3xl">Activity</div>

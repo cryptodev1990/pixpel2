@@ -18,7 +18,7 @@ const SkillsModal = ({ showModal, setShowModal }) => {
               onClick={() => setShowModal(false)}
             ></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
-              <div className="relative flex flex-col w-full max-w-3xl mx-auto bg-app-black rounded-xl shadow-lg md:px-12 py-12 text-lg">
+              <div className="relative flex flex-col w-full max-w-3xl mx-auto bg-app-black-modal rounded-xl shadow-lg md:px-12 py-12 text-lg">
                 <div className="flex items-center justify-center mb-6 text-2xl">
                   SKILLS
                 </div>
@@ -33,15 +33,15 @@ const SkillsModal = ({ showModal, setShowModal }) => {
                   <div className="flex gap-8">
                     <div className="flex flex-col w-5/12">
                       <input
-                        className="py-5 px-5 bg-app-black-button rounded mb-3"
+                        className="py-5 px-5 bg-app-black rounded mb-3"
                         placeholder="Magic"
                       />
                       <input
-                        className="py-5 px-5 bg-app-black-button rounded mb-5"
+                        className="py-5 px-5 bg-app-black rounded mb-5"
                         placeholder="Fist"
                       />
                       <div
-                        className="px-3 py-2 rounded-xl w-max bg-app-black-button cursor-pointer"
+                        className="px-3 py-2 rounded-xl w-max bg-app-black cursor-pointer"
                         onClick={handleClick}
                       >
                         Add more
@@ -49,11 +49,11 @@ const SkillsModal = ({ showModal, setShowModal }) => {
                     </div>
                     <div className="flex flex-col w-5/12">
                       <input
-                        className="py-5 px-5 bg-app-black-button rounded mb-3"
+                        className="py-5 px-5 bg-app-black rounded mb-3"
                         placeholder="100"
                       />
                       <input
-                        className="py-5 px-5 bg-app-black-button rounded mb-5"
+                        className="py-5 px-5 bg-app-black rounded mb-5"
                         placeholder="50"
                       />
                     </div>

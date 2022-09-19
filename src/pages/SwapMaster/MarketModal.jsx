@@ -18,13 +18,13 @@ export default function MarketModal(props) {
 							onClick={() => props.setShowModal(false)}
 						></div>
 						<div className="flex items-center min-h-screen px-4 py-8">
-							<div className="relative flex flex-col w-full sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] mx-auto text-lg bg-app-black rounded-xl xs:w-auto">
+							<div className="relative flex flex-col w-full sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] mx-auto text-lg bg-app-black-modal rounded-xl xs:w-auto">
                 <div className="flex mb-5">
                   <div className="text-xl font-medium 2xs:text-2xl">
                     Security Verification
                   </div>
                 </div>
-                <div className="flex flex-col gap-1 px-3 py-2 rounded-md 2xs:py-5 2xs:px-7 bg-app-black-button mb-7">
+                <div className="flex flex-col gap-1 px-3 py-2 rounded-md 2xs:py-5 2xs:px-7 bg-app-black mb-7">
                   <div className="flex flex-row gap-3 1xs:justify-between 2xs:w-auto">
                     <div className="flex 1xs:w-1/6 ">
                       <div className="text-xs font-medium 2xs:text-base text-slate-400">
@@ -79,9 +79,9 @@ export default function MarketModal(props) {
                     Phone Number Verification Code
                   </div>
                 </div>
-                <div className='flex flex-row items-center justify-between h-16 px-2 py-5 mb-1 rounded-md 2xs:px-7 bg-app-black-button'>
+                <div className='flex flex-row items-center justify-between h-16 px-2 py-5 mb-1 rounded-md 2xs:px-7 bg-app-black'>
                   <div className="flex flex-row ">
-                    <input className="w-4/5 xs:w-72 bg-app-black-button"/>
+                    <input className="w-4/5 xs:w-72 bg-app-black"/>
                   </div>
                   <div className="text-xs 2xs:text-base text-slate-400">
                       Verification code sent
@@ -97,9 +97,9 @@ export default function MarketModal(props) {
                     Email Verification Code
                   </div>
                 </div>
-                <div className='flex flex-row items-center justify-between h-16 px-2 py-5 mb-1 rounded-md 2xs:px-7 bg-app-black-button'>
+                <div className='flex flex-row items-center justify-between h-16 px-2 py-5 mb-1 rounded-md 2xs:px-7 bg-app-black'>
                   <div className="flex flex-row w-">
-                    <input className="w-4/5 xs:w-72 bg-app-black-button"/>
+                    <input className="w-4/5 xs:w-72 bg-app-black"/>
                   </div>
                   <div className="text-xs 2xs:text-base text-slate-400">
                       Verification code sent

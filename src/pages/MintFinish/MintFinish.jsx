@@ -1,270 +1,176 @@
-import React from "react";
-import "./MintFinish.scss";
+import React, { useState } from "react";
+import Image from "../../asssets/images/market/inventory.png";
+import NFTDetail from "../../components/Developer/NFTDetail";
+import NFTDetailWithIcon from "../../components/Developer/NFTDetailWithIcon";
+import image from "../../asssets/images/UserHome/avax.png";
+import EveryDetail from "../../components/Developer/EveryDetail";
+import { Listing, Offers } from "./dataList";
+import ListNFTModal from "../../components/Modal/NFTModal/ListNFTModal";
 
 const MintFinish = () => {
+  const [showListNFTModal, setShowListNFTModal] = useState(false);
   return (
     <>
-      <div className="developer">
-        <div className="container">
-          <div className="developer__row">
-            <div
-              className="developer__col"
-              style={{
-                height: "100%",
-                width: "100%",
-                maxWidth: 780,
-                marginRight: 30,
-              }}
-            >
-              <div className="widget__row">
-                <div className="widget__col">
-                  <img
-                    style={{ width: "100%", height: "100%" }}
-                    src="assets/images/market/inventory.png"
-                    alt=""
-                  />
-                </div>
+      <div className="flex flex-col px-28 py-10">
+        <div className="flex gap-12 justify-between mb-20">
+          <div className="flex w-1/2">
+            <img src={Image} alt="NFT" className="w-full" />
+          </div>
+          <div className="flex flex-col w-1/2 gap-8">
+            <div className="flex justify-between px-10 py-6 rounded-xl bg-app-black">
+              <div className="text-lg">Name</div>
+              <div className="text-app-blue text-lg">Archer</div>
+            </div>
+            <div className="flex justify-between px-10 py-6 rounded-xl bg-app-black">
+              <div className="text-lg">Collection</div>
+              <div className="text-app-blue text-lg">The Warrior</div>
+            </div>
+            <div className="flex justify-between px-10 py-6 rounded-xl bg-app-black">
+              <div className="text-lg">Total Supply</div>
+              <div className="text-app-blue text-lg">800</div>
+            </div>
+            <div className="flex justify-between gap-5">
+              <div
+                className="bg-app-green flex justify-center items-center py-7 cursor-pointer rounded-xl text-lg w-1/3"
+                onClick={() => setShowListNFTModal(true)}
+              >
+                Open Auction
+              </div>
+              <div className="bg-app-blue flex justify-center items-center py-7 cursor-pointer rounded-xl text-lg w-1/3">
+                Mystery Box
+              </div>
+              <div className="bg-app-red flex justify-center items-center py-7 cursor-pointer rounded-xl text-lg w-1/3">
+                Fix Price
               </div>
             </div>
-
-            <div className="developer__col w100">
-              <div className="developer__row row-wrap w100 flex-dic-col">
-                <div className="widget__row widget__box w100">
-                  <div className="widget__item widget__item--offset-top">
-                    <div className="widget__item-name">Name</div>
-                    <div className="widget__item-value">Archer</div>
-                  </div>
-                  <div className="widget__item widget__item--offset-top">
-                    <div className="widget__item-name">Collection</div>
-                    <div className="widget__item-value">The Warrior</div>
-                  </div>
-                  <div className="widget__item widget__item--offset-top">
-                    <div className="widget__item-name">Total Supply</div>
-                    <div className="widget__item-value">800</div>
-                  </div>
-                </div>
-                <div className="widget__row widget__box w100 jc-sb fw-nw mt-1">
-                  <button class="table__btn table__btn--stake margin-left-i w100">
-                    Open auction
-                  </button>
-                  <button class="table__btn table__btn--mystery margin-left-i w100">
-                    Mystery box
-                  </button>
-                  <button class="table__btn table__btn--price margin-left-i w100">
-                    Fix Price
-                  </button>
-                </div>
-                <div className="justify-s col-gap-10">
-                  <div className="fill">
-                    <div className="widget__item-name">QTY:</div>
-                    <div className="widget__item widget__item--offset-top">
-                      <div className="widget__item-name">500</div>
-                    </div>
-                  </div>
-
-                  <div className="fill">
-                    <div className="widget__item-name">QTY:</div>
-                    <div className="widget__item widget__item--offset-top">
-                      <div className="widget__item-name">500</div>
-                    </div>
-                  </div>
-
-                  <div className="fill">
-                    <div className="widget__item-name">QTY:</div>
-                    <div className="widget__item widget__item--offset-top">
-                      <div className="widget__item-name">500</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="justify-s col-gap-10">
-                  <div className="fill">
-                    <div className="widget__item-name">Price:</div>
-                    <div className="widget__item widget__item--offset-top">
-                      <div className="justify">
-                        <img
-                          src="assets/images/Userhome/avax.png"
-                          className="developer-card__picture"
-                          alt=""
-                        />
-                        <div className="widget__item-name">472 249</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="fill">
-                    <div className="widget__item-name">Duration:</div>
-                    <div className="widget__item widget__item--offset-top">
-                      <div className="justify">
-                        <div className="widget__item-name">500</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="fill">
-                    <div className="widget__item-name">Price:</div>
-                    <div className="widget__item widget__item--offset-top">
-                      <div className="justify">
-                        <img
-                          src="assets/images/Userhome/avax.png"
-                          className="developer-card__picture"
-                          alt=""
-                        />
-                        <div className="widget__item-name">472 249</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="justify-s col-gap-10">
-                  <div className="fill">
-                    <div className="widget__item-name">Duration:</div>
-                    <div className="widget__item widget__item--offset-top">
-                      <div className="widget__item-name">500</div>
-                    </div>
-                  </div>
-                  <div className="fill"></div>
-                  <div className="fill">
-                    <div className="widget__item-name">Duration:</div>
-                    <div className="widget__item widget__item--offset-top">
-                      <div className="widget__item-name">500</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="flex gap-5">
+              <NFTDetail title="QTY:" content="500" />
+              <NFTDetail title="QTY:" content="200" />
+              <NFTDetail title="QTY:" content="100" />
+            </div>
+            <div className="flex gap-5">
+              <NFTDetailWithIcon
+                title="Price:"
+                image={image}
+                content="472 249"
+              />
+              <NFTDetail
+                title="Duration:"
+                content="500"
+                color="text-gray-500"
+              />
+              <NFTDetailWithIcon
+                title="Price:"
+                image={image}
+                content="200 PIXP"
+              />
+            </div>
+            <div className="flex gap-5">
+              <NFTDetail
+                title="Duration:"
+                content="500"
+                color="text-gray-500"
+              />
+              <div className="w-1/3" />
+              <NFTDetail
+                title="Duration:"
+                content="500"
+                color="text-gray-500"
+              />
             </div>
           </div>
-
-          <div className="developer__row mt-4">
-            <div
-              className="developer__col"
-              style={{
-                height: "100%",
-                width: "100%",
-                maxWidth: 780,
-                marginRight: 30,
-              }}
-            >
-              <div className="widget__row w100">
-                <div className="widget__row widget__box widget w100 flex-dic-col">
-                  <h2
-                    className="widget__title"
-                    style={{ marginTop: 20, marginBottom: 10 }}
-                  >
-                    Details
-                  </h2>
-                  <div className="widget__col">
-                    <div className="widget__item">
-                      <div className="widget__item-name">Contract address</div>
-                      <div className="widget__item-value">9324n12d91bas</div>
-                    </div>
-                    <div className="widget__item">
-                      <div className="widget__item-name">Token ID:</div>
-                      <div className="widget__item-value">
-                        234nd29dn0sm1smxn3n
-                      </div>
-                    </div>
-                    <div className="widget__item">
-                      <div className="widget__item-name">Token Standard</div>
-                      <div className="widget__item-value">BEP-2U</div>
-                    </div>
-                    <div className="widget__item">
-                      <div className="widget__item-name">Blockchain:</div>
-                      <div className="widget__item-value">Binance</div>
-                    </div>
-                  </div>
-
-                  <div className="widget__item widget__item--offset-top">
-                    <div className="widget__item-name">Creator Fee:</div>
-                    <div className="widget__item-value">5% </div>
-                  </div>
-                </div>
+        </div>
+        <div className="flex justify-between gap-8">
+          <div className="flex flex-col bg-app-black rounded-xl w-1/2 items-center py-10">
+            <div className="text-2xl mb-8">Details</div>
+            <div className="flex flex-col gap-5 w-full px-10">
+              <EveryDetail type="Contract address:" content="9324n12d91bas" />
+              <EveryDetail type="Token ID:" content="234nd29dn0smlsmxn3n" />
+              <EveryDetail type="Token Standard:" content="BEP-2U" />
+              <EveryDetail type="Blockchain:" content="Binance" />
+              <EveryDetail type="Creator Fee:" content="5%" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-8 w-1/2">
+            <div className="flex flex-col rounded-lg py-10 px-10 items-center justify-center bg-app-black">
+              <div className="text-2xl">Listing</div>
+              <div className="overflow-auto relative mt-10 w-full">
+                <table className="table-auto">
+                  <thead>
+                    <tr>
+                      <td className="text-gray-400 px-6">Price</td>
+                      <td className="text-gray-400 px-6">USD</td>
+                      <td className="text-gray-400 px-6">Type</td>
+                      <td className="text-gray-400 w-1/5 px-6">Date</td>
+                    </tr>
+                  </thead>
+                  <tbody className="px-4">
+                    {Listing.map((menu, idx) => {
+                      return (
+                        <tr
+                          key={idx}
+                          className={
+                            idx !== Listing.length - 1
+                              ? "border-b-2 border-app-black"
+                              : ""
+                          }
+                        >
+                          <td className="py-5 px-6">{menu.Price}</td>
+                          <td className="py-5 px-6">{menu.USD}</td>
+                          <td className="py-5 px-6">{menu.Type}</td>
+                          <td className="py-5 px-6">{menu.Date}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
               </div>
             </div>
-            <div class="developer__col w100">
-              <div className="widget__row w100">
-                <div className="widget__row widget__box widget w100">
-                  <div className="widget__col">
-                    <h2 className="widget__title">Listing</h2>
-                    <div className="flex mt-2">
-                      <div className=" fill">
-                        <h6>price</h6>
-                        <h5>200 PIXP</h5>
-                      </div>
-                      <div className=" fill">
-                        <h6>USD</h6>
-                        <h5>200 USD</h5>
-                      </div>
-                      <div className=" fill">
-                        <h6>Type</h6>
-                        <h5>Fix Price</h5>
-                      </div>
-                      <div className=" fill">
-                        <h6>Date</h6>
-                        <h5>28-04-2022 </h5>
-                      </div>
-                    </div>
-                    <div className="line mt"></div>
-                    <div className="flex">
-                      <div className=" fill">
-                        <h5>200 PIXP</h5>
-                      </div>
-                      <div className=" fill">
-                        <h5>200 USD</h5>
-                      </div>
-                      <div className=" fill">
-                        <h5>Fix Price</h5>
-                      </div>
-                      <div className=" fill">
-                        <h5>28-04-2022</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="widget__row w100 mt-2">
-                <div className="widget__row widget__box widget w100">
-                  <div className="widget__col">
-                    <div className="widget__title">Offers</div>
-                    <div className="flex mt-2">
-                      <div className=" fill">
-                        <h6>price</h6>
-                        <h5>200 PIXP</h5>
-                      </div>
-                      <div className=" fill">
-                        <h6>USD</h6>
-                        <h5>200 USD</h5>
-                      </div>
-                      <div className=" fill">
-                        <h6>Type</h6>
-                        <h5>Fix Price</h5>
-                      </div>
-                      <div className=" fill">
-                        <h6>Date</h6>
-                        <h5>28-04-2022 </h5>
-                      </div>
-                    </div>
-                    <div className="line mt"></div>
-                    <div className="flex">
-                      <div className=" fill">
-                        <h5>200 PIXP</h5>
-                      </div>
-                      <div className=" fill">
-                        <h5>200 USD</h5>
-                      </div>
-                      <div className=" fill">
-                        <h5>Fix Price</h5>
-                      </div>
-                      <div className=" fill">
-                        <h5>28-04-2022</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div className="flex flex-col rounded-lg py-10 px-10 items-center justify-center bg-app-black">
+              <div className="text-2xl">Offers</div>
+              <div className="overflow-auto relative mt-10 w-full">
+                <table className="table-auto">
+                  <thead>
+                    <tr>
+                      <td className="text-gray-400 px-6">Price</td>
+                      <td className="text-gray-400 px-6">USER</td>
+                      <td className="text-gray-400 px-6">Type</td>
+                      <td className="text-gray-400 w-1/5 px-6">Date</td>
+                    </tr>
+                  </thead>
+                  <tbody className="px-4">
+                    {Offers.map((menu, idx) => {
+                      return (
+                        <tr
+                          key={idx}
+                          className={
+                            idx !== Offers.length - 1
+                              ? "border-b-2 border-app-black"
+                              : ""
+                          }
+                        >
+                          <td className="py-5 px-6">{menu.Price}</td>
+                          <td className="py-5 px-6">{menu.USER}</td>
+                          <td className="py-5 px-6">{menu.Type}</td>
+                          <td className="py-5 px-6">{menu.Date}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {
+        <ListNFTModal
+          showModal={showListNFTModal}
+          setShowModal={setShowListNFTModal}
+        />
+      }
     </>
   );
 };
+
 export default MintFinish;

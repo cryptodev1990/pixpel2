@@ -16,7 +16,7 @@ const AddWarriorModal = ({ showModal, setShowModal }) => {
             <div className="flex items-center px-4 py-6 min-h-screen">
               <div
                 className="relative flex flex-col w-full max-w-2xl p-4 mx-auto 
-															bg-app-black rounded-xl shadow-lg md:px-12 py-12 text-lg"
+															bg-app-black-modal rounded-xl shadow-lg md:px-12 py-12 text-lg"
               >
                 <div className="text-2xl mb-8">Collection The Warrior</div>
                 <div className="grid grid-cols-2 gap-4 mb-5">
