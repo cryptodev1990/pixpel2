@@ -1,5 +1,4 @@
 import React from "react";
-import "./modal.css";
 import { devicesList } from "../../../pages/Profile/datalist";
 
 const DeviceModal = (props) => {
@@ -18,9 +17,7 @@ const DeviceModal = (props) => {
 															bg-app-black rounded-xl shadow-lg xs:px-12 xs:py-12 py-3 px-1 text-lg"
               >
                 <div className="h-auto w-full xs:py-6 xs:px-8 px-2 py-2 bg-app-black flex flex-col rounded-lg">
-                  <div className="text-2xl">
-                    Devices
-                  </div>
+                  <div className="text-2xl">Devices</div>
                   <div className="flex flex-col">
                     {devicesList.map((device, idx) => {
                       return (
@@ -29,7 +26,7 @@ const DeviceModal = (props) => {
                           className="flex flex-row justify-between border-b-2 border-app-black my-2"
                         >
                           <div className="flex flex-col">
-                            <div className="text-white">{device.title.OS}</div>
+                            <div>{device.title.OS}</div>
                             <div
                               className="text-gray-400"
                               style={{ fontSize: "12px" }}
@@ -38,9 +35,7 @@ const DeviceModal = (props) => {
                             </div>
                           </div>
                           <div className="flex flex-col">
-                            <div className="text-white">
-                              {device.title.level}
-                            </div>
+                            <div>{device.title.level}</div>
                             <div
                               className="text-gray-400"
                               style={{ fontSize: "12px" }}

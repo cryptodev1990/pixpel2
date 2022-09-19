@@ -81,6 +81,7 @@ function App() {
         <Route path="/collection" element={<Collection />} />
         <Route path="/mycollection" element={<MyCollection />} />
         <Route path="/create-nft" element={<CreateNFT />} />
+        <Route path="/finishmint" element={<MintFinish />} />
         <Route path="/developer" element={<Developer />} />
         <Route path="/mysterybox" element={<MysteryBox />} />
         <Route path="/buycrypto" element={<BuyCrypto />} />

@@ -2,7 +2,6 @@ import React from "react";
 import HelpCenterButton from "../../Button/HelpCenterButton";
 import ModalHalfButton from "../../Button/ModalHalfButton";
 import NFTAvatar from "../../Avatar/NFTAvatar";
-import "./modal.css";
 
 const NicknameModal = ({ showModal, setShowModal }) => {
   const handleClick = () => {

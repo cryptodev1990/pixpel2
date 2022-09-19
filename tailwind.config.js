@@ -27,6 +27,7 @@ module.exports = {
           },
           red: {
             DEFAULT: "#F6465D",
+            close: "#5F303D",
           },
           purple: {
             DEFAULT: '#7B61FF',

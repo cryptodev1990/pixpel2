@@ -1,8 +1,11 @@
 import React from "react";
 
-const PlusButton = () => {
+const PlusButton = ({ handleClick }) => {
   return (
-    <div className="flex justify-center items-center w-max h-max px-8 py-8 bg-app-black rounded-xl cursor-pointer">
+    <div
+      className="flex justify-center items-center w-max h-max px-8 py-8 bg-app-black rounded-xl cursor-pointer"
+      onClick={handleClick}
+    >
       <svg
         className="h-8 w-8 text-blue-700"
         fill="none"

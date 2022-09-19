@@ -1,5 +1,4 @@
 import React from "react";
-import "./modal.css";
 import { activityList } from "../../../pages/Profile/datalist";
 
 const ActivityModal = (props) => {
@@ -18,9 +17,7 @@ const ActivityModal = (props) => {
 															bg-app-black rounded-xl shadow-lg xs:px-12 xs:py-12 px-0 py-0 text-lg"
               >
                 <div className="h-auto w-full py-6 px-8 bg-app-black flex flex-col rounded-lg">
-                  <div className="text-white" style={{ fontSize: "28px" }}>
-                    Activity
-                  </div>
+                  <div className=" text-3xl">Activity</div>
                   <div className="flex flex-col">
                     {activityList.map((activity, idx) => {
                       return (
@@ -29,9 +26,7 @@ const ActivityModal = (props) => {
                           className="flex flex-row justify-between border-b-2 border-app-black my-2"
                         >
                           <div className="flex flex-col">
-                            <div className="text-white">
-                              {activity.title.skill}
-                            </div>
+                            <div>{activity.title.skill}</div>
                             <div
                               className="text-gray-400"
                               style={{ fontSize: "12px" }}
@@ -40,9 +35,7 @@ const ActivityModal = (props) => {
                             </div>
                           </div>
                           <div className="flex flex-col">
-                            <div className="text-white">
-                              {activity.title.level}
-                            </div>
+                            <div>{activity.title.level}</div>
                             <div
                               className="text-gray-400"
                               style={{ fontSize: "12px" }}

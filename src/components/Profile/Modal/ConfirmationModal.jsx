@@ -12,7 +12,7 @@ const ConfirmationModal = (props) => {
   const handleModalClick = () => {
     props.setShowModal(false);
   };
-  
+
   const [marketSelected, setMarketSelected] = useState(false);
   const handlemarketClick = () => {
     setMarketSelected(!marketSelected);
