@@ -61,7 +61,7 @@ const Footer = () => {
         <div className="flex mt-5 gap-2"> 
           <div className="text-xl">PIXPEL</div>
           <svg
-            class="w-5 text-white"
+            className="w-5 text-white"
             width="24"
             height="24"
             viewBox="0 0 24 24"

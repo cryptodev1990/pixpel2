@@ -21,9 +21,7 @@ const UserHome = () => {
               tempor sollicitudin, lacus mauris accumsan erat, quis posuere leo
               mi sed lectus.
             </p>
-            <Button className="user-home__top-btn" classes="btn--brand">
-              Play now
-            </Button>
+            <Button title="Play Now" />
           </div>
 
           <div className="row user-home__section user-home__section--offset">
@@ -90,9 +88,7 @@ const UserHome = () => {
               <h2 className="box-header__title user-home__nfts-title">
                 Recent NFTs
               </h2>
-              <Button classes="box-header__btn user-home__nfts-btn btn--brand">
-                Buy now
-              </Button>
+              <Button title="Buy Now" />
             </div>
             <div className="row-wrap user-home__row">
               <div className="user-home__nft">
@@ -193,9 +189,7 @@ const UserHome = () => {
               <h2 className="box-header__title user-home__nfts-title">
                 Staking
               </h2>
-              <Button classes="box-header__btn user-home__nfts-btn btn--brand">
-                Stake now
-              </Button>
+              <Button title="Stake now" />
             </div>
             <div className="row">
               <div className="col-lg-4">
@@ -374,9 +368,7 @@ const UserHome = () => {
               <h2 className="box-header__title user-home__nfts-title">
                 Token trend
               </h2>
-              <Button classes="box-header__btn user-home__nfts-btn btn--brand">
-                Trade now
-              </Button>
+              <Button title="Trade Now" />
             </div>
             <div className="user-home__table table">
               <div className="table__tr">

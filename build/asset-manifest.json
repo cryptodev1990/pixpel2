@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.65b017cb.css",
-    "main.js": "/static/js/main.2edb6b50.js",
+    "main.css": "/static/css/main.44b3b251.css",
+    "main.js": "/static/js/main.1f82f5fc.js",
     "static/media/main__bg.jpg": "/static/media/main__bg.3d2ca3cd9c52e772dead.jpg",
     "static/media/nft-1.jpg": "/static/media/nft-1.448acf01f5f1549f6820.jpg",
     "static/media/inventory.png": "/static/media/inventory.9d4e6b51f283dac9ef62.png",
@@ -22,11 +22,11 @@
     "static/media/Union.svg": "/static/media/Union.7dc3bc08a0909616cef8d2ab97b7fe1a.svg",
     "static/media/Mail.svg": "/static/media/Mail.94645815086e5146117ad6d3118b171a.svg",
     "static/media/clock.svg": "/static/media/clock.55739bce2d10d5437c4d472afb0da13f.svg",
-    "main.65b017cb.css.map": "/static/css/main.65b017cb.css.map",
-    "main.2edb6b50.js.map": "/static/js/main.2edb6b50.js.map"
+    "main.44b3b251.css.map": "/static/css/main.44b3b251.css.map",
+    "main.1f82f5fc.js.map": "/static/js/main.1f82f5fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.65b017cb.css",
-    "static/js/main.2edb6b50.js"
+    "static/css/main.44b3b251.css",
+    "static/js/main.1f82f5fc.js"
   ]
 }

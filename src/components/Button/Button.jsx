@@ -1,14 +1,9 @@
 import React from "react";
 
-const Button = (props) => {
-  return(
-    <div className={props.buttonStyle + " flex items-center justify-center rounded-md cursor-pointer hover:bg-app-blue" + (props.selected ? " bg-app-blue": " bg-app-black-button")} 
-         onClick={props.onClick}>
-      <div className={props.fontStyle}>
-        {props.title}
-      </div>
-    </div>
-  )
-}
+const Button = ({ title }) => {
+  return (
+    <div className="bg-app-blue flex justify-center w-60 py-6 text-black rounded-md text-2xl font-semibold cursor-pointer">{title}</div>
+  );
+};
 
 export default Button;
