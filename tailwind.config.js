@@ -48,7 +48,13 @@ module.exports = {
         app: {
           blue: {
             DEFAULT: '#0095C8',
-          }
+          },
+          red: {
+            DEFAULT: '#F6465D',
+          },
+          green: {
+            DEFAULT: '#2EBD85',
+          },
         }
       },
       bottom: {

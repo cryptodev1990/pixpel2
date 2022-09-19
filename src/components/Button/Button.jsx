@@ -2,7 +2,7 @@ import React from "react";
 
 const Button = ({ title }) => {
   return (
-    <div className="bg-app-blue flex justify-center w-60 py-6 text-black rounded-md text-2xl font-semibold cursor-pointer">{title}</div>
+    <div className="bg-app-blue py-6 px-24 w-max text-black rounded-lg text-xl font-medium cursor-pointer">{title}</div>
   );
 };
 

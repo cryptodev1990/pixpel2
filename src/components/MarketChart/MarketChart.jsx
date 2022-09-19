@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Chart as ChartJS } from "chart.js/auto";
 import { Line } from "react-chartjs-2";
 
 const RGB_COLOR_GROWTH = "46, 189, 133",
@@ -75,7 +74,6 @@ const MarketChart = (props) => {
     if (!chart) {
       return;
     }
-
     setChartData(getDataChart(chart.ctx, props.isGrowth, props.data));
   }, []);
 
