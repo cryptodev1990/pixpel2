@@ -20,7 +20,7 @@ const TokenDropdownInput = ({initialContent, contentList, Max }) => {
     setShowDropDown(false);
   };
   return (
-    <div className="flex flex-row items-center w-full h-16 rounded-md bg-app-black cursor-pointer">
+    <div className="flex flex-row items-center w-full h-16 rounded bg-app-black cursor-pointer">
       <div className="flex-none">
         <div
           className={

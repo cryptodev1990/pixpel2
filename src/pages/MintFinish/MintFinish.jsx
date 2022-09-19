@@ -6,9 +6,13 @@ import image from "../../asssets/images/UserHome/avax.png";
 import EveryDetail from "../../components/Developer/EveryDetail";
 import { Listing, Offers } from "./dataList";
 import ListNFTModal from "../../components/Modal/NFTModal/ListNFTModal";
+import WrapNFTModal from "../../components/Modal/NFTModal/WrapNFTModal";
+import FixPriceModal from "../../components/Modal/NFTModal/FixPriceModal";
 
 const MintFinish = () => {
   const [showListNFTModal, setShowListNFTModal] = useState(false);
+  const [showWrapNFTModal, setShowWrapNFTModal] = useState(false);
+  const [showFixPriceModal, setShowFixPriceModal] = useState(false);
   return (
     <>
       <div className="flex flex-col px-28 py-10">
@@ -36,10 +40,16 @@ const MintFinish = () => {
               >
                 Open Auction
               </div>
-              <div className="bg-app-blue flex justify-center items-center py-7 cursor-pointer rounded-xl text-lg w-1/3">
+              <div
+                className="bg-app-blue flex justify-center items-center py-7 cursor-pointer rounded-xl text-lg w-1/3"
+                onClick={() => setShowWrapNFTModal(true)}
+              >
                 Mystery Box
               </div>
-              <div className="bg-app-red flex justify-center items-center py-7 cursor-pointer rounded-xl text-lg w-1/3">
+              <div
+                className="bg-app-red flex justify-center items-center py-7 cursor-pointer rounded-xl text-lg w-1/3"
+                onClick={() => setShowFixPriceModal(true)}
+              >
                 Fix Price
               </div>
             </div>
@@ -167,6 +177,18 @@ const MintFinish = () => {
         <ListNFTModal
           showModal={showListNFTModal}
           setShowModal={setShowListNFTModal}
+        />
+      }
+      {
+        <WrapNFTModal
+          showModal={showWrapNFTModal}
+          setShowModal={setShowWrapNFTModal}
+        />
+      }
+      {
+        <FixPriceModal
+          showModal={showFixPriceModal}
+          setShowModal={setShowFixPriceModal}
         />
       }
     </>

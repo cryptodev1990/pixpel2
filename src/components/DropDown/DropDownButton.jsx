@@ -31,13 +31,13 @@ const DropDownButton = ({
       <div
         className={
           "cursor-pointer bg-app-black" +
-          (showDropDown ? " rounded-t-xl" : " rounded-xl")
+          (showDropDown ? " rounded-t" : " rounded")
         }
         onClick={handleDropDown}
       >
         <div
           className={
-            "flex px-8 rounded-xl gap-3 items-center justify-between py-5"
+            "flex px-5 rounded-xl gap-3 items-center justify-between py-5"
           }
         >
           <div className={font + " font-medium"}>{selectedContent}</div>
