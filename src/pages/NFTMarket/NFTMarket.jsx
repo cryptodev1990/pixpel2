@@ -122,7 +122,7 @@ const NFTMarket = () => {
             }
           >
             {NFTCardList.map((nft, idx) => {
-              return <NFTCard key={idx} image={nft.img} data={nft} />;
+              return <NFTCard key={idx} data={nft} />;
             })}
           </div>
         </div>

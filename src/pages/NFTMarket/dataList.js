@@ -180,6 +180,121 @@ export const NFTCardList = [
   },
 ]
 
+export const GameCardList = [
+  {
+    id:1,
+    img: game1,
+  },
+  {
+    id:2,
+    img: game2,
+  },
+  {
+    id:3,
+    img: game3,
+  },
+  {
+    id:4,
+    img: game2,
+  },
+  {
+    id:5,
+    img: game1,
+  },
+  {
+    id:6,
+    img: game2,
+  },
+  {
+    id:7,
+    img: game3,
+  },
+  {
+    id:8,
+    img: game2,
+  },
+  {
+    id:9,
+    img: game1,
+  },
+  {
+    id:10,
+    img: game3,
+  },
+  {
+    id:11,
+    img: game2,
+  },
+  {
+    id:12,
+    img: game1,
+  },
+  {
+    id:13,
+    img: game1,
+  },
+  {
+    id:14,
+    img: game3,
+  }, 
+  {
+    id:15,
+    img: game1,
+  },
+  {
+    id:16,
+    img: game3,
+  },
+  {
+    id:17,
+    img: game2,
+  },
+  {
+    id:18,
+    img: game2,
+  },
+  {
+    id:19,
+    img: game1,
+  },
+  {
+    id:20,
+    img: game3,
+  },
+  {
+    id:21,
+    img: game2,
+  },
+  {
+    id:22,
+    img: game1,
+  },
+  {
+    id:23,
+    img: game1,
+  },
+  {
+    id:24,
+    img: game3,
+  }, 
+  {
+    id:25,
+    img: game1,
+  },
+  {
+    id:26,
+    img: game3,
+  },
+  {
+    id:27,
+    img: game2,
+  },
+  {
+    id:28,
+    img: game1,
+  },
+]
+
 export const gameList = [
   {
     id: 1,

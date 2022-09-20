@@ -5,7 +5,7 @@ import CardModal from "../../CardModal/CardModal";
 
 import { ADD_CART } from "../../../actions/type";
 
-const NFTCard = ({ data, image }) => {
+const NFTCard = ({ data }) => {
   const dispatch = useDispatch();
   const [showModal, setShowModal] = useState(false);
   return (
@@ -50,7 +50,7 @@ const NFTCard = ({ data, image }) => {
           </div>
         </div>
         <div className="card__main my-3">
-          <img src={image} alt="NFT" className="card__picture w-44 h-28" />
+          <img src={data.img} alt="NFT" className="card__picture w-44 h-28" />
         </div>
         <div className="card__footer">
           <div className="card__value">-16%</div>
