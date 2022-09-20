@@ -3,24 +3,21 @@
   z-index: 0;
   top: 20px;
   right: 16px;
-  background: #37404C;
-  border-radius: 20px;
-  width: 529px;
-  padding: 50px 128px 64px 60px;
+  border-radius: 10px;
+  width: 450px;
+  padding: 40px 80px 50px 50px;
   display: flex;
   min-height: 600px;
   flex-direction: column;
   justify-content: space-between;
   &__title {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 36px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 20px;
   }
-  &__list {
-  }
-  &__list &__item:not(:last-child){
+  &__list &__item:not(:last-child) {
     margin-bottom: 7px;
   }
   &__item {
@@ -36,15 +33,14 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 5px;
   }
   &__content-price {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    color: #0095C8;
-
+    color: #0095c8;
   }
   &__img {
     width: 60px;
@@ -53,16 +49,13 @@
     border-radius: 7px;
   }
   &__delete {
-    background: #48515F;
+    background: #48515f;
     border-radius: 5px;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  &__footer {
-
   }
   &__footer-top {
     display: flex;
@@ -71,14 +64,13 @@
   }
   &__btn {
     margin-top: 15px;
-    background: #2EBD85;
+    background: #2ebd85;
     border-radius: 5px;
     width: 100%;
     padding: 22px 0;
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    color: #FFFFFF;
-
+    color: #ffffff;
   }
 }

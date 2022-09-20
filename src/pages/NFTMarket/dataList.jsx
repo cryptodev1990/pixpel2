@@ -2,6 +2,9 @@
 import nft1 from "../../asssets/images/NFT/nft-1.png";
 import nft2 from "../../asssets/images/NFT/nft-2.png";
 import nft3 from "../../asssets/images/NFT/nft-3.png";
+import game1 from "../../asssets/images/market/cryptoadventures.png";
+import game2 from "../../asssets/images/market/cryptobots.png";
+import game3 from "../../asssets/images/market/dungeons.png";
 
 export const purchaseList = [
   {
@@ -177,7 +180,58 @@ export const NFTCardList = [
   },
 ]
 
-
+export const gameList = [
+  {
+    id: 1,
+    img: game1,
+    gameName: "Crypto Adventure",
+  },
+  {
+    id: 2,
+    img: game2,
+    gameName: "Crypto Bots",
+  },
+  {
+    id: 3,
+    img: game3,
+    gameName: "Dungeons & Bots",
+  },
+  {
+    id: 4,
+    img: game2,
+    gameName: "Crypto Adventure",
+  },
+  {
+    id: 5,
+    img: game3,
+    gameName: "Crypto Bots",
+  },
+  {
+    id: 6,
+    img: game1,
+    gameName: "Crypto Adventure",
+  },
+  {
+    id: 7,
+    img: game3,
+    gameName: "Dungeons & Bots",
+  },
+  {
+    id: 8,
+    img: game2,
+    gameName: "Crypto Adventure",
+  },
+  {
+    id: 9,
+    img: game1,
+    gameName: "Crypto Bots",
+  },
+  {
+    id: 10,
+    img: game3,
+    gameName: "Dungeons & Bots",
+  },
+]
 
 export const classList = {
   title: "Class",

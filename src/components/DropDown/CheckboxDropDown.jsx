@@ -36,8 +36,8 @@ const CheckboxDropDown = ({ initialContent, contentList, clicked }) => {
                 className="fixed inset-0 w-full h-full"
                 onClick={() => setShowDropDown(false)}
               />
-              <div className="inset-0 z-10">
-                <div className="fixed bg-app-black flex flex-col rounded-b-md gap-2">
+              <div className="inset-0 z-30">
+                <div className="fixed bg-app-black flex flex-col rounded-b-md gap-2 py-3">
                   {contentList.map((content, idx) => {
                     return (
                       <div key={idx} className="flex gap-2 px-3 py-1">

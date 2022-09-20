@@ -1,9 +1,24 @@
-import React from "react";
-import nft1 from "../../asssets/images/NFT/nft-2.png";
+import React, { useState } from "react";
 import cart from "../../asssets/images/cart.svg";
 import { purchaseList } from "../../pages/NFTMarket/dataList";
+import { useDispatch } from "react-redux";
+import { ADD_CART } from "../../actions/type";
+import SuccessModal from "./SuccessModal";
 
-const CardModal = ({ showModal, setShowModal }) => {
+const CardModal = ({ showModal, setShowModal, data }) => {
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const handleCartClick = () => {
+    setShowModal(false);
+    dispatch({ type: ADD_CART, payload: data });
+  };
+
+  const handleBuyClick = () => {
+    setShowModal(false);
+    setShowSuccessModal(true);
+  };
   return (
     <>
       {showModal ? (
@@ -15,8 +30,15 @@ const CardModal = ({ showModal, setShowModal }) => {
           <div className="flex items-center px-4 py-6 min-h-screen">
             <div className="relative flex w-full max-w-7xl mx-auto bg-app-black-modal rounded-xl shadow-lg md:px-8 py-12 text-lg gap-10">
               <div className="flex flex-col gap-7 w-2/5">
-                <img src={nft1} alt="NFT" className="w-full rounded-xl h-full" />
-                <div className="bg-app-green flex justify-center items-center rounded-lg py-5">
+                <img
+                  src={data.img}
+                  alt="NFT"
+                  className="w-full rounded-xl h-full"
+                />
+                <div
+                  className="bg-app-green flex justify-center items-center rounded-lg py-5 cursor-pointer"
+                  onClick={handleBuyClick}
+                >
                   Buy Now
                 </div>
               </div>
@@ -24,11 +46,17 @@ const CardModal = ({ showModal, setShowModal }) => {
                 <div className="flex justify-between w-full items-end mb-8">
                   <div className="text-2xl">H1 Hero Name for NFT</div>
                   <div className="flex gap-3">
-                    <div className="bg-app-black rounded-md gap-2 flex justify-center items-center w-33 h-11">
+                    <div
+                      className="bg-app-black rounded-md gap-2 flex justify-center items-center w-33 h-11 cursor-pointer"
+                      onClick={handleCartClick}
+                    >
                       <img src={cart} alt="cart" />
                       <div>CART</div>
                     </div>
-                    <div className="bg-app-black-button rounded-md flex justify-center items-center h-11 w-11 cursor-pointer" onClick={() => setShowModal(false)}>
+                    <div
+                      className="bg-app-black-button rounded-md flex justify-center items-center h-11 w-11 cursor-pointer"
+                      onClick={() => setShowModal(false)}
+                    >
                       <svg
                         className="h-5 w-5"
                         width="24"
@@ -121,9 +149,15 @@ const CardModal = ({ showModal, setShowModal }) => {
                       <thead>
                         <tr>
                           <td className="text-gray-400 w-1/6 text-xs">Price</td>
-                          <td className="text-gray-400 w-1/5 px-6 text-xs">USD Price</td>
-                          <td className="text-gray-400 w-1/4 px-6 text-xs">Floor Difference</td>
-                          <td className="text-gray-400 w-1/6 px-6 text-xs">Expiration</td>
+                          <td className="text-gray-400 w-1/5 px-6 text-xs">
+                            USD Price
+                          </td>
+                          <td className="text-gray-400 w-1/4 px-6 text-xs">
+                            Floor Difference
+                          </td>
+                          <td className="text-gray-400 w-1/6 px-6 text-xs">
+                            Expiration
+                          </td>
                           <td className="text-gray-400 pl-6 text-xs">From</td>
                         </tr>
                       </thead>
@@ -134,10 +168,16 @@ const CardModal = ({ showModal, setShowModal }) => {
                               <td className="py-2 text-xs">{menu.price}</td>
                               <td className="px-6 text-xs">{menu.usd}</td>
                               <td className="px-6 text-xs">{menu.floor}</td>
-                              <td className="px-6 text-xs">{menu.expiration}</td>
-                              <td className="pl-6"><div className="underline text-xs">{menu.from}</div></td>
+                              <td className="px-6 text-xs">
+                                {menu.expiration}
+                              </td>
+                              <td className="pl-6">
+                                <div className="underline text-xs">
+                                  {menu.from}
+                                </div>
+                              </td>
                             </tr>
-                          )
+                          );
                         })}
                       </tbody>
                     </table>
@@ -148,6 +188,12 @@ const CardModal = ({ showModal, setShowModal }) => {
           </div>
         </div>
       ) : null}
+      {
+        <SuccessModal
+          showModal={showSuccessModal}
+          setShowModal={setShowSuccessModal}
+        />
+      }
     </>
   );
 };

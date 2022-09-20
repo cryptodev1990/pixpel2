@@ -90,7 +90,13 @@ const NFTCard = ({ data, image }) => {
           </div>
         </div>
       </div>
-      {<CardModal showModal={showModal} setShowModal={setShowModal} />}
+      {
+        <CardModal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          data={data}
+        />
+      }
     </>
   );
 };
