@@ -73,6 +73,7 @@ const NFTMarket = () => {
               />
             </svg>
           </div>
+          
           <CheckboxDropDown
             initialContent={classList.title}
             contentList={classList.list}
