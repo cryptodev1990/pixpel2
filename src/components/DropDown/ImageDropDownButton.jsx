@@ -4,6 +4,10 @@ const ImageDropDownButton = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [selectedContent, setSelectedContent] = useState(props.initialContent);
 
+  useEffect(() => {
+    setSelectedContent(props.initialContent);
+  },[props.initialContent])
+
 
   const handleDropDown = () => {
     if (showDropDown) {
@@ -20,18 +24,18 @@ const ImageDropDownButton = (props) => {
   return (
     <div
       className={
-        props.backgroundColor + (showDropDown ? " rounded-md" : " rounded-t-md")
+        props.backgroundColor + (showDropDown ? " rounded-t-md" : " rounded-md") + " items-center"
       }
       onClick={handleDropDown}
     >
-      <div className="flex flex-row items-center justify-between px-5 py-3 rounded-md h-14">
-        <div className="flex flex-row gap-1 h-2/3">
-          <img src={selectedContent.url} alt="" />
+      <div className="flex items-center justify-between px-8 py-5 rounded-md">
+        <div className="flex gap-2 h-3/5 items-center">
+          <img src={selectedContent.url} alt="" className="w-7 h-7 rounded-full" />
           <div className="text-base font-medium">{selectedContent.title}</div>
         </div>
-        <div className="flex">
+        <div className="flex items-center">
           <svg
-            className="w-5 h-5 text-gray-700"
+            className="w-7 h-7 text-gray-700"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -59,12 +63,12 @@ const ImageDropDownButton = (props) => {
                 return (
                   <div
                     key={idx}
-                    className="relative flex flex-row items-center justify-start gap-1 px-5 py-3"
+                    className="relative flex flex-row items-center justify-start gap-1 px-8 py-5"
                     onClick={() => {
                       selectHandleClick(content);
                     }}
                   >
-                    <img className="h-6" src={content.url} alt="" />
+                    <img className="h-7" src={content.url} alt="" />
                     <div className="text-base font-medium">{content.title}</div>
                   </div>
                 );

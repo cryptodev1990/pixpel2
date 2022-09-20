@@ -5,7 +5,7 @@ const withdrawReducer = (state = false, action) => {
     case WITHDRAW_SHOW_MODAL:
       return true;
 
-    case  WITHDRAW_CLOSE_MODAL:
+    case WITHDRAW_CLOSE_MODAL:
       return false;
 
     default:

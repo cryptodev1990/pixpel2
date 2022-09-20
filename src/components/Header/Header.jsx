@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Menu } from "../index";
 import Modal from "react-modal";
+import { useNavigate } from "react-router-dom";
 
 let typeModal = "register",
   typeUser = "account";
+
 const Header = (props) => {
+  const navigate = useNavigate();
   let styles = {
     marginBottom: "60px",
   };
@@ -84,10 +86,12 @@ const Header = (props) => {
     return (
       <div className="container-fluid">
         <div className="header__inner">
-          <div className="header__logo">
+          <div
+            className="header__logo cursor-pointer"
+            onClick={() => navigate("/")}
+          >
             <img src="assets/images/logo.svg" className="logo" alt="" />
           </div>
-          <Menu />
           <div className="header__group">
             <button
               className="btn"
@@ -117,40 +121,55 @@ const Header = (props) => {
       <div className="container-fluid">
         <div className="header__inner">
           <div className="header__logo">
-            <a href="/">
+            <div className="cursor-pointer" onClick={() => navigate("/")}>
               <img src="assets/images/logo.svg" className="logo" alt="" />
-            </a>
+            </div>
           </div>
           <nav className="menu">
             <ul className="menu__list">
               <li className="menu__item">
-                <a href="/nft-market" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/nft-market")}
+                >
                   Market
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/stacking" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/stacking")}
+                >
                   Staking
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/trade" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/exchange")}
+                >
                   Trade
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/swap-master" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/swap-master")}
+                >
                   Buy crypto
-                </a>
+                </div>
               </li>
             </ul>
           </nav>
-          <a href="#" className="header__btn-user" rel="noreferrer">
-            Player
-          </a>
+          {/* player */}
+          <div className="header__btn-user cursor-pointer">Player</div>
           <div className="header__group">
             <div className="header__user-tools">
-              <a href="#" className="header__link" rel="noreferrer">
+              {/* market */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/nft-market")}
+              >
                 <svg
                   width="24"
                   height="24"
@@ -180,8 +199,12 @@ const Header = (props) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-              <a href="#" className="header__link" rel="noreferrer">
+              </div>
+              {/* notification */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/notification")}
+              >
                 <svg
                   width="22"
                   height="24"
@@ -204,8 +227,12 @@ const Header = (props) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-              <a href="#" className="header__link" rel="noreferrer">
+              </div>
+              {/* inventory */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/inventory")}
+              >
                 <svg
                   width="27"
                   height="21"
@@ -262,8 +289,12 @@ const Header = (props) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-              <a href="#" className="header__link" rel="noreferrer">
+              </div>
+              {/* wallet */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/wallet")}
+              >
                 <svg
                   width="28"
                   height="25"
@@ -284,8 +315,12 @@ const Header = (props) => {
                     strokeWidth="0.3"
                   />
                 </svg>
-              </a>
-              <a href="#" className="header__link" rel="noreferrer">
+              </div>
+              {/* profile */}
+              <div
+                className="header__link cursor-pointer"
+                onClick={() => navigate("/profile")}
+              >
                 <svg
                   width="30"
                   height="30"
@@ -315,7 +350,7 @@ const Header = (props) => {
                     strokeWidth="2"
                   />
                 </svg>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -327,40 +362,52 @@ const Header = (props) => {
       <div className="container-fluid">
         <div className="header__inner">
           <div className="header__logo">
-            <a href="/">
+            <div className="cursor-pointer" onClick={() => navigate("/")}>
               <img src="assets/images/logo.svg" className="logo" alt="" />
-            </a>
+            </div>
           </div>
           <nav className="menu">
             <ul className="menu__list">
               <li className="menu__item">
-                <a href="/buy-crypto" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/developer")}
+                >
                   Games
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/nft-market" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/mycollection")}
+                >
                   NFT
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/trade" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/tokenroom")}
+                >
                   Token
-                </a>
+                </div>
               </li>
               <li className="menu__item">
-                <a href="/stacking" className="menu__link">
+                <div
+                  className="menu__link cursor-pointer"
+                  onClick={() => navigate("/stakingportfolio")}
+                >
                   Staking
-                </a>
+                </div>
               </li>
             </ul>
           </nav>
-          <a href="#" className="header__btn-user" rel="noreferrer">
-            Developer
-          </a>
+          {/* developer */}
+          <div className="header__btn-user cursor-pointer">Developer</div>
           <div className="header__group">
             <div className="header__user-tools">
-              <a href="#" className="header__link" rel="noreferrer">
+              {/* notification */}
+              <div className="header__link cursor-pointer">
                 <svg
                   width="22"
                   height="24"
@@ -383,8 +430,9 @@ const Header = (props) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
-              <a href="#" className="header__link" rel="noreferrer">
+              </div>
+              {/* wallet */}
+              <div className="header__link cursor-pointer" onClick={() => navigate('/developerwallet')}>
                 <svg
                   width="28"
                   height="25"
@@ -405,8 +453,9 @@ const Header = (props) => {
                     strokeWidth="0.3"
                   />
                 </svg>
-              </a>
-              <a href="#" className="header__link" rel="noreferrer">
+              </div>
+              {/* profile */}
+              <div className="header__link cursor-pointer">
                 <svg
                   width="30"
                   height="30"
@@ -436,7 +485,7 @@ const Header = (props) => {
                     strokeWidth="2"
                   />
                 </svg>
-              </a>
+              </div>
             </div>
           </div>
         </div>
@@ -479,13 +528,14 @@ const Header = (props) => {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
+        ariaHideApp={false}
         style={customStyles}
         contentLabel="Example Modal"
       >
         <div className="modal">
           <button
             onClick={closeModal}
-            className="modal__close modal__close--static"
+            className="modal__close modal__close--static flex justify-center items-center"
           >
             <svg
               width="14"
@@ -525,7 +575,7 @@ const Header = (props) => {
             <div
               className="modal__box"
               onClick={() => {
-                typeUser = "devops";
+                typeUser = "developer";
                 if (typeModal === "register") {
                   openModalRegister();
                 } else {
@@ -547,13 +597,14 @@ const Header = (props) => {
       <Modal
         isOpen={modalIsOpenLogin}
         onRequestClose={closeModalLogin}
+        ariaHideApp={false}
         style={customStylesLogin}
         contentLabel="Example Modal"
       >
         <div className="modal modal-login">
           <button
             onClick={closeModalLogin}
-            className="modal__close modal-login__close"
+            className="modal__close modal-login__close flex items-center justify-center"
           >
             <svg
               width="14"
@@ -595,7 +646,10 @@ const Header = (props) => {
                 />
               </div>
             </div>
-            <button className="btn modal__btn">Login</button>
+            <a href={`/${typeUser}`} className="btn modal__btn">
+            Login
+            </a>
+            {/* <button className="btn modal__btn">Login</button> */}
             <button
               className="modal__btn-forgot"
               onClick={() => {
@@ -611,13 +665,14 @@ const Header = (props) => {
       <Modal
         isOpen={modalIsOpenRegister}
         onRequestClose={closeModalRegister}
+        ariaHideApp={false}
         style={customStylesRegister}
         contentLabel="Example Modal"
       >
         <div className="modal modal-register">
           <button
             onClick={closeModalRegister}
-            className="modal__close modal-login__close"
+            className="modal__close modal-login__close flex items-center justify-center"
           >
             <svg
               width="14"
@@ -680,13 +735,14 @@ const Header = (props) => {
       <Modal
         isOpen={modalIsOpenVerify}
         onRequestClose={closeModalVerify}
+        ariaHideApp={false}
         style={customStylesVerify}
         contentLabel="Example Modal"
       >
         <div className="modal modal-verify">
           <button
             onClick={closeModalVerify}
-            className="modal__close modal-login__close"
+            className="modal__close modal-login__close flex items-center justify-center"
           >
             <svg
               width="14"
@@ -723,7 +779,6 @@ const Header = (props) => {
                 />
               </div>
             </div>
-
             <a href={`/${typeUser}`} className="btn modal__btn">
               Create account
             </a>
@@ -732,10 +787,18 @@ const Header = (props) => {
       </Modal>
 
       <header className="header" style={styles}>
-        {window.location.pathname === "/account"
-          ? userHeader()
-          : window.location.pathname === "/devops"
-          ? devHeader()
+        {window.location.pathname !== "/"
+          ? window.location.pathname === "/mycollection" ||
+            window.location.pathname === "/developer" ||
+            window.location.pathname === "/create-nft" ||
+            window.location.pathname === "/collection" ||
+            window.location.pathname === "/mysterybox" ||
+            window.location.pathname === "/stakingportfolio" ||
+            window.location.pathname === "/developerwallet" ||
+            window.location.pathname === "/finishmint" ||
+            window.location.pathname === "/tokenroom"
+            ? devHeader()
+            : userHeader()
           : mainHeader()}
       </header>
     </>

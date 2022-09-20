@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import ImageDropDownButton from "../../components/DropDown/ImageDropDownButton";
-import DropDownButton from "../../components/DropDown/DropDownButton";
+import DropDownButton from "./DropDownButton";
 import WithdrawalModal from "./WithdrawalModal";
 
 const tokenList = [
@@ -67,7 +67,7 @@ const FlatCard = () => {
   } 
   return (
     <>
-      <div className="flex flex-col px-12 py-12 bg-app-black rounded-xl w-155">
+      <div className="flex flex-col w-full sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] bg-app-black rounded-xl sm:w-155">
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Fiat Coin</div>
         </div>
@@ -105,20 +105,20 @@ const FlatCard = () => {
         </div>
         <div className="flex flex-row justify-between mb-2">
           <div className="flex flex-row items-center gap-4">
-            <div className="text-lg font-medium">Commission</div>
+            <div className="text-xs font-medium 2xs:text-lg">Commission</div>
           </div>
-          <div className="text-lg font-medium">5%</div>
+          <div className="text-sm font-medium 2xs:text-lg">5%</div>
         </div>
-        <div className="flex flex-row justify-between mb-5">
-          <div className="flex flex-row items-center gap-4">
-            <div className="text-lg font-medium">You recieve</div>
+        <div className="flex flex-row items-center justify-between mb-5">
+          <div className="flex flex-row gap-4">
+            <div className="text-xs font-medium 2xs:text-lg">You recieve</div>
           </div>
-          <div className="text-lg font-medium">950.000 USD</div>
+          <div className="flex text-sm font-medium 2xs:text-lg">950.000 USD</div>
         </div>
         <div className="flex flex-row justify-start gap-2 mb-12">
           <input
             type="checkbox"
-            className="appearance-none checked:bg-blue-500"
+            className="flex-none appearance-none checked:bg-blue-500"
           />
           <div className="text-base font-normal text-gray-400">
             I have read and I accept terms.

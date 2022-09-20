@@ -49,7 +49,7 @@ const LiquidityCard = () => {
   }
   return(
     <>
-      <div className="flex flex-col px-12 py-12 bg-app-black rounded-xl">
+      <div className="flex flex-col bg-app-black rounded-xl sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px]">
         <div className="flex justify-center">
           <div className="text-xl font-semibold">
             Add liquidity
@@ -60,7 +60,7 @@ const LiquidityCard = () => {
             Add liquidity to recieve LP token
           </div>
         </div>
-        <div className="flex flex-col px-16 py-8 mt-6 mb-8 rounded-xl bg-app-black-button">
+        <div className="flex flex-col px-4 py-4 mt-6 mb-8 2xs:py-8 2xs:px-8 1xs:py-12 1xs:px-12 sm:py-8 sm:px-16 rounded-xl bg-app-black-button">
           <div className="flex justify-center mb-4">
             <div className="text-base font-semibold">
               You are the first liquidity provider.
@@ -123,26 +123,26 @@ const LiquidityCard = () => {
             Balance: 233,319,129.9022
           </div>
         </div>
-        <div className="flex flex-col py-8 mt-6 mb-8 rounded-xl bg-app-black-button">
+        <div className="flex flex-col py-4 mt-6 mb-8 xs:py-8 rounded-xl bg-app-black-button">
           <div className="flex justify-center pb-5 mb-4 border-b-2 border-gray-500">
-            <div className="text-base font-medium">
+            <div className="text-xs font-medium 2xs:text-base">
               Initial prices and pool share
             </div>
           </div>
-          <div className="flex flex-row justify-around text-base font-medium">
-            <div className="flex flex-col">
+          <div className="flex flex-col text-lg font-medium 2xs:text-xs 2xs:justify-around 2xs:flex-row 1xs:text-base">
+            <div className="flex flex-col items-center">
               <div className="flex flex-row justify-center">
                 <div>193.095</div>
               </div>
               <div>PIXP per BNB</div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center">
               <div className="flex flex-row justify-center">
                 <div>193.095</div>
               </div>
               <div>PIXP per BNB</div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-center">
               <div className="flex flex-row justify-center">
                 <div>193.095</div>
               </div>

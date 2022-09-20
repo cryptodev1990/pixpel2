@@ -18,7 +18,7 @@ const WithdrawModal = (props) => {
               onClick={() => props.setShowModal(false)}
             ></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
-              <div className="relative flex flex-col w-full max-w-xl p-4 mx-auto bg-app-black rounded-xl shadow-lg px-6 py-6 text-lg">
+              <div className="relative flex flex-col w-full max-w-xl p-4 mx-auto bg-app-black-modal rounded-xl shadow-lg px-6 py-6 text-lg">
                 <div className="flex justify-between items-center my-3">
                   <div className="flex text-2xl my-3">WITHDRAW FIAT</div>
                   <div

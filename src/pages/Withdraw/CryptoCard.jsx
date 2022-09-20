@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import BNB from "../../asssets/images/UserHome/bnb.png";
 import DropDownButton from "./DropDownButton";
 import WithdrawalModal  from "./WithdrawalModal";
 import ImageDropDownButton from "../../components/DropDown/ImageDropDownButton";
@@ -48,7 +47,7 @@ const CryptoCard = () => {
 
   return (
     <>
-      <div className="flex flex-col px-12 py-12 bg-app-black rounded-xl w-155">
+      <div className="flex flex-col w-full bg-app-black rounded-xl sm:w-155 sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px]">
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Crypto</div>
         </div>
@@ -82,23 +81,23 @@ const CryptoCard = () => {
             Balance: 233,319,129.9022
           </div>
         </div>
-        <div className="flex flex-row justify-between mb-2">
+        <div className="flex flex-row items-center justify-between gap-1 mb-2">
           <div className="flex flex-row items-center gap-4">
-            <input type="radio" value="startAccount" name="account" />
-            <div className="text-lg font-medium">Start Account</div>
+            <input className="flex-none" type="radio" value="startAccount" name="account" />
+            <div className="text-xs font-medium 2xs:text-lg">Start Account</div>
           </div>
-          <div className="text-lg font-medium">3 000 PIXP</div>
+          <div className="text-xs font-medium 2xs:text-lg">3 000 PIXP</div>
         </div>
-        <div className="flex flex-row justify-between mb-8">
+        <div className="flex flex-row items-center justify-between mb-8">
           <div className="flex flex-row items-center gap-4">
-            <input type="radio" value="tradingAccount" name="account" />
-            <div className="text-lg font-medium">Trading Account</div>
+            <input className="flex-none" type="radio" value="tradingAccount" name="account" />
+            <div className="text-xs font-medium 2xs:text-lg">Trading Account</div>
           </div>
-          <div className="text-lg font-medium">500 PIXP</div>
+          <div className="text-xs font-medium 2xs:text-lg">500 PIXP</div>
         </div>
-        <div className="flex flex-row justify-between mb-1">
-          <div className="text-lg font-medium">500 PIXP</div>
-          <div className="text-2xl font-semibold">27 854 853.958 PIXP</div>
+        <div className="flex flex-row items-center justify-between mb-1">
+          <div className="text-sm font-medium 2xs:text-lg">500 PIXP</div>
+          <div className="text-sm font-semibold 1xs:text-2xl 2xs:text-xl">27 854 853.958 PIXP</div>
         </div>
         <div className="flex flex-row justify-end mb-5">
           <div className="text-sm font-normal text-gray-500">

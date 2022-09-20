@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Header, Filter, NFTCard, Cart, CardModal } from "../../components";
+import { Filter, NFTCard, Cart, CardModal } from "../../components";
 import "./NFTMarket.scss";
 
 const initialCards = [
@@ -32,7 +32,6 @@ const NFTMarket = () => {
 
     return (<>
         <div className="market">
-            <Header></Header>
             <div className="container">
                 <h1 className="title market__title">
                     NFT Market Place

@@ -12,7 +12,7 @@ const ConfirmationModal = (props) => {
   const handleModalClick = () => {
     props.setShowModal(false);
   };
-  
+
   const [marketSelected, setMarketSelected] = useState(false);
   const handlemarketClick = () => {
     setMarketSelected(!marketSelected);
@@ -61,7 +61,7 @@ const ConfirmationModal = (props) => {
             <div className="flex items-center px-4 py-6 min-h-screen">
               <div
                 className="relative flex flex-col w-full max-w-lg p-4 mx-auto 
-                            bg-app-black rounded-xl shadow-lg px-12 py-12 text-lg"
+                            bg-app-black-modal rounded-xl shadow-lg px-12 py-12 text-lg"
               >
                 <div className="text-xl mb-3">Order confirmation reminders</div>
                 <div className="mb-8 text-sm text-gray-400">
@@ -71,7 +71,7 @@ const ConfirmationModal = (props) => {
                 <div
                   className={
                     className +
-                    (selected ? " bg-app-blue" : " bg-app-black-button")
+                    (selected ? " bg-app-blue" : " bg-app-black")
                   }
                   onClick={handleClick}
                 >

@@ -18,7 +18,7 @@ const TransferModal = (props) => {
               onClick={() => props.setShowModal(false)}
             ></div>
             <div className="flex items-center px-4 py-6 min-h-screen">
-              <div className="relative flex flex-col w-full max-w-3xl p-4 mx-auto bg-app-black rounded-xl shadow-lg xs:px-6 px-2 py-6 text-lg">
+              <div className="relative flex flex-col w-full max-w-3xl p-4 mx-auto bg-app-black-modal rounded-xl shadow-lg xs:px-6 px-2 py-6 text-lg">
                 <div className="flex justify-center text-2xl my-10">
                   internal Transferson PIXPEL
                 </div>
@@ -46,7 +46,7 @@ const TransferModal = (props) => {
                     />
                   </div>
                   <div
-                    className="flex h-10 w-10 rounded-full bg-app-black-button items-center justify-center cursor-pointer active:bg-gray-500 flex-none"
+                    className="flex h-10 w-10 rounded-full bg-app-black items-center justify-center cursor-pointer active:bg-gray-500 flex-none"
                     onClick={handleChange}
                   >
                     <svg
@@ -77,7 +77,7 @@ const TransferModal = (props) => {
                       contentList={coinList}
                     ></Dropdown>
                   </div>
-                  <div className="bg-app-black-button flex justify-between items-center xs:w-1/2 py-2 px-4 rounded-md">
+                  <div className="bg-app-black flex justify-between items-center xs:w-1/2 py-2 px-4 rounded-md">
                     <div className="text-gray-400">AMOUNT</div>
                     <div className="text-blue-500">MAX</div>
                   </div>

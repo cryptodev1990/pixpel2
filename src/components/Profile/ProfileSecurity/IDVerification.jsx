@@ -15,7 +15,7 @@ const IDVerification = () => {
           <div className="text-gray-500 text-sm">Verified: 03-07-2022</div>
         </div>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-baseline flex-col 2xs:flex-row">
         <div className="flex gap-6 items-baseline">
           <div className="bg-app-red w-3 h-3 rounded-full flex-none"></div>
           <div className="flex flex-col">
@@ -23,7 +23,9 @@ const IDVerification = () => {
             <div className="text-gray-500 text-sm">Not Verified</div>
           </div>
         </div>
-        <EnableButton title="Enable" />
+        <div className="flex pl-8 py-3 items-baseline">
+          <EnableButton title="Enable" />
+        </div>
       </div>
       <div className="flex gap-6 items-baseline">
         <div className="bg-app-green w-3 h-3 rounded-full flex-none"></div>

@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 import "./AddressManagement.scss";
 import Modal from "./Modal.jsx";
-import BNB from "../../asssets/images/UserHome/bnb.png";
-import { Header } from "../../components";
 import ImageDropDownButton from "../../components/DropDown/ImageDropDownButton";
 
 const tokenList = [
   {
-    id:1,
-    title:"PIXP",
-    url:"../../assets/images/UserHome/bnb.png",
+    id: 1,
+    title: "PIXP",
+    url: "../../assets/images/UserHome/bnb.png",
   },
   {
-    id:2,
-    title:"PIXP",
-    url:"../../assets/images/UserHome/bnb.png",
+    id: 2,
+    title: "PIXP",
+    url: "../../assets/images/UserHome/bnb.png",
   },
   {
-    id:3,
-    title:"PIXP",
-    url:"../../assets/images/UserHome/bnb.png",
+    id: 3,
+    title: "PIXP",
+    url: "../../assets/images/UserHome/bnb.png",
   },
-]
+];
 
 const coinList = [
   {
@@ -108,7 +106,6 @@ const AddressManagement = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <Header></Header>
       <div
         className="grid grid-cols-1 gap-10 my-10 justify-items-center"
         style={{ fontFamily: "Poppins" }}
@@ -149,7 +146,11 @@ const AddressManagement = () => {
           <div className="flex flex-col items-center gap-2 xs:flex-row">
             <div className="flex flex-row items-center gap-2">
               <div className="text-lg">Coin:</div>
-              <ImageDropDownButton initialContent={tokenList[0]} contentList={tokenList} backgroundColor={" bg-app-black"}/>
+              <ImageDropDownButton
+                initialContent={tokenList[0]}
+                contentList={tokenList}
+                backgroundColor={" bg-app-black"}
+              />
             </div>
             <div className="flex flex-row items-center h-12 pl-4 rounded-md xs:h-14 xs:w-72 bg-app-black w-60">
               <svg
@@ -178,21 +179,42 @@ const AddressManagement = () => {
         </div>
         <div className="flex flex-col w-5/6 gap-4 text-base">
           <div className="flex">
-            <div className="flex-auto text-gray-400 md:flex-auto md:w-64 xl:w-1/4 w-14">Coin</div>
-            <div className="flex-auto w-64 text-gray-400 md:flex-none md:w-64 xl:w-1/4">Address</div>
-            <div className="flex-auto w-40 text-gray-400 md:flex-none md:w-64 xl:w-1/4">Name</div>
-            <div className="flex-auto text-gray-400 md:flex-auto md:w-64 xl:w-1/4 w-14">Networks</div>
+            <div className="flex-auto text-gray-400 md:flex-auto md:w-64 xl:w-1/4 w-14">
+              Coin
+            </div>
+            <div className="flex-auto w-64 text-gray-400 md:flex-none md:w-64 xl:w-1/4">
+              Address
+            </div>
+            <div className="flex-auto w-40 text-gray-400 md:flex-none md:w-64 xl:w-1/4">
+              Name
+            </div>
+            <div className="flex-auto text-gray-400 md:flex-auto md:w-64 xl:w-1/4 w-14">
+              Networks
+            </div>
           </div>
           {coinList.map((list, idx) => {
             return (
               <div
                 key={idx}
-                className={ (idx === coinList.length - 1 ? "" : "border-b-2 border-app-black") + " flex flex-row gap-1 pb-2"}
+                className={
+                  (idx === coinList.length - 1
+                    ? ""
+                    : "border-b-2 border-app-black") +
+                  " flex flex-row gap-1 pb-2"
+                }
               >
-                <div className="flex-auto md:flex-auto md:w-64 xl:w-1/4 w-14">{list.coin}</div>
-                <div className="flex-auto w-64 truncate md:flex-none md:w-64 xl:w-1/4">{list.address}</div>
-                <div className="flex-auto w-40 truncate md:flex-none md:w-64 xl:w-1/4">{list.name}</div>
-                <div className="flex-auto md:flex-auto md:w-64 xl:w-1/4 w-14">{list.network}</div>
+                <div className="flex-auto md:flex-auto md:w-64 xl:w-1/4 w-14">
+                  {list.coin}
+                </div>
+                <div className="flex-auto w-64 truncate md:flex-none md:w-64 xl:w-1/4">
+                  {list.address}
+                </div>
+                <div className="flex-auto w-40 truncate md:flex-none md:w-64 xl:w-1/4">
+                  {list.name}
+                </div>
+                <div className="flex-auto md:flex-auto md:w-64 xl:w-1/4 w-14">
+                  {list.network}
+                </div>
               </div>
             );
           })}

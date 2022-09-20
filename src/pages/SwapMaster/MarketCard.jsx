@@ -48,8 +48,8 @@ const MarketCard = () => {
     setConvert(!convert);
   };
   return (
-    <div className="px-[50px] py-[50px] rounded-md w-155 bg-app-black mb-3">
-      <div className="flex flex-row justify-between text-lg">
+    <div className="flex flex-col mb-3 rounded-md w-155 bg-app-black sm:p-[50px] xs:p-[40px] 1xs:p-[30px] 2xs:p-[20px] p-[10px] ">
+      <div className="flex flex-col justify-between text-lg 1xs:flex-row">
         <div className="font-semibold">From</div>
         <div className="font-normal text-gray-400">
           { convert ? "Balance: 229.9022" : "Balance: 233,319,129.9022" }
@@ -86,7 +86,7 @@ const MarketCard = () => {
           </svg>
         </div>
       </div>
-      <div className="flex flex-row justify-between text-lg">
+      <div className="flex flex-col justify-between text-lg 1xs:flex-row">
         <div className="font-semibold">To</div>
         <div className="font-normal text-gray-400">
 					{convert ? "Balance: 233,319,129.9022" : "Balance: 229.9022" }

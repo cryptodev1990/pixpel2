@@ -18,8 +18,14 @@ import {
   GameMarket,
   Collection,
   CreateNFT,
-  Developer
+  MyCollection,
+  MysteryBox,
+  MintFinish,
+  Developer,
+  BuyCrypto
 } from "./pages/index"
+
+import { Header, Footer } from "./components";
 
 function About() {
   return (
@@ -56,6 +62,7 @@ function Test() {
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nft-market" element={<NFTMarket />} />
@@ -72,10 +79,15 @@ function App() {
         <Route path="/address-management" element={<AddressManagement />} />
         <Route path="/account" element={<UserHome />} />
         <Route path="/collection" element={<Collection />} />
+        <Route path="/mycollection" element={<MyCollection />} />
         <Route path="/create-nft" element={<CreateNFT />} />
+        <Route path="/finishmint" element={<MintFinish />} />
         <Route path="/developer" element={<Developer />} />
+        <Route path="/mysterybox" element={<MysteryBox />} />
+        <Route path="/buycrypto" element={<BuyCrypto />} />
         <Route path="*" element={<Test />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -2,13 +2,11 @@ import React from "react";
 import "./Home.scss";
 import Banner from "../../components/Banner/Banner";
 import Button from "../../components/Button/Button";
-import Header from "../../components/Header/Header";
 
 const Home = () => {
   return (
     <>
       <div className="home">
-        <Header />
         <div className="container-fluid">
           <Banner
             bannerBg={"assets/images/home/header__top.jpg"}
@@ -22,13 +20,13 @@ const Home = () => {
                 tempor sollicitudin, lacus mauris accumsan erat, quis posuere
                 leo mi sed lectus.
               </p>
-              <form className="banner__form">
+              <form className="flex banner__form">
                 <input
                   type="text"
                   className="banner__input"
                   placeholder="Enter Email / Phone number"
                 />
-                <Button classes="banner__btn btn--brand ">Play</Button>
+                <Button title="Play" />
               </form>
               <div className="row row--space-between">
                 <div className="col-lg-3">
@@ -100,7 +98,9 @@ const Home = () => {
             classes="banner--offset-bottom"
           >
             <div className="container">
-              <h1 className="title banner__title">PLAY 2 EARN, SAFE AND FUN</h1>
+              <h1 className="title banner__title">
+                TRADE, MINT & PLAY YOUR NFT
+              </h1>
               <p className="text banner__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
                 tincidunt volutpat ligula sed dignissim. Cras sagittis, purus at
@@ -108,7 +108,7 @@ const Home = () => {
                 leo mi sed lectus.
               </p>
               <form className="banner__form">
-                <Button classes="banner__btn btn--brand ">Play</Button>
+                <Button title="Trade" />
               </form>
               <div className="row row--space-between">
                 <div className="col-lg-3">
@@ -180,16 +180,16 @@ const Home = () => {
             classes="banner--offset-bottom"
           >
             <div className="container">
-              <h1 className="title banner__title">PLAY 2 EARN, SAFE AND FUN</h1>
+              <h1 className="title banner__title">
+                SWAP & CHANGE YOUR FAVORITE TOKEN
+              </h1>
               <p className="text banner__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
                 tincidunt volutpat ligula sed dignissim. Cras sagittis, purus at
                 tempor sollicitudin, lacus mauris accumsan erat, quis posuere
                 leo mi sed lectus.
               </p>
-              <form className="banner__form">
-                <Button classes="banner__btn btn--brand ">Play</Button>
-              </form>
+              <Button title="Swap" />
               <div className="row row--space-between">
                 <div className="col-lg-3">
                   <div className="banner__card">

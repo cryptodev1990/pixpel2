@@ -7,24 +7,24 @@ const NFTAccount = () => {
   return (
     <div>
       <NFTOverview />
-      <div className="flex px-6 py-3">
-        <div className="flex text-sm text-gray-400 w-1/12">Game</div>
-        <div className="flex text-sm text-gray-400 w-1/6 justify-center">
+      <div className="flex py-6 overflow-x-auto relative w-full">
+        <div className="flex text-base text-gray-400 w-1/12 px-6">Game</div>
+        <div className="flex text-base text-gray-400 w-1/6 px-6">
           NFT quantity
         </div>
-        <div className="flex text-sm text-gray-400 w-1/4 justify-center">
+        <div className="flex text-base text-gray-400 w-1/4 px-6">
           Total purchase valuet
         </div>
-        <div className="flex text-sm text-gray-400 w-1/6 justify-center">
+        <div className="flex text-base text-gray-400 w-1/6 px-6">
           Start Date
         </div>
-        <div className="flex text-sm text-gray-400 w-1/6 justify-center">
+        <div className="flex text-base text-gray-400 w-1/6 px-6">
           Earning
         </div>
-        <div className="flex text-sm text-gray-400 w-1/12 justify-center">
+        <div className="flex text-base text-gray-400 w-1/12 px-6">
           Expenses
         </div>
-        <div className="flex text-sm text-gray-400"></div>
+        <div className="flex text-base text-gray-400 px-6"></div>
       </div>
       <div className="flex flex-col gap-3">
         {NFTList.map((menu, idx) => {

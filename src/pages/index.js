@@ -14,7 +14,11 @@ import Withdraw from "./Withdraw/Withdraw";
 import GameMarket from "./GameMarket/GameMarket";
 import Collection from "./Collection/Collection";
 import CreateNFT from "./CreateNFT/CreateNFT";
+import MintFinish from "./MintFinish/MintFinish";
+import BuyCrypto from "./BuyCrypto/BuyCrypto";
 import Developer from "./Developer/Developer";
+import MyCollection from "./MyCollection/MyCollection";
+import MysteryBox from "./MysteryBox/MysteryBox";
 
 export {
     AddressManagement,
@@ -33,5 +37,9 @@ export {
     GameMarket,
     Collection,
     CreateNFT,
+    MintFinish,
+    BuyCrypto,
     Developer,
+    MyCollection,
+    MysteryBox
 }
