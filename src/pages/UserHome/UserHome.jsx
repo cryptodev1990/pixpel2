@@ -5,20 +5,40 @@ import NFTintro from "../../components/Image/NFTintro";
 import Cryptobots from "../../asssets/images/market/cryptobots.png";
 import Dungeons from "../../asssets/images/market/dungeons.png";
 import Cryptoadventures from "../../asssets/images/market/cryptoadventures.png";
+import StakingDetail from "../../components/Image/StakingDetail";
+import MarketChart from "../../components/MarketChart/MarketChart";
+import { useNavigate } from "react-router-dom";
+
+import { tokenTrend } from "./dataList";
 import nft1 from "../../asssets/images/NFT/nft-1.png";
 import nft2 from "../../asssets/images/NFT/nft-2.png";
 import nft3 from "../../asssets/images/NFT/nft-3.png";
-import StakingDetail from "../../components/Image/StakingDetail";
-import { tokenTrend } from "./dataList";
-import MarketChart from "../../components/MarketChart/MarketChart";
 
 const sizeChart = {
   maxHeight: 51,
-  maxWidth: 250,
+  maxWidth: 124,
   marginLeft: "auto",
 };
 
 const UserHome = () => {
+  const navigate = useNavigate();
+
+  const handleBuyClick = () => {
+    navigate("/nft-market");
+  };
+
+  const handlePlayClick = () => {
+    navigate("/game-market");
+  };
+
+  const handleTradeClick = () => {
+    navigate("/exchange");
+  };
+
+  const handleStakeClick = () => {
+    navigate("/stakingportfolio");
+  };
+
   return (
     <div className="py-28 px-32 flex flex-col">
       <div className="text-6xl font-medium mb-8">Play your favorite game</div>
@@ -28,7 +48,7 @@ const UserHome = () => {
         sollicitudin, lacus mauris accumsan erat, quis posuere leo mi sed
         lectus.
       </div>
-      <Button title="Play Now" />
+      <Button title="Play Now" handleClick={handlePlayClick} />
       <div className="flex mt-10 mb-20">
         <GameIntro
           image={Cryptobots}
@@ -51,7 +71,7 @@ const UserHome = () => {
       </div>
       <div className="flex justify-between items-end mb-10">
         <div className="text-5xl">Recent NFTs</div>
-        <Button title="Buy Now" />
+        <Button title="Buy Now" handleClick={handleBuyClick} />
       </div>
       <div className="flex justify-between mb-32">
         <NFTintro image={nft1} name="Mustang" bid="2 PIX" />
@@ -62,7 +82,7 @@ const UserHome = () => {
       </div>
       <div className="flex justify-between items-end mb-10">
         <div className="text-5xl">Staking</div>
-        <Button title="Stake Now" />
+        <Button title="Stake Now" handleClick={handleStakeClick} />
       </div>
       <div className="flex gap-5 justify-between mb-20">
         <StakingDetail locked={true} />
@@ -71,7 +91,7 @@ const UserHome = () => {
       </div>
       <div className="flex justify-between items-end mb-10">
         <div className="text-5xl">Token trend</div>
-        <Button title="Trade Now" />
+        <Button title="Trade Now" handleClick={handleTradeClick} />
       </div>
       <div className="overflow-x-auto relative w-full">
         <table className="table-auto">
@@ -114,7 +134,7 @@ const UserHome = () => {
                     <div className="flex items-center">
                       <MarketChart
                         isGrowth={token.Change > 0}
-                        data={[0.2, 0.4, 0.7, 0.6, 0.5, 1, 0.1, 5, 0.5, 3, 2, 1]}
+                        data={[0.2, 0.5, 1, 0.1, 5, 0.5, 3, 2, 1]}
                         sizeChart={sizeChart}
                       />
                     </div>
