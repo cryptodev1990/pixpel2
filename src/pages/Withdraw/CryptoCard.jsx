@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import DropDownButton from "./DropDownButton";
-import WithdrawalModal  from "./WithdrawalModal";
+import WithdrawalModal from "./WithdrawalModal";
 import ImageDropDownButton from "../../components/DropDown/ImageDropDownButton";
 import TokenDropdownInput from "../../components/DropDown/TokenDropdownInput";
 
@@ -42,8 +42,7 @@ const networkList = [
 ];
 
 const CryptoCard = () => {
-
-  const[showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <>
@@ -52,8 +51,12 @@ const CryptoCard = () => {
           <div className="text-lg font-medium">Crypto</div>
         </div>
         <div className="w-full mb-8">
-         <ImageDropDownButton initialContent={tokenList[0]} contentList={tokenList} backgroundColor={" bg-app-black-button"}/>
-        </div>  
+          <ImageDropDownButton
+            initialContent={tokenList[0]}
+            contentList={tokenList}
+            backgroundColor={" bg-app-black-button"}
+          />
+        </div>
         <div className="flex justify-start mb-1">
           <div className="text-lg font-medium">Wallet Address</div>
         </div>
@@ -68,13 +71,18 @@ const CryptoCard = () => {
         </div>
         <DropDownButton
           initialContent="Select Withdraw Network"
+          backgroundColor="bg-app-black-button"
           contentList={networkList}
         />
         <div className="flex justify-start mt-8 mb-1">
           <div className="text-lg font-medium">Withdraw Amount</div>
         </div>
         <div className="flex flex-row mb-1 ">
-          <TokenDropdownInput initialContent={tokenList[0]} contentList={tokenList}/>
+          <TokenDropdownInput
+            initialContent={tokenList[0]}
+            contentList={tokenList}
+            backgroundColor="bg-app-black-button"
+          />
         </div>
         <div className="flex justify-end mb-8">
           <div className="text-sm text-slate-500">
@@ -83,21 +91,35 @@ const CryptoCard = () => {
         </div>
         <div className="flex flex-row items-center justify-between gap-1 mb-2">
           <div className="flex flex-row items-center gap-4">
-            <input className="flex-none" type="radio" value="startAccount" name="account" />
+            <input
+              className="flex-none"
+              type="radio"
+              value="startAccount"
+              name="account"
+            />
             <div className="text-xs font-medium 2xs:text-lg">Start Account</div>
           </div>
           <div className="text-xs font-medium 2xs:text-lg">3 000 PIXP</div>
         </div>
         <div className="flex flex-row items-center justify-between mb-8">
           <div className="flex flex-row items-center gap-4">
-            <input className="flex-none" type="radio" value="tradingAccount" name="account" />
-            <div className="text-xs font-medium 2xs:text-lg">Trading Account</div>
+            <input
+              className="flex-none"
+              type="radio"
+              value="tradingAccount"
+              name="account"
+            />
+            <div className="text-xs font-medium 2xs:text-lg">
+              Trading Account
+            </div>
           </div>
           <div className="text-xs font-medium 2xs:text-lg">500 PIXP</div>
         </div>
         <div className="flex flex-row items-center justify-between mb-1">
           <div className="text-sm font-medium 2xs:text-lg">500 PIXP</div>
-          <div className="text-sm font-semibold 1xs:text-2xl 2xs:text-xl">27 854 853.958 PIXP</div>
+          <div className="text-sm font-semibold 1xs:text-2xl 2xs:text-xl">
+            27 854 853.958 PIXP
+          </div>
         </div>
         <div className="flex flex-row justify-end mb-5">
           <div className="text-sm font-normal text-gray-500">
@@ -111,7 +133,7 @@ const CryptoCard = () => {
           <div className="text-lg">Withdraw</div>
         </div>
       </div>
-      <WithdrawalModal showModal={showModal} setShowModal={setShowModal}/>
+      <WithdrawalModal showModal={showModal} setShowModal={setShowModal} />
     </>
   );
 };

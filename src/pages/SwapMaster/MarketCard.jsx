@@ -58,6 +58,7 @@ const MarketCard = () => {
       <TokenDropdownInput
         initialContent={convert ? toTokenList[0] : fromTokenList[0]}
         contentList={convert ? toTokenList : fromTokenList}
+        backgroundColor="bg-app-black-button"
         Max={true}
       />
       <div className="flex justify-center w-full mt-5">
@@ -95,6 +96,7 @@ const MarketCard = () => {
       <TokenDropdownInput
         initialContent={convert ? fromTokenList[0] : toTokenList[0]}
         contentList={convert ? fromTokenList : toTokenList}
+        backgroundColor="bg-app-black-button"
         Max={false}
       />
 

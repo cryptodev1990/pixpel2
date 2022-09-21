@@ -44,6 +44,7 @@ const CreateNFT = () => {
           <div className="w-1/2">
             <div className="text-lg mb-2">Collection:</div>
             <DropDownButton
+              backgroundColor="bg-app-black-button"
               initialContent={collectionList[0].title}
               contentList={collectionList}
             />
@@ -52,6 +53,7 @@ const CreateNFT = () => {
             <div className="text-lg mb-2">Sub-Collection:</div>
             <DropDownButton
               initialContent={subCollectionList[0].title}
+              backgroundColor="bg-app-black-button"
               contentList={subCollectionList}
             />
           </div>
@@ -70,6 +72,7 @@ const CreateNFT = () => {
             <div className="w-full rounded-xl py-3 bg-app-black">
               <DropDownButton
                 initialContent={statsList[0].title}
+                backgroundColor="bg-app-black-button"
                 contentList={statsList}
                 fontSize="text-2xl"
               />
@@ -103,6 +106,7 @@ const CreateNFT = () => {
             <div>Blockchain:</div>
             <DropDownButton
               initialContent={ChainList[0].title}
+              backgroundColor="bg-app-black-button"
               contentList={ChainList}
             />
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/Button/Button";
+import ButtonMar from "../../components/Button/ButtonMar";
 import GameIntro from "../../components/Image/GameIntro";
 import NFTintro from "../../components/Image/NFTintro";
 import Cryptobots from "../../asssets/images/market/cryptobots.png";
@@ -48,7 +48,7 @@ const UserHome = () => {
         sollicitudin, lacus mauris accumsan erat, quis posuere leo mi sed
         lectus.
       </div>
-      <Button title="Play Now" handleClick={handlePlayClick} />
+      <ButtonMar title="Play Now" handleClick={handlePlayClick} />
       <div className="flex mt-10 mb-20">
         <GameIntro
           image={Cryptobots}
@@ -71,7 +71,7 @@ const UserHome = () => {
       </div>
       <div className="flex justify-between items-end mb-10">
         <div className="text-5xl">Recent NFTs</div>
-        <Button title="Buy Now" handleClick={handleBuyClick} />
+        <ButtonMar title="Buy Now" handleClick={handleBuyClick} />
       </div>
       <div className="flex justify-between mb-32">
         <NFTintro image={nft1} name="Mustang" bid="2 PIX" />
@@ -82,7 +82,7 @@ const UserHome = () => {
       </div>
       <div className="flex justify-between items-end mb-10">
         <div className="text-5xl">Staking</div>
-        <Button title="Stake Now" handleClick={handleStakeClick} />
+        <ButtonMar title="Stake Now" handleClick={handleStakeClick} />
       </div>
       <div className="flex gap-5 justify-between mb-20">
         <StakingDetail locked={true} />
@@ -91,7 +91,7 @@ const UserHome = () => {
       </div>
       <div className="flex justify-between items-end mb-10">
         <div className="text-5xl">Token trend</div>
-        <Button title="Trade Now" handleClick={handleTradeClick} />
+        <ButtonMar title="Trade Now" handleClick={handleTradeClick} />
       </div>
       <div className="overflow-x-auto relative w-full">
         <table className="table-auto">

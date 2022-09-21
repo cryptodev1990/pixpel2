@@ -27,11 +27,11 @@ const Withdraw = () => {
   return (
     <>
       <div
-        className="flex flex-col px-5 py-12 justify md:px-0"
+        className="flex flex-col justify-center items-center py-5 md:px-0"
         style={{ fontFamily: "Poppins" }}
       >
         <div className="flex mb-5">
-          <div className="text-3xl font-semibold 1xs:text-5xl 2xs:text-4xl">Withdraw Portal</div>
+          <div className="text-3xl font-semibold my-3 1xs:text-5xl 2xs:text-4xl">Withdraw Portal</div>
         </div>
         <div className="flex flex-row justify-center w-full gap-5 px-40 mb-12">
           {buttonList.map((button, idx) => {

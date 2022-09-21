@@ -80,6 +80,7 @@ const LiquidityCard = () => {
         <TokenDropdownInput
           initialContent={convert ? toTokenList[0] : fromTokenList[0]}
           contentList={convert ? toTokenList : fromTokenList}
+          backgroundColor="bg-app-black-button"
           Max={false}
         />
         <div className="flex flex-row justify-end mt-1 text-sm">
@@ -116,6 +117,7 @@ const LiquidityCard = () => {
         <TokenDropdownInput
           initialContent={convert ? fromTokenList[0] : toTokenList[0]}
           contentList={convert ? fromTokenList : toTokenList}
+          backgroundColor="bg-app-black-button"
           Max={false}
         />
         <div className="flex flex-row justify-end mt-1 text-sm">

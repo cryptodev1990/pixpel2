@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
 
-const TokenDropdownInput = ({initialContent, contentList, Max }) => {
+const TokenDropdownInput = ({
+  initialContent,
+  contentList,
+  Max,
+  backgroundColor,
+}) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [selectedContent, setSelectedContent] = useState(initialContent);
+  const [bgColor, setBgColor] = useState("bg-app-black");
 
   useEffect(() => {
     setSelectedContent(initialContent);
   }, [initialContent]);
+
+  useEffect(() => {
+    setBgColor(backgroundColor);
+  }, [backgroundColor]);
 
   const handleDropDown = () => {
     if (showDropDown) {
@@ -20,13 +30,15 @@ const TokenDropdownInput = ({initialContent, contentList, Max }) => {
     setShowDropDown(false);
   };
   return (
-    <div className="flex flex-row items-center w-full h-16 rounded bg-app-black cursor-pointer">
+    <div
+      className={
+        "flex flex-row items-center w-full h-16 rounded cursor-pointer " +
+        bgColor
+      }
+    >
       <div className="flex-none">
         <div
-          className={
-            (showDropDown ? "rounded-t-md" : "rounded-md") +
-            " bg-app-black"
-          }
+          className={(showDropDown ? "rounded-t-md " : "rounded-md ") + bgColor}
           onClick={handleDropDown}
         >
           <div className="flex flex-row h-16 px-5 py-5">
@@ -59,17 +71,12 @@ const TokenDropdownInput = ({initialContent, contentList, Max }) => {
                   className="fixed inset-0 w-full h-full"
                   onClick={handleDropDown}
                 ></div>
-                <div className="flex flex-col w-64 rounded-b-md bg-app-black">
+                <div className={"flex flex-col w-64 rounded-b-md " + bgColor}>
                   {contentList.map((content, idx) => {
                     return (
                       <div
                         key={idx}
-                        className={
-                          (idx === contentList.length - 1
-                            ? " "
-                            : " border-b-2 border-gray-500 ") +
-                          " relative flex flex-row items-center justify-start gap-5 px-5 py-3"
-                        }
+                        className="relative flex flex-row items-center justify-start gap-5 px-5 py-3"
                         onClick={() => {
                           selectHandleClick(content);
                         }}
@@ -104,7 +111,7 @@ const TokenDropdownInput = ({initialContent, contentList, Max }) => {
         </svg>
       </div>
       <div className="flex-auto">
-        <input className="w-full bg-app-black" />
+        <input className={"w-full " + bgColor} />
       </div>
       {Max ? <div className="flex mx-5 text-blue-500">Max</div> : null}
     </div>

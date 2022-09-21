@@ -1,6 +1,6 @@
 import React from "react";
 import nft1 from "../../asssets/images/NFT/nft-1.png";
-import Button from "../Button/Button";
+import Button from "../Button/ButtonMar";
 
 const BuyWeapons = () => {
   return (

@@ -34,7 +34,7 @@ export default function Modal(props) {
                 <ImageDropDownButton
                   initialContent={tokenList[0]}
                   contentList={tokenList}
-                  backgroundColor={" bg-app-black-button"}
+                  backgroundColor=" bg-app-black-button"
                 />
                 <div className="flex flex-col">
                   <div>Wallet Address</div>

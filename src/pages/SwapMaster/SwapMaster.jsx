@@ -52,7 +52,7 @@ function SwapMaster() {
   };
 
   const handleClickArrow = () => {
-    navigate("/", { replace: true });
+    navigate(-1);
   };
 
   return (

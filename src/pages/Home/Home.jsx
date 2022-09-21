@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.scss";
 import Banner from "../../components/Banner/Banner";
-import Button from "../../components/Button/Button";
+import ButtonMar from "../../components/Button/ButtonMar";
 
 const Home = () => {
   return (
@@ -26,7 +26,7 @@ const Home = () => {
                   className="banner__input"
                   placeholder="Enter Email / Phone number"
                 />
-                <Button title="Play" />
+                <ButtonMar title="Play" />
               </form>
               <div className="row row--space-between">
                 <div className="col-lg-3">
@@ -108,7 +108,7 @@ const Home = () => {
                 leo mi sed lectus.
               </p>
               <form className="banner__form">
-                <Button title="Trade" />
+                <ButtonMar title="Trade" />
               </form>
               <div className="row row--space-between">
                 <div className="col-lg-3">
@@ -189,7 +189,7 @@ const Home = () => {
                 tempor sollicitudin, lacus mauris accumsan erat, quis posuere
                 leo mi sed lectus.
               </p>
-              <Button title="Swap" />
+              <ButtonMar title="Swap" />
               <div className="row row--space-between">
                 <div className="col-lg-3">
                   <div className="banner__card">

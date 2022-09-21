@@ -1,6 +1,6 @@
 import React from "react";
 import game1 from "../../asssets/images/market/cryptobots.png";
-import Button from "../Button/Button";
+import Button from "../Button/ButtonMar";
 
 const Description = () => {
   return (
