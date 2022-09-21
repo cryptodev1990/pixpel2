@@ -149,7 +149,7 @@ const AddressManagement = () => {
               <ImageDropDownButton
                 initialContent={tokenList[0]}
                 contentList={tokenList}
-                backgroundColor={" bg-app-black"}
+                backgroundColor=" bg-app-black"
               />
             </div>
             <div className="flex flex-row items-center h-12 pl-4 rounded-md xs:h-14 xs:w-72 bg-app-black w-60">

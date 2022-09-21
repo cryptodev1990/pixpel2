@@ -3,11 +3,15 @@ import React, { useState, useEffect } from "react";
 const ImageDropDownButton = (props) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [selectedContent, setSelectedContent] = useState(props.initialContent);
+  const [bgColor, setBgColor] = useState("bg-app-black");
 
   useEffect(() => {
     setSelectedContent(props.initialContent);
-  },[props.initialContent])
+  }, [props.initialContent]);
 
+  useEffect(() => {
+    setBgColor(props.backgroundColor);
+  }, [props.backgroundColor]);
 
   const handleDropDown = () => {
     if (showDropDown) {
@@ -24,13 +28,19 @@ const ImageDropDownButton = (props) => {
   return (
     <div
       className={
-        props.backgroundColor + (showDropDown ? " rounded-t-md" : " rounded-md") + " items-center"
+        bgColor +
+        (showDropDown ? " rounded-t-md" : " rounded-md") +
+        " items-center cursor-pointer"
       }
       onClick={handleDropDown}
     >
-      <div className="flex items-center justify-between px-8 py-5 rounded-md">
+      <div className="flex items-center justify-between px-7 py-4 rounded-md">
         <div className="flex gap-2 h-3/5 items-center">
-          <img src={selectedContent.url} alt="" className="w-7 h-7 rounded-full" />
+          <img
+            src={selectedContent.url}
+            alt=""
+            className="w-7 h-7 rounded-full"
+          />
           <div className="text-base font-medium">{selectedContent.title}</div>
         </div>
         <div className="flex items-center">
@@ -57,7 +67,7 @@ const ImageDropDownButton = (props) => {
               onClick={handleDropDown}
             ></div>
             <div
-              className={props.backgroundColor + " flex flex-col rounded-b-md"}
+              className={bgColor + " flex flex-col rounded-b-md"}
             >
               {props.contentList.map((content, idx) => {
                 return (

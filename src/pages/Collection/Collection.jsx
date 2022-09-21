@@ -85,6 +85,7 @@ const Collection = () => {
           <DropDownButton
             initialContent={Category[0].title}
             contentList={Category}
+            backgroundColor="bg-app-black-button"
           />
         </div>
         <div className="flex flex-col gap-4">
@@ -92,12 +93,14 @@ const Collection = () => {
           <DropDownButton
             initialContent={subCategory[0].title}
             contentList={subCategory}
+            backgroundColor="bg-app-black-button"
           />
         </div>
         <div className="flex flex-col gap-4">
           <div className="text-lg">Blockchain:</div>
           <DropDownButton
             initialContent={Blockchain[0].title}
+            backgroundColor="bg-app-black-button"
             contentList={Blockchain}
           />
         </div>

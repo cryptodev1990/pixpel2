@@ -3,12 +3,12 @@ import "./Cart.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { removeCart } from "../../actions/cart";
 
-const Cart = (props) => {
+const Cart = () => {
   const cardsInCart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   return (
-    <div className="cart" style={props.styles}>
+    <div className=" bg-app-black-button cart">
       <div className="cart__inner">
         <div className="cart__title">Cart</div>
         <div className="cart__list">
@@ -16,7 +16,7 @@ const Cart = (props) => {
             return (
               <div className="cart__item" key={card.id}>
                 <div className="cart__img-wrap">
-                  <img src={card.image} alt="" className="cart__img" />
+                  <img src={card.img} alt="" className="cart__img" />
                 </div>
                 <div className="cart__content">
                   <div className="cart__content-title">
@@ -25,7 +25,7 @@ const Cart = (props) => {
                   <div className="cart__content-price">2 PIXP</div>
                 </div>
                 <div
-                  className="cart__delete"
+                  className="cart__delete cursor-pointer"
                   onClick={() => dispatch(removeCart(card.id))}
                 >
                   <svg

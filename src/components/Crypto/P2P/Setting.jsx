@@ -32,6 +32,7 @@ const Setting = () => {
         <DropDownButton
           initialContent={PaymentList[0].title}
           contentList={PaymentList}
+          backgroundColor="bg-app-black-button"
         />
       </div>
     </div>

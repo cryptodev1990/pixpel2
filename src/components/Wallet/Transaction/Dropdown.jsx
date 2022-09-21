@@ -18,7 +18,7 @@ const Dropdown = (props) => {
   return (
     <div
       className={
-        " bg-app-black-button cursor-pointer" +
+        " bg-app-black cursor-pointer" +
         (showDropDown ? " rounded-t-md" : " rounded-md")
       }
       onClick={handleDropDown}
@@ -50,7 +50,7 @@ const Dropdown = (props) => {
               className="fixed inset-0 w-full h-full"
               onClick={handleDropDown}
             ></div>
-            <div className="flex flex-col bg-app-black-button rounded-b-md">
+            <div className="flex flex-col bg-app-black rounded-b-md">
               {props.contentList.map((content, idx) => {
                 return (
                   <div

@@ -9,12 +9,12 @@ const HelpCenter = () => {
   return (
     <>
       <div className="flex flex-col xl:px-32 lg:px-28 md:px-20 sm:px-12 px-4 py-8">
-        <div className="flex justify-between mb-10 xl:flex-row gap-6 flex-col">
+        <div className="flex justify-between mb-10 sm:flex-row gap-6 flex-col">
           <div className="text-3xl">Help Center</div>
-          <div className="flex gap-4 sm:items-center flex-col">
+          <div className="flex gap-4 flex-col">
             <div className="text-sm">Security Service:</div>
             <input
-              className="bg-app-black-button h-10 px-4 items-center rounded"
+              className="bg-app-black h-10 px-4 items-center rounded"
               placeholder="Search"
             ></input>
           </div>

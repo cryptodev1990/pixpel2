@@ -1,180 +1,201 @@
-import React from "react";
-import Modal from "../Modal/Modal";
-import "./CardModal.scss";
+import React, { useState } from "react";
+import cart from "../../asssets/images/cart.svg";
+import { purchaseList } from "../../pages/NFTMarket/dataList";
+import { useDispatch } from "react-redux";
+import { ADD_CART } from "../../actions/type";
+import SuccessModal from "./SuccessModal";
 
-const CardModal = ({ show, handleClose }) => {
-  if (!show) {
-    return null;
-  }
+const CardModal = ({ showModal, setShowModal, data }) => {
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const handleCartClick = () => {
+    setShowModal(false);
+    dispatch({ type: ADD_CART, payload: data });
+  };
+
+  const handleBuyClick = () => {
+    setShowModal(false);
+    setShowSuccessModal(true);
+  };
   return (
-    <Modal
-      header={
-        <button className="btn btn--secondary flex middle gap">
-          <svg
-            width="24"
-            height="23"
-            viewBox="0 0 24 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
-              stroke="#0095C8"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
-              stroke="#0095C8"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
-              stroke="#0095C8"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <span>Cart</span>
-        </button>
-      }
-      handleClose={handleClose}
-    >
-      <div className="card-modal">
-        <div className="flex gap">
-          <div className="col-5">
-            <div className="flex column h100">
-              <div className="fill">
+    <>
+      {showModal ? (
+        <div className="fixed inset-0 z-10 overflow-x-auto">
+          <div
+            className="fixed inset-0 w-full h-full bg-black opacity-40"
+            onClick={() => setShowModal(false)}
+          ></div>
+          <div className="flex items-center px-4 py-6 min-h-screen">
+            <div className="relative flex w-full max-w-7xl mx-auto bg-app-black-modal rounded-xl shadow-lg md:px-8 py-12 text-lg gap-10">
+              <div className="flex flex-col gap-7 w-2/5">
                 <img
-                  src="assets/images/market/nft-1.jpg"
-                  alt=""
-                  className="card__picture"
+                  src={data.img}
+                  alt="NFT"
+                  className="w-full rounded-xl h-full"
                 />
+                <div
+                  className="bg-app-green flex justify-center items-center rounded-lg py-5 cursor-pointer"
+                  onClick={handleBuyClick}
+                >
+                  Buy Now
+                </div>
               </div>
-              <button className="btn btn-buy">Buy it now</button>
-            </div>
-          </div>
-          <div className="col-7">
-            <h3 className="mb-1">H1 Hero Name for NFT</h3>
-            <div className="row-wrap gap mb-1">
-              <div className="btn btn--secondary flex middle gap-4">
-                <span>Level:</span>
-                <span className="card__name">31</span>
-              </div>
-              <div className="btn btn--secondary flex middle gap-4">
-                <span>Attck:</span>
-                <span className="card__name">50</span>
-              </div>
-              <div className="btn btn--secondary flex middle gap-4">
-                <span>Defense</span>
-                <span className="card__name">60</span>
-              </div>
-              <div className="btn btn--secondary flex middle gap-4">
-                <span>Stealth</span>
-                <span className="card__name">128</span>
-              </div>
-              <div className="btn btn--secondary flex middle gap-4">
-                <span>Power</span>
-                <span className="card__name">50</span>
-              </div>
-            </div>
-            <div className="mb-1">
-              <div className="btn btn--secondary btn-block flex middle justify-between mb">
-                <span>Price</span>
-                <span className="card__name">$31213241.942</span>
-              </div>
-              <div className="btn btn--secondary btn-block flex middle justify-between mb">
-                <span>Item location</span>
-                <span className="card__name">Crypto Bots</span>
-              </div>
-              <div className="btn btn--secondary btn-block flex middle justify-between mb">
-                <span>Blockchain ID</span>
-                <div className="flex middle gap">
-                  <span className="card__name">c478befa...18076d627f</span>
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M15 6.75H8.25C7.42157 6.75 6.75 7.42157 6.75 8.25V15C6.75 15.8284 7.42157 16.5 8.25 16.5H15C15.8284 16.5 16.5 15.8284 16.5 15V8.25C16.5 7.42157 15.8284 6.75 15 6.75Z"
-                      stroke="#717A8B"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M3.75 11.25H3C2.60218 11.25 2.22064 11.092 1.93934 10.8107C1.65804 10.5294 1.5 10.1478 1.5 9.75V3C1.5 2.60218 1.65804 2.22064 1.93934 1.93934C2.22064 1.65804 2.60218 1.5 3 1.5H9.75C10.1478 1.5 10.5294 1.65804 10.8107 1.93934C11.092 2.22064 11.25 2.60218 11.25 3V3.75"
-                      stroke="#717A8B"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+              <div className="flex flex-col w-3/5">
+                <div className="flex justify-between w-full items-end mb-8">
+                  <div className="text-2xl">H1 Hero Name for NFT</div>
+                  <div className="flex gap-3">
+                    <div
+                      className="bg-app-black rounded-md gap-2 flex justify-center items-center w-33 h-11 cursor-pointer"
+                      onClick={handleCartClick}
+                    >
+                      <img src={cart} alt="cart" />
+                      <div>CART</div>
+                    </div>
+                    <div
+                      className="bg-app-black-button rounded-md flex justify-center items-center h-11 w-11 cursor-pointer"
+                      onClick={() => setShowModal(false)}
+                    >
+                      <svg
+                        className="h-5 w-5"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2"
+                        stroke="currentColor"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        {" "}
+                        <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                        <line x1="18" y1="6" x2="6" y2="18" />{" "}
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-2 mb-2">
+                  <div className="bg-app-black-button flex justify-between items-center px-7 rounded-lg w-44 h-16">
+                    <div>LEVEL</div>
+                    <div className="text-app-blue">31</div>
+                  </div>
+                  <div className="bg-app-black-button flex justify-between items-center px-7 rounded-lg w-48 h-16">
+                    <div>ATTACK</div>
+                    <div className="text-app-blue">50</div>
+                  </div>
+                  <div className="bg-app-black-button flex justify-between items-center px-7 rounded-lg w-48 h-16">
+                    <div>DEFENSE</div>
+                    <div className="text-app-blue">60</div>
+                  </div>
+                </div>
+                <div className="flex gap-2 mb-6">
+                  <div className="bg-app-black-button flex justify-between items-center px-7 rounded-lg w-52 h-16">
+                    <div>STEALTH</div>
+                    <div className="text-app-blue">128</div>
+                  </div>
+                  <div className="bg-app-black-button flex justify-between items-center px-7 rounded-lg w-47 h-16">
+                    <div>POWER</div>
+                    <div className="text-app-blue">50</div>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2 mb-6">
+                  <div className="px-8 py-5 flex justify-between bg-app-black-button rounded-lg">
+                    <div>Price</div>
+                    <div className="text-app-blue font-semibold">
+                      $31 213 241.942
+                    </div>
+                  </div>
+                  <div className="px-8 py-5 flex justify-between bg-app-black-button rounded-lg">
+                    <div>Item Location</div>
+                    <div className="text-app-blue font-semibold">
+                      Crypto Bots
+                    </div>
+                  </div>
+                  <div className="px-8 py-5 flex justify-between bg-app-black-button rounded-lg">
+                    <div>Blockchain ID</div>
+                    <div className="flex gap-2">
+                      <div className="text-app-blue font-semibold">
+                        c47befa...18076d627f
+                      </div>
+                      <svg
+                        className="h-5 w-5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        {" "}
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          ry="2"
+                        />{" "}
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-app-black-button py-5 px-5 rounded-md">
+                  <div className="text-xl">Previous Purchase</div>
+                  <div className="overflow-x-auto relative mt-4 w-full">
+                    <table className="table-auto">
+                      <thead>
+                        <tr>
+                          <td className="text-gray-400 w-1/6 text-xs">Price</td>
+                          <td className="text-gray-400 w-1/5 px-6 text-xs">
+                            USD Price
+                          </td>
+                          <td className="text-gray-400 w-1/4 px-6 text-xs">
+                            Floor Difference
+                          </td>
+                          <td className="text-gray-400 w-1/6 px-6 text-xs">
+                            Expiration
+                          </td>
+                          <td className="text-gray-400 pl-6 text-xs">From</td>
+                        </tr>
+                      </thead>
+                      <tbody className="px-4">
+                        {purchaseList.map((menu, idx) => {
+                          return (
+                            <tr key={idx}>
+                              <td className="py-2 text-xs">{menu.price}</td>
+                              <td className="px-6 text-xs">{menu.usd}</td>
+                              <td className="px-6 text-xs">{menu.floor}</td>
+                              <td className="px-6 text-xs">
+                                {menu.expiration}
+                              </td>
+                              <td className="pl-6">
+                                <div className="underline text-xs">
+                                  {menu.from}
+                                </div>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="panel">
-              <span className="mb-1">Previous Purchase</span>
-              <table>
-                <thead>
-                  <tr>
-                    <th>Price</th>
-                    <th>USD Price</th>
-                    <th>Floor Difference</th>
-                    <th>Expiration</th>
-                    <th>From</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>12 214 125 PIXP</td>
-                    <td>$1 252 424</td>
-                    <td>25% Below</td>
-                    <td>10 days</td>
-                    <td>Ivashek big name</td>
-                  </tr>
-                  <tr>
-                    <td>12 214 125 PIXP</td>
-                    <td>$1 252 424</td>
-                    <td>25% Below</td>
-                    <td>10 days</td>
-                    <td>Ivashek big name</td>
-                  </tr>
-                  <tr>
-                    <td>12 214 125 PIXP</td>
-                    <td>$1 252 424</td>
-                    <td>25% Below</td>
-                    <td>10 days</td>
-                    <td>Ivashek big name</td>
-                  </tr>
-                  <tr>
-                    <td>12 214 125 PIXP</td>
-                    <td>$1 252 424</td>
-                    <td>25% Below</td>
-                    <td>10 days</td>
-                    <td>Ivashek big name</td>
-                  </tr>
-                  <tr>
-                    <td>12 214 125 PIXP</td>
-                    <td>$1 252 424</td>
-                    <td>25% Below</td>
-                    <td>10 days</td>
-                    <td>Ivashek big name</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
         </div>
-      </div>
-    </Modal>
+      ) : null}
+      {
+        <SuccessModal
+          showModal={showSuccessModal}
+          setShowModal={setShowSuccessModal}
+        />
+      }
+    </>
   );
 };
+
 export default CardModal;

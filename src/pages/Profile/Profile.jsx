@@ -22,7 +22,7 @@ const Profile = () => {
       case 1:
         temp = <ProfileSettings />;
         break;
-      case 3:
+      case 2:
         temp = <ProfileSecurity />;
         break;
       default:

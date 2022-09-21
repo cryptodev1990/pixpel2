@@ -5,14 +5,20 @@ const DropDownButton = ({
   initialContent,
   contentList,
   fontSize,
+  backgroundColor,
 }) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const [selectedContent, setSelectedContent] = useState(initialContent);
+  const [bgColor, setBgColor] = useState("bg-app-black");
   const [font, setFont] = useState("");
 
   useEffect(() => {
     setFont(fontSize);
-  },[fontSize]);
+  }, [fontSize]);
+
+  useEffect(() => {
+    setBgColor(backgroundColor);
+  }, [backgroundColor]);
 
   const handleDropDown = () => {
     if (showDropDown) {
@@ -30,14 +36,15 @@ const DropDownButton = ({
     <>
       <div
         className={
-          "cursor-pointer bg-app-black" +
+          "cursor-pointer " +
+          bgColor +
           (showDropDown ? " rounded-t" : " rounded")
         }
         onClick={handleDropDown}
       >
         <div
           className={
-            "flex px-5 rounded-xl gap-3 items-center justify-between py-5"
+            "flex px-5 rounded-xl gap-3 items-center justify-between py-4"
           }
         >
           <div className={font + " font-medium"}>{selectedContent}</div>
@@ -64,7 +71,7 @@ const DropDownButton = ({
                 className="fixed inset-0 w-full h-full"
                 onClick={handleDropDown}
               ></div>
-              <div className="flex flex-col bg-app-black rounded-b-xl">
+              <div className={bgColor + " flex flex-col rounded-b-xl"}>
                 {contentList.map((content, idx) => {
                   return (
                     <div
