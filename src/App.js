@@ -22,7 +22,8 @@ import {
   MysteryBox,
   MintFinish,
   Developer,
-  BuyCrypto
+  BuyCrypto,
+  GameLanding
 } from "./pages/index"
 
 import { Header, Footer } from "./components";
@@ -85,6 +86,7 @@ function App() {
         <Route path="/developer" element={<Developer />} />
         <Route path="/mysterybox" element={<MysteryBox />} />
         <Route path="/buycrypto" element={<BuyCrypto />} />
+        <Route path="/gamelanding" element={<GameLanding />} />
         <Route path="*" element={<Test />} />
       </Routes>
       <Footer />

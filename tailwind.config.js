@@ -19,6 +19,7 @@ module.exports = {
             button: '#37404C',
             modal: "#1F2630",
             select: "#48515F",
+            duration: "#717A8B",
           },
           blue: {
             DEFAULT: '#0095C8',
@@ -63,6 +64,10 @@ module.exports = {
       bottom: {
         '34': "136px",
       },
+      gap: {
+        'value': "3px",
+        "time": "106px",
+      },
       width: {
         '13': '53px',
         '15': '60px',
@@ -80,6 +85,7 @@ module.exports = {
         '81': '323px',
         '93': '372px',
         '125': '500px',
+        '133': "530px",
         '155': '619px',
         '158': '630px',
         '227': '1307px',
@@ -90,6 +96,7 @@ module.exports = {
         '15': '60px',
         '31': '122px',
         '50': '200px',
+        '75': '300px',
         '86': '340px',
         '88': '350px',
         '90': '360px',

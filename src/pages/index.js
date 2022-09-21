@@ -19,6 +19,7 @@ import BuyCrypto from "./BuyCrypto/BuyCrypto";
 import Developer from "./Developer/Developer";
 import MyCollection from "./MyCollection/MyCollection";
 import MysteryBox from "./MysteryBox/MysteryBox";
+import GameLanding from "./GameLanding/GameLanding";
 
 export {
     AddressManagement,
@@ -41,5 +42,6 @@ export {
     BuyCrypto,
     Developer,
     MyCollection,
-    MysteryBox
+    MysteryBox,
+    GameLanding
 }
