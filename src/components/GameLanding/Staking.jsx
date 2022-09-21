@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import StakingModal from "../Modal/StakingModal";
 
 import bnb from "../../asssets/images/UserHome/bnb.png";
 import eth from "../../asssets/images/UserHome/eth.png";
@@ -41,67 +42,71 @@ const stakingList = [
 ];
 
 const Staking = () => {
-
   const [showModal, setShowModal] = useState(false);
-  const handleClick = () => {
-
-  }
   return (
-    <div className="flex flex-col gap-10 px-32 py-32">
-      <div className="text-5xl font-semibold">Staking</div>
-      <div className="overflow-x-auto relative">
-        <table className="table-auto">
-          <thead>
-            <tr>
-              <td className="text-gray-400 w-1/4">Token</td>
-              <td className="text-gray-400 w-1/5 px-6">Invest</td>
-              <td className="text-gray-400 w-1/4 px-6">Duration</td>
-              <td className="text-gray-400 w-1/4 px-6">Minimun</td>
-              <td className="text-gray-400 px-6"></td>
-            </tr>
-          </thead>
-          <tbody className="px-4">
-            {stakingList.map((staking, idx) => {
-              return (
-                <tr key={idx}>
-                  <td className="py-3">
-                    <div className="flex gap-2 items-center">
-                      <img src={staking.img} alt="token" />
-                      <div className="text-lg">{staking.token}</div>
-                    </div>
-                  </td>
-                  <td className="px-6">
-                    <div className="text-app-green flex items-center">{staking.invest}%</div>
-                  </td>
-                  <td className="px-6">
-                    <div className="flex items-center gap-3">
-                      {staking.duration.map((day, idx) => {
-                        return (
-                          <div
-                            key={idx}
-                            className="bg-app-black-duration py-2 px-7 text-lg rounded-md"
-                          >
-                            {day}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </td>
-                  <td className="px-6">
-                    <div className="text-lg">{staking.minimun}</div>
-                  </td>
-                  <td className="px-6">
-                    <div className="bg-app-green cursor-pointer px-7 py-2 text-lg rounded-md" onClick={() => handleClick}>
-                      STAKE
-                    </div>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+    <>
+      <div className="flex flex-col gap-10 px-32 py-32">
+        <div className="text-5xl font-semibold">Staking</div>
+        <div className="overflow-x-auto relative">
+          <table className="table-auto">
+            <thead>
+              <tr>
+                <td className="text-gray-400 w-1/4">Token</td>
+                <td className="text-gray-400 w-1/5 px-6">Invest</td>
+                <td className="text-gray-400 w-1/4 px-6">Duration</td>
+                <td className="text-gray-400 w-1/4 px-6">Minimun</td>
+                <td className="text-gray-400 px-6"></td>
+              </tr>
+            </thead>
+            <tbody className="px-4">
+              {stakingList.map((staking, idx) => {
+                return (
+                  <tr key={idx}>
+                    <td className="py-3">
+                      <div className="flex gap-2 items-center">
+                        <img src={staking.img} alt="token" />
+                        <div className="text-lg">{staking.token}</div>
+                      </div>
+                    </td>
+                    <td className="px-6">
+                      <div className="text-app-green flex items-center">
+                        {staking.invest}%
+                      </div>
+                    </td>
+                    <td className="px-6">
+                      <div className="flex items-center gap-3">
+                        {staking.duration.map((day, idx) => {
+                          return (
+                            <div
+                              key={idx}
+                              className="bg-app-black-duration py-2 px-7 text-lg rounded-md"
+                            >
+                              {day}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </td>
+                    <td className="px-6">
+                      <div className="text-lg">{staking.minimun}</div>
+                    </td>
+                    <td className="px-6">
+                      <div
+                        className="bg-app-green cursor-pointer px-7 py-2 text-lg rounded-md"
+                        onClick={() => setShowModal(true)}
+                      >
+                        STAKE
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+      {<StakingModal showModal={showModal} setShowModal={setShowModal} />}
+    </>
   );
 };
 
