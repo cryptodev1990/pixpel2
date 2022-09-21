@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import bnb from "../../asssets/images/UserHome/bnb.png";
 import eth from "../../asssets/images/UserHome/eth.png";
@@ -41,6 +41,11 @@ const stakingList = [
 ];
 
 const Staking = () => {
+
+  const [showModal, setShowModal] = useState(false);
+  const handleClick = () => {
+
+  }
   return (
     <div className="flex flex-col gap-10 px-32 py-32">
       <div className="text-5xl font-semibold">Staking</div>
@@ -86,7 +91,7 @@ const Staking = () => {
                     <div className="text-lg">{staking.minimun}</div>
                   </td>
                   <td className="px-6">
-                    <div className="bg-app-green cursor-pointer px-7 py-2 text-lg rounded-md">
+                    <div className="bg-app-green cursor-pointer px-7 py-2 text-lg rounded-md" onClick={() => handleClick}>
                       STAKE
                     </div>
                   </td>

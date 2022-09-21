@@ -3,9 +3,11 @@ import "./GameCard.scss";
 import GameCardModal from "../../CardModal/GameCardModal";
 import { useDispatch } from "react-redux";
 import { ADD_CART } from "../../../actions/type";
+import { useNavigate } from "react-router-dom";
 
 const GameCard = ({ data }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   return (
     <>
@@ -83,7 +85,12 @@ const GameCard = ({ data }) => {
           </div>
         </div>
         <div className="game-card__main">
-          <img src={data.img} alt="Game" className="w-70 h-50" />
+          <img
+            src={data.img}
+            alt="Game"
+            className="w-70 h-50 cursor-pointer"
+            onClick={() => navigate("/gamelanding")}
+          />
         </div>
         <div className="game-card__bottom">
           <div className="game-card__item">

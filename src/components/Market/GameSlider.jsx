@@ -4,8 +4,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NFTGameCard from "./NFTGameCard";
 import { gameList } from "../../pages/NFTMarket/dataList";
+import { useNavigate } from "react-router-dom";
 
 const GameSlider = ({ number }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/gamelanding");
+  };
   const settings = {
     dots: true,
     infinite: true,
@@ -19,7 +25,12 @@ const GameSlider = ({ number }) => {
       <Slider {...settings}>
         {gameList.map((game, idx) => {
           return (
-            <NFTGameCard key={idx} img={game.img} gameName={game.gameName} />
+            <NFTGameCard
+              key={idx}
+              img={game.img}
+              gameName={game.gameName}
+              handleClick={handleClick}
+            />
           );
         })}
       </Slider>
