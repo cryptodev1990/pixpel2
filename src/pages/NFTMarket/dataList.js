@@ -67,231 +67,259 @@ export const purchaseList = [
 
 export const NFTCardList = [
   {
-    id:1,
+    id: 1,
     img: nft1,
   },
   {
-    id:2,
+    id: 2,
     img: nft2,
   },
   {
-    id:3,
+    id: 3,
     img: nft3,
   },
   {
-    id:4,
+    id: 4,
     img: nft2,
   },
   {
-    id:5,
+    id: 5,
     img: nft1,
   },
   {
-    id:6,
+    id: 6,
     img: nft2,
   },
   {
-    id:7,
+    id: 7,
     img: nft3,
   },
   {
-    id:8,
+    id: 8,
     img: nft2,
   },
   {
-    id:9,
+    id: 9,
     img: nft1,
   },
   {
-    id:10,
+    id: 10,
     img: nft3,
   },
   {
-    id:11,
+    id: 11,
     img: nft2,
   },
   {
-    id:12,
+    id: 12,
     img: nft1,
   },
   {
-    id:13,
+    id: 13,
     img: nft1,
   },
   {
-    id:14,
-    img: nft3,
-  }, 
-  {
-    id:15,
-    img: nft1,
-  },
-  {
-    id:16,
+    id: 14,
     img: nft3,
   },
   {
-    id:17,
+    id: 15,
+    img: nft1,
+  },
+  {
+    id: 16,
+    img: nft3,
+  },
+  {
+    id: 17,
     img: nft2,
   },
   {
-    id:18,
+    id: 18,
     img: nft2,
   },
   {
-    id:19,
+    id: 19,
     img: nft1,
   },
   {
-    id:20,
+    id: 20,
     img: nft3,
   },
   {
-    id:21,
+    id: 21,
     img: nft2,
   },
   {
-    id:22,
+    id: 22,
     img: nft1,
   },
   {
-    id:23,
+    id: 23,
     img: nft1,
   },
   {
-    id:24,
-    img: nft3,
-  }, 
-  {
-    id:25,
-    img: nft1,
-  },
-  {
-    id:26,
+    id: 24,
     img: nft3,
   },
   {
-    id:27,
+    id: 25,
+    img: nft1,
+  },
+  {
+    id: 26,
+    img: nft3,
+  },
+  {
+    id: 27,
     img: nft2,
   },
   {
-    id:28,
+    id: 28,
     img: nft1,
   },
 ]
 
 export const GameCardList = [
   {
-    id:1,
+    id: 1,
     img: game1,
+    gameName: "Crypto Adventure",
   },
   {
-    id:2,
+    id: 2,
     img: game2,
+    gameName: "Crypto Bots",
   },
   {
-    id:3,
+    id: 3,
     img: game3,
+    gameName: "Crypto Adventure",
   },
   {
-    id:4,
+    id: 4,
     img: game2,
+    gameName: "Dungeons & Bots",
   },
   {
-    id:5,
+    id: 5,
     img: game1,
+    gameName: "Crypto Bots",
   },
   {
-    id:6,
+    id: 6,
     img: game2,
+    gameName: "Crypto Adventure",
   },
   {
-    id:7,
+    id: 7,
     img: game3,
+    gameName: "Crypto Bots",
   },
   {
-    id:8,
+    id: 8,
     img: game2,
+    gameName: "Dungeons & Bots",
   },
   {
-    id:9,
+    id: 9,
     img: game1,
+    gameName: "Crypto Bots",
   },
   {
-    id:10,
+    id: 10,
     img: game3,
+    gameName: "Crypto Adventure",
   },
   {
-    id:11,
+    id: 11,
     img: game2,
+    gameName: "Dungeons & Bots",
   },
   {
-    id:12,
+    id: 12,
     img: game1,
+    gameName: "Crypto Adventure",
   },
   {
-    id:13,
+    id: 13,
     img: game1,
+    gameName: "Crypto Adventure",
   },
   {
-    id:14,
+    id: 14,
     img: game3,
-  }, 
+    gameName: "Crypto Adventure",
+  },
   {
-    id:15,
+    id: 15,
     img: game1,
+    gameName: "Crypto Adventure",
   },
   {
-    id:16,
+    id: 16,
     img: game3,
+    gameName: "Crypto Adventure",
   },
   {
-    id:17,
+    id: 17,
     img: game2,
+    gameName: "Crypto Adventure",
   },
   {
-    id:18,
+    id: 18,
     img: game2,
+    gameName: "Crypto Adventure",
   },
   {
-    id:19,
+    id: 19,
     img: game1,
+    gameName: "Crypto Adventure",
   },
   {
-    id:20,
+    id: 20,
     img: game3,
+    gameName: "Crypto Adventure",
   },
   {
-    id:21,
+    id: 21,
     img: game2,
+    gameName: "Crypto Adventure",
   },
   {
-    id:22,
+    id: 22,
     img: game1,
+    gameName: "Crypto Adventure",
   },
   {
-    id:23,
+    id: 23,
     img: game1,
+    gameName: "Crypto Adventure",
   },
   {
-    id:24,
+    id: 24,
     img: game3,
-  }, 
+    gameName: "Crypto Adventure",
+  },
   {
-    id:25,
+    id: 25,
     img: game1,
+    gameName: "Crypto Adventure",
   },
   {
-    id:26,
+    id: 26,
     img: game3,
+    gameName: "Crypto Adventure",
   },
   {
-    id:27,
+    id: 27,
     img: game2,
+    gameName: "Crypto Adventure",
   },
   {
-    id:28,
+    id: 28,
     img: game1,
+    gameName: "Crypto Adventure",
   },
 ]
 
