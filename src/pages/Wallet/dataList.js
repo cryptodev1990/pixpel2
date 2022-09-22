@@ -13,7 +13,7 @@ export const menuList = [
   },
   {
     id: 4,
-    title: "GAME ACCOUNT",
+    title: "GAMING ACCOUNT",
   },
   {
     id: 5,

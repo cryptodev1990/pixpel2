@@ -9,16 +9,13 @@ export const menuList = [
   },
   {
     id: 3,
-    title: "PAYMENT",
-  },
-  {
-    id: 4,
     title: "SECURITY",
   },
   {
-    id: 5,
+    id: 4,
     title: "API SETUP",
   },
+
 ];
 
 export const verificationList = {

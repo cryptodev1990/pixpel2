@@ -3,32 +3,32 @@ import graph from "../../asssets/images/graph.png";
 
 const Chart = () => {
   return (
-    <div className="flex flex-col px-32 gap-10">
-      <div className="text-3xl font-bold">Chart</div>
-      <div className="flex gap-5 bg-app-black px-16 py-16 rounded-2xl">
-        <div className="flex flex-col gap-value -mt-2">
-          <div>10000</div>
-          <div>9 950</div>
-          <div>9 900</div>
-          <div>9 850</div>
-          <div>9 800</div>
-          <div>9 750</div>
-          <div>9 700</div>
-          <div>9 650</div>
-          <div>9 600</div>
-          <div>9 550</div>
-          <div>9 500</div>
-          <div>9 450</div>
-          <div>9 400</div>
-          <div>9 350</div>
-          <div>9 300</div>
-          <div>9 250</div>
-          <div>9 200</div>
-          <div>9 150</div>
+    <div className="flex flex-col 2xl:px-32 xl:px-24 lg:px-16 md:px-8 px-3 2xl:gap-10 xl:gap-8 lg:gap-6 md:gap-4 gap-2 ">
+      <div className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-lg font-bold">Chart</div>
+      <div className="relative flex gap-5 bg-app-black 2xl:px-16 xl:px-12 lg:px-9 md:px-6 px-3 2xl:py-16 xl:py-12 lg:py-9 md:py-6 py-3 rounded-2xl 2xl:justify-center overflow-x-auto">
+        <div className="flex flex-col gap-value -mt-2 sticky top-2 left-2 bottom-2 shrink-0">
+          <div className="text-base">10000</div>
+          <div className="text-base">9 950</div>
+          <div className="text-base">9 900</div>
+          <div className="text-base">9 850</div>
+          <div className="text-base">9 800</div>
+          <div className="text-base">9 750</div>
+          <div className="text-base">9 700</div>
+          <div className="text-base">9 650</div>
+          <div className="text-base">9 600</div>
+          <div className="text-base">9 550</div>
+          <div className="text-base">9 500</div>
+          <div className="text-base">9 450</div>
+          <div className="text-base">9 400</div>
+          <div className="text-base">9 350</div>
+          <div className="text-base">9 300</div>
+          <div className="text-base">9 250</div>
+          <div className="text-base">9 200</div>
+          <div className="text-base">9 150</div>
         </div>
         <div className="flex flex-col gap-5">
-          <img src={graph} alt="Graph" />
-          <div className="flex gap-time">
+          <img src={graph} alt="Graph" className="none-flex" style={{width:"1460px", height:"468px"}}/>
+          <div className="flex gap-time shrink-0">
             <div>3:00 AM</div>
             <div>4:00 AM</div>
             <div>5:00 AM</div>

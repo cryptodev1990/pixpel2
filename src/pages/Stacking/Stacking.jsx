@@ -1,208 +1,134 @@
-import React from "react";
-import "./Stacking.scss";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { stakingList } from "./dataList";
+
 const Stacking = () => {
+  const navigate = useNavigate();
+  const [locked, setLocked] = useState(false);
+
   return (
-    <div className="stacking">
-      <div className="container">
-        <h1 className="title stacking__title">Staking</h1>
-        <div className="stacking__status">
-          <h2 className="stacking__status-name">Locked</h2>
-          <div className="stacking__status-btns">
-            <button className="stacking__status-btn stacking__status-btn--active">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 30 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.25 13.75H7.5C6.11929 13.75 5 14.8693 5 16.25V25C5 26.3807 6.11929 27.5 7.5 27.5H21.25C22.6307 27.5 23.75 26.3807 23.75 25V16.25C23.75 14.8693 22.6307 13.75 21.25 13.75Z"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M8.84766 12.7556V9.00562C8.84766 7.34801 9.44029 5.7583 10.4952 4.5862C11.5501 3.4141 12.9808 2.75562 14.4727 2.75562C15.9645 2.75562 17.3952 3.4141 18.4501 4.5862C19.505 5.7583 20.0977 7.34801 20.0977 9.00562V12.7556"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            <button className="stacking__status-btn">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 30 30"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.25 13.75H7.5C6.11929 13.75 5 14.8693 5 16.25V25C5 26.3807 6.11929 27.5 7.5 27.5H21.25C22.6307 27.5 23.75 26.3807 23.75 25V16.25C23.75 14.8693 22.6307 13.75 21.25 13.75Z"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M8.84766 12.7556V9.00562C8.84766 7.34801 9.44029 5.7583 10.4952 4.5862C11.5501 3.4141 12.9808 2.75562 14.4727 2.75562C15.9645 2.75562 17.3952 3.4141 18.4501 4.5862C19.505 5.7583 20.0977 7.34801 20.0977 9.00562"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+    <div className="flex flex-col gap-3 px-16 pb-8">
+      <div className="flex items-end mb-10">
+        <div
+          className="flex bg-app-black-button px-2 py-2 justify-center rounded-md cursor-pointer"
+          onClick={() => navigate(-1)}
+        >
+          <svg
+            className="h-8 w-8 text-gray-500"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            strokeWidth="2"
+            stroke="currentColor"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            {" "}
+            <path stroke="none" d="M0 0h24v24H0z" />{" "}
+            <line x1="5" y1="12" x2="19" y2="12" />{" "}
+            <line x1="5" y1="12" x2="9" y2="16" />{" "}
+            <line x1="5" y1="12" x2="9" y2="8" />
+          </svg>
+        </div>
+        <div className="flex justify-center text-5xl font-semibold w-full">
+          Staking
+        </div>
+      </div>
+      <div className="flex justify-between">
+        <div className="text-4xl font-semibold">
+          {locked ? "Locked" : "UnLocked"}
+        </div>
+        <div className="flex gap-3">
+          <div
+            className={
+              (locked ? "bg-app-blue" : "bg-app-black") +
+              " px-8 py-4 rounded-md cursor-pointer hover:bg-app-blue"
+            }
+            onClick={() => setLocked(true)}
+          >
+            <svg
+              className="h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              {" "}
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />{" "}
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+          <div
+            className={
+              (locked ? "bg-app-black" : "bg-app-blue") +
+              " px-8 py-4 rounded-md cursor-pointer hover:bg-app-blue"
+            }
+            onClick={() => setLocked(false)}
+          >
+            <svg
+              className="h-8 w-8"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              {" "}
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />{" "}
+              <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+            </svg>
           </div>
         </div>
-        <div className="table stacking__table">
-          <div className="table__tr">
-            <div className="table__th">Token</div>
-            <div className="table__th">Game</div>
-            <div className="table__th">Invest</div>
-            <div className="table__th">Duration</div>
-            <div className="table__th">Minimum</div>
-            <div className="table__th"></div>
-          </div>
-          <div className="table__tr">
-            <div className="table__td">
-              <img
-                src="assets/images/UserHome/bnb.png"
-                className="table__icon"
-                alt=""
-              />
-              BNB
-            </div>
-            <div className="table__td">Crypto Box</div>
-            <div className="table__td">7.8%</div>
-            <div className="table__td">
-              <div className="table__duration">90</div>
-            </div>
-            <div className="table__td">2 PIXP</div>
-            <div className="table__td">
-              <button className="table__btn table__btn--stake">STAKE</button>
-            </div>
-          </div>
-          <div className="table__tr">
-            <div className="table__td">
-              <img
-                src="assets/images/UserHome/bnb.png"
-                className="table__icon"
-                alt=""
-              />
-              BNB
-            </div>
-            <div className="table__td">Crypto Box</div>
-            <div className="table__td">7.8%</div>
-            <div className="table__td">
-              <div className="table__duration">90</div>
-            </div>
-            <div className="table__td">2 PIXP</div>
-            <div className="table__td">
-              <button className="table__btn table__btn--stake">STAKE</button>
-            </div>
-          </div>
-          <div className="table__tr">
-            <div className="table__td">
-              <img
-                src="assets/images/UserHome/bnb.png"
-                className="table__icon"
-                alt=""
-              />
-              BNB
-            </div>
-            <div className="table__td">Crypto Box</div>
-            <div className="table__td">7.8%</div>
-            <div className="table__td">
-              <div className="table__duration">90</div>
-            </div>
-            <div className="table__td">2 PIXP</div>
-            <div className="table__td">
-              <button className="table__btn table__btn--stake">STAKE</button>
-            </div>
-          </div>
-          <div className="table__tr">
-            <div className="table__td">
-              <img
-                src="assets/images/UserHome/bnb.png"
-                className="table__icon"
-                alt=""
-              />
-              BNB
-            </div>
-            <div className="table__td">Crypto Box</div>
-            <div className="table__td">7.8%</div>
-            <div className="table__td">
-              <div className="table__duration">90</div>
-            </div>
-            <div className="table__td">2 PIXP</div>
-            <div className="table__td">
-              <button className="table__btn table__btn--stake">STAKE</button>
-            </div>
-          </div>
-          <div className="table__tr">
-            <div className="table__td">
-              <img
-                src="assets/images/UserHome/bnb.png"
-                className="table__icon"
-                alt=""
-              />
-              BNB
-            </div>
-            <div className="table__td">Crypto Box</div>
-            <div className="table__td">7.8%</div>
-            <div className="table__td">
-              <div className="table__duration">90</div>
-            </div>
-            <div className="table__td">2 PIXP</div>
-            <div className="table__td">
-              <button className="table__btn table__btn--stake">STAKE</button>
-            </div>
-          </div>
-          <div className="table__tr">
-            <div className="table__td">
-              <img
-                src="assets/images/UserHome/bnb.png"
-                className="table__icon"
-                alt=""
-              />
-              BNB
-            </div>
-            <div className="table__td">Crypto Box</div>
-            <div className="table__td">7.8%</div>
-            <div className="table__td">
-              <div className="table__duration">90</div>
-            </div>
-            <div className="table__td">2 PIXP</div>
-            <div className="table__td">
-              <button className="table__btn table__btn--stake">STAKE</button>
-            </div>
-          </div>
-          <div className="table__tr">
-            <div className="table__td">
-              <img
-                src="assets/images/UserHome/bnb.png"
-                className="table__icon"
-                alt=""
-              />
-              BNB
-            </div>
-            <div className="table__td">Crypto Box</div>
-            <div className="table__td">7.8%</div>
-            <div className="table__td">
-              <div className="table__duration">90</div>
-            </div>
-            <div className="table__td">2 PIXP</div>
-            <div className="table__td">
-              <button className="table__btn table__btn--stake">STAKE</button>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div className="overflow-x-auto relative mt-10">
+        <table className="table-auto">
+          <thead>
+            <tr>
+              <td className="text-gray-500 w-1/5">Token</td>
+              <td className="text-gray-500 w-1/5 px-6">Game</td>
+              <td className="text-gray-500 w-1/5 px-6">Invest</td>
+              <td className="text-gray-500 w-1/5 px-6">Duration</td>
+              <td className="text-gray-500 w-1/5 px-6">Minimum</td>
+              <td className="text-gray-500" />
+            </tr>
+          </thead>
+          <tbody className="px-4">
+            {stakingList.map((staking, idx) => {
+              return (
+                <tr key={idx}>
+                  <td className="py-3">
+                    <div className="flex gap-2 items-center">
+                      <img src={staking.img} alt="token" />
+                      <div className="text-lg">{staking.name}</div>
+                    </div>
+                  </td>
+                  <td className="px-6">
+                    <div className="flex text-lg items-center">{staking.game}</div>
+                  </td>
+                  <td className="px-6">
+                    <div className="flex text-app-green items-center">{staking.invest}%</div>
+                  </td>
+                  <td className="px-6">
+                    <div className="flex items-center bg-app-black-duration px-6 py-1 rounded-md w-max">{staking.duration}</div>
+                  </td>
+                  <td className="px-6">
+                    <div className="flex items-center text-lg">{staking.minimum}</div>
+                  </td>
+                  <td className="px-6">
+                    <div className="flex items-center text-xl bg-app-green px-6 py-1 rounded-md">STAKE</div>
+                  </td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );
 };
+
 export default Stacking;
