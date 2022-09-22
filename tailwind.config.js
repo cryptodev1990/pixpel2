@@ -9,7 +9,6 @@ module.exports = {
         '1xs': '480px',
         'xs': '560px',
         'preferencemd': '820px',
-
       },
       backgroundColor: {
         app: {

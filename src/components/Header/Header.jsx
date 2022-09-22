@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+import Market from "./Market";
 import { useNavigate } from "react-router-dom";
 
 let typeModal = "register",
@@ -128,12 +129,7 @@ const Header = (props) => {
           <nav className="menu">
             <ul className="menu__list">
               <li className="menu__item">
-                <div
-                  className="menu__link cursor-pointer"
-                  onClick={() => navigate("/nft-market")}
-                >
-                  Market
-                </div>
+                <Market />
               </li>
               <li className="menu__item">
                 <div
