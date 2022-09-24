@@ -20,7 +20,7 @@ const CreateNFT = () => {
 
   return (
     <>
-      <div className="flex flex-col px-28 pb-40">
+      <div className="flex flex-col px-28 pb-20">
         <div className="text-3xl gap-12 mb-8">Create a New NFT</div>
         <div className="flex gap-16 mb-3">
           <img src={NFT} alt="NFT" className="rounded-md w-7/12 h-137"></img>

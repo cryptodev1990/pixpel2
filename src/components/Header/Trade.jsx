@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Market = () => {
+const Trade = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ const Market = () => {
       onClick={() => setShowDropDown(!showDropDown)}
     >
       <div className="flex px-5 gap-1 items-center justify-between">
-        <div>Market</div>
+        <div>Trade</div>
         <svg
           className="w-5 h-5"
           fill="none"
@@ -28,23 +28,23 @@ const Market = () => {
       </div>
       <div className="relative">
         {showDropDown ? (
-          <div className="absolute inset-8 left-3 z-10">
+          <div className="absolute inset-8 left-1 z-10">
             <div
               className="fixed inset-0 w-full h-full"
               onClick={() => setShowDropDown(!showDropDown)}
             />
-            <div className="flex flex-col rounded-b-md bg-app-black w-max text-lg">
+            <div className="flex flex-col rounded-b-md bg-app-black text-lg w-max">
               <div
                 className="relative flex justify-start px-5 border-b-2 border-app-black py-1 hover:text-app-blue"
-                onClick={() => navigate("/nft-market")}
+                onClick={() => navigate("/swap-master")}
               >
-                NFT
+                Swap
               </div>
               <div
                 className="relative flex justify-start px-5 py-1 hover:text-app-blue"
-                onClick={() => navigate("/game-market")}
+                onClick={() => navigate("/exchange")}
               >
-                Game
+                CEX
               </div>
             </div>
           </div>
@@ -54,4 +54,4 @@ const Market = () => {
   );
 };
 
-export default Market;
+export default Trade;

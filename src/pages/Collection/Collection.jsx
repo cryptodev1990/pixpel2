@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const Collection = () => {
   const navigate = useNavigate();
   return (
-    <div className="px-28 pb-32 flex flex-col">
+    <div className="px-28 pb-20 flex flex-col">
       <div className="text-3xl mb-8">Create a Collection</div>
       <div className="flex justify-between gap-12 mb-8">
         <div className="flex pl-12 py-16 rounded-lg gap-8 bg-app-black w-1/2">

@@ -26,7 +26,14 @@ const NFTMarket = () => {
     setGameClicked(!gameClicked);
   };
   return (
-    <div className="flex flex-col pb-40 2xl:px-28 xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8">
+    <div
+      className={
+        (cartClicked
+          ? "2xl:pl-28 xl:pl-24 lg:pl-20 md:pl-16 sm:pl-12 pl-8"
+          : "2xl:px-28 xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8") +
+        " flex flex-col pb-20"
+      }
+    >
       <div className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-lg mb-6 font-medium">
         NFT Marketplace
       </div>
@@ -42,7 +49,6 @@ const NFTMarket = () => {
             </div>
             <div
               className={
-                
                 "w-41 flex bg-app-black gap-2 rounded-md items-center justify-center cursor-pointer active:bg-app-black-light"
               }
               onClick={handleGameClick}
@@ -113,8 +119,8 @@ const NFTMarket = () => {
           <div
             className={
               (cartClicked
-                ? "grid-cols-5"
-                : "3xl1:grid-cols-8 2xl1:grid-cols-7 xl1:grid-cols-6 lg1:grid-cols-5 md1:grid-cols-4 sm1:grid-cols-3 1xs:grid-cols-2 grid-cols-1") +
+                ? "5xl:grid-cols-10 3xl1:grid-cols-6 2xl1:grid-cols-5 xl1:grid-cols-4 lg1:grid-cols-3 md1:grid-cols-2 grid-cols-1"
+                : "5xl:grid-cols-12 3xl1:grid-cols-8 2xl1:grid-cols-7 xl1:grid-cols-6 lg1:grid-cols-5 md1:grid-cols-4 sm1:grid-cols-3 1xs:grid-cols-2 grid-cols-1") +
               " grid gap-3"
             }
           >

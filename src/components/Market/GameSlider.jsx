@@ -11,14 +11,23 @@ const GameSlider = ({ cartClicked }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: !cartClicked ? 10 : 7,
+    slidesToShow: !cartClicked ? 12 : 10,
     slidesToScroll: 1,
     responsive: [
+      {
+        breakpoint: 3440,
+        settings: {
+          slidesToShow: !cartClicked ? 12 : 10,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
       {
         breakpoint: 1920,
         settings: {
           slidesToShow: !cartClicked ? 8 : 6,
-          slidesToScroll: 8,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -26,8 +35,8 @@ const GameSlider = ({ cartClicked }) => {
       {
         breakpoint: 1680,
         settings: {
-          slidesToShow: !cartClicked ? 7 : 5,
-          slidesToScroll: 7,
+          slidesToShow: !cartClicked ? 6 : 5,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -35,8 +44,8 @@ const GameSlider = ({ cartClicked }) => {
       {
         breakpoint: 1366,
         settings: {
-          slidesToShow: !cartClicked ? 6 : 4,
-          slidesToScroll: 6,
+          slidesToShow: !cartClicked ? 5 : 4,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -44,8 +53,8 @@ const GameSlider = ({ cartClicked }) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: !cartClicked ? 5 : 3,
-          slidesToScroll: 5,
+          slidesToShow: !cartClicked ? 4 : 3,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -54,7 +63,7 @@ const GameSlider = ({ cartClicked }) => {
         breakpoint: 768,
         settings: {
           slidesToShow: !cartClicked ? 3 : 2,
-          slidesToScroll: 3,
+          slidesToScroll: 2,
           initialSlide: 2
         }
       },

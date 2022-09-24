@@ -20,6 +20,7 @@ import Developer from "./Developer/Developer";
 import MyCollection from "./MyCollection/MyCollection";
 import MysteryBox from "./MysteryBox/MysteryBox";
 import GameLanding from "./GameLanding/GameLanding";
+import StakingPortfolio from "./StakingPortfolio/StakingPortfolio";
 
 export {
     AddressManagement,
@@ -43,5 +44,6 @@ export {
     Developer,
     MyCollection,
     MysteryBox,
-    GameLanding
+    GameLanding,
+    StakingPortfolio
 }

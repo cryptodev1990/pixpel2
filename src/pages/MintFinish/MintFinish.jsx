@@ -15,7 +15,7 @@ const MintFinish = () => {
   const [showFixPriceModal, setShowFixPriceModal] = useState(false);
   return (
     <>
-      <div className="flex flex-col px-28 py-10">
+      <div className="flex flex-col px-28 pb-20">
         <div className="flex gap-12 justify-between mb-20">
           <div className="flex w-1/2">
             <img src={Image} alt="NFT" className="w-full" />

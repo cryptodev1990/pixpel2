@@ -26,7 +26,14 @@ const GameMarket = () => {
     setGameClicked(!gameClicked);
   };
   return (
-    <div className="flex flex-col pb-40 2xl:px-28 xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8">
+    <div
+      className={
+        (cartClicked
+          ? "2xl:pl-28 xl:pl-24 lg:pl-20 md:pl-16 sm:pl-12 pl-8"
+          : "2xl:px-28 xl:px-24 lg:px-20 md:px-16 sm:px-12 px-8") +
+        " flex flex-col pb-20"
+      }
+    >
       <div className="2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-lg mb-6 font-medium">
         Game Marketplace
       </div>
@@ -107,11 +114,14 @@ const GameMarket = () => {
       <div className="flex gap-8">
         <div className={cartClicked ? "w-4/5" : "w-full"}>
           <div className={(gameClicked ? "" : "hidden") + " mb-8"}>
-            <GameSlider number={cartClicked ? 5 : 7} />
+            <GameSlider cartClicked={cartClicked} />
           </div>
           <div
             className={
-              (cartClicked ? "grid-cols-4" : "2xl1:grid-cols-5 xl1:grid-cols-4 lg1:grid-cols-3 sm1:grid-cols-2 grid-cols-1") + " grid gap-3"
+              (cartClicked
+                ? "5xl:grid-cols-10 3xl1:grid-cols-5 2xl1:grid-cols-4 xl1:grid-cols-3 lg1:grid-cols-2 grid-cols-1"
+                : "5xl:grid-cols-12 3xl1:grid-cols-6 2xl1:grid-cols-5 xl1:grid-cols-4 lg1:grid-cols-3 sm1:grid-cols-2 grid-cols-1") +
+              " grid gap-4"
             }
           >
             {GameCardList.map((game, idx) => {

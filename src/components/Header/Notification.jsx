@@ -11,7 +11,7 @@ const Notification = () => {
       className="cursor-pointer"
       onClick={() => setShowDropDown(!showDropDown)}
     >
-      <div className="flex pr-5 gap-1 items-center justify-between">
+      <div className="flex items-center justify-between">
         <img src={notification} alt="notification" />
       </div>
       <div className="relative">
