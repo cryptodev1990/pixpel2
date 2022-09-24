@@ -11,7 +11,7 @@ const GameCard = ({ data }) => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div className="game-card">
+      <div className="game-card xs:px-3 px-1 py-3">
         <div className="game-card__top">
           <div
             className="game-card__btn game-card__btn--to-cart cursor-pointer"

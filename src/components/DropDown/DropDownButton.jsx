@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const DropDownButton = ({
   initialContent,
@@ -42,11 +41,7 @@ const DropDownButton = ({
         }
         onClick={handleDropDown}
       >
-        <div
-          className={
-            "flex px-5 rounded-xl gap-3 items-center justify-between py-4"
-          }
-        >
+        <div className="flex px-5 rounded-xl gap-3 items-center justify-between py-4">
           <div className={font + " font-medium"}>{selectedContent}</div>
           <div className="flex">
             <svg

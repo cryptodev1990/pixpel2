@@ -29,8 +29,8 @@ const CoinTable = (props) => {
             <td className="text-gray-400 w-1/6 px-6">Coin</td>
             <td className="text-gray-400 w-1/6 px-6">Total</td>
             <td className="text-gray-400 px-6">Available</td>
-            <td className="text-gray-400 px-6">In Orders</td>
-            <td className="text-gray-400 px-6">PIXP Value</td>
+            <td className="text-gray-400 px-6"><div className="text-gray-400 w-max">In Orders</div></td>
+            <td className="text-gray-400 px-6"><div className="text-gray-400 w-max">PIXP Value</div></td>
             <td className="text-gray-400 w-1/6 px-6">Action</td>
           </tr>
         </thead>
@@ -45,11 +45,11 @@ const CoinTable = (props) => {
                     : ""
                 }
               >
-                <td className="py-5 px-6">{menu.Coin}</td>
-                <td className="px-6">{menu.Total}</td>
-                <td className="px-6">{menu.Available}</td>
-                <td className="px-6">{menu.Orders}</td>
-                <td className="px-6">{menu.PIXP}</td>
+                <td className="py-5 px-6"><div className="w-max">{menu.Coin}</div></td>
+                <td className="px-6"><div className="w-max">{menu.Total}</div></td>
+                <td className="px-6"><div className="w-max">{menu.Available}</div></td>
+                <td className="px-6"><div className="w-max">{menu.Orders}</div></td>
+                <td className="px-6"><div className="w-max">{menu.PIXP}</div></td>
                 <td className="px-6">
                   <div className="flex gap-4">
                     <SwapButton title="Swap" handleClick={handleSwapClick} />

@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 const Market = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const navigate = useNavigate();
-  const handleDropDown = () => {
-    setShowDropDown(!showDropDown);
-  };
+
   return (
-    <div className="cursor-pointer" onClick={handleDropDown}>
+    <div
+      className="cursor-pointer"
+      onClick={() => setShowDropDown(!showDropDown)}
+    >
       <div className="flex px-5 gap-1 items-center justify-between">
         <div>Market</div>
         <svg
@@ -30,7 +31,7 @@ const Market = () => {
           <div className="absolute inset-0 z-10">
             <div
               className="fixed inset-0 w-full h-full"
-              onClick={handleDropDown}
+              onClick={() => setShowDropDown(!showDropDown)}
             />
             <div className="flex flex-col rounded-b-md bg-app-black text-base">
               <div

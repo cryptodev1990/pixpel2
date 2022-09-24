@@ -22,6 +22,7 @@ const ListNFTModal = ({ showModal, setShowModal }) => {
                 <TokenDropdownInput
                   initialContent={fromTokenList[0]}
                   contentList={fromTokenList}
+                  backgroundColor="bg-app-black"
                   Max={true}
                 />
                 <div className="flex text justify-end text-gray-400 mt-2">
@@ -31,6 +32,7 @@ const ListNFTModal = ({ showModal, setShowModal }) => {
                 <DropDownButton
                   initialContent={durationList[0].title}
                   contentList={durationList}
+                  backgroundColor="bg-app-black"
                 />
                 <div className="text-xl mt-6 mb-3">Quantity</div>
                 <div className="flex justify-between bg-app-black rounded py-5 px-5 mb-2">

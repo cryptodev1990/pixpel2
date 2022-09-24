@@ -9,7 +9,7 @@ const TransactionTable = (props) => {
           <tr>
             <td className="text-gray-400 w-1/6 px-6">Time</td>
             <td className="text-gray-400 w-1/6 px-6">Type</td>
-            <td className="text-gray-400 w-1/6 px-6">Deposit wallet</td>
+            <td className="w-1/6 px-6"><div className="text-gray-400 w-max">Deposit wallet</div></td>
             <td className="text-gray-400 w-1/6 px-6">Asset</td>
             <td className="text-gray-400 w-1/6 px-6">Amount</td>
             <td className="text-gray-400 w-1/6 px-6">TxID</td>

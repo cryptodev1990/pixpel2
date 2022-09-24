@@ -8,7 +8,13 @@ module.exports = {
         '2xs': '375px',
         '1xs': '480px',
         'xs': '560px',
+        'sm1': '600px',
+        'md1': '769px',
         'preferencemd': '820px',
+        'lg1': '1000px',
+        'xl1': '1281px',
+        '2xl1': '1640px',
+        '3xl1': '1920px',
       },
       backgroundColor: {
         app: {

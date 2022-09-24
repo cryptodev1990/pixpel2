@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c2bfacaa.css",
-    "main.js": "/static/js/main.9638eb08.js",
+    "main.css": "/static/css/main.669949eb.css",
+    "main.js": "/static/js/main.c606672e.js",
     "static/media/main__bg.jpg": "/static/media/main__bg.3d2ca3cd9c52e772dead.jpg",
     "static/media/landing1.png": "/static/media/landing1.55b094fb7b6515f477ba.png",
     "static/media/nft-1.jpg": "/static/media/nft-1.448acf01f5f1549f6820.jpg",
@@ -12,7 +12,7 @@
     "static/media/nft-3.png": "/static/media/nft-3.7eedf558e946f3d368f1.png",
     "static/media/plane.png": "/static/media/plane.8f9d5009a315de997c04.png",
     "static/media/cryptoadventures.png": "/static/media/cryptoadventures.9225af0e1d6119859f2c.png",
-    "static/media/flower.svg": "/static/media/flower.c88218678612c88b752b8f70dfaee055.svg",
+    "static/media/flower.svg": "/static/media/flower.d1d7c1fec6785016bb74f6e95e31e9d3.svg",
     "static/media/cryptobots.png": "/static/media/cryptobots.3c03b1605a20d08b44bb.png",
     "static/media/dungeons.png": "/static/media/dungeons.8ac0c285410429caa790.png",
     "static/media/graph.PNG": "/static/media/graph.932742628ff41f85fc2c.PNG",
@@ -30,19 +30,22 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/wallet.svg": "/static/media/wallet.87369760d62d925398a19d5b3f69ce32.svg",
     "static/media/facebook.svg": "/static/media/facebook.04aa4079abfbaa82fe3dfabdfbf07ab9.svg",
-    "static/media/spin.svg": "/static/media/spin.f4400bdc38060c9f67f8580f8147fb33.svg",
-    "static/media/cart.svg": "/static/media/cart.875224dc686892a38344bd41fd6c3253.svg",
+    "static/media/spin.svg": "/static/media/spin.df92062bf6bae2d682dd5b681db60cc9.svg",
+    "static/media/cart.svg": "/static/media/cart.d3d0a17e2993c518e02129ce56ddc041.svg",
     "static/media/exclaimnation.svg": "/static/media/exclaimnation.7bbdc9d0b7c8282545986df3c9419484.svg",
+    "static/media/notification.svg": "/static/media/notification.afcdf75151c945b866024adbd5d03393.svg",
+    "static/media/help.svg": "/static/media/help.bd3320f399ded8d7233dac197021bbec.svg",
     "index.html": "/index.html",
     "static/media/Union.svg": "/static/media/Union.d884d40de59cdaccdf11e3813baac511.svg",
-    "static/media/Mail.svg": "/static/media/Mail.94645815086e5146117ad6d3118b171a.svg",
-    "static/media/clock.svg": "/static/media/clock.55739bce2d10d5437c4d472afb0da13f.svg",
-    "static/media/ok.svg": "/static/media/ok.0d340f8b7f7e2af5dc0c080d79591ba1.svg",
-    "main.c2bfacaa.css.map": "/static/css/main.c2bfacaa.css.map",
-    "main.9638eb08.js.map": "/static/js/main.9638eb08.js.map"
+    "static/media/Mail.svg": "/static/media/Mail.f37158b2814985879e4dc9e6e17d73b7.svg",
+    "static/media/search.svg": "/static/media/search.596e329f5b23b192b474a9c716f34a12.svg",
+    "static/media/clock.svg": "/static/media/clock.e44f3af62bcee713b41b5094e0f02681.svg",
+    "static/media/ok.svg": "/static/media/ok.5c5f1ce2adec5eb6afbf478cf6183db9.svg",
+    "main.669949eb.css.map": "/static/css/main.669949eb.css.map",
+    "main.c606672e.js.map": "/static/js/main.c606672e.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2bfacaa.css",
-    "static/js/main.9638eb08.js"
+    "static/css/main.669949eb.css",
+    "static/js/main.c606672e.js"
   ]
 }

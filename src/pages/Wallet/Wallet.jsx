@@ -51,7 +51,7 @@ const Wallet = () => {
   };
   return (
     <>
-      <div className="flex xl:flex-row flex-col xl:px-32 xs:px-10 px-2 w-full min-h-screen gap-8 xl:pb-80 pb-32">
+      <div className="flex xl:flex-row flex-col xl:px-32 xs:px-10 px-2 w-full min-h-screen gap-8 xl:pb-40 pb-20">
         <div className="flex flex-col xl:w-1/5 w-full bg-app-black h-max rounded-xl px-4 py-8 gap-2 xl:text-base">
           {menuList.map((menu, idx) => {
             return (

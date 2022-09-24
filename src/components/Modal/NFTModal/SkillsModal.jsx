@@ -57,8 +57,8 @@ const SkillsModal = ({ showModal, setShowModal }) => {
                         placeholder="50"
                       />
                     </div>
-                    <div className="flex flex-col w-1/6">
-                      <div className="mb-3 bg-app-red-close px-5 py-5 rounded">
+                    <div className="flex flex-col w-1/6 gap-3 items-center">
+                      <div className="bg-app-red-close px-5 py-5 rounded">
                         <svg
                           className="h-7 w-7"
                           fill="none"
@@ -73,7 +73,7 @@ const SkillsModal = ({ showModal, setShowModal }) => {
                           />
                         </svg>
                       </div>
-                      <div className="mb-3 bg-app-red-close px-5 py-5 rounded">
+                      <div className="bg-app-red-close px-5 py-5 rounded">
                         <svg
                           className="h-7 w-7"
                           fill="none"
