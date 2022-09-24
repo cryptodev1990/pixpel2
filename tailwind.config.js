@@ -15,6 +15,7 @@ module.exports = {
         'xl1': '1281px',
         '2xl1': '1640px',
         '3xl1': '1920px',
+        '5xl': '3420px',
       },
       backgroundColor: {
         app: {
