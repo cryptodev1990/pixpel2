@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Overview from "./Overview";
 
 const StakingPortfolio = () => {
   const [selected, setSelected] = useState(0);
@@ -35,10 +36,10 @@ const StakingPortfolio = () => {
             />
           </svg>
         </div>
-        <div className="text-4xl font-semibold">Staking Portfolio</div>
+        <div className="text-4xl font-semibold">STAKING PORTFOLIO</div>
         <div />
       </div>
-      <div className="flex justify-center gap-4">
+      <div className="flex justify-center gap-4 mb-32">
         <div
           className={
             (selected === 0 ? "bg-app-blue" : "bg-app-black") +
@@ -67,6 +68,7 @@ const StakingPortfolio = () => {
           Promotion
         </div>
       </div>
+      <Overview />
     </div>
   );
 };
