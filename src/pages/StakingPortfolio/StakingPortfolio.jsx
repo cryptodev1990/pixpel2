@@ -2,22 +2,39 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Overview from "./Overview";
 import Create from "./Create";
+import Promotion from "./Promotion";
+import { useAppContext } from "../../contexts/AppContext";
+import { useEffect } from "react";
 
 const StakingPortfolio = () => {
-  const [selected, setSelected] = useState(0);
+  const context = useAppContext();
   const [temp, setTemp] = useState(<Overview />);
 
   const handleOverviewClick = () => {
-    setSelected(0);
-    setTemp(<Overview />);
+    context.setSelectStaking(0);
   };
   const handleCreateClick = () => {
-    setSelected(1);
-    setTemp(<Create />);
+    context.setSelectStaking(1);
   };
   const handlePromotionClick = () => {
-    setSelected(2);
+    context.setSelectStaking(2);
   };
+
+  useEffect(() => {
+    switch (context.selectStaking) {
+      case 0:
+        setTemp(<Overview />);
+        break;
+      case 1:
+        setTemp(<Create />);
+        break;
+      case 2:
+        setTemp(<Promotion />);
+        break;
+      default:
+        break;
+    }
+  }, [context.selectStaking]);
   const navigate = useNavigate();
   return (
     <div className="flex flex-col px-32">
@@ -46,7 +63,7 @@ const StakingPortfolio = () => {
       <div className="flex justify-center gap-4 mb-32">
         <div
           className={
-            (selected === 0 ? "bg-app-blue" : "bg-app-black") +
+            (context.selectStaking === 0 ? "bg-app-blue" : "bg-app-black") +
             " px-8 py-4 font-medium rounded-md hover:bg-app-blue cursor-pointer"
           }
           onClick={handleOverviewClick}
@@ -55,7 +72,7 @@ const StakingPortfolio = () => {
         </div>
         <div
           className={
-            (selected === 1 ? "bg-app-blue" : "bg-app-black") +
+            (context.selectStaking === 1 ? "bg-app-blue" : "bg-app-black") +
             " px-8 py-4 font-medium rounded-md hover:bg-app-blue cursor-pointer"
           }
           onClick={handleCreateClick}
@@ -64,7 +81,7 @@ const StakingPortfolio = () => {
         </div>
         <div
           className={
-            (selected === 2 ? "bg-app-blue" : "bg-app-black") +
+            (context.selectStaking === 2 ? "bg-app-blue" : "bg-app-black") +
             " px-8 py-4 font-medium rounded-md hover:bg-app-blue cursor-pointer"
           }
           onClick={handlePromotionClick}

@@ -63,23 +63,33 @@ const Create = () => {
         </div>
       </div>
       <div className="bg-app-black flex flex-col px-12 py-12 w-3/4 rounded-md">
-        <div className="text-4xl mb-6 font-medium">CREATE STAKING</div>
-        <div className="flex gap-5 mb-12">
-          <div
-            className={
-              (locked ? "bg-app-blue" : "bg-app-black-button") +
-              " px-8 py-4 rounded-md"
-            }
-          >
-            LOCKED
+        <div className={(locked ? "mb-4" : "mb-12") + " text-4xl font-medium"}>
+          CREATE STAKING
+        </div>
+        <div className="flex justify-between items-end gap-5 mb-5">
+          <div className="flex gap-5 w-1/2">
+            <div
+              className={
+                (locked ? "bg-app-blue" : "bg-app-black-button") +
+                " px-8 py-4 rounded-md"
+              }
+            >
+              LOCKED
+            </div>
+            <div
+              className={
+                (locked ? "bg-app-black-button" : "bg-app-blue") +
+                " px-8 py-4 rounded-md"
+              }
+            >
+              UNLOCKED
+            </div>
           </div>
           <div
-            className={
-              (locked ? "bg-app-black-button" : "bg-app-blue") +
-              " px-8 py-4 rounded-md"
-            }
+            className={(locked ? "" : "hidden") + " flex flex-col w-1/2"}
           >
-            UNLOCKED
+            <div>Token Name:</div>
+            <input className="bg-app-black-button rounded h-16" />
           </div>
         </div>
         <div className="flex justify-between gap-5 items-center">
@@ -102,7 +112,7 @@ const Create = () => {
                   120
                 </div>
               </div>
-              <div className="flex flex-col gap-1 w-1/3">
+              <div className={(locked ? "hidden" : "") + " flex flex-col gap-1 w-1/3"}>
                 <div>Early FEE:</div>
                 <div className="bg-app-black-button rounded-md flex justify-center py-5">
                   0.8%

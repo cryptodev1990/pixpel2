@@ -73,6 +73,8 @@ module.exports = {
       gap: {
         'value': "3px",
         "time": "106px",
+        "intervaly": "35px",
+        "intervalx": "17px",
       },
       width: {
         '13': '53px',
@@ -95,6 +97,7 @@ module.exports = {
         '133': "530px",
         '155': '619px',
         '158': '630px',
+        '184': '734px',
         '227': '1307px',
       },
       height: {

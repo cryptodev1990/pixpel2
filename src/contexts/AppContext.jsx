@@ -5,11 +5,14 @@ export const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectStaking, setSelectStaking] = useState(0);
   return (
     <AppContext.Provider 
       value={{ 
         selectedIndex,
+        selectStaking,
         setSelectedIndex,
+        setSelectStaking,
       }}
     >
       {children}
