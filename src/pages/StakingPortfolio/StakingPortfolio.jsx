@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Overview from "./Overview";
+import Create from "./Create";
 
 const StakingPortfolio = () => {
   const [selected, setSelected] = useState(0);
+  const [temp, setTemp] = useState(<Overview />);
 
   const handleOverviewClick = () => {
     setSelected(0);
+    setTemp(<Overview />);
   };
   const handleCreateClick = () => {
     setSelected(1);
+    setTemp(<Create />);
   };
   const handlePromotionClick = () => {
     setSelected(2);
@@ -68,7 +72,7 @@ const StakingPortfolio = () => {
           Promotion
         </div>
       </div>
-      <Overview />
+      {temp}
     </div>
   );
 };
