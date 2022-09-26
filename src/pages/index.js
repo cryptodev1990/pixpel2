@@ -21,6 +21,7 @@ import MyCollection from "./MyCollection/MyCollection";
 import MysteryBox from "./MysteryBox/MysteryBox";
 import GameLanding from "./GameLanding/GameLanding";
 import StakingPortfolio from "./StakingPortfolio/StakingPortfolio";
+import TokenRoom from "./TokenRoom/TokenRoom";
 
 export {
     AddressManagement,
@@ -45,5 +46,6 @@ export {
     MyCollection,
     MysteryBox,
     GameLanding,
-    StakingPortfolio
+    StakingPortfolio,
+    TokenRoom
 }

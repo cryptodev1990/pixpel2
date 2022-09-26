@@ -24,7 +24,8 @@ import {
   Developer,
   BuyCrypto,
   GameLanding,
-  StakingPortfolio
+  StakingPortfolio,
+  TokenRoom
 } from "./pages/index"
 
 import { Header, Footer } from "./components";
@@ -73,7 +74,7 @@ function App() {
         <Route path="/buycrypto" element={<BuyCrypto />} />
         <Route path="/gamelanding" element={<GameLanding />} />
         <Route path="/stakingportfolio" element={<StakingPortfolio />} />
-        
+        <Route path="/tokenroom" element={<TokenRoom />} />
         <Route path="*" element={<Test />} />
       </Routes>
       <Footer />
