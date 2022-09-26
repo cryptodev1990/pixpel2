@@ -35,6 +35,7 @@ module.exports = {
           red: {
             DEFAULT: "#F6465D",
             close: "#5F303D",
+            unlocked: "rgba(246, 70, 93, 0.15)",
           },
           purple: {
             DEFAULT: '#7B61FF',
