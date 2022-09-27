@@ -231,7 +231,7 @@ const Create = () => {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    strokelinecap="round"
+                    strokeLinecap="round"
                     strokeLinejoin="round"
                   >
                     {" "}

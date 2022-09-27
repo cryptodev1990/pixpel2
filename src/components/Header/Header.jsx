@@ -417,8 +417,11 @@ const Header = (props) => {
           window.location.pathname === "/collection" ||
           window.location.pathname === "/mysterybox" ||
           window.location.pathname === "/stakingportfolio" ||
-          window.location.pathname === "/developerwallet" ||
           window.location.pathname === "/finishmint" ||
+          window.location.pathname === "/gamelanding" ||
+          window.location.pathname === "/developerwallet" ||
+          window.location.pathname === "/tokenroom/mint" ||
+          window.location.pathname === "/tokenroom/burn" ||
           window.location.pathname === "/tokenroom" ? (
             <DeveloperHeader />
           ) : (

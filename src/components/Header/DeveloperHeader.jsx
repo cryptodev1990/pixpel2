@@ -47,7 +47,7 @@ const DeveloperHeader = () => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:bg-app-black-button px-8 py-3 rounded-md text-app-blue w-max cursor-pointer">
+      <div className="hidden lg:flex bg-app-black-button px-8 py-3 rounded-md text-app-blue w-max cursor-pointer">
         Developer
       </div>
       <div className="hidden xl:flex gap-5 items-center">
