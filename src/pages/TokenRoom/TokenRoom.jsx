@@ -77,7 +77,7 @@ const TokenRoom = () => {
           </div>
           <div
             className={
-              (select === 2 ? "bg-app-blue" : "bg-app-black") +
+              (select === 3 ? "bg-app-blue" : "bg-app-black") +
               " px-8 py-4 font-medium rounded-md hover:bg-app-blue cursor-pointer"
             }
             onClick={handleOverviewClick}
