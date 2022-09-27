@@ -4,7 +4,7 @@ import IEODetail from "../../components/TokenRoom/IEODetail";
 const OfferIEO = () => {
   return (
     <>
-    <div className="flex justify-center text-2xl">VESTING SCHEDULE</div>
+    <div className="flex justify-center text-2xl">IEO  SCHEDULE</div>
       <div className="my-12 gap-5 flex flex-col">
         <IEODetail number={1} />
         <IEODetail number={2} />

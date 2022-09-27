@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Create from "./Create";
 import Supplies from "./Supplies";
 import Offer from "./Offer";
+import Overview from "./Overview";
 
 const TokenRoom = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const TokenRoom = () => {
   };
   const handleOverviewClick = () => {
     setSelect(3);
+    setTemp(<Overview />);
   };
   return (
     <div className="flex flex-col px-32">
