@@ -3,7 +3,7 @@ import ProfileCircle from "../../Profile/ProfilePlayer/ProfileCircle";
 
 const WalletOverview = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-8 justify-between w-full h-max py-8 px-5 bg-app-black rounded-lg">
+    <div className="flex flex-col lg:flex-row gap-8 justify-between w-full h-max py-8 px-10 bg-app-black rounded-lg">
       <div className="flex flex-col">
         <div className="text-3xl mb-8">WALLET OVERVIEW</div>
         <div className="text-sm text-gray-400 mb-4">Value Purchase</div>

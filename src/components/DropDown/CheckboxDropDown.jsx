@@ -14,7 +14,7 @@ const CheckboxDropDown = ({ initialContent, contentList, clicked }) => {
           }
           onClick={() => setShowDropDown(!showDropDown)}
         >
-          <div className="text-lg">{initialContent}</div>
+          <div>{initialContent}</div>
           <svg
             className="w-5 h-5"
             fill="none"
@@ -34,10 +34,10 @@ const CheckboxDropDown = ({ initialContent, contentList, clicked }) => {
             <div>
               <div
                 className="fixed inset-0 w-full h-full"
-                onClick={() => setShowDropDown(false)}
+                onClick={() => setShowDropDown(!showDropDown)}
               />
               <div className="inset-0">
-                <div className="fixed bg-app-black flex flex-col rounded-b-md gap-2 py-3 z-10">
+                <div className="absolute bg-app-black flex flex-col rounded-b-md gap-2 py-3 w-max z-10">
                   {contentList.map((content, idx) => {
                     return (
                       <div key={idx} className="flex gap-2 px-3 py-1">

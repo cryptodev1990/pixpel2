@@ -34,7 +34,7 @@ const ImageDropDownButton = (props) => {
       }
       onClick={handleDropDown}
     >
-      <div className="flex items-center justify-between px-7 py-4 rounded-md">
+      <div className="flex items-center justify-between px-6 py-4 rounded-md">
         <div className="flex gap-2 h-3/5 items-center">
           <img
             src={selectedContent.url}

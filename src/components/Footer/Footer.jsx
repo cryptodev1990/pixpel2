@@ -7,43 +7,43 @@ import Linkedin from "../../asssets/images/linkedin.svg";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col bg-app-black px-20 pt-16 pb-8">
-      <div className="header__logo cursor-pointer mb-12">
+    <div className="flex flex-col bg-app-black 2xl:px-20 xl:px-16 lg:px-12 md:px-9 sm:px-6 px-3 xl:pt-16 lg:pt-12 md:pt-9 sm:pt-6 pt-3 xl:pb-8 lg:pb-6 md:pb-4 pb-3 mt-10">
+      <div className="header__logo cursor-pointer xl:mb-12 lg:mb-9 md:mb-6 sm:mb-4 mb-3">
         <img src="assets/images/logo.svg" className="logo" alt="" />
       </div>
-      <div className="flex mb-20">
-        <div className="flex flex-col w-1/6">
-          <div className="text-2xl font-semibold mb-6">About Us</div>
-          <div className="flex flex-col gap-3">
+      <div className="grid xl1:grid-cols-6 md1:grid-cols-3 2xs:grid-cols-2 grid-cols-1 2xl:mb-20 xl:mb-16 lg:mb-12 md:mb-9 sm:mb-6 mb-3 gap-10">
+        <div className="flex flex-col">
+          <div className="text-2xl font-semibold xl:mb-6 md:mb-4 mb-2">About Us</div>
+          <div className="flex flex-col xl:gap-3 md:gap-2 gap-1">
             <div>Contact Us</div>
             <div>Copyright</div>
           </div>
         </div>
-        <div className="flex flex-col w-1/6">
-          <div className="text-2xl font-semibold mb-6">Products</div>
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-col">
+          <div className="text-2xl font-semibold xl:mb-6 md:mb-4 mb-2">Products</div>
+          <div className="flex flex-col xl:gap-3 md:gap-2 gap-1">
             <div>NFT</div>
             <div>Token</div>
             <div>Buy Crypto</div>
           </div>
         </div>
-        <div className="flex flex-col w-1/6">
-          <div className="text-2xl font-semibold mb-6">Service</div>
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-col">
+          <div className="text-2xl font-semibold xl:mb-6 md:mb-4 mb-2">Service</div>
+          <div className="flex flex-col xl:gap-3 md:gap-2 gap-1">
             <div>Staking</div>
             <div>Trade</div>
           </div>
         </div>
-        <div className="flex flex-col w-1/6">
-          <div className="text-2xl font-semibold mb-6">Support</div>
-          <div className="flex flex-col gap-3">
+        <div className="flex flex-col">
+          <div className="text-2xl font-semibold xl:mb-6 md:mb-4 mb-2">Support</div>
+          <div className="flex flex-col xl:gap-3 md:gap-2 gap-1">
             <div>Privacy Policy</div>
             <div>Terms of Use</div>
           </div>
         </div>
-        <div className="w-1/6"></div>
-        <div className="flex flex-col w-1/6">
-          <div className="text-2xl font-semibold mb-6">Community</div>
+        <div className="hidden xl:flex w-1/6"></div>
+        <div className="flex flex-col">
+          <div className="text-2xl font-semibold xl:mb-6 md:mb-4 mb-2">Community</div>
           <div className="flex flex-col gap-6">
             <div className="flex gap-9">
               <img src={Facebook} alt="facebook" className="w-7 rounded-full" />

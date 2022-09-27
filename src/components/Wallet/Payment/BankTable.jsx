@@ -9,8 +9,8 @@ const BankTable = () => {
       <thead>
         <tr>
           <td className="text-gray-400 px-6">Name</td>
-          <td className="text-gray-400 px-6">Bank Account</td>
-          <td className="text-gray-400 px-6">Bank Name</td>
+          <td className="px-6"><div className="text-gray-400 w-max">Bank Account</div></td>
+          <td className="px-6"><div className="text-gray-400 w-max">Bank Name</div></td>
           <td className="text-gray-400 w-1/12 px-6">Action</td>
         </tr>
       </thead>
@@ -25,7 +25,7 @@ const BankTable = () => {
                   : ""
               }
             >
-              <td className="py-5 px-6">{menu.name}</td>
+              <td className="py-5 px-6"><div className="w-max">{menu.name}</div></td>
               <td className="px-6">{menu.bankAccount}</td>
               <td className="px-6">{menu.bankName}</td>
               <td className="px-6">

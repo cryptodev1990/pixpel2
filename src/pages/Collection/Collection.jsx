@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const Collection = () => {
   const navigate = useNavigate();
   return (
-    <div className="px-28 pb-32 flex flex-col">
+    <div className="px-28 pb-20 flex flex-col">
       <div className="text-3xl mb-8">Create a Collection</div>
       <div className="flex justify-between gap-12 mb-8">
         <div className="flex pl-12 py-16 rounded-lg gap-8 bg-app-black w-1/2">
@@ -85,7 +85,7 @@ const Collection = () => {
           <DropDownButton
             initialContent={Category[0].title}
             contentList={Category}
-            backgroundColor="bg-app-black-button"
+            backgroundColor="bg-app-black"
           />
         </div>
         <div className="flex flex-col gap-4">
@@ -93,14 +93,14 @@ const Collection = () => {
           <DropDownButton
             initialContent={subCategory[0].title}
             contentList={subCategory}
-            backgroundColor="bg-app-black-button"
+            backgroundColor="bg-app-black"
           />
         </div>
         <div className="flex flex-col gap-4">
           <div className="text-lg">Blockchain:</div>
           <DropDownButton
             initialContent={Blockchain[0].title}
-            backgroundColor="bg-app-black-button"
+            backgroundColor="bg-app-black"
             contentList={Blockchain}
           />
         </div>

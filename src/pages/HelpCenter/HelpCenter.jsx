@@ -8,7 +8,7 @@ const HelpCenter = () => {
   const [showMessageBox, setShowMessageBox] = useState(false);
   return (
     <>
-      <div className="flex flex-col xl:px-32 lg:px-28 md:px-20 sm:px-12 px-4 py-8">
+      <div className="flex flex-col xl:px-32 lg:px-28 md:px-20 sm:px-12 px-4 pb-20">
         <div className="flex justify-between mb-10 sm:flex-row gap-6 flex-col">
           <div className="text-3xl">Help Center</div>
           <div className="flex gap-4 flex-col">

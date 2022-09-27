@@ -76,7 +76,10 @@ const TokenDropdownInput = ({
                     return (
                       <div
                         key={idx}
-                        className="relative flex flex-row items-center justify-start gap-5 px-5 py-3"
+                        className={
+                          bgColor +
+                          " relative flex flex-row items-center justify-start gap-5 px-5 py-3"
+                        }
                         onClick={() => {
                           selectHandleClick(content);
                         }}
@@ -110,7 +113,7 @@ const TokenDropdownInput = ({
           <line x1="12" y1="5" x2="12" y2="19" />
         </svg>
       </div>
-      <div className="flex-auto">
+      <div className={"flex-auto " + bgColor}>
         <input className={"w-full " + bgColor} />
       </div>
       {Max ? <div className="flex mx-5 text-blue-500">Max</div> : null}

@@ -107,8 +107,7 @@ const AddressManagement = () => {
   return (
     <>
       <div
-        className="grid grid-cols-1 gap-10 my-10 justify-items-center"
-        style={{ fontFamily: "Poppins" }}
+        className="grid grid-cols-1 gap-10 pb-10 justify-items-center"
       >
         <div className="flex flex-row justify-between w-5/6 gap-2 text-lg">
           <div className="flex flex-row items-center justify-center rounded-md bg-app-black h-14 w-44">

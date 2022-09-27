@@ -27,14 +27,14 @@ const LockedUnlocked = () => {
         <table className="table-auto">
           <thead>
             <tr>
-              <td className="text-gray-400 px-6">Game</td>
-              <td className="text-gray-400 px-6">Coin</td>
-              <td className="text-gray-400 px-6">Rewards</td>
-              <td className="text-gray-400 px-6">Staked Amount</td>
-              <td className="text-gray-400 px-6">Start Date</td>
-              <td className="text-gray-400 px-6">EST.APY</td>
-              <td className="text-gray-400 px-6">Locked Days</td>
-              <td className="text-gray-400 px-6">Invest Date</td>
+              <td><div className="text-gray-400 w-max">Game</div></td>
+              <td className="px-6"><div className="text-gray-400 w-max">Coin</div></td>
+              <td className="px-6"><div className="text-gray-400 w-max">Rewards</div></td>
+              <td className="px-6"><div className="text-gray-400 w-max">Staked Amount</div></td>
+              <td className="px-6"><div className="text-gray-400 w-max">Start Date</div></td>
+              <td className="px-6"><div className="text-gray-400 w-max">EST.APY</div></td>
+              <td className="px-6"><div className="text-gray-400 w-max">Locked Days</div></td>
+              <td className="px-6"><div className="text-gray-400 w-max">Invest Date</div></td>
               <td className="w-1/12"></td>
             </tr>
           </thead>
@@ -49,14 +49,14 @@ const LockedUnlocked = () => {
                       : ""
                   }
                 >
-                  <td className="py-5 px-6">{menu.Game}</td>
-                  <td className="px-6">{menu.Coin}</td>
-                  <td className="px-6">{menu.Rewards}</td>
-                  <td className="px-6">{menu.StakedAmount}</td>
-                  <td className="px-6">{menu.StartDate}</td>
-                  <td className="px-6">{menu.ESTAPY}</td>
-                  <td className="px-6">{menu.LockedDays}</td>
-                  <td className="px-6">{menu.InvestDate}</td>
+                  <td className="py-5"><div className="w-max">{menu.Game}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.Coin}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.Rewards}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.StakedAmount}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.StartDate}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.ESTAPY}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.LockedDays}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.InvestDate}</div></td>
                   <td className="px-6">
                     <UnlockButton />
                   </td>

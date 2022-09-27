@@ -150,13 +150,17 @@ const CardModal = ({ showModal, setShowModal, data }) => {
                         <tr>
                           <td className="text-gray-400 w-1/6 text-xs">Price</td>
                           <td className="text-gray-400 w-1/5 px-6 text-xs">
-                            USD Price
+                            <div className="text-gray-400 w-max">USD Price</div>
                           </td>
                           <td className="text-gray-400 w-1/4 px-6 text-xs">
-                            Floor Difference
+                            <div className="text-gray-400 w-max">
+                              Floor Differnece
+                            </div>
                           </td>
                           <td className="text-gray-400 w-1/6 px-6 text-xs">
-                            Expiration
+                            <div className="text-gray-400 w-max">
+                              Expiration
+                            </div>
                           </td>
                           <td className="text-gray-400 pl-6 text-xs">From</td>
                         </tr>
@@ -165,14 +169,26 @@ const CardModal = ({ showModal, setShowModal, data }) => {
                         {purchaseList.map((menu, idx) => {
                           return (
                             <tr key={idx}>
-                              <td className="py-2 text-xs">{menu.price}</td>
-                              <td className="px-6 text-xs">{menu.usd}</td>
-                              <td className="px-6 text-xs">{menu.floor}</td>
-                              <td className="px-6 text-xs">
-                                {menu.expiration}
+                              <td className="py-2">
+                                <div className="text-xs w-max">
+                                  {menu.price}
+                                </div>
+                              </td>
+                              <td className="px-6">
+                                <div className="text-xs w-max">{menu.usd}</div>
+                              </td>
+                              <td className="px-6">
+                                <div className="text-xs w-max">
+                                  {menu.floor}
+                                </div>
+                              </td>
+                              <td className="px-6">
+                                <div className="text-xs w-max">
+                                  {menu.expiration}
+                                </div>
                               </td>
                               <td className="pl-6">
-                                <div className="underline text-xs">
+                                <div className="underline text-xs w-max">
                                   {menu.from}
                                 </div>
                               </td>

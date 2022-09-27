@@ -23,27 +23,16 @@ import {
   MintFinish,
   Developer,
   BuyCrypto,
-  GameLanding
+  GameLanding,
+  StakingPortfolio,
+  TokenRoom,
+  Mint,
+  Burn,
+  DeveloperWallet
 } from "./pages/index"
 
 import { Header, Footer } from "./components";
 
-function About() {
-  return (
-    <>
-      <main>
-        <h2>Who are we?</h2>
-        <p>
-          That feels like an existential question, don't you
-          think?
-        </p>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </>
-  );
-}
 function Test() {
   return (
     <>
@@ -68,7 +57,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/nft-market" element={<NFTMarket />} />
         <Route path="/game-market" element={<GameMarket />} />
-        <Route path="/stacking" element={<Stacking />} />
+        <Route path="/staking" element={<Stacking />} />
         <Route path="/exchange" element={<Exchange />} />
         <Route path="/help-center" element={<HelpCenter />} />
         <Route path="/inventory" element={<Inventory />} />
@@ -87,6 +76,11 @@ function App() {
         <Route path="/mysterybox" element={<MysteryBox />} />
         <Route path="/buycrypto" element={<BuyCrypto />} />
         <Route path="/gamelanding" element={<GameLanding />} />
+        <Route path="/stakingportfolio" element={<StakingPortfolio />} />
+        <Route path="/tokenroom" element={<TokenRoom />} />
+        <Route path="/developerwallet" element={<DeveloperWallet />} />
+        <Route path="/tokenroom/mint" element={<Mint />} />
+        <Route path="/tokenroom/burn" element={<Burn />} />
         <Route path="*" element={<Test />} />
       </Routes>
       <Footer />

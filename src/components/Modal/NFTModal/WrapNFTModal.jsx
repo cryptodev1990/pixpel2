@@ -29,6 +29,7 @@ const WrapNFTModal = ({ showModal, setShowModal }) => {
                 <DropDownButton
                   initialContent={durationList[0].title}
                   contentList={durationList}
+                  backgroundColor="bg-app-black"
                 />
                 <div className="flex justify-center items-center mt-8">
                   <div

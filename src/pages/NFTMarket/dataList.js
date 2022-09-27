@@ -374,6 +374,31 @@ export const gameList = [
     img: game3,
     gameName: "Dungeons & Bots",
   },
+  {
+    id: 11,
+    img: game1,
+    gameName: "Crypto Adventure",
+  },
+  {
+    id: 12,
+    img: game3,
+    gameName: "Dungeons & Bots",
+  },
+  {
+    id: 13,
+    img: game2,
+    gameName: "Crypto Adventure",
+  },
+  {
+    id: 14,
+    img: game1,
+    gameName: "Crypto Bots",
+  },
+  {
+    id: 15,
+    img: game3,
+    gameName: "Dungeons & Bots",
+  },
 ]
 
 export const classList = {

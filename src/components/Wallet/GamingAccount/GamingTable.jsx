@@ -69,12 +69,12 @@ const GamingTable = () => {
                       : ""
                   }
                 >
-                  <td className="py-5 px-6">{menu.coin}</td>
-                  <td className="px-6">{menu.game}</td>
-                  <td className="px-6">{menu.reward}</td>
-                  <td className="px-6">{menu.deposit}</td>
-                  <td className="px-6">{menu.available}</td>
-                  <td className="px-6">{menu.daw}</td>
+                  <td className="py-5 px-6"><div className="w-max">{menu.coin}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.game}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.reward}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.deposit}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.available}</div></td>
+                  <td className="px-6"><div className="w-max">{menu.daw}</div></td>
                   <td className="px-6">
                     <div className="flex gap-4">
                       <BuyButton
