@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/Button/Button";
 import InstantCrypto from "./InstantCrypto/InstantCrypto";
 import P2P from "./P2P/P2P";
