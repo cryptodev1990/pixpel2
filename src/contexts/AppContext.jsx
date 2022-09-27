@@ -6,16 +6,28 @@ export const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectStaking, setSelectStaking] = useState(0);
-  const [selectedDevWalletIndex, setSelectedDevWalletIndex] = useState(0);
+  const [buyCryptoState, setBuyCryptoState] = useState(2);
+  const [p2PState, setP2PState] = useState(0);
+  const [depositState, setDepositState] = useState(0);
+  const [orderBuyState, setOrderBuyState] = useState(0);
+  const [orderSellState, setOrderSellState] = useState(0);
   return (
     <AppContext.Provider 
       value={{ 
         selectedIndex,
         selectStaking,
-        selectedDevWalletIndex,
         setSelectedIndex,
         setSelectStaking,
-        setSelectedDevWalletIndex
+        buyCryptoState,
+        setBuyCryptoState,
+        p2PState,
+        setP2PState,
+        depositState,
+        setDepositState,
+        orderBuyState,
+        setOrderBuyState,
+        orderSellState,
+        setOrderSellState
       }}
     >
       {children}
