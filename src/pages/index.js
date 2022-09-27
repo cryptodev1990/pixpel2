@@ -24,6 +24,7 @@ import StakingPortfolio from "./StakingPortfolio/StakingPortfolio";
 import TokenRoom from "./TokenRoom/TokenRoom";
 import Mint from "./TokenRoom/Mint";
 import Burn from "./TokenRoom/Burn";
+import DeveloperWallet from "./DeveloperWallet/DeveloperWallet";
 
 export {
     AddressManagement,
@@ -51,5 +52,6 @@ export {
     StakingPortfolio,
     TokenRoom,
     Mint,
-    Burn
+    Burn,
+    DeveloperWallet
 }
