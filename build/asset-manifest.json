@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f48e87c1.css",
-    "main.js": "/static/js/main.bdc73e7f.js",
+    "main.css": "/static/css/main.758ce0cc.css",
+    "main.js": "/static/js/main.fdf11312.js",
     "static/media/main__bg.jpg": "/static/media/main__bg.3d2ca3cd9c52e772dead.jpg",
     "static/media/landing1.png": "/static/media/landing1.55b094fb7b6515f477ba.png",
     "static/media/nft-1.jpg": "/static/media/nft-1.448acf01f5f1549f6820.jpg",
@@ -21,10 +21,15 @@
     "static/media/1.JPG": "/static/media/1.5e8707b30c3aeaf5c3a9.JPG",
     "static/media/blockchain.png": "/static/media/blockchain.d7445e67380764e78587.png",
     "static/media/ply.png": "/static/media/ply.d40e34013ebbd1f78d54.png",
+    "static/media/Downbutton.svg": "/static/media/Downbutton.3ad1bb047dd263a2325b7c28496e74b6.svg",
+    "static/media/Upbutton.svg": "/static/media/Upbutton.fdf9651cb135b06d8e2c41f44baec1b0.svg",
+    "static/media/Capture.PNG": "/static/media/Capture.018bcc149435aa2cd72b.PNG",
     "static/media/discord.svg": "/static/media/discord.34b9c99f7ab53f08d0faf0e73a058205.svg",
     "static/media/linkedin.svg": "/static/media/linkedin.e2344915885842026466a1265496314c.svg",
+    "static/media/FrameRed.svg": "/static/media/FrameRed.d251c12c56893e01b5424a923f3cdb27.svg",
+    "static/media/Frame.svg": "/static/media/Frame.f0963ac273c6ba9c24b6cd28313071b1.svg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/wallet-header.svg": "/static/media/wallet-header.b77d3f9fbbebe8ea639713efe088742e.svg",
+    "static/media/wallet-header.svg": "/static/media/wallet-header.2c67752d5e2ce10e9eeae6da47365362.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/twitter.svg": "/static/media/twitter.782b850231420b1a7be9ace2914d4d44.svg",
@@ -32,35 +37,28 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "static/media/wallet.svg": "/static/media/wallet.87369760d62d925398a19d5b3f69ce32.svg",
     "static/media/facebook.svg": "/static/media/facebook.04aa4079abfbaa82fe3dfabdfbf07ab9.svg",
-    "static/media/inventory.svg": "/static/media/inventory.768d93e0b12bfef327826f44185b037b.svg",
+    "static/media/inventory.svg": "/static/media/inventory.ac627a14ca50f773a7f2def23ecb4a3c.svg",
     "static/media/spin.svg": "/static/media/spin.df92062bf6bae2d682dd5b681db60cc9.svg",
     "static/media/cart.svg": "/static/media/cart.d3d0a17e2993c518e02129ce56ddc041.svg",
-    "static/media/shopping-cart.svg": "/static/media/shopping-cart.55d6803749bbe5d9d7968b32d9d136df.svg",
-    "static/media/profile.svg": "/static/media/profile.f4ee40fa7232a37d1dfce4b3f630b9b7.svg",
+    "static/media/shopping-cart.svg": "/static/media/shopping-cart.3c03cb6660297cf38ca2f293301a0b48.svg",
+    "static/media/profile.svg": "/static/media/profile.12aee8c53cb7cb70e484c4177afba51d.svg",
+    "static/media/notification.svg": "/static/media/notification.736e6058bcb460382e11e8247c3b8c3c.svg",
     "static/media/exclaimnation.svg": "/static/media/exclaimnation.7bbdc9d0b7c8282545986df3c9419484.svg",
-    "static/media/notification.svg": "/static/media/notification.afcdf75151c945b866024adbd5d03393.svg",
-    "static/media/help.svg": "/static/media/help.bd3320f399ded8d7233dac197021bbec.svg",
+    "static/media/help.svg": "/static/media/help.c12dcb75422dfe4657038505df7e8475.svg",
+    "static/media/supply.svg": "/static/media/supply.cc89af2ccf8545ed0a84e93ec12a16de.svg",
     "index.html": "/index.html",
     "static/media/menu.svg": "/static/media/menu.e409cf767b7d73980e29247b6db34515.svg",
     "static/media/Union.svg": "/static/media/Union.d884d40de59cdaccdf11e3813baac511.svg",
     "static/media/Mail.svg": "/static/media/Mail.f37158b2814985879e4dc9e6e17d73b7.svg",
-    "static/media/search.svg": "/static/media/search.596e329f5b23b192b474a9c716f34a12.svg",
+    "static/media/search.svg": "/static/media/search.1e6fc952d0615e5a95e97e59081ac390.svg",
     "static/media/clock.svg": "/static/media/clock.e44f3af62bcee713b41b5094e0f02681.svg",
     "static/media/ok.svg": "/static/media/ok.5c5f1ce2adec5eb6afbf478cf6183db9.svg",
-    "main.f48e87c1.css.map": "/static/css/main.f48e87c1.css.map",
-    "main.bdc73e7f.js.map": "/static/js/main.bdc73e7f.js.map"
+    "static/media/close.svg": "/static/media/close.9118db409f9a431779c3bc4c4f989726.svg",
+    "main.758ce0cc.css.map": "/static/css/main.758ce0cc.css.map",
+    "main.fdf11312.js.map": "/static/js/main.fdf11312.js.map"
   },
   "entrypoints": [
-    "static/css/main.f48e87c1.css",
-    "static/js/main.bdc73e7f.js"
-    "static/media/Mail.svg": "/static/media/Mail.94645815086e5146117ad6d3118b171a.svg",
-    "static/media/clock.svg": "/static/media/clock.55739bce2d10d5437c4d472afb0da13f.svg",
-    "static/media/ok.svg": "/static/media/ok.0d340f8b7f7e2af5dc0c080d79591ba1.svg",
-    "main.c2bfacaa.css.map": "/static/css/main.c2bfacaa.css.map",
-    "main.9638eb08.js.map": "/static/js/main.9638eb08.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.c2bfacaa.css",
-    "static/js/main.9638eb08.js"
+    "static/css/main.758ce0cc.css",
+    "static/js/main.fdf11312.js"
   ]
 }
