@@ -53,5 +53,14 @@
   "entrypoints": [
     "static/css/main.f48e87c1.css",
     "static/js/main.bdc73e7f.js"
+    "static/media/Mail.svg": "/static/media/Mail.94645815086e5146117ad6d3118b171a.svg",
+    "static/media/clock.svg": "/static/media/clock.55739bce2d10d5437c4d472afb0da13f.svg",
+    "static/media/ok.svg": "/static/media/ok.0d340f8b7f7e2af5dc0c080d79591ba1.svg",
+    "main.c2bfacaa.css.map": "/static/css/main.c2bfacaa.css.map",
+    "main.9638eb08.js.map": "/static/js/main.9638eb08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2bfacaa.css",
+    "static/js/main.9638eb08.js"
   ]
 }
