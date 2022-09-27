@@ -10,11 +10,11 @@ const Create = () => {
   return (
     <>
       <div className="flex flex-col items-center">
-        <div className="flex justify-between w-3/4 mb-5">
-          <div className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-gl font-semibold">
+        <div className="flex justify-between xl:w-3/4 w-full mb-5">
+          <div className="2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-lg font-semibold">
             {locked ? "Locked" : "UnLocked"}
           </div>
-          <div className="flex gap-3">
+          <div className="flex sm:gap-3 gap-1">
             <div className="flex flex-col items-center gap-2">
               <div
                 className={
@@ -44,7 +44,7 @@ const Create = () => {
                   <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                 </svg>
               </div>
-              <div className="text-gray-500 text-sm">Locked</div>
+              <div className="text-gray-500 sm:text-sm text-xs">Locked</div>
             </div>
             <div className="flex flex-col gap-2 items-center">
               <div
@@ -75,22 +75,22 @@ const Create = () => {
                   <path d="M7 11V7a5 5 0 0 1 9.9-1" />
                 </svg>
               </div>
-              <div className="text-gray-500 text-sm">Unlocked</div>
+              <div className="text-gray-500 sm:text-sm text-xs">Unlocked</div>
             </div>
           </div>
         </div>
-        <div className="bg-app-black flex flex-col px-12 py-12 w-3/4 rounded-md">
+        <div className="bg-app-black flex flex-col lg:px-12 md:px-8 sm:px-5 px-3 lg:py-12 md:py-8 py-5 xl:w-3/4 w-full rounded-md">
           <div
-            className={(locked ? "mb-4" : "mb-12") + " text-4xl font-medium"}
+            className={(locked ? "mb-4" : "mb-12") + " 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl text-lg font-medium"}
           >
             CREATE STAKING
           </div>
-          <div className="flex justify-between items-end gap-5 mb-5">
-            <div className="flex gap-5 w-1/2">
+          <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-5 mb-5">
+            <div className="flex md:gap-5 gap-2 sm:w-1/2 w-full">
               <div
                 className={
                   (locked ? "bg-app-blue" : "bg-app-black-button") +
-                  " px-8 py-4 rounded-md"
+                  " lg:px-8 md:px-6 px-4 lg:py-4 md:py-3 py-2 rounded-md"
                 }
               >
                 LOCKED
@@ -98,32 +98,32 @@ const Create = () => {
               <div
                 className={
                   (locked ? "bg-app-black-button" : "bg-app-blue") +
-                  " px-8 py-4 rounded-md"
+                  " lg:px-8 md:px-6 px-4 lg:py-4 md:py-3 py-2 rounded-md"
                 }
               >
                 UNLOCKED
               </div>
             </div>
-            <div className={(locked ? "" : "hidden") + " flex flex-col w-1/2"}>
+            <div className={(locked ? "" : "hidden") + " flex flex-col sm:w-1/2 w-full"}>
               <div>Token Name:</div>
-              <input className="bg-app-black-button rounded h-16" />
+              <input className="bg-app-black-button rounded lg:h-16 h-12" />
             </div>
           </div>
-          <div className="flex justify-between gap-5 items-center">
-            <div className="w-1/2 mt-8">
+          <div className="flex flex-col sm:flex-row justify-between gap-5 sm:items-center">
+            <div className="sm:w-1/2 w-full mt-8">
               <ImageDropDownButton
                 initialContent={FiatList[0]}
                 backgroundColor={"bg-app-black-button"}
                 contentList={FiatList}
               />
-              <div className="flex gap-6 mt-9">
-                <div className="flex flex-col gap-1 w-1/3">
+              <div className="flex flex-col sm:flex-row sm:gap-6 gap-4 sm:mt-9 mt-6">
+                <div className="flex flex-col gap-1 sm:w-1/3 w-full">
                   <div>ARP:</div>
                   <div className="bg-app-black-button rounded-md flex justify-center py-5">
                     8%
                   </div>
                 </div>
-                <div className="flex flex-col gap-1 w-1/3">
+                <div className="flex flex-col gap-1 sm:w-1/3 w-full">
                   <div>Days:</div>
                   <div className="bg-app-black-button rounded-md flex justify-center py-5">
                     120
@@ -131,7 +131,7 @@ const Create = () => {
                 </div>
                 <div
                   className={
-                    (locked ? "hidden" : "") + " flex flex-col gap-1 w-1/3"
+                    (locked ? "hidden" : "") + " flex flex-col gap-1 sm:w-1/3 w-full"
                   }
                 >
                   <div>Early FEE:</div>
@@ -141,7 +141,7 @@ const Create = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-1/2">
+            <div className="flex flex-col sm:w-1/2 w-full">
               <div className="text-lg mb-1">Max CAP:</div>
               <div className="flex justify-between bg-app-black-button rounded w-full py-4 px-6 mb-1">
                 <div className="text-lg">200.000</div>
