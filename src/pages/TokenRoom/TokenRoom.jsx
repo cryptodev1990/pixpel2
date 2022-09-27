@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Create from "./Create";
+import Supplies from "./Supplies";
 
 const TokenRoom = () => {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ const TokenRoom = () => {
   };
   const handleSuppliesClick = () => {
     setSelect(1);
+    setTemp(<Supplies />);
   };
   const handleOfferClick = () => {
     setSelect(2);

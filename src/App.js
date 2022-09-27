@@ -25,7 +25,9 @@ import {
   BuyCrypto,
   GameLanding,
   StakingPortfolio,
-  TokenRoom
+  TokenRoom,
+  Mint,
+  Burn
 } from "./pages/index"
 
 import { Header, Footer } from "./components";
@@ -75,6 +77,8 @@ function App() {
         <Route path="/gamelanding" element={<GameLanding />} />
         <Route path="/stakingportfolio" element={<StakingPortfolio />} />
         <Route path="/tokenroom" element={<TokenRoom />} />
+        <Route path="/tokenroom/mint" element={<Mint />} />
+        <Route path="/tokenroom/burn" element={<Burn />} />
         <Route path="*" element={<Test />} />
       </Routes>
       <Footer />

@@ -22,6 +22,8 @@ import MysteryBox from "./MysteryBox/MysteryBox";
 import GameLanding from "./GameLanding/GameLanding";
 import StakingPortfolio from "./StakingPortfolio/StakingPortfolio";
 import TokenRoom from "./TokenRoom/TokenRoom";
+import Mint from "./TokenRoom/Mint";
+import Burn from "./TokenRoom/Burn";
 
 export {
     AddressManagement,
@@ -47,5 +49,7 @@ export {
     MysteryBox,
     GameLanding,
     StakingPortfolio,
-    TokenRoom
+    TokenRoom,
+    Mint,
+    Burn
 }

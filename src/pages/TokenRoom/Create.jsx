@@ -88,7 +88,7 @@ const Create = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div className="mt-32">
+      <div className="mt-28">
         <div className="flex flex-col gap-5">
           <div className="flex justify-between gap-36">
             <div className="bg-app-black-button w-1/3 px-6 py-4 text-lg rounded-md">
@@ -167,7 +167,7 @@ const Create = () => {
             <div className="w-1/3" />
           </div>
         </div>
-        <div className="mt-40 text-3xl flex justify-center font-medium mb-16">
+        <div className="mt-28 text-3xl flex justify-center font-medium mb-16">
           Supplies
         </div>
         <div className="bg-app-black py-12 px-16 gap-20 flex">
