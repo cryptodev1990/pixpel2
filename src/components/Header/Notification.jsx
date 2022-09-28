@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import notification from "../../asssets/images/notification.svg";
+import notificationBlue from "../../asssets/images/notification-blue.svg";
+import { useAppContext } from "../../contexts/AppContext";
 
 const Notification = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const navigate = useNavigate();
+  const context = useAppContext();
 
   return (
     <div
@@ -12,7 +15,10 @@ const Notification = () => {
       onClick={() => setShowDropDown(!showDropDown)}
     >
       <div className="flex items-center justify-between">
-        <img src={notification} alt="notification" />
+        <img
+          src={context.developerHeader === 5 ? notificationBlue : notification}
+          alt="notification"
+        />
       </div>
       <div className="relative">
         {showDropDown ? (
@@ -31,13 +37,21 @@ const Notification = () => {
                 </div>
                 <div
                   className="text-app-blue text-sm"
-                  onClick={() => navigate("/notification")}
+                  onClick={() => {
+                    navigate("/notification");
+                    context.setDeveloperHeader(5);
+                  }}
                 >
                   View all
                 </div>
               </div>
               <div className="relative flex items-start gap-2 px-3 py-4 border-b-2 border-app-black">
-                <div onClick={() => navigate("/notification")}>
+                <div
+                  onClick={() => {
+                    navigate("/notification");
+                    context.setDeveloperHeader(5);
+                  }}
+                >
                   <svg
                     className="h-5 w-5"
                     viewBox="0 0 24 24"
@@ -62,7 +76,12 @@ const Notification = () => {
                 </div>
               </div>
               <div className="relative flex items-start gap-2 px-3 py-4 border-b-2 border-app-black">
-                <div onClick={() => navigate("/notification")}>
+                <div
+                  onClick={() => {
+                    navigate("/notification");
+                    context.setDeveloperHeader(5);
+                  }}
+                >
                   <svg
                     className="h-5 w-5"
                     viewBox="0 0 24 24"
@@ -87,7 +106,12 @@ const Notification = () => {
                 </div>
               </div>
               <div className="relative flex items-start gap-2 px-3 py-4">
-                <div onClick={() => navigate("/notification")}>
+                <div
+                  onClick={() => {
+                    navigate("/notification");
+                    context.setDeveloperHeader(5);
+                  }}
+                >
                   <svg
                     className="h-5 w-5"
                     viewBox="0 0 24 24"

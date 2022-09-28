@@ -27,16 +27,16 @@ const Promotion = () => {
   return (
     <div className="flex flex-col pb-56">
       <div className="text-xl font-medium mb-2">NEMESIS</div>
-      <div className="flex justify-between">
-        <div className="flex gap-7 w-1/2">
-          <div className="w-1/4">
+      <div className="flex flex-col md:flex-row justify-between gap-3">
+        <div className="flex flex-col sm:flex-row gap-7 lg:w-1/2 w-full">
+          <div className="sm:w-1/4 md:w-1/3 w-full">
             <DropDownButton
               initialContent={dataList[0].title}
               contentList={dataList}
               backgroundColor="bg-app-black"
             />
           </div>
-          <div className="flex items-center bg-app-black px-4 py-2 gap-4 rounded-md">
+          <div className="flex items-center bg-app-black px-4 py-2 gap-4 rounded-md w-max">
             <div className="text-app-blue font-medium">Locked Staking</div>
             <div
               className="bg-app-blue px-2 py-2 rounded cursor-pointer"
@@ -58,21 +58,21 @@ const Promotion = () => {
             </div>
           </div>
         </div>
-        <div className="bg-app-blue flex px-24 py-4 rounded-md cursor-pointer">
+        <div className="bg-app-blue flex px-24 py-4 rounded-md cursor-pointer w-max">
           BOOST
         </div>
       </div>
-      <div className="text-3xl mb-1 mt-11 font-medium">CAPITALIZATION</div>
-      <div className="flex justify-between gap-5 mb-12">
-        <div className="bg-app-black rounded-md w-1/3 flex justify-between py-4 px-5">
+      <div className="2xl:text-3xl xl:text-2xl lg:text-xl text-lg mb-1 mt-11 font-medium">CAPITALIZATION</div>
+      <div className="flex flex-col lg:flex-row justify-between gap-5 mb-12">
+        <div className="bg-app-black rounded-md w-full lg:w-1/3 flex justify-between py-4 px-5">
           <div>Maximum capitalization:</div>
           <div className="text-app-blue">2.000.000 CPAN = 4.000.000 TUSD</div>
         </div>
-        <div className="bg-app-black rounded-md w-1/3 flex justify-between py-4 px-5">
+        <div className="bg-app-black rounded-md w-full lg:w-1/3 flex justify-between py-4 px-5">
           <div>Capitalization achived:</div>
           <div className="text-app-blue">2.000.000 CPAN = 4.000.000 TUSD</div>
         </div>
-        <div className="bg-app-black rounded-md w-1/3 flex justify-between py-4 px-5">
+        <div className="bg-app-black rounded-md w-full lg:w-1/3 flex justify-between py-4 px-5">
           <div>Capitalization achived:</div>
           <div className="text-app-blue">2.000.000 CPAN = 4.000.000 TUSD</div>
         </div>
@@ -80,20 +80,20 @@ const Promotion = () => {
       <div className="flex justify-center text-3xl font-semibold mb-6">
         Investors
       </div>
-      <div className="flex justify-between gap-5">
-        <div className="bg-app-black rounded-md w-1/4 flex justify-between py-4 px-5">
+      <div className="flex flex-col lg:flex-row justify-between gap-5">
+        <div className="bg-app-black rounded-md w-full lg:w-1/4 flex justify-between py-4 px-5">
           <div>Investors:</div>
           <div className="text-app-blue">20 558</div>
         </div>
-        <div className="bg-app-black rounded-md w-1/4 flex justify-between py-4 px-5">
+        <div className="bg-app-black rounded-md w-full lg:w-1/4 flex justify-between py-4 px-5">
           <div>Quantity if stakes</div>
           <div className="text-app-blue">200.000</div>
         </div>
-        <div className="bg-app-black rounded-md w-1/4 flex justify-between py-4 px-5">
+        <div className="bg-app-black rounded-md w-full lg:w-1/4 flex justify-between py-4 px-5">
           <div>Highest stakes:</div>
           <div className="text-app-blue">1.500 TUSD</div>
         </div>
-        <div className="bg-app-black rounded-md w-1/4 flex justify-between py-4 px-5">
+        <div className="bg-app-black rounded-md w-full lg:w-1/4 flex justify-between py-4 px-5">
           <div>Lowest stake:</div>
           <div className="text-app-blue">50 TUSD</div>
         </div>
@@ -101,8 +101,8 @@ const Promotion = () => {
       <div className="mt-12 mb-6 text-3xl font-semibold flex justify-center">
         Graph
       </div>
-      <div className="flex justify-between gap-8">
-        <div className="relative flex w-1/2 gap-3 bg-app-black px-6 py-7 rounded-xl overflow-x-auto">
+      <div className="flex flex-col lg:flex-row justify-between gap-8">
+        <div className="relative flex lg:w-1/2 w-full gap-3 bg-app-black px-6 py-7 rounded-xl overflow-x-auto">
           <div className="flex flex-col gap-intervalx sticky shrink-0 text-sm">
             <div>10</div>
             <div>9</div>
@@ -143,12 +143,12 @@ const Promotion = () => {
             </div>
           </div>
         </div>
-        <div className="bg-app-black rounded-lg flex justify-center items-center w-1/2"></div>
+        <div className="bg-app-black rounded-lg flex justify-center items-center lg:w-1/2 w-full"></div>
       </div>
       <div className="mt-12 mb-6 flex justify-center text-3xl font-semibold">
         Status
       </div>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
         <div className="bg-app-black rounded-md flex justify-between py-4 px-5">
           <div>Actual APR:</div>
           <div className="text-app-blue">16.000 PIXP</div>

@@ -420,6 +420,7 @@ const Header = (props) => {
           window.location.pathname === "/finishmint" ||
           window.location.pathname === "/gamelanding" ||
           window.location.pathname === "/developerwallet" ||
+          window.location.pathname === "/developerprofile" ||
           window.location.pathname === "/tokenroom/mint" ||
           window.location.pathname === "/tokenroom/burn" ||
           window.location.pathname === "/tokenroom" ? (

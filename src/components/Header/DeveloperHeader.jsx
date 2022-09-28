@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import Notification from "./Notification";
 import notification from "../../asssets/images/notification.svg";
 import wallet from "../../asssets/images/wallet-header.svg";
+import walletBlue from "../../asssets/images/wallet-blue.svg";
 import profile from "../../asssets/images/profile.svg";
+import profileBlue from "../../asssets/images/profile-blue.svg";
 import logo from "../../asssets/images/logo.svg";
 import Iconmenu from "../../asssets/images/menu.svg";
-
 import { useNavigate } from "react-router-dom";
+import { useAppContext } from "../../contexts/AppContext";
 
 const DeveloperHeader = () => {
   const navigate = useNavigate();
   const [openMenu, setOpenMenu] = useState(false);
+  const context = useAppContext();
+  context.setDeveloperHeader(-1);
   return (
     <div className="bg-app-black flex justify-between px-8 py-5 items-center mb-11">
       <div className="flex gap-7 items-center">
@@ -22,26 +26,50 @@ const DeveloperHeader = () => {
         />
         <div className="hidden xl:flex gap-12 ">
           <div
-            className="hover:text-app-blue cursor-pointer"
-            onClick={() => navigate("/developer")}
+            className={
+              (context.playerHeader === 0 ? "text-app-blue " : "") +
+              "hover:text-app-blue cursor-pointer"
+            }
+            onClick={() => {
+              navigate("/developer");
+              context.setPlayerHeader(0);
+            }}
           >
             Games
           </div>
           <div
-            className="hover:text-app-blue cursor-pointer"
-            onClick={() => navigate("/mycollection")}
+            className={
+              (context.playerHeader === 1 ? "text-app-blue " : "") +
+              "hover:text-app-blue cursor-pointer"
+            }
+            onClick={() => {
+              navigate("/mycollection");
+              context.setPlayerHeader(1);
+            }}
           >
             NFT
           </div>
           <div
-            className="hover:text-app-blue cursor-pointer"
-            onClick={() => navigate("/tokenroom")}
+            className={
+              (context.playerHeader === 2 ? "text-app-blue " : "") +
+              "hover:text-app-blue cursor-pointer"
+            }
+            onClick={() => {
+              navigate("/tokenroom");
+              context.setPlayerHeader(2);
+            }}
           >
             Token
           </div>
           <div
-            className="hover:text-app-blue cursor-pointer"
-            onClick={() => navigate("/stakingportfolio")}
+            className={
+              (context.playerHeader === 3 ? "text-app-blue " : "") +
+              "hover:text-app-blue cursor-pointer"
+            }
+            onClick={() => {
+              navigate("/stakingportfolio");
+              context.setPlayerHeader(3);
+            }}
           >
             Staking
           </div>
@@ -53,16 +81,22 @@ const DeveloperHeader = () => {
       <div className="hidden xl:flex gap-5 items-center">
         <Notification />
         <img
-          src={wallet}
+          src={context.playerHeader === 4 ? walletBlue : wallet}
           alt="wallet"
           className="cursor-pointer"
-          onClick={() => navigate("/developerwallet")}
+          onClick={() => {
+            navigate("/developerwallet");
+            context.setPlayerHeader(4);
+          }}
         />
         <img
-          src={profile}
+          src={context.playerHeader === 5 ? profileBlue : profile}
           alt="profile"
           className="cursor-pointer"
-          onClick={() => navigate("/profile")}
+          onClick={() => {
+            navigate("/developerprofile");
+            context.setPlayerHeader(5);
+          }}
         />
       </div>
       <div className="xl:hidden flex" onClick={() => setOpenMenu(!openMenu)}>

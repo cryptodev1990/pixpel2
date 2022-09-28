@@ -1,30 +1,27 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAppContext } from "../../contexts/AppContext";
+import vector from "../../asssets/images/vector.svg";
+import vectorBlue from "../../asssets/images/vector-blue.svg";
 
 const Trade = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const navigate = useNavigate();
+  const context = useAppContext();
 
   return (
     <div
       className="cursor-pointer"
       onClick={() => setShowDropDown(!showDropDown)}
     >
-      <div className="flex px-5 gap-1 items-center justify-between">
-        <div>Trade</div>
-        <svg
-          className="w-5 h-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
+      <div className={"flex px-5 gap-1 items-center justify-between"}>
+        <div className={context.developerHeader === 2 ? "text-app-blue " : ""}>
+          Trade
+        </div>
+        <img
+          src={context.developerHeader === 2 ? vectorBlue : vector}
+          alt="vector"
+        />
       </div>
       <div className="relative">
         {showDropDown ? (
@@ -36,13 +33,19 @@ const Trade = () => {
             <div className="flex flex-col rounded-b-md bg-app-black text-lg w-max">
               <div
                 className="relative flex justify-start px-5 border-b-2 border-app-black py-1 hover:text-app-blue"
-                onClick={() => navigate("/swap-master")}
+                onClick={() => {
+                  navigate("/swap-master");
+                  context.setDeveloperHeader(2);
+                }}
               >
                 Swap
               </div>
               <div
                 className="relative flex justify-start px-5 py-1 hover:text-app-blue"
-                onClick={() => navigate("/exchange")}
+                onClick={() => {
+                  navigate("/exchange");
+                  context.setDeveloperHeader(2);
+                }}
               >
                 CEX
               </div>

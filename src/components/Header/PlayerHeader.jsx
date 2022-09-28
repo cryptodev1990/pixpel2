@@ -3,17 +3,24 @@ import Notification from "./Notification";
 import Market from "./Market";
 import Trade from "./Trade";
 import cart from "../../asssets/images/shopping-cart.svg";
+import inventoryBlue from "../../asssets/images/inventory-blue.svg";
+import cartBlue from "../../asssets/images/cart.svg";
 import inventory from "../../asssets/images/inventory.svg";
 import wallet from "../../asssets/images/wallet-header.svg";
+import walletBlue from "../../asssets/images/wallet-blue.svg";
 import profile from "../../asssets/images/profile.svg";
+import profileBlue from "../../asssets/images/profile-blue.svg";
 import logo from "../../asssets/images/logo.svg";
 import notification from "../../asssets/images/notification.svg";
 import { useNavigate } from "react-router-dom";
 import Iconmenu from "../../asssets/images/menu.svg";
+import { useAppContext } from "../../contexts/AppContext";
 
 const PlayerHeader = () => {
+  const context = useAppContext();
   const [openMenu, setOpenMenu] = useState(false);
   const navigate = useNavigate();
+  context.setPlayerHeader(-1);
   return (
     <div className="bg-app-black flex justify-between px-8 py-5 items-center mb-11">
       <div className="flex gap-7 items-center">
@@ -26,15 +33,27 @@ const PlayerHeader = () => {
         <div className="hidden xl:flex gap-12 ">
           <Market />
           <div
-            className="hover:text-app-blue cursor-pointer"
-            onClick={() => navigate("/staking")}
+            className={
+              (context.developerHeader === 1 ? "text-app-blue " : "") +
+              "hover:text-app-blue cursor-pointer"
+            }
+            onClick={async () => {
+              navigate("/staking");
+              context.setDeveloperHeader(1);
+            }}
           >
             Staking
           </div>
           <Trade />
           <div
-            className="hover:text-app-blue cursor-pointer w-max"
-            onClick={() => navigate("/buycrypto")}
+            className={
+              (context.developerHeader === 3 ? "text-app-blue " : "") +
+              "hover:text-app-blue cursor-pointer w-max"
+            }
+            onClick={() => {
+              navigate("/buycrypto");
+              context.setDeveloperHeader(3);
+            }}
           >
             Buy Crypto
           </div>
@@ -45,29 +64,41 @@ const PlayerHeader = () => {
       </div>
       <div className="hidden xl:flex gap-5 items-center">
         <img
-          src={cart}
+          src={context.developerHeader === 4 ? cartBlue : cart}
           alt="cart"
           className="cursor-pointer"
-          onClick={() => navigate("/nft-market")}
+          onClick={() => {
+            navigate("/nft-market");
+            context.setDeveloperHeader(4);
+          }}
         />
         <Notification />
         <img
-          src={inventory}
+          src={context.developerHeader === 6 ? inventoryBlue : inventory}
           alt="inventory"
           className="cursor-pointer"
-          onClick={() => navigate("/inventory")}
+          onClick={() => {
+            navigate("/inventory");
+            context.setDeveloperHeader(6);
+          }}
         />
         <img
-          src={wallet}
+          src={context.developerHeader === 7 ? walletBlue : wallet}
           alt="wallet"
           className="cursor-pointer"
-          onClick={() => navigate("/wallet")}
+          onClick={() => {
+            navigate("/wallet");
+            context.setDeveloperHeader(7);
+          }}
         />
         <img
-          src={profile}
+          src={context.developerHeader === 8 ? profileBlue : profile}
           alt="profile"
           className="cursor-pointer"
-          onClick={() => navigate("/profile")}
+          onClick={() => {
+            navigate("/profile");
+            context.setDeveloperHeader(8);
+          }}
         />
       </div>
       <div className="xl:hidden flex" onClick={() => setOpenMenu(!openMenu)}>
@@ -137,7 +168,6 @@ const PlayerHeader = () => {
               setOpenMenu(false);
               navigate("/buycrypto");
             }}
-            
           >
             Buy Crypto
           </div>

@@ -24,7 +24,7 @@ const Developer = () => {
     }
   };
   return (
-    <div className="flex flex-col px-12 pb-20 gap-11">
+    <div className="flex flex-col xl:px-12 lg:px-8 sm:px-4 px-2 pb-20 gap-11">
       {workingList.map((working, idx) => {
         return (
           <SelectWorking
