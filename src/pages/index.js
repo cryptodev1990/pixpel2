@@ -26,6 +26,7 @@ import Mint from "./TokenRoom/Mint";
 import Burn from "./TokenRoom/Burn";
 import DeveloperWallet from "./DeveloperWallet/DeveloperWallet";
 import NotVerified from "./DeveloperProfile/NotVerified";
+import DeveloperProfile from "./DeveloperProfile/DeveloperProfile";
 
 export {
     AddressManagement,
@@ -55,5 +56,6 @@ export {
     Mint,
     Burn,
     DeveloperWallet,
-    NotVerified
+    NotVerified,
+    DeveloperProfile
 }

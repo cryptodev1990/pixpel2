@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../../contexts/AppContext";
+import vector from "../../asssets/images/vector.svg";
+import vectorBlue from "../../asssets/images/vector-blue.svg";
 
 const Trade = () => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -16,19 +18,10 @@ const Trade = () => {
         <div className={context.developerHeader === 2 ? "text-app-blue " : ""}>
           Trade
         </div>
-        <svg
-          className="w-5 h-5 text-app-blue"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
+        <img
+          src={context.developerHeader === 2 ? vectorBlue : vector}
+          alt="vector"
+        />
       </div>
       <div className="relative">
         {showDropDown ? (

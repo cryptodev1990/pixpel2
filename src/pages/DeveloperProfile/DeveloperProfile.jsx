@@ -1,22 +1,23 @@
 import React from "react";
 import { useState } from "react";
 import ProfileButton from "../../components/Button/ProfileButton";
-import ProfileAvatar from "../../components/Profile/ProfileAvatar";
 import ProfileSecurity from "../../components/Profile/ProfileSecurity";
 import ProfileSettings from "../../components/Profile/ProfileSettings";
+import DeveloperProfileOverview from "../../components/DeveloperProfile/DeveloperProfileOverview";
+import Profile from "./Profile";
 import { menuList } from "./datalist";
 
 const DeveloperProfile = () => {
   const [profileButtonIndex, setProfileButtonIndex] = useState(0);
   const [showingComponent, setShowingComponent] = useState(
-    <ProfilePlayerStat />
+    <Profile />
   );
   let temp;
   const handleClick = (idx) => () => {
     setProfileButtonIndex(idx);
     switch (idx) {
       case 0:
-        temp = <ProfilePlayerStat />;
+        temp = <Profile />;
         break;
       case 1:
         temp = <ProfileSettings />;
@@ -47,7 +48,7 @@ const DeveloperProfile = () => {
           })}
         </div>
         <div className="flex flex-col md:w-4/5 x-full">
-          <ProfileAvatar />
+          <DeveloperProfileOverview />
           {showingComponent}
         </div>
       </div>

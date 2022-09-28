@@ -20,6 +20,7 @@ const PlayerHeader = () => {
   const context = useAppContext();
   const [openMenu, setOpenMenu] = useState(false);
   const navigate = useNavigate();
+  context.setPlayerHeader(-1);
   return (
     <div className="bg-app-black flex justify-between px-8 py-5 items-center mb-11">
       <div className="flex gap-7 items-center">
