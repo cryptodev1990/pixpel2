@@ -26,14 +26,14 @@ const TokenRoom = () => {
     setTemp(<Overview />);
   };
   return (
-    <div className="flex flex-col px-32">
+    <div className="flex flex-col 2xl:px-32 xl:px-24 lg:px-16 md:px-12 sm:px-8 px-4">
       <div className="flex justify-between items-end mb-5">
         <div
-          className="flex py-3 px-3 bg-app-black-button rounded-md cursor-pointer"
+          className="flex lg:py-3 sm:py-2 py-1 lg:px-3 sm:px-2 px-1 bg-app-black-button rounded-md cursor-pointer"
           onClick={() => navigate(-1)}
         >
           <svg
-            className="h-5 w-5"
+            className="md:h-5 h-4 md:w-5 w-4"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -46,12 +46,12 @@ const TokenRoom = () => {
             />
           </svg>
         </div>
-        <div className="text-4xl font-semibold">Token Room</div>
+        <div className="xl:text-4xl lg:text-3xl sm:text-2xl text-xl font-semibold">Token Room</div>
         <div />
       </div>
-      <div className="flex justify-between">
+      <div className="flex flex-col lg:flex-row gap-3 justify-between">
         <div className="w-1/6" />
-        <div className="flex gap-5">
+        <div className="flex flex-col lg:flex-row gap-5">
           <div
             className={
               (select === 0 ? "bg-app-blue" : "bg-app-black") +
@@ -89,7 +89,7 @@ const TokenRoom = () => {
             Overview
           </div>
         </div>
-        <div className="bg-app-green px-8 py-4 rounded-xl cursor-pointer">
+        <div className="bg-app-green px-8 py-4 rounded-xl cursor-pointer w-max">
           + ADD LOGO
         </div>
       </div>

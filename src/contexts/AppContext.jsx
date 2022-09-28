@@ -1,5 +1,5 @@
-import React, { createContext, useState, useContext } from 'react';
-import PropTypes from 'prop-types';
+import React, { createContext, useState, useContext } from "react";
+import PropTypes from "prop-types";
 
 export const AppContext = createContext();
 
@@ -11,9 +11,11 @@ const AppContextProvider = ({ children }) => {
   const [depositState, setDepositState] = useState(0);
   const [orderBuyState, setOrderBuyState] = useState(0);
   const [orderSellState, setOrderSellState] = useState(0);
+  const [developerHeader, setDeveloperHeader] = useState(-1);
+  const [playerHeader, setPlayerHeader] = useState(-1);
   return (
-    <AppContext.Provider 
-      value={{ 
+    <AppContext.Provider
+      value={{
         selectedIndex,
         selectStaking,
         setSelectedIndex,
@@ -27,7 +29,11 @@ const AppContextProvider = ({ children }) => {
         orderBuyState,
         setOrderBuyState,
         orderSellState,
-        setOrderSellState
+        setOrderSellState,
+        developerHeader,
+        playerHeader,
+        setDeveloperHeader,
+        setPlayerHeader
       }}
     >
       {children}

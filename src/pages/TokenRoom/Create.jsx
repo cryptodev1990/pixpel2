@@ -88,13 +88,13 @@ const Create = () => {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <div className="mt-28">
+      <div className="2xl:mt-28 xl:mt-20 md:mt-12 sm:mt-8 mt-4">
         <div className="flex flex-col gap-5">
-          <div className="flex justify-between gap-36">
-            <div className="bg-app-black-button w-1/3 px-6 py-4 text-lg rounded-md">
+          <div className="flex flex-col lg:flex-row justify-between 2xl:gap-36 xl:gap-20 lg:gap-8 gap-4">
+            <div className="bg-app-black-button lg:w-1/3 w-full xl:px-6 lg:px-4 px-2 py-4 text-lg rounded-md">
               Name:
             </div>
-            <div className="w-1/3 bg-app-black-button flex rounded-md pl-6">
+            <div className="lg:w-1/3 w-full bg-app-black-button flex rounded-md xl:pl-6 lg:pl-4 pl-2">
               <div className="border-r-2 border-app-gray my-3 text-lg flex items-center pr-4">
                 Blockchain
               </div>
@@ -106,19 +106,19 @@ const Create = () => {
                 />
               </div>
             </div>
-            <div className="bg-app-black-button flex w-1/3 px-6 py-4 text-lg rounded-md">
+            <div className="bg-app-black-button flex lg:w-1/3 w-full xl:px-6 lg:px-4 px-2 py-4 text-lg rounded-md">
               Total Supply:
             </div>
           </div>
-          <div className="flex justify-between gap-36">
-            <div className="bg-app-black-button w-1/3 px-6 py-4 text-lg rounded-md">
+          <div className="flex flex-col lg:flex-row justify-between 2xl:gap-36 xl:gap-20 lg:gap-8 gap-4">
+            <div className="bg-app-black-button lg:w-1/3 w-full xl:px-6 lg:px-4 px-2 py-4 text-lg rounded-md">
               ABBR:
             </div>
-            <div className="w-1/3 bg-app-black-button flex rounded-md pl-6">
-              <div className="border-r-2 border-app-gray my-3 text-lg flex items-center pr-12">
+            <div className="lg:w-1/3 w-full bg-app-black-button flex rounded-md xl:pl-6 lg:pl-4 pl-2">
+              <div className="border-r-2 border-app-gray my-3 text-lg flex items-center xs:pr-12 pr-2 ">
                 Nature
               </div>
-              <div className="text-gray-500 mx-6 flex items-end w-1/2">--</div>
+              <div className="text-gray-500 xs:mx-6 flex items-end xs:w-1/2 w-full">--</div>
               <div className="w-full">
                 <DropDownButton
                   backgroundColor="bg-app-black-button"
@@ -127,11 +127,11 @@ const Create = () => {
                 />
               </div>
             </div>
-            <div className="w-1/3 flex bg-app-black-button rounded-md pl-6">
-              <div className="text-lg flex items-center w-4/5">
+            <div className="lg:w-1/3 w-full flex bg-app-black-button rounded-md xl:pl-6 lg:pl-4 pl-2">
+              <div className="text-lg flex items-center 2xl:w-3/4 lg:w-3/5 w-3/5">
                 Supply Division
               </div>
-              <div className="w-1/5">
+              <div className="2xl:w-1/4 lg:w-2/5 w-2/5">
                 <DropDownButton
                   initialContent="4"
                   contentList={divisionList}
@@ -141,26 +141,26 @@ const Create = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-between gap-36">
-            <div className="bg-app-black-button w-1/3 px-6 py-4 text-lg rounded-md">
+          <div className="flex flex-col lg:flex-row justify-between 2xl:gap-36 xl:gap-20 lg:gap-8 gap-4">
+            <div className="bg-app-black-button lg:w-1/3 w-full px-6 py-4 text-lg rounded-md">
               Decimals:
             </div>
-            <div className="w-1/3 px-6 items-center flex text-xl gap-2">
+            <div className="lg:w-1/3 w-full px-6 items-center flex text-xl gap-2">
               Description:
               <div className="text-gray-500 text-sm">
                 A short description of your token
               </div>
             </div>
-            <div className="w-1/3 text-4xl text-app-blue flex items-center justify-self-stretch">
+            <div className="lg:w-1/3 w-full text-4xl text-app-blue flex items-center justify-self-stretch">
               Tokens Available: 11111
             </div>
           </div>
-          <div className="flex justify-between gap-36">
-            <div className="flex items-center w-1/3 text-lg px-6 py-4 bg-app-black-button rounded-md gap-1">
+          <div className="flex flex-col lg:flex-row justify-between 2xl:gap-36 xl:gap-20 lg:gap-8 gap-4">
+            <div className="flex items-center lg:w-1/3 w-full text-lg px-6 py-4 bg-app-black-button rounded-md gap-1">
               Website
               <div className="text-gray-500 text-sm">(optional)</div>:
             </div>
-            <div className="flex items-center w-1/3 text-lg px-6 py-4 bg-app-black-button rounded-md gap-1">
+            <div className="flex items-center lg:w-1/3 w-full text-lg px-6 py-4 bg-app-black-button rounded-md gap-1">
               Twitter
               <div className="text-gray-500 text-sm">(optional)</div>:
             </div>

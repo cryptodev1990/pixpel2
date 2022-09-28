@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAppContext } from "../../contexts/AppContext";
 
 const Trade = () => {
   const [showDropDown, setShowDropDown] = useState(false);
   const navigate = useNavigate();
+  const context = useAppContext();
 
   return (
     <div
       className="cursor-pointer"
       onClick={() => setShowDropDown(!showDropDown)}
     >
-      <div className="flex px-5 gap-1 items-center justify-between">
-        <div>Trade</div>
+      <div className={"flex px-5 gap-1 items-center justify-between"}>
+        <div className={context.developerHeader === 2 ? "text-app-blue " : ""}>
+          Trade
+        </div>
         <svg
-          className="w-5 h-5"
+          className="w-5 h-5 text-app-blue"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -36,13 +40,19 @@ const Trade = () => {
             <div className="flex flex-col rounded-b-md bg-app-black text-lg w-max">
               <div
                 className="relative flex justify-start px-5 border-b-2 border-app-black py-1 hover:text-app-blue"
-                onClick={() => navigate("/swap-master")}
+                onClick={() => {
+                  navigate("/swap-master");
+                  context.setDeveloperHeader(2);
+                }}
               >
                 Swap
               </div>
               <div
                 className="relative flex justify-start px-5 py-1 hover:text-app-blue"
-                onClick={() => navigate("/exchange")}
+                onClick={() => {
+                  navigate("/exchange");
+                  context.setDeveloperHeader(2);
+                }}
               >
                 CEX
               </div>

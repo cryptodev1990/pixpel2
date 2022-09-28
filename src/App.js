@@ -28,7 +28,8 @@ import {
   TokenRoom,
   Mint,
   Burn,
-  DeveloperWallet
+  DeveloperWallet,
+  NotVerified
 } from "./pages/index"
 
 import { Header, Footer } from "./components";
@@ -79,6 +80,7 @@ function App() {
         <Route path="/stakingportfolio" element={<StakingPortfolio />} />
         <Route path="/tokenroom" element={<TokenRoom />} />
         <Route path="/developerwallet" element={<DeveloperWallet />} />
+        <Route path="/notverified" element={<NotVerified />} />
         <Route path="/tokenroom/mint" element={<Mint />} />
         <Route path="/tokenroom/burn" element={<Burn />} />
         <Route path="*" element={<Test />} />
