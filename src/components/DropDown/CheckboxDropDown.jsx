@@ -40,7 +40,7 @@ const CheckboxDropDown = ({ initialContent, contentList, clicked }) => {
                 <div className="absolute bg-app-black flex flex-col rounded-b-md gap-2 py-3 w-max z-10">
                   {contentList.map((content, idx) => {
                     return (
-                      <div key={idx} className="flex gap-2 px-3 py-1">
+                      <div key={idx} className="flex gap-2 px-3 py-1 hover:text-app-blue">
                         <input type="checkbox" />
                         <label className="text-base font-medium">
                           {content.title}

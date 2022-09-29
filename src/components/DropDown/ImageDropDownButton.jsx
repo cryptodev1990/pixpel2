@@ -79,7 +79,7 @@ const ImageDropDownButton = (props) => {
                     }}
                   >
                     <img className="h-7" src={content.url} alt="" />
-                    <div className="text-base font-medium">{content.title}</div>
+                    <div className="text-base font-medium hover:text-app-blue">{content.title}</div>
                   </div>
                 );
               })}
