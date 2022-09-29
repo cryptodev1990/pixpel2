@@ -61,7 +61,7 @@ const DropDownButton = (props) => {
                         selectHandleClick(content.title);
                       }}
                     >
-                      <div className="text-base font-medium">
+                      <div className="text-base font-medium hover:text-app-blue">
                         {content.title}
                       </div>
                     </div>
