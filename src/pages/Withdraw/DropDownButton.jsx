@@ -26,7 +26,9 @@ const DropDownButton = (props) => {
       >
         <div className="flex flex-row justify-between h-16 px-5 py-5 rounded-md">
           <div className="flex">
-            <div className="overflow-auto text-base font-medium">{selectedContent}</div>
+            <div className="overflow-auto text-base font-medium">
+              {selectedContent}
+            </div>
           </div>
           <div className="flex">
             <svg
@@ -61,7 +63,7 @@ const DropDownButton = (props) => {
                         selectHandleClick(content.title);
                       }}
                     >
-                      <div className="text-base font-medium">
+                      <div className="text-base font-medium hover:text-app-blue">
                         {content.title}
                       </div>
                     </div>

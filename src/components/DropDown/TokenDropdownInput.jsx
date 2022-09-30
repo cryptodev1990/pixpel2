@@ -85,7 +85,7 @@ const TokenDropdownInput = ({
                         }}
                       >
                         <img className="h-6" src={content.url} alt="" />
-                        <div className="text-base font-medium">
+                        <div className="text-base font-medium hover:text-app-blue">
                           {content.title}
                         </div>
                       </div>

@@ -77,7 +77,7 @@ const DropDownButton = ({
                         selectHandleClick(content.title);
                       }}
                     >
-                      <div className={"text-base font-medium " + textColor}>
+                      <div className={"text-base font-medium hover:text-app-blue " + textColor}>
                         {content.title}
                       </div>
                     </div>
